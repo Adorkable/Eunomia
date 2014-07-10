@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C65DDBC1964B878009C714B /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDBB1964B878009C714B /* Utility.m */; };
+		3C65DDC81965A8D8009C714B /* UIImageView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDBF1965A8D8009C714B /* UIImageView+Templating.m */; };
+		3C65DDC91965A8D8009C714B /* UILabel+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC11965A8D8009C714B /* UILabel+Templating.m */; };
+		3C65DDCA1965A8D8009C714B /* UITextField+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC31965A8D8009C714B /* UITextField+Templating.m */; };
+		3C65DDCB1965A8D8009C714B /* UITextView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC51965A8D8009C714B /* UITextView+Templating.m */; };
+		3C65DDCC1965A8D8009C714B /* UIView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC71965A8D8009C714B /* UIView+Templating.m */; };
+		3CC133F01968FC4B00E614FC /* NSFetchedResultsController+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC133EF1968FC4B00E614FC /* NSFetchedResultsController+Utility.m */; };
+		3CC133F31968FC8000E614FC /* NSManagedObjectContext+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC133F21968FC8000E614FC /* NSManagedObjectContext+Utility.m */; };
+		3CC133F61968FD3700E614FC /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC133F51968FD3700E614FC /* UIImage+Utility.m */; };
+		3CC133F91968FDC200E614FC /* NSObject+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC133F81968FDC200E614FC /* NSObject+Utility.m */; };
+		3CD18D641964A7B100DB8ED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD18CFB1964A60200DB8ED7 /* Foundation.framework */; };
+		3CD18D711964A7B100DB8ED7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD18D091964A60200DB8ED7 /* XCTest.framework */; };
+		3CD18D721964A7B100DB8ED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD18CFB1964A60200DB8ED7 /* Foundation.framework */; };
+		3CD18D731964A7B100DB8ED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD18D0C1964A60200DB8ED7 /* UIKit.framework */; };
+		3CD18D761964A7B100DB8ED7 /* libEunomia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD18D631964A7B100DB8ED7 /* libEunomia.a */; };
+		3CD18D7C1964A7B100DB8ED7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD18D7A1964A7B100DB8ED7 /* InfoPlist.strings */; };
+		3CD18D7E1964A7B100DB8ED7 /* EunomiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D7D1964A7B100DB8ED7 /* EunomiaTests.m */; };
+		3CD18D861964A7D200DB8ED7 /* JSContext+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D261964A6ED00DB8ED7 /* JSContext+Utility.m */; };
+		3CD18D871964A7D200DB8ED7 /* NSMutableString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D281964A6ED00DB8ED7 /* NSMutableString+Utility.m */; };
+		3CD18D881964A7D200DB8ED7 /* NSNotification+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D2A1964A6ED00DB8ED7 /* NSNotification+Utility.m */; };
+		3CD18D891964A7D200DB8ED7 /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D2C1964A6ED00DB8ED7 /* NSString+Utility.m */; };
+		3CD18D8D1964A7D200DB8ED7 /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D341964A6ED00DB8ED7 /* UIColor+Utility.m */; };
+		3CD18D8E1964A7D200DB8ED7 /* UILongPressGestureRecognizer+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D361964A6ED00DB8ED7 /* UILongPressGestureRecognizer+Utility.m */; };
+		3CD18D8F1964A7D200DB8ED7 /* UIMenuController+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D381964A6ED00DB8ED7 /* UIMenuController+Utility.m */; };
+		3CD18D901964A7D200DB8ED7 /* UIPanGestureRecognizer+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D3A1964A6ED00DB8ED7 /* UIPanGestureRecognizer+Utility.m */; };
+		3CD18D911964A7D200DB8ED7 /* UIScrollView+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D3C1964A6ED00DB8ED7 /* UIScrollView+Utility.m */; };
+		3CD18D921964A7D200DB8ED7 /* UIStoryboardSegue+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D3E1964A6ED00DB8ED7 /* UIStoryboardSegue+Utility.m */; };
+		3CD18D931964A7D200DB8ED7 /* UITapGestureRecognizer+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D401964A6ED00DB8ED7 /* UITapGestureRecognizer+Utility.m */; };
+		3CD18D941964A7D200DB8ED7 /* UITextField+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D421964A6ED00DB8ED7 /* UITextField+Utility.m */; };
+		3CD18D951964A7D200DB8ED7 /* UIView+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D441964A6ED00DB8ED7 /* UIView+Utility.m */; };
+		3CD18D961964A7D200DB8ED7 /* UIViewController+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D461964A6ED00DB8ED7 /* UIViewController+Utility.m */; };
+		3CD18D971964A7D200DB8ED7 /* UIWebView+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD18D481964A6ED00DB8ED7 /* UIWebView+Utility.m */; };
+		562B8A345D334E2898C55449 /* libPods-Eunomia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CD18D741964A7B100DB8ED7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CD18CF01964A60200DB8ED7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CD18D621964A7B100DB8ED7;
+			remoteInfo = Eunomia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3CD18D611964A7B100DB8ED7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eunomia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C65DDB91964B6D1009C714B /* Eunomia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
+		3C65DDBA1964B878009C714B /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		3C65DDBB1964B878009C714B /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		3C65DDBE1965A8D8009C714B /* UIImageView+Templating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Templating.h"; sourceTree = "<group>"; };
+		3C65DDBF1965A8D8009C714B /* UIImageView+Templating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Templating.m"; sourceTree = "<group>"; };
+		3C65DDC01965A8D8009C714B /* UILabel+Templating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Templating.h"; sourceTree = "<group>"; };
+		3C65DDC11965A8D8009C714B /* UILabel+Templating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Templating.m"; sourceTree = "<group>"; };
+		3C65DDC21965A8D8009C714B /* UITextField+Templating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Templating.h"; sourceTree = "<group>"; };
+		3C65DDC31965A8D8009C714B /* UITextField+Templating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Templating.m"; sourceTree = "<group>"; };
+		3C65DDC41965A8D8009C714B /* UITextView+Templating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Templating.h"; sourceTree = "<group>"; };
+		3C65DDC51965A8D8009C714B /* UITextView+Templating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Templating.m"; sourceTree = "<group>"; };
+		3C65DDC61965A8D8009C714B /* UIView+Templating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Templating.h"; sourceTree = "<group>"; };
+		3C65DDC71965A8D8009C714B /* UIView+Templating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Templating.m"; sourceTree = "<group>"; };
+		3C65DDCD1965A91E009C714B /* View+Templating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+Templating.h"; sourceTree = "<group>"; };
+		3C65DDCE1965A9B8009C714B /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		3CC133EE1968FC4B00E614FC /* NSFetchedResultsController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+Utility.h"; sourceTree = "<group>"; };
+		3CC133EF1968FC4B00E614FC /* NSFetchedResultsController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+Utility.m"; sourceTree = "<group>"; };
+		3CC133F11968FC8000E614FC /* NSManagedObjectContext+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Utility.h"; sourceTree = "<group>"; };
+		3CC133F21968FC8000E614FC /* NSManagedObjectContext+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Utility.m"; sourceTree = "<group>"; };
+		3CC133F41968FD3700E614FC /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
+		3CC133F51968FD3700E614FC /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
+		3CC133F71968FDC200E614FC /* NSObject+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Utility.h"; sourceTree = "<group>"; };
+		3CC133F81968FDC200E614FC /* NSObject+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Utility.m"; sourceTree = "<group>"; };
+		3CD18CFB1964A60200DB8ED7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3CD18D091964A60200DB8ED7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3CD18D0C1964A60200DB8ED7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3CD18D251964A6ED00DB8ED7 /* JSContext+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSContext+Utility.h"; sourceTree = "<group>"; };
+		3CD18D261964A6ED00DB8ED7 /* JSContext+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSContext+Utility.m"; sourceTree = "<group>"; };
+		3CD18D271964A6ED00DB8ED7 /* NSMutableString+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Utility.h"; sourceTree = "<group>"; };
+		3CD18D281964A6ED00DB8ED7 /* NSMutableString+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Utility.m"; sourceTree = "<group>"; };
+		3CD18D291964A6ED00DB8ED7 /* NSNotification+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotification+Utility.h"; sourceTree = "<group>"; };
+		3CD18D2A1964A6ED00DB8ED7 /* NSNotification+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotification+Utility.m"; sourceTree = "<group>"; };
+		3CD18D2B1964A6ED00DB8ED7 /* NSString+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utility.h"; sourceTree = "<group>"; };
+		3CD18D2C1964A6ED00DB8ED7 /* NSString+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utility.m"; sourceTree = "<group>"; };
+		3CD18D331964A6ED00DB8ED7 /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
+		3CD18D341964A6ED00DB8ED7 /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
+		3CD18D351964A6ED00DB8ED7 /* UILongPressGestureRecognizer+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILongPressGestureRecognizer+Utility.h"; sourceTree = "<group>"; };
+		3CD18D361964A6ED00DB8ED7 /* UILongPressGestureRecognizer+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILongPressGestureRecognizer+Utility.m"; sourceTree = "<group>"; };
+		3CD18D371964A6ED00DB8ED7 /* UIMenuController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIMenuController+Utility.h"; sourceTree = "<group>"; };
+		3CD18D381964A6ED00DB8ED7 /* UIMenuController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIMenuController+Utility.m"; sourceTree = "<group>"; };
+		3CD18D391964A6ED00DB8ED7 /* UIPanGestureRecognizer+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPanGestureRecognizer+Utility.h"; sourceTree = "<group>"; };
+		3CD18D3A1964A6ED00DB8ED7 /* UIPanGestureRecognizer+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPanGestureRecognizer+Utility.m"; sourceTree = "<group>"; };
+		3CD18D3B1964A6ED00DB8ED7 /* UIScrollView+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Utility.h"; sourceTree = "<group>"; };
+		3CD18D3C1964A6ED00DB8ED7 /* UIScrollView+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Utility.m"; sourceTree = "<group>"; };
+		3CD18D3D1964A6ED00DB8ED7 /* UIStoryboardSegue+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboardSegue+Utility.h"; sourceTree = "<group>"; };
+		3CD18D3E1964A6ED00DB8ED7 /* UIStoryboardSegue+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboardSegue+Utility.m"; sourceTree = "<group>"; };
+		3CD18D3F1964A6ED00DB8ED7 /* UITapGestureRecognizer+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITapGestureRecognizer+Utility.h"; sourceTree = "<group>"; };
+		3CD18D401964A6ED00DB8ED7 /* UITapGestureRecognizer+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITapGestureRecognizer+Utility.m"; sourceTree = "<group>"; };
+		3CD18D411964A6ED00DB8ED7 /* UITextField+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Utility.h"; sourceTree = "<group>"; };
+		3CD18D421964A6ED00DB8ED7 /* UITextField+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Utility.m"; sourceTree = "<group>"; };
+		3CD18D431964A6ED00DB8ED7 /* UIView+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utility.h"; sourceTree = "<group>"; };
+		3CD18D441964A6ED00DB8ED7 /* UIView+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utility.m"; sourceTree = "<group>"; };
+		3CD18D451964A6ED00DB8ED7 /* UIViewController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utility.h"; sourceTree = "<group>"; };
+		3CD18D461964A6ED00DB8ED7 /* UIViewController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utility.m"; sourceTree = "<group>"; };
+		3CD18D471964A6ED00DB8ED7 /* UIWebView+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Utility.h"; sourceTree = "<group>"; };
+		3CD18D481964A6ED00DB8ED7 /* UIWebView+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Utility.m"; sourceTree = "<group>"; };
+		3CD18D631964A7B100DB8ED7 /* libEunomia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEunomia.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD18D701964A7B100DB8ED7 /* EunomiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EunomiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD18D791964A7B100DB8ED7 /* EunomiaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EunomiaTests-Info.plist"; sourceTree = "<group>"; };
+		3CD18D7B1964A7B100DB8ED7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3CD18D7D1964A7B100DB8ED7 /* EunomiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EunomiaTests.m; sourceTree = "<group>"; };
+		3CD18D991964AF2800DB8ED7 /* Eunomia.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Eunomia.podspec; sourceTree = "<group>"; };
+		963A5B68FEBC472790AF07AD /* Pods-Eunomia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.xcconfig"; path = "Pods/Pods-Eunomia.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CD18D601964A7B100DB8ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD18D641964A7B100DB8ED7 /* Foundation.framework in Frameworks */,
+				562B8A345D334E2898C55449 /* libPods-Eunomia.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD18D6D1964A7B100DB8ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD18D761964A7B100DB8ED7 /* libEunomia.a in Frameworks */,
+				3CD18D711964A7B100DB8ED7 /* XCTest.framework in Frameworks */,
+				3CD18D731964A7B100DB8ED7 /* UIKit.framework in Frameworks */,
+				3CD18D721964A7B100DB8ED7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C65DDBD1965A8D8009C714B /* View+Templating */ = {
+			isa = PBXGroup;
+			children = (
+				3C65DDBE1965A8D8009C714B /* UIImageView+Templating.h */,
+				3C65DDBF1965A8D8009C714B /* UIImageView+Templating.m */,
+				3C65DDC01965A8D8009C714B /* UILabel+Templating.h */,
+				3C65DDC11965A8D8009C714B /* UILabel+Templating.m */,
+				3C65DDC21965A8D8009C714B /* UITextField+Templating.h */,
+				3C65DDC31965A8D8009C714B /* UITextField+Templating.m */,
+				3C65DDC41965A8D8009C714B /* UITextView+Templating.h */,
+				3C65DDC51965A8D8009C714B /* UITextView+Templating.m */,
+				3C65DDC61965A8D8009C714B /* UIView+Templating.h */,
+				3C65DDC71965A8D8009C714B /* UIView+Templating.m */,
+			);
+			path = "View+Templating";
+			sourceTree = "<group>";
+		};
+		3CD18CEF1964A60200DB8ED7 = {
+			isa = PBXGroup;
+			children = (
+				3CD18D991964AF2800DB8ED7 /* Eunomia.podspec */,
+				3CD18D211964A65F00DB8ED7 /* Source */,
+				3CD18D771964A7B100DB8ED7 /* EunomiaTests */,
+				3CD18CFA1964A60200DB8ED7 /* Frameworks */,
+				3CD18CF91964A60200DB8ED7 /* Products */,
+				963A5B68FEBC472790AF07AD /* Pods-Eunomia.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		3CD18CF91964A60200DB8ED7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CD18D631964A7B100DB8ED7 /* libEunomia.a */,
+				3CD18D701964A7B100DB8ED7 /* EunomiaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CD18CFA1964A60200DB8ED7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CD18CFB1964A60200DB8ED7 /* Foundation.framework */,
+				3CD18D091964A60200DB8ED7 /* XCTest.framework */,
+				3CD18D0C1964A60200DB8ED7 /* UIKit.framework */,
+				2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3CD18D211964A65F00DB8ED7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3C65DDB91964B6D1009C714B /* Eunomia.h */,
+				3C65DDCE1965A9B8009C714B /* Config.h */,
+				3C65DDBA1964B878009C714B /* Utility.h */,
+				3C65DDBB1964B878009C714B /* Utility.m */,
+				3CD18D241964A6ED00DB8ED7 /* Utility */,
+				3C65DDCD1965A91E009C714B /* View+Templating.h */,
+				3C65DDBD1965A8D8009C714B /* View+Templating */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		3CD18D241964A6ED00DB8ED7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3CC133F41968FD3700E614FC /* UIImage+Utility.h */,
+				3CC133F51968FD3700E614FC /* UIImage+Utility.m */,
+				3CC133F11968FC8000E614FC /* NSManagedObjectContext+Utility.h */,
+				3CC133F21968FC8000E614FC /* NSManagedObjectContext+Utility.m */,
+				3CC133EE1968FC4B00E614FC /* NSFetchedResultsController+Utility.h */,
+				3CC133EF1968FC4B00E614FC /* NSFetchedResultsController+Utility.m */,
+				3CC133F71968FDC200E614FC /* NSObject+Utility.h */,
+				3CC133F81968FDC200E614FC /* NSObject+Utility.m */,
+				3CD18D251964A6ED00DB8ED7 /* JSContext+Utility.h */,
+				3CD18D261964A6ED00DB8ED7 /* JSContext+Utility.m */,
+				3CD18D271964A6ED00DB8ED7 /* NSMutableString+Utility.h */,
+				3CD18D281964A6ED00DB8ED7 /* NSMutableString+Utility.m */,
+				3CD18D291964A6ED00DB8ED7 /* NSNotification+Utility.h */,
+				3CD18D2A1964A6ED00DB8ED7 /* NSNotification+Utility.m */,
+				3CD18D2B1964A6ED00DB8ED7 /* NSString+Utility.h */,
+				3CD18D2C1964A6ED00DB8ED7 /* NSString+Utility.m */,
+				3CD18D331964A6ED00DB8ED7 /* UIColor+Utility.h */,
+				3CD18D341964A6ED00DB8ED7 /* UIColor+Utility.m */,
+				3CD18D351964A6ED00DB8ED7 /* UILongPressGestureRecognizer+Utility.h */,
+				3CD18D361964A6ED00DB8ED7 /* UILongPressGestureRecognizer+Utility.m */,
+				3CD18D371964A6ED00DB8ED7 /* UIMenuController+Utility.h */,
+				3CD18D381964A6ED00DB8ED7 /* UIMenuController+Utility.m */,
+				3CD18D391964A6ED00DB8ED7 /* UIPanGestureRecognizer+Utility.h */,
+				3CD18D3A1964A6ED00DB8ED7 /* UIPanGestureRecognizer+Utility.m */,
+				3CD18D3B1964A6ED00DB8ED7 /* UIScrollView+Utility.h */,
+				3CD18D3C1964A6ED00DB8ED7 /* UIScrollView+Utility.m */,
+				3CD18D3D1964A6ED00DB8ED7 /* UIStoryboardSegue+Utility.h */,
+				3CD18D3E1964A6ED00DB8ED7 /* UIStoryboardSegue+Utility.m */,
+				3CD18D3F1964A6ED00DB8ED7 /* UITapGestureRecognizer+Utility.h */,
+				3CD18D401964A6ED00DB8ED7 /* UITapGestureRecognizer+Utility.m */,
+				3CD18D411964A6ED00DB8ED7 /* UITextField+Utility.h */,
+				3CD18D421964A6ED00DB8ED7 /* UITextField+Utility.m */,
+				3CD18D431964A6ED00DB8ED7 /* UIView+Utility.h */,
+				3CD18D441964A6ED00DB8ED7 /* UIView+Utility.m */,
+				3CD18D451964A6ED00DB8ED7 /* UIViewController+Utility.h */,
+				3CD18D461964A6ED00DB8ED7 /* UIViewController+Utility.m */,
+				3CD18D471964A6ED00DB8ED7 /* UIWebView+Utility.h */,
+				3CD18D481964A6ED00DB8ED7 /* UIWebView+Utility.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		3CD18D771964A7B100DB8ED7 /* EunomiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CD18D7D1964A7B100DB8ED7 /* EunomiaTests.m */,
+				3CD18D781964A7B100DB8ED7 /* Supporting Files */,
+			);
+			path = EunomiaTests;
+			sourceTree = "<group>";
+		};
+		3CD18D781964A7B100DB8ED7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CD18D791964A7B100DB8ED7 /* EunomiaTests-Info.plist */,
+				3CD18D7A1964A7B100DB8ED7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CD18D621964A7B100DB8ED7 /* Eunomia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CD18D7F1964A7B100DB8ED7 /* Build configuration list for PBXNativeTarget "Eunomia" */;
+			buildPhases = (
+				F0876C8E7EDB4875A0500591 /* Check Pods Manifest.lock */,
+				3CD18D5F1964A7B100DB8ED7 /* Sources */,
+				3CD18D601964A7B100DB8ED7 /* Frameworks */,
+				3CD18D611964A7B100DB8ED7 /* CopyFiles */,
+				8C586BE3288E433EA66F8614 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Eunomia;
+			productName = Eunomia;
+			productReference = 3CD18D631964A7B100DB8ED7 /* libEunomia.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3CD18D6F1964A7B100DB8ED7 /* EunomiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CD18D821964A7B100DB8ED7 /* Build configuration list for PBXNativeTarget "EunomiaTests" */;
+			buildPhases = (
+				3CD18D6C1964A7B100DB8ED7 /* Sources */,
+				3CD18D6D1964A7B100DB8ED7 /* Frameworks */,
+				3CD18D6E1964A7B100DB8ED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CD18D751964A7B100DB8ED7 /* PBXTargetDependency */,
+			);
+			name = EunomiaTests;
+			productName = EunomiaTests;
+			productReference = 3CD18D701964A7B100DB8ED7 /* EunomiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CD18CF01964A60200DB8ED7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Eunomia;
+			};
+			buildConfigurationList = 3CD18CF31964A60200DB8ED7 /* Build configuration list for PBXProject "Eunomia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3CD18CEF1964A60200DB8ED7;
+			productRefGroup = 3CD18CF91964A60200DB8ED7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CD18D621964A7B100DB8ED7 /* Eunomia */,
+				3CD18D6F1964A7B100DB8ED7 /* EunomiaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CD18D6E1964A7B100DB8ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD18D7C1964A7B100DB8ED7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C586BE3288E433EA66F8614 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Eunomia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0876C8E7EDB4875A0500591 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CD18D5F1964A7B100DB8ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC133F31968FC8000E614FC /* NSManagedObjectContext+Utility.m in Sources */,
+				3CD18D871964A7D200DB8ED7 /* NSMutableString+Utility.m in Sources */,
+				3CD18D921964A7D200DB8ED7 /* UIStoryboardSegue+Utility.m in Sources */,
+				3CD18D8F1964A7D200DB8ED7 /* UIMenuController+Utility.m in Sources */,
+				3CD18D941964A7D200DB8ED7 /* UITextField+Utility.m in Sources */,
+				3CD18D8D1964A7D200DB8ED7 /* UIColor+Utility.m in Sources */,
+				3C65DDCC1965A8D8009C714B /* UIView+Templating.m in Sources */,
+				3CC133F61968FD3700E614FC /* UIImage+Utility.m in Sources */,
+				3CD18D971964A7D200DB8ED7 /* UIWebView+Utility.m in Sources */,
+				3C65DDCA1965A8D8009C714B /* UITextField+Templating.m in Sources */,
+				3CD18D8E1964A7D200DB8ED7 /* UILongPressGestureRecognizer+Utility.m in Sources */,
+				3C65DDC81965A8D8009C714B /* UIImageView+Templating.m in Sources */,
+				3C65DDC91965A8D8009C714B /* UILabel+Templating.m in Sources */,
+				3CC133F01968FC4B00E614FC /* NSFetchedResultsController+Utility.m in Sources */,
+				3CD18D931964A7D200DB8ED7 /* UITapGestureRecognizer+Utility.m in Sources */,
+				3C65DDBC1964B878009C714B /* Utility.m in Sources */,
+				3CD18D961964A7D200DB8ED7 /* UIViewController+Utility.m in Sources */,
+				3CD18D901964A7D200DB8ED7 /* UIPanGestureRecognizer+Utility.m in Sources */,
+				3CD18D881964A7D200DB8ED7 /* NSNotification+Utility.m in Sources */,
+				3C65DDCB1965A8D8009C714B /* UITextView+Templating.m in Sources */,
+				3CD18D951964A7D200DB8ED7 /* UIView+Utility.m in Sources */,
+				3CD18D891964A7D200DB8ED7 /* NSString+Utility.m in Sources */,
+				3CD18D861964A7D200DB8ED7 /* JSContext+Utility.m in Sources */,
+				3CC133F91968FDC200E614FC /* NSObject+Utility.m in Sources */,
+				3CD18D911964A7D200DB8ED7 /* UIScrollView+Utility.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD18D6C1964A7B100DB8ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD18D7E1964A7B100DB8ED7 /* EunomiaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CD18D751964A7B100DB8ED7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CD18D621964A7B100DB8ED7 /* Eunomia */;
+			targetProxy = 3CD18D741964A7B100DB8ED7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3CD18D7A1964A7B100DB8ED7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CD18D7B1964A7B100DB8ED7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CD18D191964A60200DB8ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3CD18D1A1964A60200DB8ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CD18D801964A7B100DB8ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 963A5B68FEBC472790AF07AD /* Pods-Eunomia.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/Eunomia.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3CD18D811964A7B100DB8ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 963A5B68FEBC472790AF07AD /* Pods-Eunomia.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/Eunomia.dst;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3CD18D831964A7B100DB8ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Eunomia/Eunomia-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EunomiaTests/EunomiaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3CD18D841964A7B100DB8ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Eunomia/Eunomia-Prefix.pch";
+				INFOPLIST_FILE = "EunomiaTests/EunomiaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CD18CF31964A60200DB8ED7 /* Build configuration list for PBXProject "Eunomia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD18D191964A60200DB8ED7 /* Debug */,
+				3CD18D1A1964A60200DB8ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CD18D7F1964A7B100DB8ED7 /* Build configuration list for PBXNativeTarget "Eunomia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD18D801964A7B100DB8ED7 /* Debug */,
+				3CD18D811964A7B100DB8ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CD18D821964A7B100DB8ED7 /* Build configuration list for PBXNativeTarget "EunomiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD18D831964A7B100DB8ED7 /* Debug */,
+				3CD18D841964A7B100DB8ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CD18CF01964A60200DB8ED7 /* Project object */;
+}
