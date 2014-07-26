@@ -36,4 +36,6 @@
 - (UIView *)getClosestSuperViewOfProtocol:(Protocol *)protocol;
 - (UIView *)getClosestSuperViewWhichRespondsTo:(SEL)selector;
 
+- (UIImage *)snapshotView;
+
 @end

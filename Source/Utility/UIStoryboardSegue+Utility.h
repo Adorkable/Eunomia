@@ -14,5 +14,6 @@
 @property (nonatomic, readonly) UIViewController *destinationViewControllerTyped;
 
 - (void)performIfViewsAreAvailableOrReplace:(void(^)(UIViewController *sourceViewController, UIViewController *destinationViewController, UIView *sourceView, UIView *destinationView) )performIfViewsAreAvailable;
+- (void)performIfViewsWithParentAreAvailableOrReplace:(void(^)(UIViewController *sourceViewController, UIViewController *destinationViewController, UIViewController *parentViewController, UIView *sourceView, UIView *destinationView, UIView *parentView) )performIfViewsAreAvailable;
 
 @end

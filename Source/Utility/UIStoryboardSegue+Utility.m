@@ -52,4 +52,24 @@
     }
 }
 
+- (void)performIfViewsWithParentAreAvailableOrReplace:(void(^)(UIViewController *sourceViewController, UIViewController *destinationViewController, UIViewController *parentViewController, UIView *sourceView, UIView *destinationView, UIView *parentView) )performIfViewsAreAvailable
+{
+    [self performIfViewsAreAvailableOrReplace:^(UIViewController *sourceViewController, UIViewController *destinationViewController, UIView *sourceView, UIView *destinationView) {
+        
+        UIViewController *parentViewController = sourceViewController.parentViewController;
+        UIView *parentView = parentViewController.view;
+
+        if (parentView)
+        {
+            if (performIfViewsAreAvailable)
+            {
+                performIfViewsAreAvailable(sourceViewController, destinationViewController, parentViewController, sourceView, destinationView, parentView);
+            }
+        } else
+        {
+            [sourceViewController replaceWithViewController:destinationViewController];
+        }
+    }];
+}
+
 @end

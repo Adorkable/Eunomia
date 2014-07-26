@@ -32,6 +32,7 @@
 #import "UILongPressGestureRecognizer+Utility.h"
 #import "UIPanGestureRecognizer+Utility.h"
 #import "UITapGestureRecognizer+Utility.h"
+#import "UIPinchGestureRecognizer+Utility.h"
 
 #import "UIViewController+Utility.h"
 

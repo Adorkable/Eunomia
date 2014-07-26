@@ -13,6 +13,12 @@
 		3C65DDCA1965A8D8009C714B /* UITextField+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC31965A8D8009C714B /* UITextField+Templating.m */; };
 		3C65DDCB1965A8D8009C714B /* UITextView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC51965A8D8009C714B /* UITextView+Templating.m */; };
 		3C65DDCC1965A8D8009C714B /* UIView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC71965A8D8009C714B /* UIView+Templating.m */; };
+		3CABCD0319835D1E003AA850 /* ReplaceLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCCFB19835D1E003AA850 /* ReplaceLeftSegue.m */; };
+		3CABCD0419835D1E003AA850 /* ReplaceRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCCFD19835D1E003AA850 /* ReplaceRightSegue.m */; };
+		3CABCD0519835D1E003AA850 /* ZoomInFromRectSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCCFF19835D1E003AA850 /* ZoomInFromRectSegue.m */; };
+		3CABCD0619835D1E003AA850 /* ZoomOutToRectSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCD0119835D1E003AA850 /* ZoomOutToRectSegue.m */; };
+		3CABCD0B19835D25003AA850 /* LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCD0919835D25003AA850 /* LaunchView.m */; };
+		3CABCD0E19835D73003AA850 /* UIPinchGestureRecognizer+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCD0D19835D73003AA850 /* UIPinchGestureRecognizer+Utility.m */; };
 		3CC133F01968FC4B00E614FC /* NSFetchedResultsController+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC133EF1968FC4B00E614FC /* NSFetchedResultsController+Utility.m */; };
 		3CC133F31968FC8000E614FC /* NSManagedObjectContext+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC133F21968FC8000E614FC /* NSManagedObjectContext+Utility.m */; };
 		3CC133F61968FD3700E614FC /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC133F51968FD3700E614FC /* UIImage+Utility.m */; };
@@ -81,6 +87,20 @@
 		3C65DDC71965A8D8009C714B /* UIView+Templating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Templating.m"; sourceTree = "<group>"; };
 		3C65DDCD1965A91E009C714B /* View+Templating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+Templating.h"; sourceTree = "<group>"; };
 		3C65DDCE1965A9B8009C714B /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		3CABCCFA19835D1E003AA850 /* ReplaceLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceLeftSegue.h; sourceTree = "<group>"; };
+		3CABCCFB19835D1E003AA850 /* ReplaceLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceLeftSegue.m; sourceTree = "<group>"; };
+		3CABCCFC19835D1E003AA850 /* ReplaceRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceRightSegue.h; sourceTree = "<group>"; };
+		3CABCCFD19835D1E003AA850 /* ReplaceRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceRightSegue.m; sourceTree = "<group>"; };
+		3CABCCFE19835D1E003AA850 /* ZoomInFromRectSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomInFromRectSegue.h; sourceTree = "<group>"; };
+		3CABCCFF19835D1E003AA850 /* ZoomInFromRectSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomInFromRectSegue.m; sourceTree = "<group>"; };
+		3CABCD0019835D1E003AA850 /* ZoomOutToRectSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomOutToRectSegue.h; sourceTree = "<group>"; };
+		3CABCD0119835D1E003AA850 /* ZoomOutToRectSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomOutToRectSegue.m; sourceTree = "<group>"; };
+		3CABCD0219835D1E003AA850 /* Segues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Segues.h; sourceTree = "<group>"; };
+		3CABCD0819835D25003AA850 /* LaunchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchView.h; sourceTree = "<group>"; };
+		3CABCD0919835D25003AA850 /* LaunchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchView.m; sourceTree = "<group>"; };
+		3CABCD0A19835D25003AA850 /* Views.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Views.h; sourceTree = "<group>"; };
+		3CABCD0C19835D73003AA850 /* UIPinchGestureRecognizer+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPinchGestureRecognizer+Utility.h"; sourceTree = "<group>"; };
+		3CABCD0D19835D73003AA850 /* UIPinchGestureRecognizer+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPinchGestureRecognizer+Utility.m"; sourceTree = "<group>"; };
 		3CC133EE1968FC4B00E614FC /* NSFetchedResultsController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+Utility.h"; sourceTree = "<group>"; };
 		3CC133EF1968FC4B00E614FC /* NSFetchedResultsController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+Utility.m"; sourceTree = "<group>"; };
 		3CC133F11968FC8000E614FC /* NSManagedObjectContext+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Utility.h"; sourceTree = "<group>"; };
@@ -172,6 +192,30 @@
 			path = "View+Templating";
 			sourceTree = "<group>";
 		};
+		3CABCCF919835D1E003AA850 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				3CABCCFA19835D1E003AA850 /* ReplaceLeftSegue.h */,
+				3CABCCFB19835D1E003AA850 /* ReplaceLeftSegue.m */,
+				3CABCCFC19835D1E003AA850 /* ReplaceRightSegue.h */,
+				3CABCCFD19835D1E003AA850 /* ReplaceRightSegue.m */,
+				3CABCCFE19835D1E003AA850 /* ZoomInFromRectSegue.h */,
+				3CABCCFF19835D1E003AA850 /* ZoomInFromRectSegue.m */,
+				3CABCD0019835D1E003AA850 /* ZoomOutToRectSegue.h */,
+				3CABCD0119835D1E003AA850 /* ZoomOutToRectSegue.m */,
+			);
+			path = Segues;
+			sourceTree = "<group>";
+		};
+		3CABCD0719835D25003AA850 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3CABCD0819835D25003AA850 /* LaunchView.h */,
+				3CABCD0919835D25003AA850 /* LaunchView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3CD18CEF1964A60200DB8ED7 = {
 			isa = PBXGroup;
 			children = (
@@ -209,9 +253,13 @@
 			children = (
 				3C65DDB91964B6D1009C714B /* Eunomia.h */,
 				3C65DDCE1965A9B8009C714B /* Config.h */,
+				3CABCD0219835D1E003AA850 /* Segues.h */,
+				3CABCCF919835D1E003AA850 /* Segues */,
 				3C65DDBA1964B878009C714B /* Utility.h */,
 				3C65DDBB1964B878009C714B /* Utility.m */,
 				3CD18D241964A6ED00DB8ED7 /* Utility */,
+				3CABCD0A19835D25003AA850 /* Views.h */,
+				3CABCD0719835D25003AA850 /* Views */,
 				3C65DDCD1965A91E009C714B /* View+Templating.h */,
 				3C65DDBD1965A8D8009C714B /* View+Templating */,
 			);
@@ -221,6 +269,8 @@
 		3CD18D241964A6ED00DB8ED7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3CABCD0C19835D73003AA850 /* UIPinchGestureRecognizer+Utility.h */,
+				3CABCD0D19835D73003AA850 /* UIPinchGestureRecognizer+Utility.m */,
 				3CC133F41968FD3700E614FC /* UIImage+Utility.h */,
 				3CC133F51968FD3700E614FC /* UIImage+Utility.m */,
 				3CC133F11968FC8000E614FC /* NSManagedObjectContext+Utility.h */,
@@ -408,13 +458,19 @@
 				3CD18D971964A7D200DB8ED7 /* UIWebView+Utility.m in Sources */,
 				3C65DDCA1965A8D8009C714B /* UITextField+Templating.m in Sources */,
 				3CD18D8E1964A7D200DB8ED7 /* UILongPressGestureRecognizer+Utility.m in Sources */,
+				3CABCD0319835D1E003AA850 /* ReplaceLeftSegue.m in Sources */,
 				3C65DDC81965A8D8009C714B /* UIImageView+Templating.m in Sources */,
 				3C65DDC91965A8D8009C714B /* UILabel+Templating.m in Sources */,
 				3CC133F01968FC4B00E614FC /* NSFetchedResultsController+Utility.m in Sources */,
+				3CABCD0519835D1E003AA850 /* ZoomInFromRectSegue.m in Sources */,
 				3CD18D931964A7D200DB8ED7 /* UITapGestureRecognizer+Utility.m in Sources */,
+				3CABCD0619835D1E003AA850 /* ZoomOutToRectSegue.m in Sources */,
 				3C65DDBC1964B878009C714B /* Utility.m in Sources */,
+				3CABCD0B19835D25003AA850 /* LaunchView.m in Sources */,
 				3CD18D961964A7D200DB8ED7 /* UIViewController+Utility.m in Sources */,
 				3CD18D901964A7D200DB8ED7 /* UIPanGestureRecognizer+Utility.m in Sources */,
+				3CABCD0E19835D73003AA850 /* UIPinchGestureRecognizer+Utility.m in Sources */,
+				3CABCD0419835D1E003AA850 /* ReplaceRightSegue.m in Sources */,
 				3CD18D881964A7D200DB8ED7 /* NSNotification+Utility.m in Sources */,
 				3C65DDCB1965A8D8009C714B /* UITextView+Templating.m in Sources */,
 				3CD18D951964A7D200DB8ED7 /* UIView+Utility.m in Sources */,
