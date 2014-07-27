@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency 'UIColor-HexString'
   s.dependency 'CocoaLumberjack'
 
 end

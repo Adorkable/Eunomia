@@ -4,14 +4,11 @@ PODS:
   - CocoaLumberjack/Core (1.9.1)
   - CocoaLumberjack/Extensions (1.9.1):
     - CocoaLumberjack/Core
-  - UIColor-HexString (1.1.0)
 
 DEPENDENCIES:
   - CocoaLumberjack
-  - UIColor-HexString
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 94accd5749f5c5d15134c8d50f34a973aed8ef69
-  UIColor-HexString: a9eabf02c1a2f9036ed6ac9cb2a3ea086f3b39e4
 
 COCOAPODS: 0.33.1
