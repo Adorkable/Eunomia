@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C371BD719853F4E008503FE /* UITextView+TemplatingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BD519853F4E008503FE /* UITextView+TemplatingSpec.m */; };
 		3C371BD819853F4E008503FE /* UIView+TemplatingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */; };
+		3C371BDB19854EBE008503FE /* LaunchViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BDA19854EBE008503FE /* LaunchViewSpec.m */; };
 		3C65DDBC1964B878009C714B /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDBB1964B878009C714B /* Utility.m */; };
 		3C65DDC81965A8D8009C714B /* UIImageView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDBF1965A8D8009C714B /* UIImageView+Templating.m */; };
 		3C65DDC91965A8D8009C714B /* UILabel+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC11965A8D8009C714B /* UILabel+Templating.m */; };
@@ -83,6 +84,7 @@
 		2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eunomia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C371BD519853F4E008503FE /* UITextView+TemplatingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TemplatingSpec.m"; sourceTree = "<group>"; };
 		3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TemplatingSpec.m"; sourceTree = "<group>"; };
+		3C371BDA19854EBE008503FE /* LaunchViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewSpec.m; sourceTree = "<group>"; };
 		3C65DDB91964B6D1009C714B /* Eunomia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
 		3C65DDBA1964B878009C714B /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		3C65DDBB1964B878009C714B /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		3C371BD319853F20008503FE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3C371BD919854EB3008503FE /* Views */,
 				3C371BD419853F3A008503FE /* View+Templating */,
 			);
 			path = Tests;
@@ -205,6 +208,14 @@
 				3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */,
 			);
 			path = "View+Templating";
+			sourceTree = "<group>";
+		};
+		3C371BD919854EB3008503FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C371BDA19854EBE008503FE /* LaunchViewSpec.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3C65DDBD1965A8D8009C714B /* View+Templating */ = {
@@ -427,11 +438,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Eunomia;
-				TargetAttributes = {
-					3CD18D6F1964A7B100DB8ED7 = {
-						TestTargetID = 3CD18D621964A7B100DB8ED7;
-					};
-				};
 			};
 			buildConfigurationList = 3CD18CF31964A60200DB8ED7 /* Build configuration list for PBXProject "Eunomia" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -569,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C371BDB19854EBE008503FE /* LaunchViewSpec.m in Sources */,
 				3C371BD819853F4E008503FE /* UIView+TemplatingSpec.m in Sources */,
 				3C371BD719853F4E008503FE /* UITextView+TemplatingSpec.m in Sources */,
 			);
@@ -708,6 +715,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"TEST=1",
 				);
 				INFOPLIST_FILE = "EunomiaTests/EunomiaTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -725,6 +733,11 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TEST=1",
+				);
 				INFOPLIST_FILE = "EunomiaTests/EunomiaTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;

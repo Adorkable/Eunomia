@@ -10,4 +10,8 @@
 
 @interface LaunchView : UIImageView
 
+#if DEBUG
+@property (readwrite) NSUInteger sharedInitCallCount;
+#endif
+
 @end

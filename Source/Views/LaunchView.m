@@ -8,9 +8,59 @@
 
 #import "LaunchView.h"
 
+#import "Eunomia.h"
+
 @implementation LaunchView
 
-- (void)willMoveToSuperview:(UIView *)newSuperview
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self)
+    {
+        [self sharedInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        [self sharedInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithImage:(UIImage *)image
+{
+    self = [super initWithImage:image];
+    if (self)
+    {
+        [self sharedInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage
+{
+    self = [super initWithImage:image highlightedImage:highlightedImage];
+    if (self)
+    {
+        [self sharedInit];
+    }
+    return self;
+}
+
+- (void)sharedInit
+{
+#if DEBUG
+    self.sharedInitCallCount ++;
+#endif
+    [self setLaunchImage];
+}
+
+- (void)setLaunchImage
 {
     NSString *imageLocation = [NSString stringWithFormat:@"%@", [ [NSBundle mainBundle] bundlePath] ];
     
@@ -25,6 +75,11 @@
     
     NSString *imagePath = [NSString stringWithFormat:@"%@/%@", imageLocation, imageName];
     UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+    
+    if (image == nil)
+    {
+        NSLogWarn(@"Could not find expected Launch Image at %@", imagePath);
+    }
     
     [self setImage:image];
 }
