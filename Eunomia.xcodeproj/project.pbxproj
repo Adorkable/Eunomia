@@ -13,6 +13,7 @@
 		3C65DDCA1965A8D8009C714B /* UITextField+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC31965A8D8009C714B /* UITextField+Templating.m */; };
 		3C65DDCB1965A8D8009C714B /* UITextView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC51965A8D8009C714B /* UITextView+Templating.m */; };
 		3C65DDCC1965A8D8009C714B /* UIView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC71965A8D8009C714B /* UIView+Templating.m */; };
+		3C9280841984956600D3B07D /* CoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9280831984956600D3B07D /* CoreDataStore.m */; };
 		3CABCD0319835D1E003AA850 /* ReplaceLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCCFB19835D1E003AA850 /* ReplaceLeftSegue.m */; };
 		3CABCD0419835D1E003AA850 /* ReplaceRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCCFD19835D1E003AA850 /* ReplaceRightSegue.m */; };
 		3CABCD0519835D1E003AA850 /* ZoomInFromRectSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCCFF19835D1E003AA850 /* ZoomInFromRectSegue.m */; };
@@ -87,6 +88,9 @@
 		3C65DDC71965A8D8009C714B /* UIView+Templating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Templating.m"; sourceTree = "<group>"; };
 		3C65DDCD1965A91E009C714B /* View+Templating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+Templating.h"; sourceTree = "<group>"; };
 		3C65DDCE1965A9B8009C714B /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		3C9280801984951900D3B07D /* CoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
+		3C9280821984956600D3B07D /* CoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStore.h; sourceTree = "<group>"; };
+		3C9280831984956600D3B07D /* CoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStore.m; sourceTree = "<group>"; };
 		3CABCCFA19835D1E003AA850 /* ReplaceLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceLeftSegue.h; sourceTree = "<group>"; };
 		3CABCCFB19835D1E003AA850 /* ReplaceLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceLeftSegue.m; sourceTree = "<group>"; };
 		3CABCCFC19835D1E003AA850 /* ReplaceRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceRightSegue.h; sourceTree = "<group>"; };
@@ -192,6 +196,15 @@
 			path = "View+Templating";
 			sourceTree = "<group>";
 		};
+		3C9280811984953E00D3B07D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3C9280821984956600D3B07D /* CoreDataStore.h */,
+				3C9280831984956600D3B07D /* CoreDataStore.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		3CABCCF919835D1E003AA850 /* Segues */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +266,8 @@
 			children = (
 				3C65DDB91964B6D1009C714B /* Eunomia.h */,
 				3C65DDCE1965A9B8009C714B /* Config.h */,
+				3C9280801984951900D3B07D /* CoreData.h */,
+				3C9280811984953E00D3B07D /* CoreData */,
 				3CABCD0219835D1E003AA850 /* Segues.h */,
 				3CABCCF919835D1E003AA850 /* Segues */,
 				3C65DDBA1964B878009C714B /* Utility.h */,
@@ -473,6 +488,7 @@
 				3CABCD0419835D1E003AA850 /* ReplaceRightSegue.m in Sources */,
 				3CD18D881964A7D200DB8ED7 /* NSNotification+Utility.m in Sources */,
 				3C65DDCB1965A8D8009C714B /* UITextView+Templating.m in Sources */,
+				3C9280841984956600D3B07D /* CoreDataStore.m in Sources */,
 				3CD18D951964A7D200DB8ED7 /* UIView+Utility.m in Sources */,
 				3CD18D891964A7D200DB8ED7 /* NSString+Utility.m in Sources */,
 				3CD18D861964A7D200DB8ED7 /* JSContext+Utility.m in Sources */,
