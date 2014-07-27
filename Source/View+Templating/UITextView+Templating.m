@@ -30,7 +30,12 @@
         UITextView *template = (UITextView *)baseTemplate;
         
         self.delegate = template.delegate;
+
+        self.clearsOnInsertion = template.clearsOnInsertion; // resets things like selectedRange, needs to be early
+
         self.text = template.text;
+        self.attributedText = template.attributedText;
+        
         self.font = template.font;
         self.textColor = template.textColor;
         self.textAlignment = template.textAlignment;
@@ -39,14 +44,11 @@
         self.selectable = template.selectable;
         self.dataDetectorTypes = template.dataDetectorTypes;
         self.allowsEditingTextAttributes = template.allowsEditingTextAttributes;
-        self.attributedText = template.attributedText;
         self.typingAttributes = template.typingAttributes;
         
         self.inputView = template.inputView;
         self.inputAccessoryView = template.inputAccessoryView;
         
-        self.clearsOnInsertion = template.clearsOnInsertion;
-
         self.textContainerInset = template.textContainerInset;
         
         self.linkTextAttributes = template.linkTextAttributes;

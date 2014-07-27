@@ -6,6 +6,8 @@ target "Eunomia" do
 end
 
 target "EunomiaTests" do
-
+    pod 'Specta'
+    pod 'Expecta'
+    pod 'OCMock'
 end
 
