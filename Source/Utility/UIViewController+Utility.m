@@ -67,4 +67,16 @@
     }
 }
 
++ (void)prepareDestinationViewControllerForSegue:(UIStoryboardSegue *)segue withSender:(id)sender
+{
+    if ( [segue.destinationViewController conformsToProtocol:@protocol(SegueingViewController) ] )
+    {
+        id<SegueingViewController> segueingViewController = segue.destinationViewController;
+        if ( [segueingViewController respondsToSelector:@selector(destinationPrepareForSegue:sender:) ] )
+        {
+            [segueingViewController destinationPrepareForSegue:segue sender:sender];
+        }
+    }
+}
+
 @end
