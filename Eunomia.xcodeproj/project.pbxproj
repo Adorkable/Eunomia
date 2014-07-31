@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0479C7198A8BE400109D96 /* ReplaceDownSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0479C4198A8BE400109D96 /* ReplaceDownSegue.m */; };
+		3C0479C8198A8BE400109D96 /* ReplaceUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0479C6198A8BE400109D96 /* ReplaceUpSegue.m */; };
 		3C371BD719853F4E008503FE /* UITextView+TemplatingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BD519853F4E008503FE /* UITextView+TemplatingSpec.m */; };
 		3C371BD819853F4E008503FE /* UIView+TemplatingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */; };
 		3C371BDB19854EBE008503FE /* LaunchViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BDA19854EBE008503FE /* LaunchViewSpec.m */; };
@@ -82,6 +84,10 @@
 
 /* Begin PBXFileReference section */
 		2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eunomia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C0479C3198A8BE400109D96 /* ReplaceDownSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceDownSegue.h; sourceTree = "<group>"; };
+		3C0479C4198A8BE400109D96 /* ReplaceDownSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceDownSegue.m; sourceTree = "<group>"; };
+		3C0479C5198A8BE400109D96 /* ReplaceUpSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceUpSegue.h; sourceTree = "<group>"; };
+		3C0479C6198A8BE400109D96 /* ReplaceUpSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceUpSegue.m; sourceTree = "<group>"; };
 		3C371BD519853F4E008503FE /* UITextView+TemplatingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TemplatingSpec.m"; sourceTree = "<group>"; };
 		3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TemplatingSpec.m"; sourceTree = "<group>"; };
 		3C371BDA19854EBE008503FE /* LaunchViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewSpec.m; sourceTree = "<group>"; };
@@ -247,6 +253,10 @@
 		3CABCCF919835D1E003AA850 /* Segues */ = {
 			isa = PBXGroup;
 			children = (
+				3C0479C3198A8BE400109D96 /* ReplaceDownSegue.h */,
+				3C0479C4198A8BE400109D96 /* ReplaceDownSegue.m */,
+				3C0479C5198A8BE400109D96 /* ReplaceUpSegue.h */,
+				3C0479C6198A8BE400109D96 /* ReplaceUpSegue.m */,
 				3CABCCFA19835D1E003AA850 /* ReplaceLeftSegue.h */,
 				3CABCCFB19835D1E003AA850 /* ReplaceLeftSegue.m */,
 				3CABCCFC19835D1E003AA850 /* ReplaceRightSegue.h */,
@@ -541,6 +551,7 @@
 				3CD18D921964A7D200DB8ED7 /* UIStoryboardSegue+Utility.m in Sources */,
 				3CD18D8F1964A7D200DB8ED7 /* UIMenuController+Utility.m in Sources */,
 				3CD18D941964A7D200DB8ED7 /* UITextField+Utility.m in Sources */,
+				3C0479C8198A8BE400109D96 /* ReplaceUpSegue.m in Sources */,
 				3CD18D8D1964A7D200DB8ED7 /* UIColor+Utility.m in Sources */,
 				3C65DDCC1965A8D8009C714B /* UIView+Templating.m in Sources */,
 				3CC133F61968FD3700E614FC /* UIImage+Utility.m in Sources */,
@@ -557,6 +568,7 @@
 				3C65DDBC1964B878009C714B /* Utility.m in Sources */,
 				3CABCD0B19835D25003AA850 /* LaunchView.m in Sources */,
 				3CD18D961964A7D200DB8ED7 /* UIViewController+Utility.m in Sources */,
+				3C0479C7198A8BE400109D96 /* ReplaceDownSegue.m in Sources */,
 				3CD18D901964A7D200DB8ED7 /* UIPanGestureRecognizer+Utility.m in Sources */,
 				3CABCD0E19835D73003AA850 /* UIPinchGestureRecognizer+Utility.m in Sources */,
 				3CABCD0419835D1E003AA850 /* ReplaceRightSegue.m in Sources */,

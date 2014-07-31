@@ -12,6 +12,8 @@
 
 #import "ReplaceLeftSegue.h"
 #import "ReplaceRightSegue.h"
+#import "ReplaceUpSegue.h"
+#import "ReplaceDownSegue.h"
 
 #import "ZoomInFromRectSegue.h"
 #import "ZoomOutToRectSegue.h"
