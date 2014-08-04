@@ -44,10 +44,12 @@
     
     [self createPersistentStoreCoordinator:baseURL withManagedObjectModel:self.managedObjectModel];
     
+    NSURL *urlOfPersistentStore;
+    
     BOOL result = NO;
     if (initPersistentStore)
     {
-        NSURL *urlOfPersistentStore = [CoreDataStore urlOfPersistentStore:nameOfDataModel]; //inUserDirectory:NSCachesDirectory];
+        urlOfPersistentStore = [CoreDataStore urlOfPersistentStore:nameOfDataModel]; //inUserDirectory:NSCachesDirectory];
         
         NSDictionary *currentPersistentStoreMetadata = [CoreDataStore persistentStoreMetadata:NSSQLiteStoreType atURL:urlOfPersistentStore];
         if ( [CoreDataStore isMigrationNeeded:currentPersistentStoreMetadata forCurrentModel:self.managedObjectModel] )
@@ -72,6 +74,13 @@
     
     if (result)
     {
+#if DEBUG
+        if (initPersistentStore)
+        {
+            [CoreDataStore createToolScriptWithModel:urlOfDataModel persistentStore:urlOfPersistentStore persistentStoreFormat:NSSQLiteStoreType];
+        }
+#endif
+        
 #if USE_AFNETWORKING
         [ [AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 #endif
@@ -250,6 +259,7 @@
     result = self.persistentStore != nil;
     
 #endif
+    
     if (error)
     {
         NSLogError(@"When attempting to add SQLite persistent store at path %@: %@", url, error);
@@ -566,5 +576,95 @@
      }];
 }
 #endif
+
+#if !defined(SOURCE_ROOT)
+#define SOURCE_ROOT /tmp
+#endif
+
+#define STRINGIFY(value) #value
+#define TO_STRING(value) STRINGIFY(value)
+
++ (void)createToolScriptWithModel:(NSURL *)modelFileLocation persistentStore:(NSURL *)persistentStoreFileLocation persistentStoreFormat:(NSString *)persistentStoreFormat
+{
+#if defined(SOURCE_ROOT)
+#if TARGET_IPHONE_SIMULATOR
+    NSString *modelFileParameter;
+    if (modelFileLocation)
+    {
+        modelFileParameter = [NSString stringWithFormat:@"--model \"%@\"", [modelFileLocation absoluteString] ];
+    }
+    
+    NSString *persistentStoreParameter;
+    if (persistentStoreFileLocation)
+    {
+        persistentStoreParameter = [NSString stringWithFormat:@"--store \"%@\"", [persistentStoreFileLocation absoluteString] ];
+    }
+    
+    NSString *formatParameterType;
+    if ( [persistentStoreFormat isEqualToString:NSSQLiteStoreType] )
+    {
+        formatParameterType = @"SQLite";
+#if !TARGET_OS_IPHONE
+    } else if ( [persistentStoreFormat isEqualToString:NSXMLStoreType] )
+    {
+        formatParameterType = @"XML";
+#endif
+    } else if ( [persistentStoreFormat isEqualToString:NSBinaryStoreType] )
+    {
+        formatParameterType = @"Binary";
+    }
+    
+    NSString *formatParameter;
+    if (formatParameterType.length > 0)
+    {
+        formatParameter = [NSString stringWithFormat:@"--storeType %@", formatParameterType];
+    }
+    
+    NSString *parameters;
+    if (modelFileParameter.length > 0 && persistentStoreParameter.length > 0 && formatParameter.length > 0)
+    {
+        parameters = [NSString stringWithFormat:@"%@ %@ %@", modelFileParameter, persistentStoreParameter, formatParameter];
+    }
+    
+    NSString *toolLocation = @"/Applications/CoreDataPro.app/Contents/MacOS/CoreDataPro";
+    NSString *scriptRelativeLocation = @"/Tools/CoreDataPro/attachToProcess.sh";
+    
+    if (toolLocation.length > 0 && parameters.length > 0 && scriptRelativeLocation.length > 0)
+    {
+        NSString *run = [NSString stringWithFormat:@"%@ %@", toolLocation, parameters];
+        
+        NSString *scriptLocation = [NSString stringWithFormat:@"%s%@",
+                                    TO_STRING(SOURCE_ROOT),
+                                    scriptRelativeLocation];
+        
+        NSError *error;
+        NSString *scriptPath = [scriptLocation stringByDeletingLastPathComponent];
+        [ [NSFileManager defaultManager] createDirectoryAtPath:scriptPath withIntermediateDirectories:YES attributes:nil error:&error];
+        if (error)
+        {
+            NSLogError(@"When creating folders for CoreData support tool script at %@: %@", scriptPath, error);
+        }
+        
+        error = nil;
+        [run writeToFile:scriptLocation atomically:YES encoding:NSUTF8StringEncoding error:&error];
+        if (error)
+        {
+            NSLogError(@"When writing CoreData support tool script to %@: %@", scriptLocation, error);
+        } else
+        {
+            error = nil;
+            [ [NSFileManager defaultManager] setAttributes:@{NSFilePosixPermissions:[NSNumber numberWithInt:777]}
+                                              ofItemAtPath:scriptLocation
+                                                     error:&error];
+            if (error)
+            {
+                NSLogError(@"When setting CoreData support tool script %@ to executable: %@", scriptLocation, error);
+            }
+            NSLogVerbose(@"CoreData support tool script written to %@", scriptLocation);
+        }
+    }
+#endif
+#endif
+}
 
 @end
