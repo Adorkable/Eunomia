@@ -18,6 +18,8 @@
 		3C65DDCA1965A8D8009C714B /* UITextField+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC31965A8D8009C714B /* UITextField+Templating.m */; };
 		3C65DDCB1965A8D8009C714B /* UITextView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC51965A8D8009C714B /* UITextView+Templating.m */; };
 		3C65DDCC1965A8D8009C714B /* UIView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65DDC71965A8D8009C714B /* UIView+Templating.m */; };
+		3C741E04198F34BE00461822 /* ThirdPartyWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C741E03198F34BE00461822 /* ThirdPartyWrapper.m */; };
+		3C741E09198F36BD00461822 /* VerboseDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C741E08198F36BD00461822 /* VerboseDDLogFormatter.m */; };
 		3C9280841984956600D3B07D /* CoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9280831984956600D3B07D /* CoreDataStore.m */; };
 		3CABCD0319835D1E003AA850 /* ReplaceLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCCFB19835D1E003AA850 /* ReplaceLeftSegue.m */; };
 		3CABCD0419835D1E003AA850 /* ReplaceRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABCCFD19835D1E003AA850 /* ReplaceRightSegue.m */; };
@@ -106,6 +108,11 @@
 		3C65DDC71965A8D8009C714B /* UIView+Templating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Templating.m"; sourceTree = "<group>"; };
 		3C65DDCD1965A91E009C714B /* View+Templating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+Templating.h"; sourceTree = "<group>"; };
 		3C65DDCE1965A9B8009C714B /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		3C741E02198F34BE00461822 /* ThirdPartyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyWrapper.h; sourceTree = "<group>"; };
+		3C741E03198F34BE00461822 /* ThirdPartyWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPartyWrapper.m; sourceTree = "<group>"; };
+		3C741E05198F34DA00461822 /* ThirdParty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdParty.h; sourceTree = "<group>"; };
+		3C741E07198F36BD00461822 /* VerboseDDLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerboseDDLogFormatter.h; sourceTree = "<group>"; };
+		3C741E08198F36BD00461822 /* VerboseDDLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerboseDDLogFormatter.m; sourceTree = "<group>"; };
 		3C9280801984951900D3B07D /* CoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		3C9280821984956600D3B07D /* CoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStore.h; sourceTree = "<group>"; };
 		3C9280831984956600D3B07D /* CoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStore.m; sourceTree = "<group>"; };
@@ -241,6 +248,25 @@
 			path = "View+Templating";
 			sourceTree = "<group>";
 		};
+		3C741E01198F34BE00461822 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				3C741E02198F34BE00461822 /* ThirdPartyWrapper.h */,
+				3C741E03198F34BE00461822 /* ThirdPartyWrapper.m */,
+				3C741E06198F36BD00461822 /* CocoaLumberjack */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		3C741E06198F36BD00461822 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				3C741E07198F36BD00461822 /* VerboseDDLogFormatter.h */,
+				3C741E08198F36BD00461822 /* VerboseDDLogFormatter.m */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
 		3C9280811984953E00D3B07D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +348,8 @@
 				3C9280811984953E00D3B07D /* CoreData */,
 				3CABCD0219835D1E003AA850 /* Segues.h */,
 				3CABCCF919835D1E003AA850 /* Segues */,
+				3C741E05198F34DA00461822 /* ThirdParty.h */,
+				3C741E01198F34BE00461822 /* ThirdParty */,
 				3C65DDBA1964B878009C714B /* Utility.h */,
 				3C65DDBB1964B878009C714B /* Utility.m */,
 				3CD18D241964A6ED00DB8ED7 /* Utility */,
@@ -547,6 +575,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CC133F31968FC8000E614FC /* NSManagedObjectContext+Utility.m in Sources */,
+				3C741E04198F34BE00461822 /* ThirdPartyWrapper.m in Sources */,
+				3C741E09198F36BD00461822 /* VerboseDDLogFormatter.m in Sources */,
 				3CD18D871964A7D200DB8ED7 /* NSMutableString+Utility.m in Sources */,
 				3CD18D921964A7D200DB8ED7 /* UIStoryboardSegue+Utility.m in Sources */,
 				3CD18D8F1964A7D200DB8ED7 /* UIMenuController+Utility.m in Sources */,

@@ -11,7 +11,8 @@
 #import "Config.h"
 
 #import "CoreData.h"
-#import "Utility.h"
-#import "View+Templating.h"
+#import "ThirdParty.h"
 #import "Segues.h"
+#import "Utility.h"
 #import "Views.h"
+#import "View+Templating.h"

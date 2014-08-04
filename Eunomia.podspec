@@ -19,4 +19,46 @@ Pod::Spec.new do |s|
 
   s.dependency 'CocoaLumberjack'
 
+  s.subspec 'Core' do |ss|
+  end
+  
+  s.subspec 'NSLogger' do |ss|
+    ss.dependency 'NSLogger'
+    ss.prefix_header_contents = "#define USE_NSLOGGER 1"
+  end
+  
+  s.subspec "Crashlytics" do |ss|
+    ss.dependency 'CrashlyticsFramework'
+    ss.dependency 'CrashlyticsLumberjack'
+    ss.prefix_header_contents = "#define USE_CRASHLYTICS 1"
+  end
+  
+  s.subspec "TestFlight" do |ss|
+    ss.dependency 'TestFlightSDK'
+    ss.dependency 'TestFlightLogger'
+    ss.prefix_header_contents = "#define USE_TEST_FLIGHT 1"
+  end
+  
+  s.subspec "Applause" do |ss|
+    ss.prefix_header_contents = "#define USE_APPLAUSE 1"
+  end
+  
+  s.subspec "ARAnalytics" do |ss|
+    ss.dependency 'ARAnalytics'
+    ss.prefix_header_contents = "#define USE_ARANALYTICS 1"
+  end
+  
+  s.subspec "PonyDebugger" do |ss|
+    ss.dependency 'PonyDebugger'
+#    ss.dependency 'PonyDebuggerLogger'
+    ss.prefix_header_contents = "#define USE_PONYDEBUGGER 1"
+  end
+  
+  s.subspec "Lookback" do |ss|
+    ss.dependency 'Lookback'
+    ss.prefix_header_contents = "#define USE_LOOKBACK 1"
+  end
+  
+  s.default_subspecs = 'Core'
+
 end
