@@ -35,10 +35,6 @@
 #import <TestFlightLogger/TestFlightLogger.h>
 #endif
 
-#if USE_APPLAUSE
-#import <Applause/APLLogger.h>
-#endif
-
 #if USE_ARANALYTICS
 #import <ARAnalytics/ARAnalytics.h>
 #endif
@@ -121,16 +117,6 @@
     [ThirdPartyWrapper addCocoaLumberjackLogger:[TestFlightLogger sharedInstance] ];
     
     NSLogInfo(@"Test Flight initialized");
-#endif
-}
-
-- (void)initApplauseAppKey:(NSString *)appKey
-{
-#if USE_APPLAUSE
-    [APLLogger startNewSessionWithApplicationKey:appKey];
-    
-    // TODO: Applause Logger
-    NSLogInfo(@"Applause initialized");
 #endif
 }
 

@@ -16,7 +16,6 @@
 - (void)initNSLogger;
 - (void)initCrashlyticsWithAPIKey:(NSString *)apiKey;
 - (void)initTestFlightWithAppToken:(NSString *)appToken;
-- (void)initApplauseAppKey:(NSString *)appKey;
 - (void)initARAnalyticsWithTokens:(NSDictionary *)initTokens;
 
 - (void)initPonyDebugger;

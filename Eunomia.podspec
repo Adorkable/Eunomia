@@ -40,10 +40,6 @@ Pod::Spec.new do |s|
     ss.prefix_header_contents = "#define USE_TEST_FLIGHT 1"
   end
   
-  s.subspec "Applause" do |ss|
-    ss.prefix_header_contents = "#define USE_APPLAUSE 1"
-  end
-  
   s.subspec "ARAnalytics_GoogleAnalytics" do |ss|
     ss.dependency 'ARAnalytics/GoogleAnalytics'
     ss.prefix_header_contents = "#define USE_ARANALYTICS 1"
