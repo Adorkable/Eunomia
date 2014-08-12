@@ -8,7 +8,7 @@
 
 #pragma once
 
-#import <CocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 #if DEBUG
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
