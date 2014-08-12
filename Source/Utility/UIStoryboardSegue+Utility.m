@@ -72,4 +72,16 @@
     }];
 }
 
+- (void)notifySegueFinishedAnimating:(id)object
+{
+    if ( [object conformsToProtocol:@protocol(AnimatedSegueViewController) ] )
+    {
+        id<AnimatedSegueViewController> animatedSegueViewController = object;
+        if ( [animatedSegueViewController respondsToSelector:@selector(segueFinishedAnimating:) ] )
+        {
+            [animatedSegueViewController segueFinishedAnimating:self];
+        }
+    }
+}
+
 @end

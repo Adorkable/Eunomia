@@ -12,4 +12,6 @@
 
 @property (readwrite) UIColor *placeholderTextColor;
 
+- (void)errorVibrate:(CGFloat)duration distance:(CGFloat)distance;
+
 @end

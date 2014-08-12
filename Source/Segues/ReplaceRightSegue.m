@@ -37,6 +37,9 @@
          } completion:^(BOOL finished) {
              [sourceView removeFromSuperview];
              [sourceViewController removeFromParentViewController];
+             
+             [self notifySegueFinishedAnimating:sourceViewController];
+             [self notifySegueFinishedAnimating:destinationViewController];
          } ];
     }];
 }

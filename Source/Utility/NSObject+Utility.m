@@ -12,7 +12,10 @@
 
 @implementation NSObject (Eunomia_Utility)
 
-
+- (NSString *)objectPerminentKey
+{
+    return [NSString stringWithFormat:@"%@ %p", [self class], self];
+}
 
 - (void)registerForKeyboardNotifications
 {

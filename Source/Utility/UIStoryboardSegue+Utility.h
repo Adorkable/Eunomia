@@ -16,4 +16,13 @@
 - (void)performIfViewsAreAvailableOrReplace:(void(^)(UIViewController *sourceViewController, UIViewController *destinationViewController, UIView *sourceView, UIView *destinationView) )performIfViewsAreAvailable;
 - (void)performIfViewsWithParentAreAvailableOrReplace:(void(^)(UIViewController *sourceViewController, UIViewController *destinationViewController, UIViewController *parentViewController, UIView *sourceView, UIView *destinationView, UIView *parentView) )performIfViewsAreAvailable;
 
+- (void)notifySegueFinishedAnimating:(id)object;
+
+@end
+
+@protocol AnimatedSegueViewController <NSObject>
+
+@optional
+- (void)segueFinishedAnimating:(UIStoryboardSegue *)segue;
+
 @end

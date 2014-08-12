@@ -13,4 +13,6 @@
 // TODO: random string without repeat
 + (NSString *)randomStringOfLength:(NSUInteger)length withAllowedCharacters:(NSString *)allowedCharacters;
 
+- (BOOL)validEmail;
+
 @end

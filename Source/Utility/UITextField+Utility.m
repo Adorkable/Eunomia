@@ -38,4 +38,37 @@
     return result;
 }
 
+- (void)errorVibrate:(CGFloat)duration distance:(CGFloat)distance
+{
+    CGFloat keyframeDuration = duration / 4;
+    CGRect originalFrame = self.frame;
+    [UIView animateKeyframesWithDuration:duration
+                                   delay:0.0f
+                                 options:UIViewKeyframeAnimationOptionCalculationModeLinear
+                              animations:^
+     {
+         [UIView addKeyframeWithRelativeStartTime:keyframeDuration * 0
+                                 relativeDuration:keyframeDuration
+                                       animations:^
+          {
+              self.transform = CGAffineTransformTranslate(self.transform, -distance, 0);
+          }];
+         [UIView addKeyframeWithRelativeStartTime:keyframeDuration * 1
+                                 relativeDuration:keyframeDuration * 2
+                                       animations:^
+          {
+              self.transform = CGAffineTransformTranslate(self.transform, distance * 2, 0);
+          }];
+         [UIView addKeyframeWithRelativeStartTime:keyframeDuration * 3
+                                 relativeDuration:keyframeDuration * 2
+                                       animations:^
+          {
+              self.frame = originalFrame;
+          }];
+     } completion:^(BOOL finished)
+     {
+         
+     }];
+}
+
 @end

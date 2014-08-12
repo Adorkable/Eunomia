@@ -12,12 +12,17 @@
 
 #import "NSObject+Utility.h"
 
+#import "NSBundle+Utility.h"
+
 #import "JSContext+Utility.h"
 
 #import "UIMenuController+Utility.h"
 
 #import "NSString+Utility.h"
 #import "NSMutableString+Utility.h"
+
+#import "NSMutableArray+Utility.h"
+#import "NSMutableDictionary+Utility.h"
 
 #import "UIColor+Utility.h"
 #import "UIImage+Utility.h"

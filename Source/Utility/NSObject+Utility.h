@@ -10,6 +10,8 @@
 
 @interface NSObject (Eunomia_Utility)
 
+@property (readonly) NSString *objectPerminentKey;
+
 - (void)registerForKeyboardNotifications;
 - (void)unregisterForKeyboardNotifications;
 - (void)keyboardWillShowWithBeginFrame:(CGRect)beginFrame

@@ -23,6 +23,7 @@
         
         UIImage *snapshot = [sourceView snapshotView];
         UIImageView *zoomView = [ [UIImageView alloc] initWithImage:snapshot];
+        zoomView.contentMode = UIViewContentModeScaleToFill;
         
         [parentViewController addChildViewController:destinationViewController];
         [parentView addSubview:destinationView];
@@ -51,6 +52,10 @@
             }
             
             [zoomView removeFromSuperview];
+            
+            [self notifySegueFinishedAnimating:sourceViewController];
+            [self notifySegueFinishedAnimating:destinationViewController];
+
         }];
         
     }];

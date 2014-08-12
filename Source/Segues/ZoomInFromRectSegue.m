@@ -52,6 +52,10 @@
             [parentView addSubview:destinationView];
 
             [zoomView removeFromSuperview];
+            
+            [self notifySegueFinishedAnimating:sourceViewController];
+            [self notifySegueFinishedAnimating:destinationViewController];
+
         }];
         
     }];
