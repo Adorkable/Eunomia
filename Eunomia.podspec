@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'NSLogger' do |ss|
     ss.dependency 'NSLogger'
+    ss.dependency 'NSLogger-CocoaLumberjack-connector'
     ss.prefix_header_contents = "#define USE_NSLOGGER 1"
   end
   
