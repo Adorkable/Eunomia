@@ -11,3 +11,14 @@ target "EunomiaTests" do
     pod 'OCMock'
 end
 
+target "Full Build Test" do
+    pod 'Eunomia', :path => '.'
+    pod 'Eunomia/NSLogger', :path => '.'
+    pod 'Eunomia/Crashlytics', :path => '.'
+    pod 'Eunomia/TestFlight', :path => '.'
+    pod 'Eunomia/Applause', :path => '.'
+    pod 'Eunomia/ARAnalytics_GoogleAnalytics', :path => '.'
+    pod 'Eunomia/PonyDebugger', :path => '.'
+    pod 'Eunomia/Lookback', :path => '.'
+end
+
