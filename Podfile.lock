@@ -15,29 +15,29 @@ PODS:
   - CrashlyticsFramework (2.2.2)
   - CrashlyticsLumberjack (1.0.1):
     - CocoaLumberjack/Core
-  - Eunomia (1.5.0):
+  - Eunomia (1.6.0):
     - CocoaLumberjack
     - Eunomia/Core
-  - Eunomia/ARAnalytics_GoogleAnalytics (1.5.0):
+  - Eunomia/ARAnalytics_GoogleAnalytics (1.6.0):
     - ARAnalytics/GoogleAnalytics
     - CocoaLumberjack
-  - Eunomia/Core (1.5.0):
+  - Eunomia/Core (1.6.0):
     - CocoaLumberjack
-  - Eunomia/Crashlytics (1.5.0):
+  - Eunomia/Crashlytics (1.6.0):
     - CocoaLumberjack
     - CrashlyticsFramework
     - CrashlyticsLumberjack
-  - Eunomia/Lookback (1.5.0):
+  - Eunomia/Lookback (1.6.0):
     - CocoaLumberjack
     - Lookback
-  - Eunomia/NSLogger (1.5.0):
+  - Eunomia/NSLogger (1.6.0):
     - CocoaLumberjack
     - NSLogger
     - NSLogger-CocoaLumberjack-connector
-  - Eunomia/PonyDebugger (1.5.0):
+  - Eunomia/PonyDebugger (1.6.0):
     - CocoaLumberjack
     - PonyDebugger
-  - Eunomia/TestFlight (1.5.0):
+  - Eunomia/TestFlight (1.6.0):
     - CocoaLumberjack
     - TestFlightLogger
     - TestFlightSDK
@@ -60,27 +60,27 @@ PODS:
 
 DEPENDENCIES:
   - CocoaLumberjack
-  - Eunomia (from `.`)
-  - Eunomia/ARAnalytics_GoogleAnalytics (from `.`)
-  - Eunomia/Crashlytics (from `.`)
-  - Eunomia/Lookback (from `.`)
-  - Eunomia/NSLogger (from `.`)
-  - Eunomia/PonyDebugger (from `.`)
-  - Eunomia/TestFlight (from `.`)
+  - Eunomia (from `./`)
+  - Eunomia/ARAnalytics_GoogleAnalytics (from `./`)
+  - Eunomia/Crashlytics (from `./`)
+  - Eunomia/Lookback (from `./`)
+  - Eunomia/NSLogger (from `./`)
+  - Eunomia/PonyDebugger (from `./`)
+  - Eunomia/TestFlight (from `./`)
   - Expecta
   - OCMock
   - Specta
 
 EXTERNAL SOURCES:
   Eunomia:
-    :path: .
+    :path: ./
 
 SPEC CHECKSUMS:
   ARAnalytics: 9b56fa1385710cd8afca391b2ee578f81d6bb389
   CocoaLumberjack: aadc76d7bd6c839ca84b38ed50cbf89d7cf8c693
   CrashlyticsFramework: bce4c0e83b50f22aafde946b41a34a6b8ca7acd0
   CrashlyticsLumberjack: b2a184319db06a070ccc176c07c503720ebedf81
-  Eunomia: 9906d4b62a32dd6b727359141ea96880e149f36d
+  Eunomia: a7f8663d8d52fd134eebb17d02d8de5dc8c9405d
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
   Lookback: b95ec58d73b9a706735df6230dc83dbb62831abb
