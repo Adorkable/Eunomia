@@ -15,4 +15,6 @@
 
 - (id)objectForKeyObject:(NSObject *)aKey;
 
+- (void)removeObjectForKeyObject:(NSObject *)aKey;
+
 @end

@@ -33,4 +33,9 @@
     return [self objectForKey:aKey.objectPerminentKey];
 }
 
+- (void)removeObjectForKeyObject:(NSObject *)aKey
+{
+    [self removeObjectForKey:aKey.objectPerminentKey];
+}
+
 @end
