@@ -3,6 +3,7 @@
 
 target "Eunomia" do
     pod 'CocoaLumberjack'
+    pod 'SegueingInfo'
 end
 
 target "EunomiaTests" do

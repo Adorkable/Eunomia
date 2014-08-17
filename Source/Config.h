@@ -9,6 +9,7 @@
 #pragma once
 
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import <SegueingInfo/SegueingInfo.h>
 
 #if DEBUG
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;

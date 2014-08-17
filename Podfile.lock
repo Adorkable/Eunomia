@@ -15,30 +15,38 @@ PODS:
   - CrashlyticsFramework (2.2.2)
   - CrashlyticsLumberjack (1.0.1):
     - CocoaLumberjack/Core
-  - Eunomia (1.6.0):
+  - Eunomia (1.6.1):
     - CocoaLumberjack
     - Eunomia/Core
-  - Eunomia/ARAnalytics_GoogleAnalytics (1.6.0):
+    - SegueingInfo
+  - Eunomia/ARAnalytics_GoogleAnalytics (1.6.1):
     - ARAnalytics/GoogleAnalytics
     - CocoaLumberjack
-  - Eunomia/Core (1.6.0):
+    - SegueingInfo
+  - Eunomia/Core (1.6.1):
     - CocoaLumberjack
-  - Eunomia/Crashlytics (1.6.0):
+    - SegueingInfo
+  - Eunomia/Crashlytics (1.6.1):
     - CocoaLumberjack
     - CrashlyticsFramework
     - CrashlyticsLumberjack
-  - Eunomia/Lookback (1.6.0):
+    - SegueingInfo
+  - Eunomia/Lookback (1.6.1):
     - CocoaLumberjack
     - Lookback
-  - Eunomia/NSLogger (1.6.0):
+    - SegueingInfo
+  - Eunomia/NSLogger (1.6.1):
     - CocoaLumberjack
     - NSLogger
     - NSLogger-CocoaLumberjack-connector
-  - Eunomia/PonyDebugger (1.6.0):
+    - SegueingInfo
+  - Eunomia/PonyDebugger (1.6.1):
     - CocoaLumberjack
     - PonyDebugger
-  - Eunomia/TestFlight (1.6.0):
+    - SegueingInfo
+  - Eunomia/TestFlight (1.6.1):
     - CocoaLumberjack
+    - SegueingInfo
     - TestFlightLogger
     - TestFlightSDK
   - Expecta (0.3.1)
@@ -49,8 +57,9 @@ PODS:
     - CocoaLumberjack
     - NSLogger
   - OCMock (3.0.2)
-  - PonyDebugger (0.3.1):
+  - PonyDebugger (0.4.0):
     - SocketRocket
+  - SegueingInfo (1.0.0)
   - SocketRocket (0.3.1-beta2)
   - Specta (0.2.1)
   - TestFlightLogger (0.0.3):
@@ -69,6 +78,7 @@ DEPENDENCIES:
   - Eunomia/TestFlight (from `./`)
   - Expecta
   - OCMock
+  - SegueingInfo
   - Specta
 
 EXTERNAL SOURCES:
@@ -80,14 +90,15 @@ SPEC CHECKSUMS:
   CocoaLumberjack: aadc76d7bd6c839ca84b38ed50cbf89d7cf8c693
   CrashlyticsFramework: bce4c0e83b50f22aafde946b41a34a6b8ca7acd0
   CrashlyticsLumberjack: b2a184319db06a070ccc176c07c503720ebedf81
-  Eunomia: a7f8663d8d52fd134eebb17d02d8de5dc8c9405d
+  Eunomia: 9eb062ebecfec9c95caaefeb9b13f04fa4e8f82b
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
   Lookback: b95ec58d73b9a706735df6230dc83dbb62831abb
   NSLogger: 3df5dca5dcbf99fe1e5c54931e44880f6e7eb089
   NSLogger-CocoaLumberjack-connector: 8f659ea51386f0a0e8c2643bf9273010a83a15f5
   OCMock: b9836ab89d8d5e66cbe6333f93857037c310ee62
-  PonyDebugger: 256e19c15c093e15f950f92b1a5017f3feb3c87e
+  PonyDebugger: 4f43d7c2f67aa5e26ca00ce6983421608a6eca6d
+  SegueingInfo: 674b86e23d6db7f005e146919fef0e3078f70efb
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
   Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
   TestFlightLogger: 755fa3745846e413787a2ec7d5cb531e5966de36
