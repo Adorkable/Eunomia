@@ -16,14 +16,4 @@
            inParentViewController:(BOOL)inParentViewController
             andRootViewController:(BOOL)replaceRootViewController;
 
-+ (void)prepareDestinationViewControllerForSegue:(UIStoryboardSegue *)segue withSender:(id)sender;
-
 @end
-
-@protocol SegueingViewController <NSObject>
-
-@required
-- (void)destinationPrepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
-
-@end
-
