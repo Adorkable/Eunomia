@@ -22,5 +22,6 @@
                               endFrame:(CGRect)endFrame
                               duration:(double)duration
                         animationCurve:(UIViewAnimationCurve)animationCurve;
+- (void)alignWithKeyboardBeginFrame:(CGRect)beginFrame endFrame:(CGRect)endFrame duration:(double)duration animationCurve:(UIViewAnimationCurve)animationCurve;
 
 @end
