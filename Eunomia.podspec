@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://bitbucket.org/yoiang/eunomia", :tag => "1.6.4" }
 
-  s.source_files = "Source/**/*.{h,m}"
+  s.source_files = "Source/*.{h,m}", "Source/Core/**/*.{h,m}", "Source/ThirdParty/*.{h,m}", "Source/ThirdParty/CocoaLumberjack/*.{h,m}"
 
-  s.public_header_files = "Source/**/*.h"
+  s.public_header_files = "Source/*.h", "Source/Core/**/*.h", "Source/ThirdParty/*.h", "Source/ThirdParty/CocoaLumberjack/*.h"
 
   s.requires_arc = true
 
@@ -44,6 +44,9 @@ Pod::Spec.new do |s|
   s.subspec "ARAnalytics_GoogleAnalytics" do |ss|
     ss.dependency 'ARAnalytics/GoogleAnalytics'
     ss.prefix_header_contents = "#define USE_ARANALYTICS 1"
+
+    ss.source_files = "Source/ThirdParty/ARAnalytics/*.{h,m}"
+    ss.public_header_files = "Source/ThirdParty/ARAnalytics/*.h"
   end
   
   s.subspec "PonyDebugger" do |ss|
@@ -56,7 +59,15 @@ Pod::Spec.new do |s|
     ss.dependency 'Lookback'
     ss.prefix_header_contents = "#define USE_LOOKBACK 1"
   end
-  
+
+  s.subspec "SSDataSources" do |ss|
+    ss.dependency 'SSDataSources'
+    ss.prefix_header_contents = "#define USE_SSDATASOURCES 1"
+
+    ss.source_files = "Source/ThirdParty/SSDataSources/*.{h,m}"
+    ss.public_header_files = "Source/ThirdParty/SSDataSources/*.h"
+  end
+
   s.default_subspecs = 'Core'
 
 end
