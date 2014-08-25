@@ -11,6 +11,7 @@
 #import "Config.h"
 
 #import "CoreData.h"
+#import "Exceptions.h"
 #import "ThirdParty.h"
 #import "Segues.h"
 #import "Utility.h"

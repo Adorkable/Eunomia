@@ -13,12 +13,12 @@ target "EunomiaTests" do
 end
 
 target "Full Build Test" do
-    pod 'Eunomia', :path => './'
-    pod 'Eunomia/NSLogger', :path => './'
-    pod 'Eunomia/Crashlytics', :path => './'
-    pod 'Eunomia/TestFlight', :path => './'
-    pod 'Eunomia/ARAnalytics_GoogleAnalytics', :path => './'
-    pod 'Eunomia/PonyDebugger', :path => './'
-    pod 'Eunomia/Lookback', :path => './'
+    pod 'Eunomia', :path => './Eunomia.podspec'
+    pod 'Eunomia/NSLogger', :path => './Eunomia.podspec'
+    pod 'Eunomia/Crashlytics', :path => './Eunomia.podspec'
+    pod 'Eunomia/TestFlight', :path => './Eunomia.podspec'
+    pod 'Eunomia/ARAnalytics_GoogleAnalytics', :path => './Eunomia.podspec'
+    pod 'Eunomia/PonyDebugger', :path => './Eunomia.podspec'
+    pod 'Eunomia/Lookback', :path => './Eunomia.podspec'
 end
 

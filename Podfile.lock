@@ -15,36 +15,36 @@ PODS:
   - CrashlyticsFramework (2.2.2)
   - CrashlyticsLumberjack (1.0.1):
     - CocoaLumberjack/Core
-  - Eunomia (1.6.2):
+  - Eunomia (1.6.3):
     - CocoaLumberjack
     - Eunomia/Core
     - SegueingInfo
-  - Eunomia/ARAnalytics_GoogleAnalytics (1.6.2):
+  - Eunomia/ARAnalytics_GoogleAnalytics (1.6.3):
     - ARAnalytics/GoogleAnalytics
     - CocoaLumberjack
     - SegueingInfo
-  - Eunomia/Core (1.6.2):
+  - Eunomia/Core (1.6.3):
     - CocoaLumberjack
     - SegueingInfo
-  - Eunomia/Crashlytics (1.6.2):
+  - Eunomia/Crashlytics (1.6.3):
     - CocoaLumberjack
     - CrashlyticsFramework
     - CrashlyticsLumberjack
     - SegueingInfo
-  - Eunomia/Lookback (1.6.2):
+  - Eunomia/Lookback (1.6.3):
     - CocoaLumberjack
     - Lookback
     - SegueingInfo
-  - Eunomia/NSLogger (1.6.2):
+  - Eunomia/NSLogger (1.6.3):
     - CocoaLumberjack
     - NSLogger
     - NSLogger-CocoaLumberjack-connector
     - SegueingInfo
-  - Eunomia/PonyDebugger (1.6.2):
+  - Eunomia/PonyDebugger (1.6.3):
     - CocoaLumberjack
     - PonyDebugger
     - SegueingInfo
-  - Eunomia/TestFlight (1.6.2):
+  - Eunomia/TestFlight (1.6.3):
     - CocoaLumberjack
     - SegueingInfo
     - TestFlightLogger
@@ -69,13 +69,13 @@ PODS:
 
 DEPENDENCIES:
   - CocoaLumberjack
-  - Eunomia (from `./`)
-  - Eunomia/ARAnalytics_GoogleAnalytics (from `./`)
-  - Eunomia/Crashlytics (from `./`)
-  - Eunomia/Lookback (from `./`)
-  - Eunomia/NSLogger (from `./`)
-  - Eunomia/PonyDebugger (from `./`)
-  - Eunomia/TestFlight (from `./`)
+  - Eunomia (from `./Eunomia.podspec`)
+  - Eunomia/ARAnalytics_GoogleAnalytics (from `./Eunomia.podspec`)
+  - Eunomia/Crashlytics (from `./Eunomia.podspec`)
+  - Eunomia/Lookback (from `./Eunomia.podspec`)
+  - Eunomia/NSLogger (from `./Eunomia.podspec`)
+  - Eunomia/PonyDebugger (from `./Eunomia.podspec`)
+  - Eunomia/TestFlight (from `./Eunomia.podspec`)
   - Expecta
   - OCMock
   - SegueingInfo
@@ -83,14 +83,14 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Eunomia:
-    :path: ./
+    :path: ./Eunomia.podspec
 
 SPEC CHECKSUMS:
   ARAnalytics: 9b56fa1385710cd8afca391b2ee578f81d6bb389
   CocoaLumberjack: aadc76d7bd6c839ca84b38ed50cbf89d7cf8c693
   CrashlyticsFramework: bce4c0e83b50f22aafde946b41a34a6b8ca7acd0
   CrashlyticsLumberjack: b2a184319db06a070ccc176c07c503720ebedf81
-  Eunomia: 939697b4b4477bdfc8cc5988d583769e2e64cc6f
+  Eunomia: bf0c3fe07df3baa315b33df9b577c3a5e3b21049
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
   Lookback: b95ec58d73b9a706735df6230dc83dbb62831abb

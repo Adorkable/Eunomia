@@ -10,6 +10,8 @@
 		30D98CC76E8E4F04885388B0 /* libPods-Full Build Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD399F081174AEC9BC9B1B2 /* libPods-Full Build Test.a */; };
 		3C0479C7198A8BE400109D96 /* ReplaceDownSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0479C4198A8BE400109D96 /* ReplaceDownSegue.m */; };
 		3C0479C8198A8BE400109D96 /* ReplaceUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0479C6198A8BE400109D96 /* ReplaceUpSegue.m */; };
+		3C357D9D19AB9EF300FCD7A9 /* NSManagedObject+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C357D9C19AB9EF300FCD7A9 /* NSManagedObject+Utility.m */; };
+		3C357DA319AB9F8700FCD7A9 /* MissingSubclassOverrideException.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C357DA219AB9F8700FCD7A9 /* MissingSubclassOverrideException.m */; };
 		3C371BD719853F4E008503FE /* UITextView+TemplatingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BD519853F4E008503FE /* UITextView+TemplatingSpec.m */; };
 		3C371BD819853F4E008503FE /* UIView+TemplatingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */; };
 		3C371BDB19854EBE008503FE /* LaunchViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BDA19854EBE008503FE /* LaunchViewSpec.m */; };
@@ -106,6 +108,11 @@
 		3C0479C4198A8BE400109D96 /* ReplaceDownSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceDownSegue.m; sourceTree = "<group>"; };
 		3C0479C5198A8BE400109D96 /* ReplaceUpSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceUpSegue.h; sourceTree = "<group>"; };
 		3C0479C6198A8BE400109D96 /* ReplaceUpSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceUpSegue.m; sourceTree = "<group>"; };
+		3C357D9B19AB9EF300FCD7A9 /* NSManagedObject+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Utility.h"; sourceTree = "<group>"; };
+		3C357D9C19AB9EF300FCD7A9 /* NSManagedObject+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Utility.m"; sourceTree = "<group>"; };
+		3C357DA119AB9F8700FCD7A9 /* MissingSubclassOverrideException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingSubclassOverrideException.h; sourceTree = "<group>"; };
+		3C357DA219AB9F8700FCD7A9 /* MissingSubclassOverrideException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissingSubclassOverrideException.m; sourceTree = "<group>"; };
+		3C357DA419AB9F9400FCD7A9 /* Exceptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exceptions.h; sourceTree = "<group>"; };
 		3C371BD519853F4E008503FE /* UITextView+TemplatingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TemplatingSpec.m"; sourceTree = "<group>"; };
 		3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TemplatingSpec.m"; sourceTree = "<group>"; };
 		3C371BDA19854EBE008503FE /* LaunchViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewSpec.m; sourceTree = "<group>"; };
@@ -246,6 +253,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C357DA019AB9F7000FCD7A9 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				3C357DA119AB9F8700FCD7A9 /* MissingSubclassOverrideException.h */,
+				3C357DA219AB9F8700FCD7A9 /* MissingSubclassOverrideException.m */,
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
 		3C371BD319853F20008503FE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +407,8 @@
 				3C65DDCE1965A9B8009C714B /* Config.h */,
 				3C9280801984951900D3B07D /* CoreData.h */,
 				3C9280811984953E00D3B07D /* CoreData */,
+				3C357DA419AB9F9400FCD7A9 /* Exceptions.h */,
+				3C357DA019AB9F7000FCD7A9 /* Exceptions */,
 				3CABCD0219835D1E003AA850 /* Segues.h */,
 				3CABCCF919835D1E003AA850 /* Segues */,
 				3C741E05198F34DA00461822 /* ThirdParty.h */,
@@ -409,6 +427,8 @@
 		3CD18D241964A6ED00DB8ED7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3C357D9B19AB9EF300FCD7A9 /* NSManagedObject+Utility.h */,
+				3C357D9C19AB9EF300FCD7A9 /* NSManagedObject+Utility.m */,
 				3CEE65C3199A68CF000E1278 /* NSBundle+Utility.h */,
 				3CEE65C4199A68CF000E1278 /* NSBundle+Utility.m */,
 				3CEE65C5199A68CF000E1278 /* NSMutableArray+Utility.h */,
@@ -725,6 +745,7 @@
 				3CD18D8D1964A7D200DB8ED7 /* UIColor+Utility.m in Sources */,
 				3C65DDCC1965A8D8009C714B /* UIView+Templating.m in Sources */,
 				3CC133F61968FD3700E614FC /* UIImage+Utility.m in Sources */,
+				3C357DA319AB9F8700FCD7A9 /* MissingSubclassOverrideException.m in Sources */,
 				3CD18D971964A7D200DB8ED7 /* UIWebView+Utility.m in Sources */,
 				3C65DDCA1965A8D8009C714B /* UITextField+Templating.m in Sources */,
 				3CEE65CB199A68CF000E1278 /* NSMutableDictionary+Utility.m in Sources */,
@@ -746,6 +767,7 @@
 				3CABCD0E19835D73003AA850 /* UIPinchGestureRecognizer+Utility.m in Sources */,
 				3CABCD0419835D1E003AA850 /* ReplaceRightSegue.m in Sources */,
 				3CD18D881964A7D200DB8ED7 /* NSNotification+Utility.m in Sources */,
+				3C357D9D19AB9EF300FCD7A9 /* NSManagedObject+Utility.m in Sources */,
 				3C65DDCB1965A8D8009C714B /* UITextView+Templating.m in Sources */,
 				3C9280841984956600D3B07D /* CoreDataStore.m in Sources */,
 				3CD18D951964A7D200DB8ED7 /* UIView+Utility.m in Sources */,

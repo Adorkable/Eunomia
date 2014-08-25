@@ -38,4 +38,17 @@
     [self removeObjectForKey:aKey.objectPerminentKey];
 }
 
+- (id)keyForObject:(id)object
+{
+    __block id result;
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if (obj == object)
+        {
+            result = key;
+            *stop = YES;
+        }
+    }];
+    return result;
+}
+
 @end

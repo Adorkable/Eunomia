@@ -9,6 +9,6 @@
 
 @interface NSManagedObjectContext (Eunomia_Utility)
 
-- (BOOL)saveAndLogError:(NSString *)usageContext;
+- (BOOL)saveAndLogError:(NSString *)usageContext; // rename to saveOrLogError
 
 @end
