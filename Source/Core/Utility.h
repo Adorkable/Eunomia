@@ -33,6 +33,7 @@
 
 #import "NSFetchedResultsController+Utility.h"
 #import "NSManagedObjectContext+Utility.h"
+#import "NSManagedObject+Utility.h"
 
 #import "UILongPressGestureRecognizer+Utility.h"
 #import "UIPanGestureRecognizer+Utility.h"
