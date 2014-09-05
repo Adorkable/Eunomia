@@ -28,25 +28,20 @@
         
         [self doTransferSubviewPrep];
         
-        [parentViewController transitionFromViewController:sourceViewController
-                                          toViewController:destinationViewController
-                                                  duration:0.2f
-                                                   options:UIViewAnimationOptionCurveEaseInOut
-                                                animations:^
-         {
-             sourceView.transform = CGAffineTransformMakeTranslation(sourceView.frame.size.width, 0.f);
-             destinationView.transform = CGAffineTransformMakeTranslation(destinationView.frame.size.width, 0.0f);
-             
-             [self doTransferSubviewDestinationFrame];
-         } completion:^(BOOL finished) {
-             [self doTransferSubviewCompleteAnimation];
-             
-             [sourceView removeFromSuperview];
-             [sourceViewController removeFromParentViewController];
-             
-             [self notifySegueFinishedAnimating:sourceViewController];
-             [self notifySegueFinishedAnimating:destinationViewController];
-         } ];
+        [UIView animateWithDuration:0.2f animations:^{
+            sourceView.transform = CGAffineTransformMakeTranslation(sourceView.frame.size.width, 0.f);
+            destinationView.transform = CGAffineTransformMakeTranslation(destinationView.frame.size.width, 0.0f);
+            
+            [self doTransferSubviewDestinationFrame];
+        } completion:^(BOOL finished) {
+            [self doTransferSubviewCompleteAnimation];
+            
+            [sourceView removeFromSuperview];
+            [sourceViewController removeFromParentViewController];
+            
+            [self notifySegueFinishedAnimating:sourceViewController];
+            [self notifySegueFinishedAnimating:destinationViewController];
+        }];
     }];
 }
 
