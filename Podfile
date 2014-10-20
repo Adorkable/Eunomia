@@ -1,3 +1,6 @@
+#source 'https://bitbucket.org/yoiang/adorkable-cocoapods.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 # Uncomment this line to define a global platform for your project
 # platform :ios, "6.0"
 

@@ -229,10 +229,13 @@
 		3CEE65DA199A69E2000E1278 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3CEE65DD199A69E2000E1278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CEE65DF199A69E2000E1278 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3DB77B8747864CFC8A0BA0FF /* Pods-Full Build Test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Full Build Test.xcconfig"; path = "Pods/Pods-Full Build Test.xcconfig"; sourceTree = "<group>"; };
-		963A5B68FEBC472790AF07AD /* Pods-Eunomia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.xcconfig"; path = "Pods/Pods-Eunomia.xcconfig"; sourceTree = "<group>"; };
+		447558BB9D0C61B0DD6146E0 /* Pods-EunomiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E1955000106703E5B3FDAFD /* Pods-Eunomia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia.release.xcconfig"; sourceTree = "<group>"; };
+		52B90BBE7C4F3E992EDB8C92 /* Pods-Full Build Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Full Build Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Full Build Test/Pods-Full Build Test.debug.xcconfig"; sourceTree = "<group>"; };
+		70945A04548DF89BA4CE0DD8 /* Pods-Eunomia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia.debug.xcconfig"; sourceTree = "<group>"; };
+		8F4B3B7A0FE91B89A913454F /* Pods-EunomiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests.release.xcconfig"; sourceTree = "<group>"; };
+		961DC122518F4E5F3675B339 /* Pods-Full Build Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Full Build Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Full Build Test/Pods-Full Build Test.release.xcconfig"; sourceTree = "<group>"; };
 		AA5B461D423C4CF789732C85 /* libPods-EunomiaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EunomiaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E82C17E98D574CB3B3CC06F2 /* Pods-EunomiaTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaTests.xcconfig"; path = "Pods/Pods-EunomiaTests.xcconfig"; sourceTree = "<group>"; };
 		FCD399F081174AEC9BC9B1B2 /* libPods-Full Build Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Full Build Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -325,9 +328,7 @@
 				3CEE65D1199A69E2000E1278 /* Full Build Test */,
 				3CD18CFA1964A60200DB8ED7 /* Frameworks */,
 				3CD18CF91964A60200DB8ED7 /* Products */,
-				963A5B68FEBC472790AF07AD /* Pods-Eunomia.xcconfig */,
-				E82C17E98D574CB3B3CC06F2 /* Pods-EunomiaTests.xcconfig */,
-				3DB77B8747864CFC8A0BA0FF /* Pods-Full Build Test.xcconfig */,
+				E7627BB40181C1F4296C0075 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -568,6 +569,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E7627BB40181C1F4296C0075 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70945A04548DF89BA4CE0DD8 /* Pods-Eunomia.debug.xcconfig */,
+				4E1955000106703E5B3FDAFD /* Pods-Eunomia.release.xcconfig */,
+				447558BB9D0C61B0DD6146E0 /* Pods-EunomiaTests.debug.xcconfig */,
+				8F4B3B7A0FE91B89A913454F /* Pods-EunomiaTests.release.xcconfig */,
+				52B90BBE7C4F3E992EDB8C92 /* Pods-Full Build Test.debug.xcconfig */,
+				961DC122518F4E5F3675B339 /* Pods-Full Build Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -698,7 +712,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Eunomia-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97C5E114E51E47A5833CFA49 /* Check Pods Manifest.lock */ = {
@@ -728,7 +742,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Full Build Test-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Full Build Test/Pods-Full Build Test-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBB18A834C254FB1BD92DD9F /* Copy Pods Resources */ = {
@@ -743,7 +757,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-EunomiaTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EE8E4790BA30483B8B31CDF1 /* Check Pods Manifest.lock */ = {
@@ -962,14 +976,17 @@
 		};
 		3CD18D801964A7B100DB8ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 963A5B68FEBC472790AF07AD /* Pods-Eunomia.xcconfig */;
+			baseConfigurationReference = 70945A04548DF89BA4CE0DD8 /* Pods-Eunomia.debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Eunomia.dst;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -977,10 +994,13 @@
 		};
 		3CD18D811964A7B100DB8ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 963A5B68FEBC472790AF07AD /* Pods-Eunomia.xcconfig */;
+			baseConfigurationReference = 4E1955000106703E5B3FDAFD /* Pods-Eunomia.release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Eunomia.dst;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -988,7 +1008,7 @@
 		};
 		3CD18D831964A7B100DB8ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E82C17E98D574CB3B3CC06F2 /* Pods-EunomiaTests.xcconfig */;
+			baseConfigurationReference = 447558BB9D0C61B0DD6146E0 /* Pods-EunomiaTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1009,7 +1029,7 @@
 		};
 		3CD18D841964A7B100DB8ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E82C17E98D574CB3B3CC06F2 /* Pods-EunomiaTests.xcconfig */;
+			baseConfigurationReference = 8F4B3B7A0FE91B89A913454F /* Pods-EunomiaTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1030,7 +1050,7 @@
 		};
 		3CEE65EE199A69E2000E1278 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DB77B8747864CFC8A0BA0FF /* Pods-Full Build Test.xcconfig */;
+			baseConfigurationReference = 52B90BBE7C4F3E992EDB8C92 /* Pods-Full Build Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1052,7 +1072,7 @@
 		};
 		3CEE65EF199A69E2000E1278 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DB77B8747864CFC8A0BA0FF /* Pods-Full Build Test.xcconfig */;
+			baseConfigurationReference = 961DC122518F4E5F3675B339 /* Pods-Full Build Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

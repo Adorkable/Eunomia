@@ -1,62 +1,62 @@
 PODS:
-  - ARAnalytics/CoreIOS (2.7.2)
-  - ARAnalytics/GoogleAnalytics (2.7.2):
+  - ARAnalytics/CoreIOS (2.8.0)
+  - ARAnalytics/GoogleAnalytics (2.8.0):
     - ARAnalytics/CoreIOS
     - GoogleAnalytics-iOS-SDK
-  - CocoaLumberjack (2.0.0-beta):
+  - CocoaLumberjack (2.0.0-beta2):
     - CocoaLumberjack/CLI
     - CocoaLumberjack/Core
     - CocoaLumberjack/Extensions
-  - CocoaLumberjack/CLI (2.0.0-beta):
+  - CocoaLumberjack/CLI (2.0.0-beta2):
     - CocoaLumberjack/Core
-  - CocoaLumberjack/Core (2.0.0-beta)
-  - CocoaLumberjack/Extensions (2.0.0-beta):
+  - CocoaLumberjack/Core (2.0.0-beta2)
+  - CocoaLumberjack/Extensions (2.0.0-beta2):
     - CocoaLumberjack/Core
-  - CrashlyticsFramework (2.2.2)
+  - CrashlyticsFramework (2.2.5)
   - CrashlyticsLumberjack (1.0.1):
     - CocoaLumberjack/Core
-  - Eunomia (1.6.4):
+  - Eunomia (1.7.2):
     - CocoaLumberjack
     - Eunomia/Core
     - SegueingInfo
-  - Eunomia/ARAnalytics_GoogleAnalytics (1.6.4):
+  - Eunomia/ARAnalytics_GoogleAnalytics (1.7.2):
     - ARAnalytics/GoogleAnalytics
     - CocoaLumberjack
     - SegueingInfo
-  - Eunomia/Core (1.6.4):
+  - Eunomia/Core (1.7.2):
     - CocoaLumberjack
     - SegueingInfo
-  - Eunomia/Crashlytics (1.6.4):
+  - Eunomia/Crashlytics (1.7.2):
     - CocoaLumberjack
     - CrashlyticsFramework
     - CrashlyticsLumberjack
     - SegueingInfo
-  - Eunomia/Lookback (1.6.4):
+  - Eunomia/Lookback (1.7.2):
     - CocoaLumberjack
     - Lookback
     - SegueingInfo
-  - Eunomia/NSLogger (1.6.4):
+  - Eunomia/NSLogger (1.7.2):
     - CocoaLumberjack
     - NSLogger
     - NSLogger-CocoaLumberjack-connector
     - SegueingInfo
-  - Eunomia/PonyDebugger (1.6.4):
+  - Eunomia/PonyDebugger (1.7.2):
     - CocoaLumberjack
     - PonyDebugger
     - SegueingInfo
-  - Eunomia/SSDataSources (1.6.4):
+  - Eunomia/SSDataSources (1.7.2):
     - CocoaLumberjack
     - SegueingInfo
     - SSDataSources
-  - Eunomia/TestFlight (1.6.4):
+  - Eunomia/TestFlight (1.7.2):
     - CocoaLumberjack
     - SegueingInfo
     - TestFlightLogger
     - TestFlightSDK
   - Expecta (0.3.1)
   - GoogleAnalytics-iOS-SDK (3.0.9)
-  - Lookback (0.6.4)
-  - NSLogger (1.2)
+  - Lookback (0.6.5)
+  - NSLogger (1.5)
   - NSLogger-CocoaLumberjack-connector (1.3):
     - CocoaLumberjack
     - NSLogger
@@ -66,7 +66,7 @@ PODS:
   - SegueingInfo (1.0.0)
   - SocketRocket (0.3.1-beta2)
   - Specta (0.2.1)
-  - SSDataSources (0.7.1)
+  - SSDataSources (0.7.3)
   - TestFlightLogger (0.0.3):
     - CocoaLumberjack
     - TestFlightSDK
@@ -92,23 +92,23 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  ARAnalytics: 9b56fa1385710cd8afca391b2ee578f81d6bb389
-  CocoaLumberjack: aadc76d7bd6c839ca84b38ed50cbf89d7cf8c693
-  CrashlyticsFramework: bce4c0e83b50f22aafde946b41a34a6b8ca7acd0
+  ARAnalytics: 93c5b65989145f88f4d45e262612eac277b0c219
+  CocoaLumberjack: 956d3fb98fed498a13d56499f262c975ef431c98
+  CrashlyticsFramework: 82d124501d97d3b5d49bd6209dea21c6b7f0a33d
   CrashlyticsLumberjack: b2a184319db06a070ccc176c07c503720ebedf81
-  Eunomia: 6a2e7e1d6df99d15275328b3138f2f955a30f7fe
+  Eunomia: c9be6e53fac680d3fcd6a417a24ae033afedbe0c
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
-  Lookback: b95ec58d73b9a706735df6230dc83dbb62831abb
-  NSLogger: 3df5dca5dcbf99fe1e5c54931e44880f6e7eb089
+  Lookback: 59f217e51c1f2bcdf23d00522ef14b66be8557d1
+  NSLogger: 84ed0bf00985df483153ce344d8171c9ec83be2b
   NSLogger-CocoaLumberjack-connector: 8f659ea51386f0a0e8c2643bf9273010a83a15f5
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
   PonyDebugger: 4f43d7c2f67aa5e26ca00ce6983421608a6eca6d
   SegueingInfo: 674b86e23d6db7f005e146919fef0e3078f70efb
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
   Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
-  SSDataSources: a92a102491a3f6ab45962577a7fe3784e7b20c2e
+  SSDataSources: 03687c54e8b215add71306556ee8cef0a5960b69
   TestFlightLogger: 755fa3745846e413787a2ec7d5cb531e5966de36
   TestFlightSDK: 0c24c533748d0d84bfe7a3cb6036fa79124d84ee
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.4
