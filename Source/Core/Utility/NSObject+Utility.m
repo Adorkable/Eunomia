@@ -12,12 +12,33 @@
 
 #import "Eunomia.h"
 
+#import <objc/runtime.h>
+
 @implementation NSObject (Eunomia_Utility)
 
 - (NSString *)objectPerminentKey
 {
     return [NSString stringWithFormat:@"%@ %p", [self class], self];
 }
+
+#pragma mark Runtime Properties
+
+- (void)setProtocolProperty:(NSString *)key value:(id)value storageType:(uintptr_t)storageType
+{
+    objc_setAssociatedObject(self, CFBridgingRetain(key), value, storageType);
+}
+
+- (void)setProtocolRetainProperty:(NSString *)key value:(id)value
+{
+    [self setProtocolProperty:key value:value storageType:OBJC_ASSOCIATION_RETAIN];
+}
+
+- (id)getProtocolProperty:(NSString *)key
+{
+    return objc_getAssociatedObject(self, CFBridgingRetain(key) );
+}
+
+#pragma mark Keyboard Notifications
 
 - (void)registerForKeyboardNotifications
 {

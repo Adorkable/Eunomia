@@ -10,8 +10,9 @@
 
 #import "UIViewController+Utility.h"
 
+#import "NSObject+Utility.h"
+
 #import "Eunomia.h"
-#import <objc/runtime.h>
 
 NSString *const Eunomia_Utility_UIStoryboardSegue_DoTransferSubviewKey = @"Eunomia_Utility_UIStoryboardSegue_DoTransferSubview";
 NSString *const Eunomia_Utility_UIStoryboardSegue_TransferSubviewKey = @"Eunomia_Utility_UIStoryboardSegue_TransferSubview";
@@ -240,13 +241,14 @@ NSString *const Eunomia_Utility_UIStoryboardSegue_TransferSubviewHeightKey = @"E
 
 - (void)setDoTransferSubview:(BOOL)doTransferSubview
 {
-    SetProtocolProperty( [NSNumber numberWithBool:doTransferSubview], Eunomia_Utility_UIStoryboardSegue_DoTransferSubviewKey);
+    [self setProtocolRetainProperty:Eunomia_Utility_UIStoryboardSegue_DoTransferSubviewKey
+                              value:[NSNumber numberWithBool:doTransferSubview] ];
 }
 
 - (BOOL)doTransferSubview
 {
     BOOL result = NO;
-    id object = GetProtocolProperty(Eunomia_Utility_UIStoryboardSegue_DoTransferSubviewKey);
+    id object = [self getProtocolProperty:Eunomia_Utility_UIStoryboardSegue_DoTransferSubviewKey];
     if ( [object isKindOfClass:[NSNumber class] ] )
     {
         NSNumber *number = object;

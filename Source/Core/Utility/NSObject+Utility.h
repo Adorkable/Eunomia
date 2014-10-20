@@ -10,7 +10,11 @@
 
 @interface NSObject (Eunomia_Utility)
 
-@property (readonly) NSString *objectPerminentKey;
+@property (readonly) NSString *objectPerminentKey; // TODO: is this necessary? NSObject.hash
+
+- (void)setProtocolProperty:(NSString *)key value:(id)value storageType:(uintptr_t)storageType;
+- (void)setProtocolRetainProperty:(NSString *)key value:(id)value;
+- (id)getProtocolProperty:(NSString *)key;
 
 - (void)registerForKeyboardNotifications;
 - (void)unregisterForKeyboardNotifications;
