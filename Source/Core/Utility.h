@@ -24,8 +24,12 @@
 #import "NSMutableArray+Utility.h"
 #import "NSMutableDictionary+Utility.h"
 
+#import "NSCharacterSet+Utility.h"
+
 #import "UIColor+Utility.h"
 #import "UIImage+Utility.h"
+
+#import "UIBarItem+Utility.h"
 
 #import "UIStoryboardSegue+Utility.h"
 

@@ -19,6 +19,8 @@
 		3CD18D761964A7B100DB8ED7 /* libEunomia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD18D631964A7B100DB8ED7 /* libEunomia.a */; };
 		3CD18D7C1964A7B100DB8ED7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD18D7A1964A7B100DB8ED7 /* InfoPlist.strings */; };
 		3CDA952419F57E920009A367 /* UIApplication+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA952319F57E920009A367 /* UIApplication+Utility.m */; };
+		3CDA953419F58E100009A367 /* NSCharacterSet+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA953319F58E100009A367 /* NSCharacterSet+Utility.m */; };
+		3CDA953719F58E920009A367 /* UIBarItem+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA953619F58E920009A367 /* UIBarItem+Utility.m */; };
 		3CE46F5719ABBF7700053E62 /* CoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F0019ABBF7700053E62 /* CoreDataStore.m */; };
 		3CE46F5819ABBF7700053E62 /* MissingSubclassOverrideException.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F0419ABBF7700053E62 /* MissingSubclassOverrideException.m */; };
 		3CE46F5919ABBF7700053E62 /* ReplaceDownSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F0819ABBF7700053E62 /* ReplaceDownSegue.m */; };
@@ -127,6 +129,10 @@
 		3CD18D991964AF2800DB8ED7 /* Eunomia.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Eunomia.podspec; sourceTree = "<group>"; };
 		3CDA952219F57E920009A367 /* UIApplication+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Utility.h"; sourceTree = "<group>"; };
 		3CDA952319F57E920009A367 /* UIApplication+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Utility.m"; sourceTree = "<group>"; };
+		3CDA953219F58E100009A367 /* NSCharacterSet+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCharacterSet+Utility.h"; sourceTree = "<group>"; };
+		3CDA953319F58E100009A367 /* NSCharacterSet+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+Utility.m"; sourceTree = "<group>"; };
+		3CDA953519F58E920009A367 /* UIBarItem+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarItem+Utility.h"; sourceTree = "<group>"; };
+		3CDA953619F58E920009A367 /* UIBarItem+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarItem+Utility.m"; sourceTree = "<group>"; };
 		3CE46EFF19ABBF7700053E62 /* CoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStore.h; sourceTree = "<group>"; };
 		3CE46F0019ABBF7700053E62 /* CoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStore.m; sourceTree = "<group>"; };
 		3CE46F0119ABBF7700053E62 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
@@ -487,6 +493,10 @@
 				3CE46F4419ABBF7700053E62 /* UIWebView+Utility.m */,
 				3CDA952219F57E920009A367 /* UIApplication+Utility.h */,
 				3CDA952319F57E920009A367 /* UIApplication+Utility.m */,
+				3CDA953219F58E100009A367 /* NSCharacterSet+Utility.h */,
+				3CDA953319F58E100009A367 /* NSCharacterSet+Utility.m */,
+				3CDA953519F58E920009A367 /* UIBarItem+Utility.h */,
+				3CDA953619F58E920009A367 /* UIBarItem+Utility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -816,6 +826,8 @@
 				3CE46F7A19ABBF7700053E62 /* UITextField+Templating.m in Sources */,
 				3CE46F6619ABBF7700053E62 /* NSMutableString+Utility.m in Sources */,
 				3CE46F7C19ABBF7700053E62 /* UIView+Templating.m in Sources */,
+				3CDA953719F58E920009A367 /* UIBarItem+Utility.m in Sources */,
+				3CDA953419F58E100009A367 /* NSCharacterSet+Utility.m in Sources */,
 				3CDA952419F57E920009A367 /* UIApplication+Utility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
