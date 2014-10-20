@@ -10,6 +10,8 @@
 
 #import "NSNotification+Utility.h"
 
+#import "Eunomia.h"
+
 @implementation NSObject (Eunomia_Utility)
 
 - (NSString *)objectPerminentKey
@@ -41,10 +43,10 @@
 
 - (void)keyboardWillShowWithNotification:(NSNotification *)notification
 {
-    CGRect beginFrame = [ [notification objectForInfoKey:@"UIKeyboardFrameBeginUserInfoKey"] CGRectValue];
-    CGRect endFrame = [ [notification objectForInfoKey:@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
-    double duration = [ [notification objectForInfoKey:@"UIKeyboardAnimationDurationUserInfoKey"] floatValue];
-    UIViewAnimationCurve animationCurve = [ [notification objectForInfoKey:@"UIKeyboardAnimationCurveUserInfoKey"] intValue];
+    CGRect beginFrame = [ [notification objectForInfoKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endFrame = [ [notification objectForInfoKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    double duration = [ [notification objectForInfoKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    UIViewAnimationCurve animationCurve = [ [notification objectForInfoKey:UIKeyboardAnimationCurveUserInfoKey] intValue];
     
     [self keyboardWillShowWithBeginFrame:beginFrame endFrame:endFrame duration:duration animationCurve:animationCurve];
 }
@@ -59,10 +61,10 @@
 
 - (void)keyboardWillHideWithNotification:(NSNotification *)notification
 {
-    CGRect beginFrame = [ [notification objectForInfoKey:@"UIKeyboardFrameBeginUserInfoKey"] CGRectValue];
-    CGRect endFrame = [ [notification objectForInfoKey:@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
-    double duration = [ [notification objectForInfoKey:@"UIKeyboardAnimationDurationUserInfoKey"] floatValue];
-    UIViewAnimationCurve animationCurve = [ [notification objectForInfoKey:@"UIKeyboardAnimationCurveUserInfoKey"] intValue];
+    CGRect beginFrame = [ [notification objectForInfoKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endFrame = [ [notification objectForInfoKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    double duration = [ [notification objectForInfoKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    UIViewAnimationCurve animationCurve = [ [notification objectForInfoKey:UIKeyboardAnimationCurveUserInfoKey] intValue];
     
     [self keyboardWillHideWithBeginFrame:beginFrame endFrame:endFrame duration:duration animationCurve:animationCurve];
 }

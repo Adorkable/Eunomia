@@ -223,6 +223,25 @@
     return result;
 }
 
+- (BOOL)resignFirstResponderRecursively
+{
+    __block BOOL result = NO;
+    
+    result = [self resignFirstResponder];
+    if (!result)
+    {
+        [self.subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ( [obj isKindOfClass:[UIView class] ] )
+            {
+                UIView *view = obj;
+                result = [view resignFirstResponderRecursively];
+            }
+        }];
+    }
+    
+    return result;
+}
+
 - (UIImage *)snapshotView
 {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, 0.0f);

@@ -36,6 +36,8 @@
 - (UIView *)getClosestSuperViewOfProtocol:(Protocol *)protocol;
 - (UIView *)getClosestSuperViewWhichRespondsTo:(SEL)selector;
 
+- (BOOL)resignFirstResponderRecursively;
+
 - (UIImage *)snapshotView;
 
 @end
