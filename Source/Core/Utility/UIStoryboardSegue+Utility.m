@@ -203,11 +203,11 @@ NSString *const Eunomia_Utility_UIStoryboardSegue_TransferSubviewHeightKey = @"E
 {
     if (self.doTransferSubview)
     {
-        id<ReplaceSegueSourceViewController> replaceLeftSource;
+/*        id<ReplaceSegueSourceViewController> replaceLeftSource;
         if ( [self.sourceViewController conformsToProtocol:@protocol(ReplaceSegueSourceViewController) ] )
         {
             replaceLeftSource = (id<ReplaceSegueSourceViewController>)self.sourceViewController;
-        }
+        }*/
         
         id<ReplaceSegueDestinationViewController> replaceLeftDestination;
         if ( [self.destinationViewController conformsToProtocol:@protocol(ReplaceSegueDestinationViewController) ] )
