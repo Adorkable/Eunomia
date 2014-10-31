@@ -357,9 +357,18 @@
 
 - (NSFetchedResultsController *)fetchedResultsControllerWithEntityName:(NSString *)entityName andPredicate:(NSPredicate *)predicate
 {
+    return [self fetchedResultsControllerWithEntityName:entityName
+                                           andPredicate:predicate
+                                     andSortDescriptors:nil];
+}
+
+- (NSFetchedResultsController *)fetchedResultsControllerWithEntityName:(NSString *)entityName
+                                                          andPredicate:(NSPredicate *)predicate
+                                                    andSortDescriptors:(NSArray *)sortDescriptors
+{
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:entityName ];
     fetchRequest.predicate = predicate;
-    fetchRequest.sortDescriptors = @[ ];
+    fetchRequest.sortDescriptors = sortDescriptors;
     fetchRequest.includesSubentities = YES;
     //#if DEBUG
     //    fetchRequest.returnsObjectsAsFaults = NO;

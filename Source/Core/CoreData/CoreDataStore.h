@@ -22,6 +22,9 @@
 - (NSFetchedResultsController *)fetchedResultsController:(NSFetchRequest *)fetchResults;
 - (NSFetchedResultsController *)fetchedResultsControllerWithEntityName:(NSString *)entityName
                                                           andPredicate:(NSPredicate *)predicate;
+- (NSFetchedResultsController *)fetchedResultsControllerWithEntityName:(NSString *)entityName
+                                                          andPredicate:(NSPredicate *)predicate
+                                                    andSortDescriptors:(NSArray *)sortDescriptors;
 
 - (id)insertNewInstance:(Class)ofClass withEntityName:(NSString *)entityName;
 - (id)insertNewInstance:(Class<CoreDataStoreObject>)coreDataStoreObject;
