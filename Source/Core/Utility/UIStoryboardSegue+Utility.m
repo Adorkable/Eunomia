@@ -241,14 +241,14 @@ NSString *const Eunomia_Utility_UIStoryboardSegue_TransferSubviewHeightKey = @"E
 
 - (void)setDoTransferSubview:(BOOL)doTransferSubview
 {
-    [self setProtocolRetainProperty:Eunomia_Utility_UIStoryboardSegue_DoTransferSubviewKey
+    [self setProtocolRetainProperty:@selector(doTransferSubview)
                               value:[NSNumber numberWithBool:doTransferSubview] ];
 }
 
 - (BOOL)doTransferSubview
 {
     BOOL result = NO;
-    id object = [self getProtocolProperty:Eunomia_Utility_UIStoryboardSegue_DoTransferSubviewKey];
+    id object = [self getProtocolProperty:@selector(doTransferSubview)];
     if ( [object isKindOfClass:[NSNumber class] ] )
     {
         NSNumber *number = object;
@@ -257,10 +257,10 @@ NSString *const Eunomia_Utility_UIStoryboardSegue_TransferSubviewHeightKey = @"E
     return result;
 }
 
-DefineProtocolProperty(UIView, TransferSubview, Eunomia_Utility_UIStoryboardSegue_TransferSubviewKey);
-DefineProtocolProperty(NSLayoutConstraint, TransferSubviewLeft, Eunomia_Utility_UIStoryboardSegue_TransferSubviewLeftKey);
-DefineProtocolProperty(NSLayoutConstraint, TransferSubviewTop, Eunomia_Utility_UIStoryboardSegue_TransferSubviewTopKey);
-DefineProtocolProperty(NSLayoutConstraint, TransferSubviewWidth, Eunomia_Utility_UIStoryboardSegue_TransferSubviewWidthKey);
-DefineProtocolProperty(NSLayoutConstraint, TransferSubviewHeight, Eunomia_Utility_UIStoryboardSegue_TransferSubviewHeightKey);
+DefineProtocolProperty(UIView, TransferSubview);
+DefineProtocolProperty(NSLayoutConstraint, TransferSubviewLeft);
+DefineProtocolProperty(NSLayoutConstraint, TransferSubviewTop);
+DefineProtocolProperty(NSLayoutConstraint, TransferSubviewWidth);
+DefineProtocolProperty(NSLayoutConstraint, TransferSubviewHeight);
 
 @end

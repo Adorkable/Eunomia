@@ -15,16 +15,16 @@
 #import "Utility.h"
 
 // Cannot use with non-pointer types
-#define DefineProtocolProperty(Type, Name, key) \
+#define DefineProtocolProperty(Type, Name) \
 - (void)set##Name:(Type *)value \
 { \
-    [self setProtocolRetainProperty:key value:value]; \
+    [self setProtocolRetainProperty:@selector(get##Name) value:value]; \
 } \
 \
 - (Type *)get##Name \
 { \
     Type *result; \
-    id object = [self getProtocolProperty:key]; \
+    id object = [self getProtocolProperty:@selector(get##Name)]; \
     if ( [object isKindOfClass:[Type class] ] ) \
     { \
         result = object; \

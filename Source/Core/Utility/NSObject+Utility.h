@@ -12,9 +12,9 @@
 
 @property (readonly) NSString *objectPerminentKey; // TODO: is this necessary? NSObject.hash
 
-- (void)setProtocolProperty:(NSString *)key value:(id)value storageType:(uintptr_t)storageType;
-- (void)setProtocolRetainProperty:(NSString *)key value:(id)value;
-- (id)getProtocolProperty:(NSString *)key;
+- (void)setProtocolProperty:(const void *)key value:(id)value storageType:(uintptr_t)storageType;
+- (void)setProtocolRetainProperty:(const void *)key value:(id)value;
+- (id)getProtocolProperty:(const void *)key;
 
 - (void)registerForKeyboardNotifications;
 - (void)unregisterForKeyboardNotifications;

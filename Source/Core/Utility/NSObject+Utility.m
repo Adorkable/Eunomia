@@ -23,19 +23,19 @@
 
 #pragma mark Runtime Properties
 
-- (void)setProtocolProperty:(NSString *)key value:(id)value storageType:(uintptr_t)storageType
+- (void)setProtocolProperty:(const void *)key value:(id)value storageType:(uintptr_t)storageType
 {
-    objc_setAssociatedObject(self, CFBridgingRetain(key), value, storageType);
+    objc_setAssociatedObject(self, key, value, storageType);
 }
 
-- (void)setProtocolRetainProperty:(NSString *)key value:(id)value
+- (void)setProtocolRetainProperty:(const void *)key value:(id)value
 {
     [self setProtocolProperty:key value:value storageType:OBJC_ASSOCIATION_RETAIN];
 }
 
-- (id)getProtocolProperty:(NSString *)key
+- (id)getProtocolProperty:(const void *)key
 {
-    return objc_getAssociatedObject(self, CFBridgingRetain(key) );
+    return objc_getAssociatedObject(self, key);
 }
 
 #pragma mark Keyboard Notifications

@@ -127,14 +127,14 @@ NSString *const WeAreAllTextSoAssignUsViewGroupsKey = @"WeAreAllTextSoAssignUsVi
 
 - (void)setViewGroups:(NSMutableDictionary *)viewGroups
 {
-    [self setProtocolRetainProperty:WeAreAllTextSoAssignUsViewGroupsKey value:viewGroups];
+    [self setProtocolRetainProperty:@selector(viewGroups) value:viewGroups];
 }
 
 - (NSMutableDictionary *)viewGroups
 {
     NSMutableDictionary *result;
     
-    id viewGroupsObject = [self getProtocolProperty:WeAreAllTextSoAssignUsViewGroupsKey];
+    id viewGroupsObject = [self getProtocolProperty:@selector(viewGroups) ];
     if ( [viewGroupsObject isKindOfClass:[NSMutableDictionary class] ] )
     {
         result = viewGroupsObject;
