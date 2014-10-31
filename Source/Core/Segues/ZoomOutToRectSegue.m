@@ -37,7 +37,7 @@
         [sourceViewController removeFromParentViewController];
 
         [UIView animateWithDuration:0.2f animations:^{
-            CGRect frame;
+            CGRect frame = CGRectZero;
             if ( [zoomOutToRect respondsToSelector:@selector(zoomOutToRectSegueDestinationRect:) ] && [zoomOutToRect respondsToSelector:@selector(zoomOutToRectSegueDestinationRectRelativeView:) ] )
             {
                 frame = [zoomView.superview convertRect:[zoomOutToRect zoomOutToRectSegueDestinationRect:self] fromView:[zoomOutToRect zoomOutToRectSegueDestinationRectRelativeView:self] ];

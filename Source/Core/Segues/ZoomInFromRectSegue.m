@@ -33,7 +33,7 @@
         
         [parentView addSubview:zoomView];
         
-        CGRect frame;
+        CGRect frame = CGRectZero;
         if ( [zoomInFromRect respondsToSelector:@selector(zoomInFromRectSegueSourceRect:) ] && [zoomInFromRect respondsToSelector:@selector(zoomInFromRectSegueSourceRectRelativeView:) ] )
         {
             frame = [zoomView.superview convertRect:[zoomInFromRect zoomInFromRectSegueSourceRect:self] fromView:[zoomInFromRect zoomInFromRectSegueSourceRectRelativeView:self] ];
