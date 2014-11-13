@@ -29,8 +29,8 @@
                                                                     options:UIViewAnimationOptionCurveEaseInOut
                                                                  animations:^
      {
-         sourceViewController.view.transform = CGAffineTransformMakeTranslation(0.f, -sourceViewController.view.frame.size.height);
-         destinationViewController.view.transform = CGAffineTransformMakeTranslation(0.f, -sourceViewController.view.frame.size.height);
+         sourceViewController.view.transform = CGAffineTransformTranslate(sourceViewController.view.transform, 0.f, -sourceViewController.view.frame.size.height);
+         destinationViewController.view.transform = CGAffineTransformTranslate(destinationViewController.view.transform, 0.f, -sourceViewController.view.frame.size.height);
      } completion:^(BOOL finished)
      {
          [sourceViewController.view removeFromSuperview];

@@ -29,8 +29,8 @@
         [self doTransferSubviewPrep];
         
         [UIView animateWithDuration:0.2f animations:^{
-            sourceView.transform = CGAffineTransformMakeTranslation(sourceView.frame.size.width, 0.f);
-            destinationView.transform = CGAffineTransformMakeTranslation(destinationView.frame.size.width, 0.0f);
+            sourceView.transform = CGAffineTransformTranslate(sourceView.transform, sourceView.frame.size.width, 0.f);
+            destinationView.transform = CGAffineTransformTranslate(destinationView.transform, destinationView.frame.size.width, 0.0f);
             
             [self doTransferSubviewDestinationFrame];
         } completion:^(BOOL finished) {
