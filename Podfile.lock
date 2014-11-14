@@ -48,11 +48,6 @@ PODS:
     - CocoaLumberjack
     - SegueingInfo
     - SSDataSources
-  - Eunomia/TestFlight (1.7.2):
-    - CocoaLumberjack
-    - SegueingInfo
-    - TestFlightLogger
-    - TestFlightSDK
   - Expecta (0.3.1)
   - GoogleAnalytics-iOS-SDK (3.0.9)
   - Lookback (0.6.5)
@@ -67,10 +62,6 @@ PODS:
   - SocketRocket (0.3.1-beta2)
   - Specta (0.2.1)
   - SSDataSources (0.7.3)
-  - TestFlightLogger (0.0.3):
-    - CocoaLumberjack
-    - TestFlightSDK
-  - TestFlightSDK (3.0.2)
 
 DEPENDENCIES:
   - CocoaLumberjack
@@ -81,7 +72,6 @@ DEPENDENCIES:
   - Eunomia/NSLogger (from `./`)
   - Eunomia/PonyDebugger (from `./`)
   - Eunomia/SSDataSources (from `./`)
-  - Eunomia/TestFlight (from `./`)
   - Expecta
   - OCMock
   - SegueingInfo
@@ -108,7 +98,5 @@ SPEC CHECKSUMS:
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
   Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
   SSDataSources: 03687c54e8b215add71306556ee8cef0a5960b69
-  TestFlightLogger: 755fa3745846e413787a2ec7d5cb531e5966de36
-  TestFlightSDK: 0c24c533748d0d84bfe7a3cb6036fa79124d84ee
 
 COCOAPODS: 0.34.4
