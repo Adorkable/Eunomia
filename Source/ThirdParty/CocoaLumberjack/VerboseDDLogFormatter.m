@@ -15,19 +15,19 @@
     NSString *result;
     switch (logFlag)
     {
-        case LOG_FLAG_ERROR :
+        case DDLogFlagError :
             result = @"E";
             break;
-        case LOG_FLAG_WARN  :
+        case DDLogFlagWarning  :
             result = @"W";
             break;
-        case LOG_FLAG_INFO  :
+        case DDLogFlagInfo  :
             result = @"I";
             break;
-        case LOG_FLAG_DEBUG:
+        case DDLogFlagDebug:
             result = @"D";
             break;
-        case LOG_FLAG_VERBOSE :
+        case DDLogFlagVerbose :
             result = @"V";
             break;
     }
@@ -39,30 +39,29 @@
 {
     NSMutableString *result = [NSMutableString string];
     
-    NSString *logLevel = [self cocoaLumberjackLogFlagAsString:logMessage->logFlag];
-    if ( [logLevel length] > 0)
+    NSString *logLevel = [self cocoaLumberjackLogFlagAsString:logMessage->_flag];
+    if (logLevel.length > 0)
     {
         [result appendFormat:@"%@", logLevel];
     }
     
-    if ( [logMessage->threadName length] > 0)
+    if (logMessage->_threadName.length > 0)
     {
-        [result appendFormat:@" | thrd:%@", logMessage->threadName];
+        [result appendFormat:@" | thrd:%@", logMessage->_threadName];
     }
-    if ( logMessage->queueLabel != 0 && strlen(logMessage->queueLabel) > 0)
+    if (logMessage->_queueLabel.length > 0)
     {
-        [result appendFormat:@" | gcd:%s", logMessage->queueLabel];
+        [result appendFormat:@" | gcd:%@", logMessage->_queueLabel];
     }
     
-    [result appendFormat:@": %@", logMessage->logMsg];
+    [result appendFormat:@": %@", logMessage->_message];
     
     NSString *file;
-    if (logMessage->file != 0 && strlen(logMessage->file) > 0)
+    if (logMessage->_file.length > 0)
     {
-        file = [NSString stringWithCString:logMessage->file encoding:NSUTF8StringEncoding];
-        file = [NSString stringWithFormat:@"%@:%d:", [file lastPathComponent], logMessage->lineNumber];
+        file = [NSString stringWithFormat:@"%@:%lu:", [logMessage->_file lastPathComponent], (unsigned long)logMessage->_line];
     }
-    [result appendFormat:@" | [%@%s]", file, logMessage->function ];
+    [result appendFormat:@" | [%@%@]", file, logMessage->_function];
     
     return result;
 }

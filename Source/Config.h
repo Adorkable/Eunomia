@@ -12,9 +12,9 @@
 #import <SegueingInfo/SegueingInfo.h>
 
 #if DEBUG
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = DDLogFlagVerbose;
 #else
-static const int ddLogLevel = LOG_LEVEL_INFO;
+static const int ddLogLevel = DDLogFlagInfo;
 #endif
 #define ddLogLevelInitialized
 

@@ -74,11 +74,11 @@
     [ThirdPartyWrapper addCocoaLumberjackLogger:[DDTTYLogger sharedInstance] ];
     
     [ [DDTTYLogger sharedInstance] setColorsEnabled:YES];
-    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithRed:0.973f green:0.153f blue:0.218f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:LOG_FLAG_ERROR];
-    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithRed:0.870f green:0.825f blue:0.254f alpha:1.000] backgroundColor:[UIColor colorWithWhite:1.000 alpha:1.000] forFlag:LOG_FLAG_WARN];
-    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithWhite:0.212f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:LOG_FLAG_INFO];
-    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithRed:0.391f green:0.520f blue:0.417f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:LOG_FLAG_DEBUG];
-    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithWhite:0.675f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:LOG_FLAG_VERBOSE];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithRed:0.973f green:0.153f blue:0.218f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:DDLogFlagError];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithRed:0.870f green:0.825f blue:0.254f alpha:1.000] backgroundColor:[UIColor colorWithWhite:1.000 alpha:1.000] forFlag:DDLogFlagWarning];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithWhite:0.212f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:DDLogFlagInfo];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithRed:0.391f green:0.520f blue:0.417f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:DDLogFlagDebug];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithWhite:0.675f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:DDLogFlagVerbose];
 #endif
     
     NSLogInfo(@"CocoaLumberjack initialized");
