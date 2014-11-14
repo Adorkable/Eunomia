@@ -35,11 +35,6 @@ PODS:
     - CocoaLumberjack
     - Lookback
     - SegueingInfo
-  - Eunomia/NSLogger (1.7.2):
-    - CocoaLumberjack
-    - NSLogger
-    - NSLogger-CocoaLumberjack-connector
-    - SegueingInfo
   - Eunomia/PonyDebugger (1.7.2):
     - CocoaLumberjack
     - PonyDebugger
@@ -51,10 +46,6 @@ PODS:
   - Expecta (0.3.1)
   - GoogleAnalytics-iOS-SDK (3.0.9)
   - Lookback (0.6.5)
-  - NSLogger (1.5)
-  - NSLogger-CocoaLumberjack-connector (1.3):
-    - CocoaLumberjack
-    - NSLogger
   - OCMock (3.1.1)
   - PonyDebugger (0.4.0):
     - SocketRocket
@@ -69,7 +60,6 @@ DEPENDENCIES:
   - Eunomia/ARAnalytics_GoogleAnalytics (from `./`)
   - Eunomia/Crashlytics (from `./`)
   - Eunomia/Lookback (from `./`)
-  - Eunomia/NSLogger (from `./`)
   - Eunomia/PonyDebugger (from `./`)
   - Eunomia/SSDataSources (from `./`)
   - Expecta
@@ -90,8 +80,6 @@ SPEC CHECKSUMS:
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
   Lookback: 59f217e51c1f2bcdf23d00522ef14b66be8557d1
-  NSLogger: 84ed0bf00985df483153ce344d8171c9ec83be2b
-  NSLogger-CocoaLumberjack-connector: 8f659ea51386f0a0e8c2643bf9273010a83a15f5
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
   PonyDebugger: 4f43d7c2f67aa5e26ca00ce6983421608a6eca6d
   SegueingInfo: 674b86e23d6db7f005e146919fef0e3078f70efb

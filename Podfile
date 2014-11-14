@@ -17,7 +17,7 @@ end
 
 target "Full Build Test" do
     pod 'Eunomia', :path => './'
-    pod 'Eunomia/NSLogger', :path => './'
+    #    pod 'Eunomia/NSLogger', :path => './'
     pod 'Eunomia/Crashlytics', :path => './'
     pod 'Eunomia/ARAnalytics_GoogleAnalytics', :path => './'
     pod 'Eunomia/PonyDebugger', :path => './'
