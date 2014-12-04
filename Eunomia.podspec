@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency 'CocoaLumberjack'
+  s.dependency 'CocoaLumberjack', '=2.0.0-beta4'
   s.dependency 'SegueingInfo'
 
   s.subspec 'Core' do |ss|
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   
   s.subspec "Crashlytics" do |ss|
     ss.dependency 'CrashlyticsFramework'
-    ss.dependency 'CrashlyticsLumberjack'
+    ss.dependency 'CrashlyticsLumberjack', '=2.0.0-beta4'
     ss.prefix_header_contents = "#define USE_CRASHLYTICS 1"
   end
   
