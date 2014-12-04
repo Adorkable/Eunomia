@@ -12,6 +12,32 @@
 
 @implementation NSMutableDictionary (Eunomia_Utility)
 
++ (NSDictionary *)dictionaryWithContentsOfJSONFile:(NSString *)path
+{
+    NSURL *url = [ [NSURL alloc] initFileURLWithPath:path];
+    return [self dictionaryWithContentsOfJSONURL:url];
+}
+
++ (NSDictionary *)dictionaryWithContentsOfJSONURL:(NSURL *)url
+{
+    NSDictionary *result;
+    
+    if (url)
+    {
+        NSData *jsonData = [NSData dataWithContentsOfURL:url];
+        if (jsonData)
+        {
+            id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil]; // TODO: all passing in error
+            if ( [jsonObject isKindOfClass:[NSDictionary class] ] )
+            {
+                result = jsonObject;
+            }
+        }
+    }
+    
+    return result;
+}
+
 - (void)setObjectSafe:(id)anObject forKey:(id<NSCopying>)aKey
 {
     if (anObject)
