@@ -22,7 +22,12 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
   end
-  
+
+  s.subspec "CoreMotion" do |ss|
+    ss.frameworks = 'CoreMotion'
+    ss.prefix_header_contents = "#define USE_COREMOTION 1"
+  end
+
 #  s.subspec 'NSLogger' do |ss|
 #    ss.dependency 'NSLogger'
 #    ss.dependency 'NSLogger-CocoaLumberjack-connector'
