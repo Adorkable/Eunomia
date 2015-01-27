@@ -21,6 +21,23 @@
     return [NSString stringWithFormat:@"%@ %p", [self class], self];
 }
 
+#pragma mark Casting
+
++ (BOOL)isClass:(NSObject *)object
+{
+    return [object isKindOfClass:[self class] ];
+}
+
++ (instancetype)ofClass:(NSObject *)object
+{
+    id result = nil;
+    if ( [self isClass:object] )
+    {
+        result = object;
+    }
+    return result;
+}
+
 #pragma mark Runtime Properties
 
 - (void)setProtocolProperty:(const void *)key value:(id)value storageType:(uintptr_t)storageType
