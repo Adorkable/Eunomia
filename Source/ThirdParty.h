@@ -14,6 +14,7 @@
 
 // CocoaLumberjack
 #import "VerboseDDLogFormatter.h"
+#import "NSLogWrapper.h"
 
 // ARAnalytics
 #if USE_ARANALYTICS

@@ -140,6 +140,8 @@
 		3C741E05198F34DA00461822 /* ThirdParty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdParty.h; sourceTree = "<group>"; };
 		3C741E07198F36BD00461822 /* VerboseDDLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerboseDDLogFormatter.h; sourceTree = "<group>"; };
 		3C741E08198F36BD00461822 /* VerboseDDLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerboseDDLogFormatter.m; sourceTree = "<group>"; };
+		3C9D42751A77E73D00477177 /* NSLogWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogWrapper.h; sourceTree = "<group>"; };
+		3C9D42761A77E73D00477177 /* NSLogWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLogWrapper.m; sourceTree = "<group>"; };
 		3CD18CFB1964A60200DB8ED7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CD18D091964A60200DB8ED7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3CD18D0C1964A60200DB8ED7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -380,6 +382,8 @@
 			children = (
 				3C741E07198F36BD00461822 /* VerboseDDLogFormatter.h */,
 				3C741E08198F36BD00461822 /* VerboseDDLogFormatter.m */,
+				3C9D42751A77E73D00477177 /* NSLogWrapper.h */,
+				3C9D42761A77E73D00477177 /* NSLogWrapper.m */,
 			);
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
@@ -934,6 +938,7 @@
 				3CE46F6A19ABBF7700053E62 /* UIColor+Utility.m in Sources */,
 				3CE46F5C19ABBF7700053E62 /* ReplaceUpSegue.m in Sources */,
 				3CE46F7919ABBF7700053E62 /* UILabel+Templating.m in Sources */,
+				3C9D42771A77E73D00477177 /* NSLogWrapper.m in Sources */,
 				3CE46F7B19ABBF7700053E62 /* UITextView+Templating.m in Sources */,
 				3CE46F5D19ABBF7700053E62 /* ZoomInFromRectSegue.m in Sources */,
 				3CE46F6C19ABBF7700053E62 /* UILongPressGestureRecognizer+Utility.m in Sources */,
