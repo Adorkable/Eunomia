@@ -14,4 +14,6 @@
 
 - (void)errorVibrate:(CGFloat)duration distance:(CGFloat)distance;
 
+@property (copy) BOOL(^shouldReturn)(UITextField *textField);
+
 @end

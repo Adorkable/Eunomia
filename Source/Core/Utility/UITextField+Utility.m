@@ -8,6 +8,14 @@
 
 #import "UITextField+Utility.h"
 
+#import "Eunomia.h"
+
+@interface UITextFieldDelegate : NSObject<UITextFieldDelegate>
+
+@property (copy) BOOL(^shouldReturn)(UITextField *textField);
+
+@end
+
 @implementation UITextField (Eunomia_Utility)
 
 // TODO: FIX ONLY WORKS AFTER TEXT IS SET
@@ -69,6 +77,48 @@
      {
          
      }];
+}
+
+- (void)setShouldReturn:(BOOL (^)(UITextField *) )shouldReturn
+{
+    UITextFieldDelegate *delegate;
+    if (shouldReturn)
+    {
+        delegate = [ [UITextFieldDelegate alloc] init];
+        delegate.shouldReturn = shouldReturn;
+        self.delegate = delegate;
+    }
+    [self setProtocolRetainProperty:@selector(shouldReturn) value:delegate];
+}
+
+- (BOOL (^)(UITextField *) )shouldReturn
+{
+    BOOL(^result)(UITextField *);
+    
+    id delegateObject = [self getProtocolProperty:@selector(shouldReturn) ];
+    if ( [delegateObject isKindOfClass:[UITextFieldDelegate class] ] )
+    {
+        UITextFieldDelegate *delegate = delegateObject;
+        result = delegate.shouldReturn;
+    }
+    
+    return result;
+}
+
+@end
+
+@implementation UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    BOOL result = YES;
+    
+    if (self.shouldReturn)
+    {
+        result = self.shouldReturn(textField);
+    }
+    
+    return result;
 }
 
 @end
