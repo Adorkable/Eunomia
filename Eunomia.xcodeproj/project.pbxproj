@@ -259,11 +259,9 @@
 		3CEE65DF199A69E2000E1278 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		447558BB9D0C61B0DD6146E0 /* Pods-EunomiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E1955000106703E5B3FDAFD /* Pods-Eunomia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia.release.xcconfig"; sourceTree = "<group>"; };
-		52B90BBE7C4F3E992EDB8C92 /* Pods-Full Build Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Full Build Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Full Build Test/Pods-Full Build Test.debug.xcconfig"; sourceTree = "<group>"; };
 		70945A04548DF89BA4CE0DD8 /* Pods-Eunomia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia.debug.xcconfig"; sourceTree = "<group>"; };
 		8F4B3B7A0FE91B89A913454F /* Pods-EunomiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests.release.xcconfig"; sourceTree = "<group>"; };
 		92E0FD5010914BDDEE68ADCD /* Pods-Pod Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pod Test/Pods-Pod Test.debug.xcconfig"; sourceTree = "<group>"; };
-		961DC122518F4E5F3675B339 /* Pods-Full Build Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Full Build Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Full Build Test/Pods-Full Build Test.release.xcconfig"; sourceTree = "<group>"; };
 		AA5B461D423C4CF789732C85 /* libPods-EunomiaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EunomiaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC9B502B95107A74DA306F2 /* libPods-Pod Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pod Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5A49D5D99DEA51E7C3CDE0 /* Pods-Pod Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pod Test/Pods-Pod Test.release.xcconfig"; sourceTree = "<group>"; };
@@ -657,8 +655,6 @@
 				4E1955000106703E5B3FDAFD /* Pods-Eunomia.release.xcconfig */,
 				447558BB9D0C61B0DD6146E0 /* Pods-EunomiaTests.debug.xcconfig */,
 				8F4B3B7A0FE91B89A913454F /* Pods-EunomiaTests.release.xcconfig */,
-				52B90BBE7C4F3E992EDB8C92 /* Pods-Full Build Test.debug.xcconfig */,
-				961DC122518F4E5F3675B339 /* Pods-Full Build Test.release.xcconfig */,
 				92E0FD5010914BDDEE68ADCD /* Pods-Pod Test.debug.xcconfig */,
 				CA5A49D5D99DEA51E7C3CDE0 /* Pods-Pod Test.release.xcconfig */,
 			);
