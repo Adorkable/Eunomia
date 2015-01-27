@@ -53,6 +53,8 @@
 #import "UIWebView+Utility.h"
 #import "UITextField+Utility.h"
 
+#import "MFMailComposeViewController+Utility.h"
+
 #import <UIKit/UIKit.h>
 
 // returns a random CGFloat value between 0.0 and 1.0
