@@ -60,3 +60,6 @@
 // returns a random CGFloat value between 0.0 and 1.0
 extern CGFloat randomf();
 extern u_int32_t randomi();
+
+extern CGSize CGSizeMinusCGSize(CGSize left, CGSize right);
+extern CGSize CGSizeMultiplied(CGSize size, CGFloat multiplier);

@@ -17,3 +17,13 @@ u_int32_t randomi()
 {
     return arc4random();
 }
+
+CGSize CGSizeMinusCGSize(CGSize left, CGSize right)
+{
+    return CGSizeMake(left.width - right.width, left.height - right.height);
+}
+
+CGSize CGSizeMultiplied(CGSize size, CGFloat multiplier)
+{
+    return CGSizeMake(size.width * multiplier, size.height * multiplier);
+}
