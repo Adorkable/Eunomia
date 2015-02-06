@@ -13,7 +13,6 @@
 - (void)replaceWithView:(UIView *)replaceWith;
 
 @property (readonly) CGRect frameZeroOrigin;
-@property (readwrite) CGPoint center;
 
 @property (readwrite) IBInspectable UIColor *borderColor;
 @property (readwrite) IBInspectable CGFloat borderWidth;
