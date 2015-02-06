@@ -20,6 +20,7 @@
 		3C371BD719853F4E008503FE /* UITextView+TemplatingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BD519853F4E008503FE /* UITextView+TemplatingSpec.m */; };
 		3C371BD819853F4E008503FE /* UIView+TemplatingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */; };
 		3C371BDB19854EBE008503FE /* LaunchViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BDA19854EBE008503FE /* LaunchViewSpec.m */; };
+		3C38FC451A82DB1A00813A2B /* AutoloadWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */; };
 		3C741E04198F34BE00461822 /* ThirdPartyWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C741E03198F34BE00461822 /* ThirdPartyWrapper.m */; };
 		3C741E09198F36BD00461822 /* VerboseDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C741E08198F36BD00461822 /* VerboseDDLogFormatter.m */; };
 		3C9D42771A77E73D00477177 /* NSLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D42761A77E73D00477177 /* NSLogWrapper.m */; };
@@ -78,6 +79,7 @@
 		3CEE65DB199A69E2000E1278 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE65DA199A69E2000E1278 /* ViewController.m */; };
 		3CEE65DE199A69E2000E1278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE65DC199A69E2000E1278 /* Main.storyboard */; };
 		3CEE65E0199A69E2000E1278 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE65DF199A69E2000E1278 /* Images.xcassets */; };
+		3CF3F4211A7DC01500ED59A9 /* EunomiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3F4201A7DC01500ED59A9 /* EunomiaViewController.m */; };
 		562B8A345D334E2898C55449 /* libPods-Eunomia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */; };
 		CBD31D6B4C9D483197639183 /* libPods-EunomiaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5B461D423C4CF789732C85 /* libPods-EunomiaTests.a */; };
 /* End PBXBuildFile section */
@@ -120,6 +122,7 @@
 
 /* Begin PBXFileReference section */
 		2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eunomia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C071A551A7D4048006C5A6E /* Eunomia-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Eunomia-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C160A7D1A449E6500B2C4C8 /* CMMotionManager+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMMotionManager+Utility.h"; sourceTree = "<group>"; };
 		3C160A7E1A449E6500B2C4C8 /* CMMotionManager+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMMotionManager+Utility.m"; sourceTree = "<group>"; };
 		3C160A841A44A17B00B2C4C8 /* Library Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Library Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,10 +135,11 @@
 		3C160A911A44A17B00B2C4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C160A931A44A17B00B2C4C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3C160A961A44A17B00B2C4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3C160AAB1A44A47300B2C4C8 /* CoreMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreMotion.h; sourceTree = "<group>"; };
 		3C371BD519853F4E008503FE /* UITextView+TemplatingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TemplatingSpec.m"; sourceTree = "<group>"; };
 		3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TemplatingSpec.m"; sourceTree = "<group>"; };
 		3C371BDA19854EBE008503FE /* LaunchViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewSpec.m; sourceTree = "<group>"; };
+		3C38FC431A82DB1A00813A2B /* AutoloadWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoloadWebView.h; sourceTree = "<group>"; };
+		3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoloadWebView.m; sourceTree = "<group>"; };
 		3C65DDB91964B6D1009C714B /* Eunomia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
 		3C65DDCE1965A9B8009C714B /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		3C741E02198F34BE00461822 /* ThirdPartyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyWrapper.h; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 		3CEE65DA199A69E2000E1278 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3CEE65DD199A69E2000E1278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CEE65DF199A69E2000E1278 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3CF3F41F1A7DC01500ED59A9 /* EunomiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EunomiaViewController.h; sourceTree = "<group>"; };
+		3CF3F4201A7DC01500ED59A9 /* EunomiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EunomiaViewController.m; sourceTree = "<group>"; };
 		447558BB9D0C61B0DD6146E0 /* Pods-EunomiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E1955000106703E5B3FDAFD /* Pods-Eunomia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia.release.xcconfig"; sourceTree = "<group>"; };
 		70945A04548DF89BA4CE0DD8 /* Pods-Eunomia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia.debug.xcconfig"; sourceTree = "<group>"; };
@@ -434,6 +440,7 @@
 		3CD18D211964A65F00DB8ED7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3C071A551A7D4048006C5A6E /* Eunomia-Bridging-Header.h */,
 				3C65DDB91964B6D1009C714B /* Eunomia.h */,
 				3C65DDCE1965A9B8009C714B /* Config.h */,
 				3CE46EFD19ABBF7700053E62 /* Core */,
@@ -603,6 +610,10 @@
 			children = (
 				3CE46F5419ABBF7700053E62 /* LaunchView.h */,
 				3CE46F5519ABBF7700053E62 /* LaunchView.m */,
+				3CF3F41F1A7DC01500ED59A9 /* EunomiaViewController.h */,
+				3CF3F4201A7DC01500ED59A9 /* EunomiaViewController.m */,
+				3C38FC431A82DB1A00813A2B /* AutoloadWebView.h */,
+				3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -936,8 +947,10 @@
 				3CE46F6719ABBF7700053E62 /* NSNotification+Utility.m in Sources */,
 				3CE46F7219ABBF7700053E62 /* UITapGestureRecognizer+Utility.m in Sources */,
 				3CE46F6519ABBF7700053E62 /* NSMutableDictionary+Utility.m in Sources */,
+				3CF3F4211A7DC01500ED59A9 /* EunomiaViewController.m in Sources */,
 				3CE46F5819ABBF7700053E62 /* MissingSubclassOverrideException.m in Sources */,
 				3CE46F6219ABBF7700053E62 /* NSManagedObject+Utility.m in Sources */,
+				3C38FC451A82DB1A00813A2B /* AutoloadWebView.m in Sources */,
 				3CE46F6A19ABBF7700053E62 /* UIColor+Utility.m in Sources */,
 				3CE46F5C19ABBF7700053E62 /* ReplaceUpSegue.m in Sources */,
 				3CE46F7919ABBF7700053E62 /* UILabel+Templating.m in Sources */,
@@ -1153,17 +1166,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70945A04548DF89BA4CE0DD8 /* Pods-Eunomia.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/Eunomia.dst;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Core/Eunomia-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1171,13 +1188,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E1955000106703E5B3FDAFD /* Pods-Eunomia.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/Eunomia.dst;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Core/Eunomia-Bridging-Header.h";
 			};
 			name = Release;
 		};
