@@ -63,3 +63,5 @@ extern u_int32_t randomi();
 
 extern CGSize CGSizeMinusCGSize(CGSize left, CGSize right);
 extern CGSize CGSizeMultiplied(CGSize size, CGFloat multiplier);
+
+extern CGPoint CGPointMakeScaled(CGFloat width, CGFloat height, CGFloat scale);

@@ -27,3 +27,8 @@ CGSize CGSizeMultiplied(CGSize size, CGFloat multiplier)
 {
     return CGSizeMake(size.width * multiplier, size.height * multiplier);
 }
+
+CGPoint CGPointMakeScaled(CGFloat width, CGFloat height, CGFloat scale)
+{
+    return CGPointMake(width * scale, height * scale);
+}
