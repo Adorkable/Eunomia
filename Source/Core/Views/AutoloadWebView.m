@@ -8,7 +8,7 @@
 
 #import "AutoloadWebView.h"
 
-#import "Eunomia.h"
+#import "Config.pch"
 
 @implementation AutoloadWebView
 

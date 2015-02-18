@@ -8,7 +8,7 @@
 
 #import "UIApplication+Utility.h"
 
-#import "Config.h"
+#import "Config.pch"
 
 @implementation UIApplication (Eunomia_Utility)
 

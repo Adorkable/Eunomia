@@ -10,6 +10,8 @@
 
 #import "Utility.h"
 
+#import "Config.pch"
+
 #import <objc/runtime.h>
 
 NSString *const UIMenuControllerResponderKey = @"UIMenuControllerResponder";

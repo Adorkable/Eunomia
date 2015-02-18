@@ -8,8 +8,6 @@
 
 #pragma once
 
-#import "Eunomia.h"
-
 #import "NSObject+Utility.h"
 
 #import "UIApplication+Utility.h"

@@ -10,8 +10,6 @@
 
 #import "NSNotification+Utility.h"
 
-#import "Eunomia.h"
-
 #import <objc/runtime.h>
 
 @implementation NSObject (Eunomia_Utility)

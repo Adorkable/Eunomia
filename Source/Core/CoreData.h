@@ -8,6 +8,4 @@
 
 #pragma once
 
-#import "Eunomia.h"
-
 #import "CoreDataStore.h"

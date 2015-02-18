@@ -7,7 +7,7 @@
 
 #import "NSManagedObjectContext+Utility.h"
 
-#import "Eunomia.h"
+#import "Config.pch"
 
 @implementation NSManagedObjectContext (Eunomia_Utility)
 

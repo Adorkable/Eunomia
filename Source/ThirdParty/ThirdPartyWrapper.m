@@ -8,7 +8,7 @@
 
 #import "ThirdPartyWrapper.h"
 
-#import "Eunomia.h"
+#import "Config.pch"
 
 #import "VerboseDDLogFormatter.h"
 

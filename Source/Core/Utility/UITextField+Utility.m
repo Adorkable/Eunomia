@@ -8,7 +8,7 @@
 
 #import "UITextField+Utility.h"
 
-#import "Eunomia.h"
+#import "NSObject+Utility.h"
 
 @interface UITextFieldDelegate : NSObject<UITextFieldDelegate>
 

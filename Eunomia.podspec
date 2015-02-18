@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://bitbucket.org/yoiang/eunomia", :tag => "1.8" }
 
-  s.source_files = "Source/*.{h,m}", "Source/Core/**/*.{h,m}", "Source/ThirdParty/*.{h,m}", "Source/ThirdParty/CocoaLumberjack/*.{h,m}"
+  s.source_files = "Source/*.{h,m,pch}", "Source/Core/**/*.{h,m}", "Source/ThirdParty/*.{h,m}", "Source/ThirdParty/CocoaLumberjack/*.{h,m}"
 
   s.public_header_files = "Source/*.h", "Source/Core/**/*.h", "Source/ThirdParty/*.h", "Source/ThirdParty/CocoaLumberjack/*.h"
 

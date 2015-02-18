@@ -8,8 +8,7 @@
 
 #import "NSLogWrapper.h"
 
-#import "Eunomia.h"
-
+#import "Config.pch"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 @implementation NSLogWrapper

@@ -8,7 +8,7 @@
 
 #import "LaunchView.h"
 
-#import "Eunomia.h"
+#import "Config.pch"
 
 @implementation LaunchView
 
