@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EunomiaViewController : UIViewController
+#import <SegueingInfo/SegueingInfo.h>
+
+@interface EunomiaViewController : SegueingInfoViewController
 
 @property (readwrite, nonatomic) IBInspectable NSString *analyticsViewName;
 
