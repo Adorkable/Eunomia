@@ -21,6 +21,7 @@
 		3C371BD819853F4E008503FE /* UIView+TemplatingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BD619853F4E008503FE /* UIView+TemplatingSpec.m */; };
 		3C371BDB19854EBE008503FE /* LaunchViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C371BDA19854EBE008503FE /* LaunchViewSpec.m */; };
 		3C38FC451A82DB1A00813A2B /* AutoloadWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */; };
+		3C5541BF1A953F3B00446E86 /* Eunomia-Force-Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5541BE1A953F3B00446E86 /* Eunomia-Force-Module.swift */; };
 		3C741E04198F34BE00461822 /* ThirdPartyWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C741E03198F34BE00461822 /* ThirdPartyWrapper.m */; };
 		3C741E09198F36BD00461822 /* VerboseDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C741E08198F36BD00461822 /* VerboseDDLogFormatter.m */; };
 		3C9D42771A77E73D00477177 /* NSLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D42761A77E73D00477177 /* NSLogWrapper.m */; };
@@ -140,11 +141,10 @@
 		3C371BDA19854EBE008503FE /* LaunchViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewSpec.m; sourceTree = "<group>"; };
 		3C38FC431A82DB1A00813A2B /* AutoloadWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoloadWebView.h; sourceTree = "<group>"; };
 		3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoloadWebView.m; sourceTree = "<group>"; };
-		3C65DDB91964B6D1009C714B /* Eunomia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
-		3C65DDCE1965A9B8009C714B /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		3C5541BE1A953F3B00446E86 /* Eunomia-Force-Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Eunomia-Force-Module.swift"; sourceTree = "<group>"; };
+		3C65DDCE1965A9B8009C714B /* Config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.pch; sourceTree = "<group>"; };
 		3C741E02198F34BE00461822 /* ThirdPartyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyWrapper.h; sourceTree = "<group>"; };
 		3C741E03198F34BE00461822 /* ThirdPartyWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPartyWrapper.m; sourceTree = "<group>"; };
-		3C741E05198F34DA00461822 /* ThirdParty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdParty.h; sourceTree = "<group>"; };
 		3C741E07198F36BD00461822 /* VerboseDDLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerboseDDLogFormatter.h; sourceTree = "<group>"; };
 		3C741E08198F36BD00461822 /* VerboseDDLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerboseDDLogFormatter.m; sourceTree = "<group>"; };
 		3C9D42751A77E73D00477177 /* NSLogWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogWrapper.h; sourceTree = "<group>"; };
@@ -441,12 +441,11 @@
 			isa = PBXGroup;
 			children = (
 				3C071A551A7D4048006C5A6E /* Eunomia-Bridging-Header.h */,
-				3C65DDB91964B6D1009C714B /* Eunomia.h */,
-				3C65DDCE1965A9B8009C714B /* Config.h */,
+				3C65DDCE1965A9B8009C714B /* Config.pch */,
 				3CE46EFD19ABBF7700053E62 /* Core */,
 				3C160A7C1A449DB600B2C4C8 /* CoreMotion */,
-				3C741E05198F34DA00461822 /* ThirdParty.h */,
 				3C741E01198F34BE00461822 /* ThirdParty */,
+				3C5541BE1A953F3B00446E86 /* Eunomia-Force-Module.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -932,6 +931,7 @@
 				3CE46F5E19ABBF7700053E62 /* ZoomOutToRectSegue.m in Sources */,
 				3C741E04198F34BE00461822 /* ThirdPartyWrapper.m in Sources */,
 				3CE46F7419ABBF7700053E62 /* UIView+Utility.m in Sources */,
+				3C5541BF1A953F3B00446E86 /* Eunomia-Force-Module.swift in Sources */,
 				3CE46F5919ABBF7700053E62 /* ReplaceDownSegue.m in Sources */,
 				3CE46F5F19ABBF7700053E62 /* JSContext+Utility.m in Sources */,
 				3CE46F6119ABBF7700053E62 /* NSFetchedResultsController+Utility.m in Sources */,
@@ -1179,7 +1179,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Core/Eunomia-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Eunomia-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1197,7 +1197,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Core/Eunomia-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Eunomia-Bridging-Header.h";
 			};
 			name = Release;
 		};

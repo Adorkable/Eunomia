@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import <CocoaLumberjack/CocoaLumberjack.h>
+//#import <CocoaLumberjack/CocoaLumberjack.h>
+@protocol DDLogFormatter;
+@class DDLogMessage;
 
 @interface VerboseDDLogFormatter : NSObject< DDLogFormatter >
 

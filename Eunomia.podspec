@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
   s.homepage     = "https://bitbucket.org/yoiang/eunomia"
 
   s.author       = { "Ian G" => "yo.ian.g@gmail.com" }
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
   s.source       = { :git => "https://bitbucket.org/yoiang/eunomia", :tag => "1.8" }
 
-  s.source_files = "Source/*.{h,m}", "Source/Core/**/*.{h,m}", "Source/ThirdParty/*.{h,m}", "Source/ThirdParty/CocoaLumberjack/*.{h,m}"
+  s.source_files = "Source/*.{h,m,pch}", "Source/Core/**/*.{h,m}", "Source/ThirdParty/*.{h,m}", "Source/ThirdParty/CocoaLumberjack/*.{h,m}", "Source/Eunomia-Force-Module.swift"
 
   s.public_header_files = "Source/*.h", "Source/Core/**/*.h", "Source/ThirdParty/*.h", "Source/ThirdParty/CocoaLumberjack/*.h"
 

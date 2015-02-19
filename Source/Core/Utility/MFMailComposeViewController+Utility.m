@@ -8,7 +8,7 @@
 
 #import "MFMailComposeViewController+Utility.h"
 
-#import "Eunomia.h"
+#import "NSObject+Utility.h"
 
 @interface MFMailComposeViewControllerDelegate : NSObject<MFMailComposeViewControllerDelegate>
 

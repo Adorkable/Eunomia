@@ -8,8 +8,6 @@
 
 #pragma once
 
-#import "Eunomia.h"
-
 #import "UIView+Templating.h"
 
 #import "UIImageView+Templating.h"
