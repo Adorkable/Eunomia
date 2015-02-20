@@ -53,6 +53,25 @@
     return objc_getAssociatedObject(self, key);
 }
 
+- (void)setProtocolRetainProperty:(const void *)key boolValue:(BOOL)boolValue
+{
+    [self setProtocolRetainProperty:key value:[NSNumber numberWithBool:boolValue] ];
+}
+
+- (BOOL)getProtocolPropertyBool:(const void *)key defaultValue:(BOOL)defaultValue
+{
+    BOOL result = defaultValue;
+    
+    id propertyValue = [self getProtocolProperty:key];
+    if ( [propertyValue isKindOfClass:[NSNumber class] ] )
+    {
+        NSNumber *numberValue = propertyValue;
+        result = [numberValue boolValue];
+    }
+    return result;
+}
+
+
 #pragma mark Keyboard Notifications
 
 - (void)registerForKeyboardNotifications

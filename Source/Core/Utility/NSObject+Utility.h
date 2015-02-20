@@ -19,6 +19,9 @@
 - (void)setProtocolRetainProperty:(const void *)key value:(id)value;
 - (id)getProtocolProperty:(const void *)key;
 
+- (void)setProtocolRetainProperty:(const void *)key boolValue:(BOOL)boolValue;
+- (BOOL)getProtocolPropertyBool:(const void *)key defaultValue:(BOOL)defaultValue;
+
 - (void)registerForKeyboardNotifications;
 - (void)unregisterForKeyboardNotifications;
 - (void)keyboardWillShowWithBeginFrame:(CGRect)beginFrame
