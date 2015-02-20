@@ -51,6 +51,8 @@
 #import "UIWebView+Utility.h"
 #import "UITextField+Utility.h"
 
+#import "UIImagePickerController+Utility.h"
+
 #import "MFMailComposeViewController+Utility.h"
 
 #import <UIKit/UIKit.h>
