@@ -10,6 +10,7 @@
 		06FA48E2BDB5D56009673A8A /* libPods-Pod Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC9B502B95107A74DA306F2 /* libPods-Pod Test.a */; };
 		30D98CC76E8E4F04885388B0 /* libPods-Full Build Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD399F081174AEC9BC9B1B2 /* libPods-Full Build Test.a */; };
 		3C0AFFC21A97D60E0020B9CD /* UIImagePickerController+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AFFC11A97D60E0020B9CD /* UIImagePickerController+Utility.m */; };
+		3C0AFFC51A97DB6D0020B9CD /* ALAssetsLibrary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AFFC41A97DB6D0020B9CD /* ALAssetsLibrary+Utility.m */; };
 		3C160A7F1A449E6500B2C4C8 /* CMMotionManager+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C160A7E1A449E6500B2C4C8 /* CMMotionManager+Utility.m */; };
 		3C160A891A44A17B00B2C4C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C160A881A44A17B00B2C4C8 /* main.m */; };
 		3C160A8C1A44A17B00B2C4C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C160A8B1A44A17B00B2C4C8 /* AppDelegate.m */; };
@@ -127,6 +128,8 @@
 		3C071A551A7D4048006C5A6E /* Eunomia-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Eunomia-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C0AFFC01A97D60E0020B9CD /* UIImagePickerController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Utility.h"; sourceTree = "<group>"; };
 		3C0AFFC11A97D60E0020B9CD /* UIImagePickerController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Utility.m"; sourceTree = "<group>"; };
+		3C0AFFC31A97DB6D0020B9CD /* ALAssetsLibrary+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+Utility.h"; sourceTree = "<group>"; };
+		3C0AFFC41A97DB6D0020B9CD /* ALAssetsLibrary+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+Utility.m"; sourceTree = "<group>"; };
 		3C160A7D1A449E6500B2C4C8 /* CMMotionManager+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMMotionManager+Utility.h"; sourceTree = "<group>"; };
 		3C160A7E1A449E6500B2C4C8 /* CMMotionManager+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMMotionManager+Utility.m"; sourceTree = "<group>"; };
 		3C160A841A44A17B00B2C4C8 /* Library Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Library Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -588,6 +591,8 @@
 				3CCE7CE21A7742E900EB1C27 /* MFMailComposeViewController+Utility.m */,
 				3C0AFFC01A97D60E0020B9CD /* UIImagePickerController+Utility.h */,
 				3C0AFFC11A97D60E0020B9CD /* UIImagePickerController+Utility.m */,
+				3C0AFFC31A97DB6D0020B9CD /* ALAssetsLibrary+Utility.h */,
+				3C0AFFC41A97DB6D0020B9CD /* ALAssetsLibrary+Utility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -974,6 +979,7 @@
 				3CE46F5A19ABBF7700053E62 /* ReplaceLeftSegue.m in Sources */,
 				3CE46F7719ABBF7700053E62 /* Utility.m in Sources */,
 				3C160A7F1A449E6500B2C4C8 /* CMMotionManager+Utility.m in Sources */,
+				3C0AFFC51A97DB6D0020B9CD /* ALAssetsLibrary+Utility.m in Sources */,
 				3C0AFFC21A97D60E0020B9CD /* UIImagePickerController+Utility.m in Sources */,
 				3CE46F8719ABC4B600053E62 /* SSBaseDataSource+Utility.m in Sources */,
 				3CE46F6019ABBF7700053E62 /* NSBundle+Utility.m in Sources */,
