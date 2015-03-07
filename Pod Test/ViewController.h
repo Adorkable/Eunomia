@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import <Eunomia/EunomiaViewController.h>
+
+@interface ViewController : EunomiaViewController
 
 
 @end

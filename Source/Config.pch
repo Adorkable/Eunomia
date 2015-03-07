@@ -1,10 +1,12 @@
 //
-//  Config.h
+//  Config.pch
 //  Eunomia
 //
 //  Created by Ian Grossberg on 7/3/14.
 //
 //
+
+// renamed to PCH so Cocoapods would not move it into the Swift umbrella file
 
 #pragma once
 
