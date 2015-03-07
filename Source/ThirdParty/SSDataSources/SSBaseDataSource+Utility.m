@@ -8,8 +8,6 @@
 
 #import "SSBaseDataSource+Utility.h"
 
-#import "Eunomia.h"
-
 @implementation SSBaseDataSource (Utility)
 
 - (CGFloat)heightForRenderedCellAtIndexPath:(NSIndexPath *)indexPath

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Adorkable. All rights reserved.
 //
 
-#import "SSBaseDataSource.h"
+#import <SSDataSources/SSDataSources.h>
 
 @interface SSBaseDataSource (Utility)
 

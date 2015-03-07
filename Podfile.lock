@@ -1,8 +1,4 @@
 PODS:
-  - ARAnalytics/CoreIOS (2.9.1)
-  - ARAnalytics/GoogleAnalytics (2.9.1):
-    - ARAnalytics/CoreIOS
-    - GoogleAnalytics-iOS-SDK
   - CocoaLumberjack (2.0.0-beta4):
     - CocoaLumberjack/Default (= 2.0.0-beta4)
     - CocoaLumberjack/Extensions (= 2.0.0-beta4)
@@ -11,31 +7,15 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.0.0-beta4):
     - CocoaLumberjack/Default
-  - CrashlyticsFramework (2.2.5.2)
-  - CrashlyticsLumberjack (2.0.0-beta4):
-    - CocoaLumberjack/Core (= 2.0.0-beta4)
   - Eunomia (1.8):
     - CocoaLumberjack (= 2.0.0-beta4)
     - Eunomia/Core (= 1.8)
-    - SegueingInfo
-  - Eunomia/ARAnalytics_GoogleAnalytics (1.8):
-    - ARAnalytics/GoogleAnalytics
-    - CocoaLumberjack (= 2.0.0-beta4)
     - SegueingInfo
   - Eunomia/Core (1.8):
     - CocoaLumberjack (= 2.0.0-beta4)
     - SegueingInfo
   - Eunomia/CoreMotion (1.8):
     - CocoaLumberjack (= 2.0.0-beta4)
-    - SegueingInfo
-  - Eunomia/Crashlytics (1.8):
-    - CocoaLumberjack (= 2.0.0-beta4)
-    - CrashlyticsFramework
-    - CrashlyticsLumberjack (= 2.0.0-beta4)
-    - SegueingInfo
-  - Eunomia/Lookback (1.8):
-    - CocoaLumberjack (= 2.0.0-beta4)
-    - Lookback
     - SegueingInfo
   - Eunomia/PonyDebugger (1.8):
     - CocoaLumberjack (= 2.0.0-beta4)
@@ -46,25 +26,18 @@ PODS:
     - SegueingInfo
     - SSDataSources
   - Expecta (0.3.1)
-  - GoogleAnalytics-iOS-SDK (3.10):
-    - GoogleAnalytics-iOS-SDK/Core (= 3.10)
-  - GoogleAnalytics-iOS-SDK/Core (3.10)
-  - Lookback (0.8.0)
   - OCMock (3.1.1)
-  - PonyDebugger (0.4.0):
+  - PonyDebugger (0.4.2):
     - SocketRocket
   - SegueingInfo (1.0.0)
   - SocketRocket (0.2.0)
   - Specta (0.2.1)
-  - SSDataSources (0.8.0)
+  - SSDataSources (0.8.2)
 
 DEPENDENCIES:
   - CocoaLumberjack (= 2.0.0-beta4)
   - Eunomia (from `./`)
-  - Eunomia/ARAnalytics_GoogleAnalytics (from `./`)
   - Eunomia/CoreMotion (from `./`)
-  - Eunomia/Crashlytics (from `./`)
-  - Eunomia/Lookback (from `./`)
   - Eunomia/PonyDebugger (from `./`)
   - Eunomia/SSDataSources (from `./`)
   - Expecta
@@ -77,19 +50,14 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  ARAnalytics: a06e6d012b5999d8598ec9bacec45c8a8099f668
   CocoaLumberjack: 24153b24b17d853d7182b22b128971fb98e8cb18
-  CrashlyticsFramework: 4e91082f3019bea7e718e1b67b0a3b56729dbc5d
-  CrashlyticsLumberjack: 9984417d3d960b553e9bcd88ba083d20a888bc32
-  Eunomia: bef866205e6b4dee50a0c6f37de097377c8c9065
+  Eunomia: 7d1195eeead6a093b6d917153c05217d104a1685
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
-  GoogleAnalytics-iOS-SDK: f422062075d9ccb1ea8d783fc5ba3829461e9502
-  Lookback: 2c4b5a3855bb66049073e5df9a80801d09f68545
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
-  PonyDebugger: 4f43d7c2f67aa5e26ca00ce6983421608a6eca6d
+  PonyDebugger: 4e382f345ac61b77bcecf1fef385b35a7b592f26
   SegueingInfo: 674b86e23d6db7f005e146919fef0e3078f70efb
   SocketRocket: 6c9cfd1592bea82262b4283dcda3a7de166af3b6
   Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
-  SSDataSources: 4a9f4ecbc390e107c98002a91181e671429bc7b4
+  SSDataSources: c10e97d83d93332a303604717fe683ffd3298cd8
 
-COCOAPODS: 0.36.0.beta.2
+COCOAPODS: 0.36.0.rc.1

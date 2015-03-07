@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06FA48E2BDB5D56009673A8A /* libPods-Pod Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC9B502B95107A74DA306F2 /* libPods-Pod Test.a */; };
-		30D98CC76E8E4F04885388B0 /* libPods-Full Build Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD399F081174AEC9BC9B1B2 /* libPods-Full Build Test.a */; };
 		3C0AFFC21A97D60E0020B9CD /* UIImagePickerController+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AFFC11A97D60E0020B9CD /* UIImagePickerController+Utility.m */; };
 		3C0AFFC51A97DB6D0020B9CD /* ALAssetsLibrary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AFFC41A97DB6D0020B9CD /* ALAssetsLibrary+Utility.m */; };
 		3C160A7F1A449E6500B2C4C8 /* CMMotionManager+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C160A7E1A449E6500B2C4C8 /* CMMotionManager+Utility.m */; };
@@ -83,8 +81,9 @@
 		3CEE65DE199A69E2000E1278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE65DC199A69E2000E1278 /* Main.storyboard */; };
 		3CEE65E0199A69E2000E1278 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE65DF199A69E2000E1278 /* Images.xcassets */; };
 		3CF3F4211A7DC01500ED59A9 /* EunomiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3F4201A7DC01500ED59A9 /* EunomiaViewController.m */; };
-		562B8A345D334E2898C55449 /* libPods-Eunomia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */; };
-		CBD31D6B4C9D483197639183 /* libPods-EunomiaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5B461D423C4CF789732C85 /* libPods-EunomiaTests.a */; };
+		819BDF14A15FA951DEBDC625 /* Pods_Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D64BFEC353BC5937469978 /* Pods_Eunomia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CCEBE88CB9865A83F84E2479 /* Pods_Pod_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8417E9D4EC3A4A13C821AF8A /* Pods_Pod_Test.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F3A1198C85959DCCFE4978FA /* Pods_EunomiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D966037A449F9B3BBE101BE /* Pods_EunomiaTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,13 +95,6 @@
 			remoteInfo = Eunomia;
 		};
 		3CD18D741964A7B100DB8ED7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CD18CF01964A60200DB8ED7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CD18D621964A7B100DB8ED7;
-			remoteInfo = Eunomia;
-		};
-		3CEE65F3199A6BA1000E1278 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CD18CF01964A60200DB8ED7 /* Project object */;
 			proxyType = 1;
@@ -124,7 +116,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eunomia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D966037A449F9B3BBE101BE /* Pods_EunomiaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EunomiaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C071A551A7D4048006C5A6E /* Eunomia-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Eunomia-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C0AFFC01A97D60E0020B9CD /* UIImagePickerController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Utility.h"; sourceTree = "<group>"; };
 		3C0AFFC11A97D60E0020B9CD /* UIImagePickerController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Utility.m"; sourceTree = "<group>"; };
@@ -271,11 +263,11 @@
 		3CF3F4201A7DC01500ED59A9 /* EunomiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EunomiaViewController.m; sourceTree = "<group>"; };
 		447558BB9D0C61B0DD6146E0 /* Pods-EunomiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E1955000106703E5B3FDAFD /* Pods-Eunomia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia.release.xcconfig"; sourceTree = "<group>"; };
+		59D64BFEC353BC5937469978 /* Pods_Eunomia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eunomia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70945A04548DF89BA4CE0DD8 /* Pods-Eunomia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eunomia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia.debug.xcconfig"; sourceTree = "<group>"; };
+		8417E9D4EC3A4A13C821AF8A /* Pods_Pod_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pod_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4B3B7A0FE91B89A913454F /* Pods-EunomiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests.release.xcconfig"; sourceTree = "<group>"; };
 		92E0FD5010914BDDEE68ADCD /* Pods-Pod Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pod Test/Pods-Pod Test.debug.xcconfig"; sourceTree = "<group>"; };
-		AA5B461D423C4CF789732C85 /* libPods-EunomiaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EunomiaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACC9B502B95107A74DA306F2 /* libPods-Pod Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pod Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5A49D5D99DEA51E7C3CDE0 /* Pods-Pod Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pod Test/Pods-Pod Test.release.xcconfig"; sourceTree = "<group>"; };
 		FCD399F081174AEC9BC9B1B2 /* libPods-Full Build Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Full Build Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -294,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CD18D641964A7B100DB8ED7 /* Foundation.framework in Frameworks */,
-				562B8A345D334E2898C55449 /* libPods-Eunomia.a in Frameworks */,
+				819BDF14A15FA951DEBDC625 /* Pods_Eunomia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +297,7 @@
 				3CD18D761964A7B100DB8ED7 /* libEunomia.a in Frameworks */,
 				3CD18D731964A7B100DB8ED7 /* UIKit.framework in Frameworks */,
 				3CD18D721964A7B100DB8ED7 /* Foundation.framework in Frameworks */,
-				CBD31D6B4C9D483197639183 /* libPods-EunomiaTests.a in Frameworks */,
+				F3A1198C85959DCCFE4978FA /* Pods_EunomiaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,8 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D98CC76E8E4F04885388B0 /* libPods-Full Build Test.a in Frameworks */,
-				06FA48E2BDB5D56009673A8A /* libPods-Pod Test.a in Frameworks */,
+				CCEBE88CB9865A83F84E2479 /* Pods_Pod_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,10 +426,10 @@
 				3CD18CFB1964A60200DB8ED7 /* Foundation.framework */,
 				3CD18D091964A60200DB8ED7 /* XCTest.framework */,
 				3CD18D0C1964A60200DB8ED7 /* UIKit.framework */,
-				2381F8D0AE474350B5D433E7 /* libPods-Eunomia.a */,
-				AA5B461D423C4CF789732C85 /* libPods-EunomiaTests.a */,
 				FCD399F081174AEC9BC9B1B2 /* libPods-Full Build Test.a */,
-				ACC9B502B95107A74DA306F2 /* libPods-Pod Test.a */,
+				59D64BFEC353BC5937469978 /* Pods_Eunomia.framework */,
+				0D966037A449F9B3BBE101BE /* Pods_EunomiaTests.framework */,
+				8417E9D4EC3A4A13C821AF8A /* Pods_Pod_Test.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -710,6 +701,7 @@
 				3CD18D601964A7B100DB8ED7 /* Frameworks */,
 				3CD18D611964A7B100DB8ED7 /* CopyFiles */,
 				8C586BE3288E433EA66F8614 /* Copy Pods Resources */,
+				112DE830F5883101D881472B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -729,6 +721,7 @@
 				3CD18D6D1964A7B100DB8ED7 /* Frameworks */,
 				3CD18D6E1964A7B100DB8ED7 /* Resources */,
 				CBB18A834C254FB1BD92DD9F /* Copy Pods Resources */,
+				108725DBADAA407D4B7946F9 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -750,11 +743,11 @@
 				3CEE65CD199A69E2000E1278 /* Frameworks */,
 				3CEE65CE199A69E2000E1278 /* Resources */,
 				A18CC5396E0D434FAABF3D46 /* Copy Pods Resources */,
+				D0CD497F5A4A13A3A1EBF765 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3CEE65F4199A6BA1000E1278 /* PBXTargetDependency */,
 			);
 			name = "Pod Test";
 			productName = "Full Build Test";
@@ -830,6 +823,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		108725DBADAA407D4B7946F9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		112DE830F5883101D881472B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eunomia/Pods-Eunomia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8C586BE3288E433EA66F8614 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -888,6 +911,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EunomiaTests/Pods-EunomiaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0CD497F5A4A13A3A1EBF765 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pod Test/Pods-Pod Test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EE8E4790BA30483B8B31CDF1 /* Check Pods Manifest.lock */ = {
@@ -1027,11 +1065,6 @@
 			target = 3CD18D621964A7B100DB8ED7 /* Eunomia */;
 			targetProxy = 3CD18D741964A7B100DB8ED7 /* PBXContainerItemProxy */;
 		};
-		3CEE65F4199A6BA1000E1278 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3CD18D621964A7B100DB8ED7 /* Eunomia */;
-			targetProxy = 3CEE65F3199A6BA1000E1278 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1082,7 +1115,6 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Library Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1098,7 +1130,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Library Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1137,7 +1168,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1168,7 +1199,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1263,13 +1294,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Pod Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1285,9 +1316,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Pod Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
