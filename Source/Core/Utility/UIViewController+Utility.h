@@ -16,7 +16,7 @@
 - (void)enumerateSelfAndChildViewControllers:(void (^)(UIViewController *viewController) )block;
 - (void)enumerateChildViewControllers:(void (^)(UIViewController *viewController) )block;
 
-- (NSArray *)getAllChildViewControllerssOfClass:(Class)ofClass;
+- (NSArray *)getAllChildViewControllersOfClass:(Class)ofClass;
 
 - (void)replaceWithViewController:(UIViewController *)viewController;
 - (void)replaceWithViewController:(UIViewController *)viewController

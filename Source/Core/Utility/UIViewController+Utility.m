@@ -61,7 +61,7 @@
     }
 }
 
-- (NSArray *)getAllChildViewControllerssOfClass:(Class)ofClass
+- (NSArray *)getAllChildViewControllersOfClass:(Class)ofClass
 {
     __block NSMutableArray *result = [NSMutableArray array];
     
