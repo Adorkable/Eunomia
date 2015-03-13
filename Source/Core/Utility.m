@@ -32,3 +32,29 @@ CGPoint CGPointMakeScaled(CGFloat width, CGFloat height, CGFloat scale)
 {
     return CGPointMake(width * scale, height * scale);
 }
+
+NSString *GetAppDocumentPath()
+{
+    NSString *result;
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    if (paths.count > 0)
+    {
+        result = paths[0];
+    }
+    
+    return result;
+}
+
+NSString *GetAppLibraryPath()
+{
+    NSString *result;
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    if (paths.count > 0)
+    {
+        result = paths[0];
+    }
+    
+    return result;
+}

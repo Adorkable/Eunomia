@@ -66,3 +66,6 @@ extern CGSize CGSizeMinusCGSize(CGSize left, CGSize right);
 extern CGSize CGSizeMultiplied(CGSize size, CGFloat multiplier);
 
 extern CGPoint CGPointMakeScaled(CGFloat width, CGFloat height, CGFloat scale);
+
+extern NSString *GetAppDocumentPath();
+extern NSString *GetAppLibraryPath();
