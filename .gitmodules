@@ -1,0 +1,6 @@
+[submodule "Carthage/Checkouts/SegueingInfo"]
+	path = Carthage/Checkouts/SegueingInfo
+	url = https://github.com/adorkable/SegueingInfo.git
+[submodule "Carthage/Checkouts/CocoaLumberjack"]
+	path = Carthage/Checkouts/CocoaLumberjack
+	url = https://github.com/CocoaLumberjack/CocoaLumberjack.git

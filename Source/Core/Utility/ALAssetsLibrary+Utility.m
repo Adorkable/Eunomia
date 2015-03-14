@@ -8,7 +8,7 @@
 
 #import "ALAssetsLibrary+Utility.h"
 
-#import "Config.pch"
+#import "Config.h"
 
 @implementation ALAssetsLibrary (Eunomia_Utility)
 

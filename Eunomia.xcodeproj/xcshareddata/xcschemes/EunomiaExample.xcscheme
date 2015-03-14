@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C3CF7C11AB3897300EEE0D6"
-               BuildableName = "Eunomia.framework"
-               BlueprintName = "Eunomia"
+               BlueprintIdentifier = "3CE162041AB496DF009E57C1"
+               BuildableName = "EunomiaExample.app"
+               BlueprintName = "EunomiaExample"
                ReferencedContainer = "container:Eunomia.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C3CF7C11AB3897300EEE0D6"
-            BuildableName = "Eunomia.framework"
-            BlueprintName = "Eunomia"
+            BlueprintIdentifier = "3CE162041AB496DF009E57C1"
+            BuildableName = "EunomiaExample.app"
+            BlueprintName = "EunomiaExample"
             ReferencedContainer = "container:Eunomia.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -48,15 +48,16 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C3CF7C11AB3897300EEE0D6"
-            BuildableName = "Eunomia.framework"
-            BlueprintName = "Eunomia"
+            BlueprintIdentifier = "3CE162041AB496DF009E57C1"
+            BuildableName = "EunomiaExample.app"
+            BlueprintName = "EunomiaExample"
             ReferencedContainer = "container:Eunomia.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -66,15 +67,16 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C3CF7C11AB3897300EEE0D6"
-            BuildableName = "Eunomia.framework"
-            BlueprintName = "Eunomia"
+            BlueprintIdentifier = "3CE162041AB496DF009E57C1"
+            BuildableName = "EunomiaExample.app"
+            BlueprintName = "EunomiaExample"
             ReferencedContainer = "container:Eunomia.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
