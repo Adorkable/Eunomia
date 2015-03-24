@@ -57,7 +57,8 @@
 		3C3CF8061AB389E900EEE0D6 /* UIView+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F5119ABBF7700053E62 /* UIView+Templating.m */; };
 		3C3CF8071AB389EF00EEE0D6 /* LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F5519ABBF7700053E62 /* LaunchView.m */; };
 		3C3CF8091AB389EF00EEE0D6 /* AutoloadWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */; };
-		3C3CF8131AB38A5B00EEE0D6 /* Eunomia.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3CF8111AB38A5B00EEE0D6 /* Eunomia.h */; };
+		3C3CF8131AB38A5B00EEE0D6 /* Eunomia.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3CF8111AB38A5B00EEE0D6 /* Eunomia.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C3DF6E11AC220CD00D8950D /* Eunomia-Swift-Force.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3DF6E01AC220CD00D8950D /* Eunomia-Swift-Force.swift */; };
 		3CE1613E1AB41E81009E57C1 /* SegueingInfoiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1613D1AB41E81009E57C1 /* SegueingInfoiOS.framework */; };
 		3CE1617C1AB48FF1009E57C1 /* NSLogWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161781AB48FF0009E57C1 /* NSLogWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE1617D1AB48FF1009E57C1 /* NSLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161791AB48FF1009E57C1 /* NSLogWrapper.m */; };
@@ -131,7 +132,7 @@
 		3CE161F11AB493DD009E57C1 /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D61AB493DD009E57C1 /* DDAssertMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161F21AB493DD009E57C1 /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D71AB493DD009E57C1 /* DDFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161F31AB493DD009E57C1 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161D81AB493DD009E57C1 /* DDFileLogger.m */; };
-		3CE161F41AB493DD009E57C1 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D91AB493DD009E57C1 /* DDLegacyMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CE161F41AB493DD009E57C1 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D91AB493DD009E57C1 /* DDLegacyMacros.h */; };
 		3CE161F51AB493DD009E57C1 /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161DA1AB493DD009E57C1 /* DDLog+LOGV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161F61AB493DD009E57C1 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161DB1AB493DD009E57C1 /* DDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161F71AB493DD009E57C1 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161DC1AB493DD009E57C1 /* DDLog.m */; };
@@ -188,6 +189,7 @@
 		3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eunomia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3CF8111AB38A5B00EEE0D6 /* Eunomia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
 		3C3CF8121AB38A5B00EEE0D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C3DF6E01AC220CD00D8950D /* Eunomia-Swift-Force.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Eunomia-Swift-Force.swift"; sourceTree = "<group>"; };
 		3C65DDCE1965A9B8009C714B /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		3CCE7CE11A7742E900EB1C27 /* MFMailComposeViewController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFMailComposeViewController+Utility.h"; sourceTree = "<group>"; };
 		3CCE7CE21A7742E900EB1C27 /* MFMailComposeViewController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFMailComposeViewController+Utility.m"; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 			children = (
 				3C3CF8111AB38A5B00EEE0D6 /* Eunomia.h */,
 				3C3CF8121AB38A5B00EEE0D6 /* Info.plist */,
+				3C3DF6E01AC220CD00D8950D /* Eunomia-Swift-Force.swift */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -881,6 +884,7 @@
 			files = (
 				3C3CF7DD1AB389DB00EEE0D6 /* ReplaceDownSegue.m in Sources */,
 				3C3CF7F11AB389E000EEE0D6 /* UIMenuController+Utility.m in Sources */,
+				3C3DF6E11AC220CD00D8950D /* Eunomia-Swift-Force.swift in Sources */,
 				3CE161EE1AB493DD009E57C1 /* DDASLLogCapture.m in Sources */,
 				3C3CF8001AB389E000EEE0D6 /* ALAssetsLibrary+Utility.m in Sources */,
 				3C3CF7EF1AB389E000EEE0D6 /* UIImage+Utility.m in Sources */,
@@ -977,6 +981,7 @@
 		3C3CF7D61AB3897300EEE0D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1000,6 +1005,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1009,6 +1015,7 @@
 		3C3CF7D71AB3897300EEE0D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
