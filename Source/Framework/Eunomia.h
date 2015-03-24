@@ -15,8 +15,6 @@ FOUNDATION_EXPORT double EunomiaVersionNumber;
 FOUNDATION_EXPORT const unsigned char EunomiaVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like
-#import "Config.h"
-
 #import "CoreData.h"
 
 #import "Exceptions.h"
@@ -33,11 +31,3 @@ FOUNDATION_EXPORT const unsigned char EunomiaVersionString[];
 
 #import "NSLogWrapper.h"
 #import "VerboseDDLogFormatter.h"
-
-#import "Cocoalumberjack.h"
-#import "CLIColor.h"
-#import "DDAbstractDatabaseLogger.h"
-#import "DDContextFilterLogFormatter.h"
-#import "DDDispatchQueueLogFormatter.h"
-#import "DDLog+LOGV.h"
-#import "DDMultiFormatter.h"

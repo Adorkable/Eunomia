@@ -8,14 +8,7 @@
 
 #pragma once
 
-#import "CocoaLumberjack.h"
-
-#if DEBUG
-static const int ddLogLevel = DDLogLevelVerbose;
-#else
-static const int ddLogLevel = DDLogLevelInfo;
-#endif
-#define ddLogLevelInitialized
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 #define NSLog(frmt, ...)           DDLogInfo(frmt, ##__VA_ARGS__)
 #define NSLogError(frmt, ...)      DDLogError(frmt, ##__VA_ARGS__)

@@ -8,6 +8,8 @@
 
 #import "VerboseDDLogFormatter.h"
 
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
 @implementation VerboseDDLogFormatter
 
 - (NSString *)cocoaLumberjackLogFlagAsString:(int)logFlag

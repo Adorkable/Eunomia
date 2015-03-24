@@ -12,6 +12,8 @@
 	<dict>
 		<key>35B5C9A93714EC9BEB56BAE809C5551E5C66E52D</key>
 		<string>https://github.com/CocoaLumberjack/CocoaLumberjack.git</string>
+		<key>AA51411F2577EB2AA95A153D2F2B18C41B52E3C2</key>
+		<string>https://github.com/Adorkable/SegueingInfo</string>
 		<key>D3384816E8747E600328F4FCEE13DD9F67322C35</key>
 		<string>https://bitbucket.org/yoiang/eunomia.git</string>
 	</dict>
@@ -21,6 +23,8 @@
 	<dict>
 		<key>35B5C9A93714EC9BEB56BAE809C5551E5C66E52D</key>
 		<string>../..Carthage/Checkouts/CocoaLumberjack</string>
+		<key>AA51411F2577EB2AA95A153D2F2B18C41B52E3C2</key>
+		<string>../../Library/SegueingInfo/</string>
 		<key>D3384816E8747E600328F4FCEE13DD9F67322C35</key>
 		<string>../..</string>
 	</dict>
@@ -47,6 +51,14 @@
 			<string>D3384816E8747E600328F4FCEE13DD9F67322C35</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Eunomia</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AA51411F2577EB2AA95A153D2F2B18C41B52E3C2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SegueingInfo</string>
 		</dict>
 	</array>
 </dict>

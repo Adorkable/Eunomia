@@ -10,11 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
-#ifndef DDLog
-#import "CocoaLumberjack.h"
-#endif
-
 @class DDLogMessage;
+@protocol DDLogFormatter;
 
 @interface VerboseDDLogFormatter : NSObject< DDLogFormatter >
 

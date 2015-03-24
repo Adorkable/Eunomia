@@ -16,10 +16,6 @@
 
 #pragma mark Library Headers
 
-#if DEBUG
-#import "DDTTYLogger.h"
-#endif
-
 @implementation ThirdPartyWrapper
 
 + (void)addCocoaLumberjackLogger:(DDAbstractLogger *)addLogger

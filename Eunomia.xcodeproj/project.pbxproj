@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3C0DC05F1AB4973700D32C10 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */; };
-		3C0DC0621AB498A800D32C10 /* SegueingInfoiOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CE1613D1AB41E81009E57C1 /* SegueingInfoiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C0DC0961AB49AD900D32C10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DC08F1AB49ACB00D32C10 /* AppDelegate.m */; };
 		3C0DC0971AB49AD900D32C10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DC0911AB49ACB00D32C10 /* ViewController.m */; };
 		3C3CF7DB1AB389D700EEE0D6 /* CoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F0019ABBF7700053E62 /* CoreDataStore.m */; };
@@ -58,8 +57,16 @@
 		3C3CF8071AB389EF00EEE0D6 /* LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F5519ABBF7700053E62 /* LaunchView.m */; };
 		3C3CF8091AB389EF00EEE0D6 /* AutoloadWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */; };
 		3C3CF8131AB38A5B00EEE0D6 /* Eunomia.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3CF8111AB38A5B00EEE0D6 /* Eunomia.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C3DF6E11AC220CD00D8950D /* Eunomia-Swift-Force.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3DF6E01AC220CD00D8950D /* Eunomia-Swift-Force.swift */; };
-		3CE1613E1AB41E81009E57C1 /* SegueingInfoiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1613D1AB41E81009E57C1 /* SegueingInfoiOS.framework */; };
+		3C3DF6FD1AC225C900D8950D /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3DF6E81AC2258200D8950D /* libCocoaLumberjack.a */; };
+		3C3DF6FE1AC2263600D8950D /* SegueingInfoiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3DF6FA1AC2259800D8950D /* SegueingInfoiOS.framework */; };
+		3CC9C6251AC227150075C406 /* SegueingInfoiOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C3DF6FA1AC2259800D8950D /* SegueingInfoiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3CC9C6501AC229900075C406 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9C64D1AC229900075C406 /* AppDelegate.swift */; };
+		3CC9C6521AC229900075C406 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9C64F1AC229900075C406 /* ViewController.swift */; };
+		3CC9C6531AC229B20075C406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162111AB496DF009E57C1 /* Main.storyboard */; };
+		3CC9C6541AC229B60075C406 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162141AB496DF009E57C1 /* Images.xcassets */; };
+		3CC9C6561AC229D10075C406 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */; };
+		3CC9C65C1AC22A340075C406 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9C6581AC22A340075C406 /* LaunchScreen.xib */; };
+		3CC9C65D1AC22A340075C406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9C65A1AC22A340075C406 /* Main.storyboard */; };
 		3CE1617C1AB48FF1009E57C1 /* NSLogWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161781AB48FF0009E57C1 /* NSLogWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE1617D1AB48FF1009E57C1 /* NSLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161791AB48FF1009E57C1 /* NSLogWrapper.m */; };
 		3CE1617E1AB48FF1009E57C1 /* VerboseDDLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE1617A1AB48FF1009E57C1 /* VerboseDDLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,45 +127,72 @@
 		3CE161C71AB49322009E57C1 /* ZoomOutToRectSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46F1119ABBF7700053E62 /* ZoomOutToRectSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161C81AB49327009E57C1 /* MissingSubclassOverrideException.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46F0319ABBF7700053E62 /* MissingSubclassOverrideException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161C91AB4932C009E57C1 /* CoreDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46EFF19ABBF7700053E62 /* CoreDataStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161E71AB493DD009E57C1 /* CLIColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161CC1AB493DD009E57C1 /* CLIColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161E81AB493DD009E57C1 /* CLIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161CD1AB493DD009E57C1 /* CLIColor.m */; };
-		3CE161E91AB493DD009E57C1 /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161CE1AB493DD009E57C1 /* CocoaLumberjack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161EB1AB493DD009E57C1 /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D01AB493DD009E57C1 /* DDAbstractDatabaseLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161EC1AB493DD009E57C1 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161D11AB493DD009E57C1 /* DDAbstractDatabaseLogger.m */; };
-		3CE161ED1AB493DD009E57C1 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D21AB493DD009E57C1 /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161EE1AB493DD009E57C1 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161D31AB493DD009E57C1 /* DDASLLogCapture.m */; };
-		3CE161EF1AB493DD009E57C1 /* DDASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D41AB493DD009E57C1 /* DDASLLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161F01AB493DD009E57C1 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161D51AB493DD009E57C1 /* DDASLLogger.m */; };
-		3CE161F11AB493DD009E57C1 /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D61AB493DD009E57C1 /* DDAssertMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161F21AB493DD009E57C1 /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D71AB493DD009E57C1 /* DDFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161F31AB493DD009E57C1 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161D81AB493DD009E57C1 /* DDFileLogger.m */; };
-		3CE161F41AB493DD009E57C1 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161D91AB493DD009E57C1 /* DDLegacyMacros.h */; };
-		3CE161F51AB493DD009E57C1 /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161DA1AB493DD009E57C1 /* DDLog+LOGV.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161F61AB493DD009E57C1 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161DB1AB493DD009E57C1 /* DDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161F71AB493DD009E57C1 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161DC1AB493DD009E57C1 /* DDLog.m */; };
-		3CE161F81AB493DD009E57C1 /* DDLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161DD1AB493DD009E57C1 /* DDLogMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161F91AB493DD009E57C1 /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161DE1AB493DD009E57C1 /* DDTTYLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161FA1AB493DD009E57C1 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161DF1AB493DD009E57C1 /* DDTTYLogger.m */; };
-		3CE161FB1AB493DD009E57C1 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161E11AB493DD009E57C1 /* DDContextFilterLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161FC1AB493DD009E57C1 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161E21AB493DD009E57C1 /* DDContextFilterLogFormatter.m */; };
-		3CE161FD1AB493DD009E57C1 /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161E31AB493DD009E57C1 /* DDDispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161FE1AB493DD009E57C1 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161E41AB493DD009E57C1 /* DDDispatchQueueLogFormatter.m */; };
-		3CE161FF1AB493DD009E57C1 /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161E51AB493DD009E57C1 /* DDMultiFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE162001AB493DD009E57C1 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161E61AB493DD009E57C1 /* DDMultiFormatter.m */; };
 		3CE1620A1AB496DF009E57C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE162091AB496DF009E57C1 /* main.m */; };
 		3CE162131AB496DF009E57C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162111AB496DF009E57C1 /* Main.storyboard */; };
 		3CE162151AB496DF009E57C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162141AB496DF009E57C1 /* Images.xcassets */; };
 		3CE162181AB496DF009E57C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162161AB496DF009E57C1 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3C3DF6E71AC2258200D8950D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2A37F97718E37270009FAAA7;
+			remoteInfo = CocoaLumberjack;
+		};
+		3C3DF6E91AC2258200D8950D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2A37F9DA18E37536009FAAA7;
+			remoteInfo = LibTest;
+		};
+		3C3DF6F31AC2259800D8950D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C7A0BF619A14BE70001BE79;
+			remoteInfo = SegueingInfo;
+		};
+		3C3DF6F51AC2259800D8950D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C7A0C1119A14CAF0001BE79;
+			remoteInfo = SegueingInfoExample;
+		};
+		3C3DF6F71AC2259800D8950D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3CC2AE391A853F1500D8FB27;
+			remoteInfo = SegueingInfoExampleOSX;
+		};
+		3C3DF6F91AC2259800D8950D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C3CF81A1AB38E0D00EEE0D6;
+			remoteInfo = SegueingInfoFrameworkiOS;
+		};
+		3C3DF6FB1AC2259800D8950D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3CE161061AB41785009E57C1;
+			remoteInfo = SegueingInfoExampleFrameworkiOS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		3C0DC0611AB4989B00D32C10 /* CopyFiles */ = {
+		3CC9C6231AC226FD0075C406 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3C0DC0621AB498A800D32C10 /* SegueingInfoiOS.framework in CopyFiles */,
+				3CC9C6251AC227150075C406 /* SegueingInfoiOS.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,12 +219,18 @@
 		3C371BDA19854EBE008503FE /* LaunchViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewSpec.m; sourceTree = "<group>"; };
 		3C38FC431A82DB1A00813A2B /* AutoloadWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoloadWebView.h; sourceTree = "<group>"; };
 		3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoloadWebView.m; sourceTree = "<group>"; };
-		3C3CF7BC1AB366EA00EEE0D6 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eunomia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3CF8111AB38A5B00EEE0D6 /* Eunomia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
 		3C3CF8121AB38A5B00EEE0D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C3DF6E01AC220CD00D8950D /* Eunomia-Swift-Force.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Eunomia-Swift-Force.swift"; sourceTree = "<group>"; };
+		3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = Library/CocoaLumberjack/Framework/Mobile/Lumberjack.xcodeproj; sourceTree = SOURCE_ROOT; };
+		3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SegueingInfo.xcodeproj; path = Library/SegueingInfo/SegueingInfo.xcodeproj; sourceTree = SOURCE_ROOT; };
 		3C65DDCE1965A9B8009C714B /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		3CC9C62A1AC228FE0075C406 /* EunomiaExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EunomiaExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CC9C64D1AC229900075C406 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CC9C64E1AC229900075C406 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC9C64F1AC229900075C406 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CC9C6591AC22A340075C406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		3CC9C65B1AC22A340075C406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		3CCE7CE11A7742E900EB1C27 /* MFMailComposeViewController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFMailComposeViewController+Utility.h"; sourceTree = "<group>"; };
 		3CCE7CE21A7742E900EB1C27 /* MFMailComposeViewController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFMailComposeViewController+Utility.m"; sourceTree = "<group>"; };
 		3CD18CFB1964A60200DB8ED7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -202,7 +242,6 @@
 		3CDA953319F58E100009A367 /* NSCharacterSet+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+Utility.m"; sourceTree = "<group>"; };
 		3CDA953519F58E920009A367 /* UIBarItem+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarItem+Utility.h"; sourceTree = "<group>"; };
 		3CDA953619F58E920009A367 /* UIBarItem+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarItem+Utility.m"; sourceTree = "<group>"; };
-		3CE1613D1AB41E81009E57C1 /* SegueingInfoiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SegueingInfoiOS.framework; path = Carthage/Build/iOS/SegueingInfoiOS.framework; sourceTree = "<group>"; };
 		3CE161781AB48FF0009E57C1 /* NSLogWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogWrapper.h; sourceTree = "<group>"; };
 		3CE161791AB48FF1009E57C1 /* NSLogWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLogWrapper.m; sourceTree = "<group>"; };
 		3CE1617A1AB48FF1009E57C1 /* VerboseDDLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerboseDDLogFormatter.h; sourceTree = "<group>"; };
@@ -211,32 +250,6 @@
 		3CE1618D1AB490D3009E57C1 /* ThirdPartyWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPartyWrapper.m; sourceTree = "<group>"; };
 		3CE161901AB49125009E57C1 /* UIDevice+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Utility.h"; sourceTree = "<group>"; };
 		3CE161911AB49125009E57C1 /* UIDevice+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Utility.m"; sourceTree = "<group>"; };
-		3CE161CC1AB493DD009E57C1 /* CLIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIColor.h; sourceTree = "<group>"; };
-		3CE161CD1AB493DD009E57C1 /* CLIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIColor.m; sourceTree = "<group>"; };
-		3CE161CE1AB493DD009E57C1 /* CocoaLumberjack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLumberjack.h; sourceTree = "<group>"; };
-		3CE161CF1AB493DD009E57C1 /* CocoaLumberjack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjack.swift; sourceTree = "<group>"; };
-		3CE161D01AB493DD009E57C1 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
-		3CE161D11AB493DD009E57C1 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
-		3CE161D21AB493DD009E57C1 /* DDASLLogCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogCapture.h; sourceTree = "<group>"; };
-		3CE161D31AB493DD009E57C1 /* DDASLLogCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogCapture.m; sourceTree = "<group>"; };
-		3CE161D41AB493DD009E57C1 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		3CE161D51AB493DD009E57C1 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
-		3CE161D61AB493DD009E57C1 /* DDAssertMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAssertMacros.h; sourceTree = "<group>"; };
-		3CE161D71AB493DD009E57C1 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
-		3CE161D81AB493DD009E57C1 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
-		3CE161D91AB493DD009E57C1 /* DDLegacyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLegacyMacros.h; sourceTree = "<group>"; };
-		3CE161DA1AB493DD009E57C1 /* DDLog+LOGV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDLog+LOGV.h"; sourceTree = "<group>"; };
-		3CE161DB1AB493DD009E57C1 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
-		3CE161DC1AB493DD009E57C1 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
-		3CE161DD1AB493DD009E57C1 /* DDLogMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLogMacros.h; sourceTree = "<group>"; };
-		3CE161DE1AB493DD009E57C1 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
-		3CE161DF1AB493DD009E57C1 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
-		3CE161E11AB493DD009E57C1 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
-		3CE161E21AB493DD009E57C1 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
-		3CE161E31AB493DD009E57C1 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		3CE161E41AB493DD009E57C1 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		3CE161E51AB493DD009E57C1 /* DDMultiFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMultiFormatter.h; sourceTree = "<group>"; };
-		3CE161E61AB493DD009E57C1 /* DDMultiFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMultiFormatter.m; sourceTree = "<group>"; };
 		3CE162051AB496DF009E57C1 /* EunomiaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EunomiaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE162081AB496DF009E57C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE162091AB496DF009E57C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -333,7 +346,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CE1613E1AB41E81009E57C1 /* SegueingInfoiOS.framework in Frameworks */,
+				3C3DF6FD1AC225C900D8950D /* libCocoaLumberjack.a in Frameworks */,
+				3C3DF6FE1AC2263600D8950D /* SegueingInfoiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CC9C6271AC228FE0075C406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC9C6561AC229D10075C406 /* Eunomia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,15 +423,54 @@
 			children = (
 				3C3CF8111AB38A5B00EEE0D6 /* Eunomia.h */,
 				3C3CF8121AB38A5B00EEE0D6 /* Info.plist */,
-				3C3DF6E01AC220CD00D8950D /* Eunomia-Swift-Force.swift */,
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		3C3DF6E31AC2258200D8950D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C3DF6E81AC2258200D8950D /* libCocoaLumberjack.a */,
+				3C3DF6EA1AC2258200D8950D /* LibTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C3DF6EC1AC2259800D8950D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C3DF6F41AC2259800D8950D /* libSegueingInfo.a */,
+				3C3DF6F61AC2259800D8950D /* SegueingInfoExample.app */,
+				3C3DF6F81AC2259800D8950D /* SegueingInfoExampleOSX.app */,
+				3C3DF6FA1AC2259800D8950D /* SegueingInfoiOS.framework */,
+				3C3DF6FC1AC2259800D8950D /* SegueingInfoExampleFrameworkiOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CC9C64C1AC229900075C406 /* CoreSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3CC9C6571AC22A340075C406 /* Base.lproj */,
+				3CC9C64D1AC229900075C406 /* AppDelegate.swift */,
+				3CC9C64E1AC229900075C406 /* Info.plist */,
+				3CC9C64F1AC229900075C406 /* ViewController.swift */,
+			);
+			path = CoreSwift;
+			sourceTree = "<group>";
+		};
+		3CC9C6571AC22A340075C406 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				3CC9C6581AC22A340075C406 /* LaunchScreen.xib */,
+				3CC9C65A1AC22A340075C406 /* Main.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		3CD18CEF1964A60200DB8ED7 = {
 			isa = PBXGroup;
 			children = (
-				3C3CF7BC1AB366EA00EEE0D6 /* Cartfile */,
 				3CD18D991964AF2800DB8ED7 /* Eunomia.podspec */,
 				3CD18D211964A65F00DB8ED7 /* Source */,
 				3C371BD319853F20008503FE /* Tests */,
@@ -424,6 +485,7 @@
 			children = (
 				3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */,
 				3CE162051AB496DF009E57C1 /* EunomiaExample.app */,
+				3CC9C62A1AC228FE0075C406 /* EunomiaExampleSwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -431,7 +493,6 @@
 		3CD18CFA1964A60200DB8ED7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3CE1613D1AB41E81009E57C1 /* SegueingInfoiOS.framework */,
 				3CD18CFB1964A60200DB8ED7 /* Foundation.framework */,
 				3CD18D0C1964A60200DB8ED7 /* UIKit.framework */,
 			);
@@ -454,6 +515,7 @@
 			children = (
 				3CE1618C1AB490D3009E57C1 /* ThirdPartyWrapper.h */,
 				3CE1618D1AB490D3009E57C1 /* ThirdPartyWrapper.m */,
+				3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */,
 				3CE161771AB48FF0009E57C1 /* CocoaLumberjack */,
 			);
 			path = ThirdParty;
@@ -462,7 +524,7 @@
 		3CE161771AB48FF0009E57C1 /* CocoaLumberjack */ = {
 			isa = PBXGroup;
 			children = (
-				3CE161CA1AB493DD009E57C1 /* Classes */,
+				3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */,
 				3CE161781AB48FF0009E57C1 /* NSLogWrapper.h */,
 				3CE161791AB48FF1009E57C1 /* NSLogWrapper.m */,
 				3CE1617A1AB48FF1009E57C1 /* VerboseDDLogFormatter.h */,
@@ -471,60 +533,11 @@
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
-		3CE161CA1AB493DD009E57C1 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				3CE161CB1AB493DD009E57C1 /* CLI */,
-				3CE161CE1AB493DD009E57C1 /* CocoaLumberjack.h */,
-				3CE161CF1AB493DD009E57C1 /* CocoaLumberjack.swift */,
-				3CE161D01AB493DD009E57C1 /* DDAbstractDatabaseLogger.h */,
-				3CE161D11AB493DD009E57C1 /* DDAbstractDatabaseLogger.m */,
-				3CE161D21AB493DD009E57C1 /* DDASLLogCapture.h */,
-				3CE161D31AB493DD009E57C1 /* DDASLLogCapture.m */,
-				3CE161D41AB493DD009E57C1 /* DDASLLogger.h */,
-				3CE161D51AB493DD009E57C1 /* DDASLLogger.m */,
-				3CE161D61AB493DD009E57C1 /* DDAssertMacros.h */,
-				3CE161D71AB493DD009E57C1 /* DDFileLogger.h */,
-				3CE161D81AB493DD009E57C1 /* DDFileLogger.m */,
-				3CE161D91AB493DD009E57C1 /* DDLegacyMacros.h */,
-				3CE161DA1AB493DD009E57C1 /* DDLog+LOGV.h */,
-				3CE161DB1AB493DD009E57C1 /* DDLog.h */,
-				3CE161DC1AB493DD009E57C1 /* DDLog.m */,
-				3CE161DD1AB493DD009E57C1 /* DDLogMacros.h */,
-				3CE161DE1AB493DD009E57C1 /* DDTTYLogger.h */,
-				3CE161DF1AB493DD009E57C1 /* DDTTYLogger.m */,
-				3CE161E01AB493DD009E57C1 /* Extensions */,
-			);
-			name = Classes;
-			path = Carthage/Checkouts/CocoaLumberjack/Classes;
-			sourceTree = SOURCE_ROOT;
-		};
-		3CE161CB1AB493DD009E57C1 /* CLI */ = {
-			isa = PBXGroup;
-			children = (
-				3CE161CC1AB493DD009E57C1 /* CLIColor.h */,
-				3CE161CD1AB493DD009E57C1 /* CLIColor.m */,
-			);
-			path = CLI;
-			sourceTree = "<group>";
-		};
-		3CE161E01AB493DD009E57C1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3CE161E11AB493DD009E57C1 /* DDContextFilterLogFormatter.h */,
-				3CE161E21AB493DD009E57C1 /* DDContextFilterLogFormatter.m */,
-				3CE161E31AB493DD009E57C1 /* DDDispatchQueueLogFormatter.h */,
-				3CE161E41AB493DD009E57C1 /* DDDispatchQueueLogFormatter.m */,
-				3CE161E51AB493DD009E57C1 /* DDMultiFormatter.h */,
-				3CE161E61AB493DD009E57C1 /* DDMultiFormatter.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		3CE162061AB496DF009E57C1 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				3C0DC08D1AB49ACB00D32C10 /* Core */,
+				3CC9C64C1AC229900075C406 /* CoreSwift */,
 				3C0DC0981AB49B0300D32C10 /* ThirdParty */,
 				3CE162111AB496DF009E57C1 /* Main.storyboard */,
 				3CE162141AB496DF009E57C1 /* Images.xcassets */,
@@ -711,13 +724,8 @@
 				3CE161A81AB4931C009E57C1 /* NSManagedObjectContext+Utility.h in Headers */,
 				3CE161C11AB4931C009E57C1 /* ALAssetsLibrary+Utility.h in Headers */,
 				3CE161BB1AB4931C009E57C1 /* UIWebView+Utility.h in Headers */,
-				3CE161F11AB493DD009E57C1 /* DDAssertMacros.h in Headers */,
 				3CE161A01AB4930E009E57C1 /* UILabel+Templating.h in Headers */,
-				3CE161F81AB493DD009E57C1 /* DDLogMacros.h in Headers */,
-				3CE161F61AB493DD009E57C1 /* DDLog.h in Headers */,
 				3CE161AF1AB4931C009E57C1 /* UIColor+Utility.h in Headers */,
-				3CE161E71AB493DD009E57C1 /* CLIColor.h in Headers */,
-				3CE161E91AB493DD009E57C1 /* CocoaLumberjack.h in Headers */,
 				3CE161AD1AB4931C009E57C1 /* NSObject+Utility.h in Headers */,
 				3CE161B41AB4931C009E57C1 /* UIPinchGestureRecognizer+Utility.h in Headers */,
 				3CE161C81AB49327009E57C1 /* MissingSubclassOverrideException.h in Headers */,
@@ -727,10 +735,8 @@
 				3CE161921AB49125009E57C1 /* UIDevice+Utility.h in Headers */,
 				3CE161BD1AB4931C009E57C1 /* NSCharacterSet+Utility.h in Headers */,
 				3CE161AC1AB4931C009E57C1 /* NSNotification+Utility.h in Headers */,
-				3CE161FB1AB493DD009E57C1 /* DDContextFilterLogFormatter.h in Headers */,
 				3CE1617C1AB48FF1009E57C1 /* NSLogWrapper.h in Headers */,
 				3CE161AA1AB4931C009E57C1 /* NSMutableDictionary+Utility.h in Headers */,
-				3CE161FF1AB493DD009E57C1 /* DDMultiFormatter.h in Headers */,
 				3CE161A91AB4931C009E57C1 /* NSMutableArray+Utility.h in Headers */,
 				3CE1619B1AB492DD009E57C1 /* Views.h in Headers */,
 				3CE161B71AB4931C009E57C1 /* UITapGestureRecognizer+Utility.h in Headers */,
@@ -746,7 +752,6 @@
 				3CE1619A1AB492DD009E57C1 /* View+Templating.h in Headers */,
 				3CE161C91AB4932C009E57C1 /* CoreDataStore.h in Headers */,
 				3CE161A71AB4931C009E57C1 /* NSManagedObject+Utility.h in Headers */,
-				3CE161F41AB493DD009E57C1 /* DDLegacyMacros.h in Headers */,
 				3CE161C41AB49322009E57C1 /* ReplaceRightSegue.h in Headers */,
 				3CE161C21AB49322009E57C1 /* ReplaceDownSegue.h in Headers */,
 				3CE161B21AB4931C009E57C1 /* UIMenuController+Utility.h in Headers */,
@@ -754,12 +759,9 @@
 				3CE161B11AB4931C009E57C1 /* UILongPressGestureRecognizer+Utility.h in Headers */,
 				3CE161B61AB4931C009E57C1 /* UIStoryboardSegue+Utility.h in Headers */,
 				3CE161A11AB4930E009E57C1 /* UITextField+Templating.h in Headers */,
-				3CE161F91AB493DD009E57C1 /* DDTTYLogger.h in Headers */,
 				3CE1619F1AB4930E009E57C1 /* UIImageView+Templating.h in Headers */,
-				3CE161F51AB493DD009E57C1 /* DDLog+LOGV.h in Headers */,
 				3CE161A31AB4930E009E57C1 /* UIView+Templating.h in Headers */,
 				3CE1619E1AB492FF009E57C1 /* AutoloadWebView.h in Headers */,
-				3CE161ED1AB493DD009E57C1 /* DDASLLogCapture.h in Headers */,
 				3CE161A51AB4931C009E57C1 /* NSBundle+Utility.h in Headers */,
 				3CE161991AB492DD009E57C1 /* Utility.h in Headers */,
 				3CE161A61AB4931C009E57C1 /* NSFetchedResultsController+Utility.h in Headers */,
@@ -767,16 +769,12 @@
 				3CE1617E1AB48FF1009E57C1 /* VerboseDDLogFormatter.h in Headers */,
 				3CE161AB1AB4931C009E57C1 /* NSMutableString+Utility.h in Headers */,
 				3CE161981AB492DD009E57C1 /* Segues.h in Headers */,
-				3CE161F21AB493DD009E57C1 /* DDFileLogger.h in Headers */,
-				3CE161EF1AB493DD009E57C1 /* DDASLLogger.h in Headers */,
-				3CE161FD1AB493DD009E57C1 /* DDDispatchQueueLogFormatter.h in Headers */,
 				3CE1619C1AB492FF009E57C1 /* LaunchView.h in Headers */,
 				3CE161C51AB49322009E57C1 /* ReplaceUpSegue.h in Headers */,
 				3CE161BE1AB4931C009E57C1 /* UIBarItem+Utility.h in Headers */,
 				3CE161B51AB4931C009E57C1 /* UIScrollView+Utility.h in Headers */,
 				3CE161C61AB49322009E57C1 /* ZoomInFromRectSegue.h in Headers */,
 				3CE161B31AB4931C009E57C1 /* UIPanGestureRecognizer+Utility.h in Headers */,
-				3CE161EB1AB493DD009E57C1 /* DDAbstractDatabaseLogger.h in Headers */,
 				3CE161C01AB4931C009E57C1 /* UIImagePickerController+Utility.h in Headers */,
 				3CE161A41AB4931C009E57C1 /* JSContext+Utility.h in Headers */,
 			);
@@ -793,7 +791,7 @@
 				3C3CF7BE1AB3897300EEE0D6 /* Frameworks */,
 				3C3CF7BF1AB3897300EEE0D6 /* Headers */,
 				3C3CF7C01AB3897300EEE0D6 /* Resources */,
-				3C0DC0611AB4989B00D32C10 /* CopyFiles */,
+				3CC9C6231AC226FD0075C406 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -803,6 +801,23 @@
 			productName = Eunomia;
 			productReference = 3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		3CC9C6291AC228FE0075C406 /* EunomiaExampleSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CC9C6461AC228FF0075C406 /* Build configuration list for PBXNativeTarget "EunomiaExampleSwift" */;
+			buildPhases = (
+				3CC9C6261AC228FE0075C406 /* Sources */,
+				3CC9C6271AC228FE0075C406 /* Frameworks */,
+				3CC9C6281AC228FE0075C406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EunomiaExampleSwift;
+			productName = EunomiaExampleSwift;
+			productReference = 3CC9C62A1AC228FE0075C406 /* EunomiaExampleSwift.app */;
+			productType = "com.apple.product-type.application";
 		};
 		3CE162041AB496DF009E57C1 /* EunomiaExample */ = {
 			isa = PBXNativeTarget;
@@ -833,6 +848,9 @@
 					3C3CF7C11AB3897300EEE0D6 = {
 						CreatedOnToolsVersion = 6.2;
 					};
+					3CC9C6291AC228FE0075C406 = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					3CE162041AB496DF009E57C1 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -849,19 +867,93 @@
 			mainGroup = 3CD18CEF1964A60200DB8ED7;
 			productRefGroup = 3CD18CF91964A60200DB8ED7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3C3DF6E31AC2258200D8950D /* Products */;
+					ProjectRef = 3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */;
+				},
+				{
+					ProductGroup = 3C3DF6EC1AC2259800D8950D /* Products */;
+					ProjectRef = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3C3CF7C11AB3897300EEE0D6 /* Eunomia */,
 				3CE162041AB496DF009E57C1 /* EunomiaExample */,
+				3CC9C6291AC228FE0075C406 /* EunomiaExampleSwift */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3C3DF6E81AC2258200D8950D /* libCocoaLumberjack.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCocoaLumberjack.a;
+			remoteRef = 3C3DF6E71AC2258200D8950D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C3DF6EA1AC2258200D8950D /* LibTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LibTest.app;
+			remoteRef = 3C3DF6E91AC2258200D8950D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C3DF6F41AC2259800D8950D /* libSegueingInfo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSegueingInfo.a;
+			remoteRef = 3C3DF6F31AC2259800D8950D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C3DF6F61AC2259800D8950D /* SegueingInfoExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SegueingInfoExample.app;
+			remoteRef = 3C3DF6F51AC2259800D8950D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C3DF6F81AC2259800D8950D /* SegueingInfoExampleOSX.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SegueingInfoExampleOSX.app;
+			remoteRef = 3C3DF6F71AC2259800D8950D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C3DF6FA1AC2259800D8950D /* SegueingInfoiOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SegueingInfoiOS.framework;
+			remoteRef = 3C3DF6F91AC2259800D8950D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C3DF6FC1AC2259800D8950D /* SegueingInfoExampleFrameworkiOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SegueingInfoExampleFrameworkiOS.app;
+			remoteRef = 3C3DF6FB1AC2259800D8950D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3C3CF7C01AB3897300EEE0D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CC9C6281AC228FE0075C406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC9C65C1AC22A340075C406 /* LaunchScreen.xib in Resources */,
+				3CC9C65D1AC22A340075C406 /* Main.storyboard in Resources */,
+				3CC9C6541AC229B60075C406 /* Images.xcassets in Resources */,
+				3CC9C6531AC229B20075C406 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,13 +976,9 @@
 			files = (
 				3C3CF7DD1AB389DB00EEE0D6 /* ReplaceDownSegue.m in Sources */,
 				3C3CF7F11AB389E000EEE0D6 /* UIMenuController+Utility.m in Sources */,
-				3C3DF6E11AC220CD00D8950D /* Eunomia-Swift-Force.swift in Sources */,
-				3CE161EE1AB493DD009E57C1 /* DDASLLogCapture.m in Sources */,
 				3C3CF8001AB389E000EEE0D6 /* ALAssetsLibrary+Utility.m in Sources */,
 				3C3CF7EF1AB389E000EEE0D6 /* UIImage+Utility.m in Sources */,
-				3CE161FE1AB493DD009E57C1 /* DDDispatchQueueLogFormatter.m in Sources */,
 				3C3CF7F51AB389E000EEE0D6 /* UIStoryboardSegue+Utility.m in Sources */,
-				3CE161F71AB493DD009E57C1 /* DDLog.m in Sources */,
 				3C3CF7FA1AB389E000EEE0D6 /* UIWebView+Utility.m in Sources */,
 				3C3CF7FD1AB389E000EEE0D6 /* UIBarItem+Utility.m in Sources */,
 				3C3CF7FE1AB389E000EEE0D6 /* MFMailComposeViewController+Utility.m in Sources */,
@@ -900,25 +988,18 @@
 				3C3CF7E11AB389DB00EEE0D6 /* ZoomInFromRectSegue.m in Sources */,
 				3C3CF7E01AB389DB00EEE0D6 /* ReplaceUpSegue.m in Sources */,
 				3C3CF7F81AB389E000EEE0D6 /* UIView+Utility.m in Sources */,
-				3CE161EC1AB493DD009E57C1 /* DDAbstractDatabaseLogger.m in Sources */,
 				3C3CF8041AB389E900EEE0D6 /* UITextField+Templating.m in Sources */,
 				3C3CF7EE1AB389E000EEE0D6 /* UIColor+Utility.m in Sources */,
 				3C3CF7FC1AB389E000EEE0D6 /* NSCharacterSet+Utility.m in Sources */,
 				3C3CF7FB1AB389E000EEE0D6 /* UIApplication+Utility.m in Sources */,
-				3CE161FA1AB493DD009E57C1 /* DDTTYLogger.m in Sources */,
 				3C3CF7EC1AB389E000EEE0D6 /* NSObject+Utility.m in Sources */,
-				3CE162001AB493DD009E57C1 /* DDMultiFormatter.m in Sources */,
 				3C3CF7F41AB389E000EEE0D6 /* UIScrollView+Utility.m in Sources */,
 				3C3CF7F31AB389E000EEE0D6 /* UIPinchGestureRecognizer+Utility.m in Sources */,
-				3CE161FC1AB493DD009E57C1 /* DDContextFilterLogFormatter.m in Sources */,
-				3CE161F01AB493DD009E57C1 /* DDASLLogger.m in Sources */,
 				3C3CF8071AB389EF00EEE0D6 /* LaunchView.m in Sources */,
-				3CE161F31AB493DD009E57C1 /* DDFileLogger.m in Sources */,
 				3C3CF7DF1AB389DB00EEE0D6 /* ReplaceRightSegue.m in Sources */,
 				3C3CF7EB1AB389E000EEE0D6 /* NSNotification+Utility.m in Sources */,
 				3C3CF7EA1AB389E000EEE0D6 /* NSMutableString+Utility.m in Sources */,
 				3C3CF7FF1AB389E000EEE0D6 /* UIImagePickerController+Utility.m in Sources */,
-				3CE161E81AB493DD009E57C1 /* CLIColor.m in Sources */,
 				3C3CF7DE1AB389DB00EEE0D6 /* ReplaceLeftSegue.m in Sources */,
 				3C3CF7F71AB389E000EEE0D6 /* UITextField+Utility.m in Sources */,
 				3C3CF7E81AB389E000EEE0D6 /* NSMutableArray+Utility.m in Sources */,
@@ -946,6 +1027,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3CC9C6261AC228FE0075C406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC9C6521AC229900075C406 /* ViewController.swift in Sources */,
+				3CC9C6501AC229900075C406 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CE162011AB496DF009E57C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -959,6 +1049,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3CC9C6581AC22A340075C406 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CC9C6591AC22A340075C406 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		3CC9C65A1AC22A340075C406 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CC9C65B1AC22A340075C406 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		3CE162111AB496DF009E57C1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -990,10 +1096,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1025,10 +1127,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Source/Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -1039,6 +1137,48 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3CC9C6471AC228FF0075C406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Example/CoreSwift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CC9C6481AC228FF0075C406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/CoreSwift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1158,6 +1298,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3CC9C6461AC228FF0075C406 /* Build configuration list for PBXNativeTarget "EunomiaExampleSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CC9C6471AC228FF0075C406 /* Debug */,
+				3CC9C6481AC228FF0075C406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		3CD18CF31964A60200DB8ED7 /* Build configuration list for PBXProject "Eunomia" */ = {
 			isa = XCConfigurationList;
