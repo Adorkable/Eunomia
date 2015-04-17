@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://bitbucket.org/yoiang/eunomia", :tag => "1.8" }
 
-  s.source_files = "Source/*.{h,m}", "Source/Core/**/*.{h,m}", "Source/Eunomia-Force-Module.swift", "Carthage/Checkouts/Cocoalumberjack/Classes/**/*.{h,m}"
+  s.source_files = "Source/*.{h,m}", "Source/Core/**/*.{h,m}"
 
-  s.public_header_files = "Source/**/*.h", "Carthage/Checkouts/Cocoalumberjack/Classes/**/*.h"
+  s.public_header_files = "Source/**/*.h"
   s.requires_arc = true
 
   s.dependency 'CocoaLumberjack'

@@ -1306,6 +1306,7 @@
 				3CC9C6481AC228FF0075C406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CD18CF31964A60200DB8ED7 /* Build configuration list for PBXProject "Eunomia" */ = {
 			isa = XCConfigurationList;
