@@ -133,7 +133,7 @@
 		3CE162181AB496DF009E57C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162161AB496DF009E57C1 /* LaunchScreen.xib */; };
 		3CE50C701AE75B82000182BA /* EunomiaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE50C6E1AE75B82000182BA /* EunomiaViewController.h */; };
 		3CE50C711AE75B82000182BA /* EunomiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE50C6F1AE75B82000182BA /* EunomiaViewController.m */; };
-		3CE50CD41AE7661F000182BA /* EunomiaAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE50CD21AE7661F000182BA /* EunomiaAppDelegate.h */; };
+		3CE50CD41AE7661F000182BA /* EunomiaAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE50CD21AE7661F000182BA /* EunomiaAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE50CD51AE7661F000182BA /* EunomiaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE50CD31AE7661F000182BA /* EunomiaAppDelegate.m */; };
 /* End PBXBuildFile section */
 

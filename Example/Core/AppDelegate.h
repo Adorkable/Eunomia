@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import <Eunomia/EunomiaAppDelegate.h>
 
-@property (strong, nonatomic) UIWindow *window;
-
+@interface AppDelegate : EunomiaAppDelegate
 
 @end
 
