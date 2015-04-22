@@ -14,6 +14,68 @@
 
 @implementation UIViewController (Eunomia_Utility)
 
+- (NSInteger)hasChildViewControllerAtDepth:(UIViewController *)viewController
+{
+    NSInteger result = 0;
+    UIViewController *testViewController = viewController;
+    while (testViewController)
+    {
+        if (testViewController == self)
+        {
+            break;
+        }
+        testViewController = testViewController.parentViewController;
+        result ++;
+    }
+    
+    if (testViewController == nil)
+    {
+        result = NSNotFound;
+    }
+    
+    return result;
+}
+
+- (void)enumerateSelfAndChildViewControllers:(void (^)(UIViewController *viewController) )block
+{
+    if (block)
+    {
+        block(self);
+    }
+    [self enumerateChildViewControllers:block];
+}
+
+- (void)enumerateChildViewControllers:(void (^)(UIViewController *viewController) )block
+{
+    if (block)
+    {
+        [self.childViewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+        {
+            if ( [obj isKindOfClass:[UIViewController class] ] )
+            {
+                UIViewController *childViewController = obj;
+                block(childViewController);
+                [childViewController enumerateChildViewControllers:block];
+            }
+        }];
+    }
+}
+
+- (NSArray *)getAllChildViewControllersOfClass:(Class)ofClass
+{
+    __block NSMutableArray *result = [NSMutableArray array];
+    
+    [self enumerateChildViewControllers:^(UIViewController *viewController) {
+        if ( [viewController isKindOfClass:ofClass] )
+        {
+            [result addObject:viewController];
+        }
+    }];
+    
+    return result;
+}
+
+
 - (void)replaceInSuperviewWithViewController:(UIViewController *)viewController
 {
     if (self.view.superview)

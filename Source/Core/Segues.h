@@ -8,8 +8,6 @@
 
 #pragma once
 
-#import "Eunomia.h"
-
 #import "ReplaceLeftSegue.h"
 #import "ReplaceRightSegue.h"
 #import "ReplaceUpSegue.h"

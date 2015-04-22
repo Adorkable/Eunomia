@@ -31,17 +31,6 @@
                       );
 }
 
-- (void)setCenter:(CGPoint)center
-{
-    self.frame = CGRectMake(center.x - self.frame.size.width / 2, center.y - self.frame.size.height / 2,
-                            self.frame.size.width, self.frame.size.height);
-}
-
-- (CGPoint)center
-{
-    return CGPointMake(self.frame.origin.x + self.frame.size.width / 2, self.frame.origin.y + self.frame.size.height / 2);
-}
-
 - (void)setBorderColor:(UIColor *)borderColor
 {
     self.layer.borderColor = borderColor.CGColor;

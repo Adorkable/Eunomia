@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3CD18D621964A7B100DB8ED7"
-               BuildableName = "libEunomia.a"
+               BlueprintIdentifier = "3C3CF7C11AB3897300EEE0D6"
+               BuildableName = "Eunomia.framework"
                BlueprintName = "Eunomia"
                ReferencedContainer = "container:Eunomia.xcodeproj">
             </BuildableReference>
@@ -28,22 +28,12 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3CD18D6F1964A7B100DB8ED7"
-               BuildableName = "EunomiaTests.xctest"
-               BlueprintName = "EunomiaTests"
-               ReferencedContainer = "container:Eunomia.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3CD18D621964A7B100DB8ED7"
-            BuildableName = "libEunomia.a"
+            BlueprintIdentifier = "3C3CF7C11AB3897300EEE0D6"
+            BuildableName = "Eunomia.framework"
             BlueprintName = "Eunomia"
             ReferencedContainer = "container:Eunomia.xcodeproj">
          </BuildableReference>
@@ -61,8 +51,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3CD18D621964A7B100DB8ED7"
-            BuildableName = "libEunomia.a"
+            BlueprintIdentifier = "3C3CF7C11AB3897300EEE0D6"
+            BuildableName = "Eunomia.framework"
             BlueprintName = "Eunomia"
             ReferencedContainer = "container:Eunomia.xcodeproj">
          </BuildableReference>
@@ -79,8 +69,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3CD18D621964A7B100DB8ED7"
-            BuildableName = "libEunomia.a"
+            BlueprintIdentifier = "3C3CF7C11AB3897300EEE0D6"
+            BuildableName = "Eunomia.framework"
             BlueprintName = "Eunomia"
             ReferencedContainer = "container:Eunomia.xcodeproj">
          </BuildableReference>

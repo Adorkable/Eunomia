@@ -12,7 +12,7 @@
 
 #import "NSObject+Utility.h"
 
-#import "Eunomia.h"
+#import "Config.h"
 
 NSString *const Eunomia_Utility_UIStoryboardSegue_DoTransferSubviewKey = @"Eunomia_Utility_UIStoryboardSegue_DoTransferSubview";
 NSString *const Eunomia_Utility_UIStoryboardSegue_TransferSubviewKey = @"Eunomia_Utility_UIStoryboardSegue_TransferSubview";

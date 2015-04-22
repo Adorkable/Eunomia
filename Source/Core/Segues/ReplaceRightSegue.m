@@ -8,7 +8,7 @@
 
 #import "ReplaceRightSegue.h"
 
-#import "Eunomia.h"
+#import "UIStoryboardSegue+Utility.h"
 
 @implementation ReplaceRightSegue
 

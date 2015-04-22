@@ -13,11 +13,10 @@
 - (void)replaceWithView:(UIView *)replaceWith;
 
 @property (readonly) CGRect frameZeroOrigin;
-@property (readwrite) CGPoint center;
 
-@property (readwrite) UIColor *borderColor;
-@property (readwrite) CGFloat borderWidth;
-@property (readwrite) CGFloat cornerRadius;
+@property (readwrite) IBInspectable UIColor *borderColor;
+@property (readwrite) IBInspectable CGFloat borderWidth;
+@property (readwrite) IBInspectable CGFloat cornerRadius;
 
 // returns NSNotFound if not a parent view of the given view
 - (NSInteger)hasSubviewAtDepth:(UIView *)view;

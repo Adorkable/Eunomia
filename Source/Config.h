@@ -9,14 +9,6 @@
 #pragma once
 
 #import <CocoaLumberjack/CocoaLumberjack.h>
-#import <SegueingInfo/SegueingInfo.h>
-
-#if DEBUG
-static const int ddLogLevel = DDLogFlagVerbose;
-#else
-static const int ddLogLevel = DDLogFlagInfo;
-#endif
-#define ddLogLevelInitialized
 
 #define NSLog(frmt, ...)           DDLogInfo(frmt, ##__VA_ARGS__)
 #define NSLogError(frmt, ...)      DDLogError(frmt, ##__VA_ARGS__)
@@ -24,3 +16,20 @@ static const int ddLogLevel = DDLogFlagInfo;
 #define NSLogInfo(frmt, ...)       DDLogInfo(frmt, ##__VA_ARGS__)
 #define NSLogDebug(frmt, ...)      DDLogDebug(frmt, ##__VA_ARGS__)
 #define NSLogVerbose(frmt, ...)    DDLogVerbose(frmt, ##__VA_ARGS__)
+
+#define DefineProtocolProperty(Type, Name) \
+- (void)set##Name:(Type *)value \
+{ \
+    [self setProtocolRetainProperty:@selector(get##Name) value:value]; \
+} \
+\
+- (Type *)get##Name \
+{ \
+    Type *result; \
+    id object = [self getProtocolProperty:@selector(get##Name)]; \
+    if ( [object isKindOfClass:[Type class] ] ) \
+    { \
+        result = object; \
+    } \
+    return result; \
+}

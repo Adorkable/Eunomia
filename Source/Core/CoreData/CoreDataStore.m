@@ -8,7 +8,7 @@
 
 #import "CoreDataStore.h"
 
-#import "Eunomia.h"
+#import "Config.h"
 
 // TODO: CoreDataStoreManager/RestKitCoreDataStoreManager components
 

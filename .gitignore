@@ -1,2 +1,4 @@
 xcuserdata
 /Pods/
+Carthage/Build
+.DS_Store

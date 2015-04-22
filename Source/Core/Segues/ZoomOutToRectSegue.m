@@ -7,7 +7,8 @@
 
 #import "ZoomOutToRectSegue.h"
 
-#import "Eunomia.h"
+#import "UIStoryboardSegue+Utility.h"
+#import "UIView+Utility.h"
 
 @implementation ZoomOutToRectSegue
 

@@ -8,12 +8,11 @@
 
 #pragma once
 
-#import "Eunomia.h"
-
 #import "NSObject+Utility.h"
 
 #import "UIApplication+Utility.h"
 
+#import "UIDevice+Utility.h"
 #import "NSBundle+Utility.h"
 
 #import "JSContext+Utility.h"
@@ -53,8 +52,21 @@
 #import "UIWebView+Utility.h"
 #import "UITextField+Utility.h"
 
+#import "ALAssetsLibrary+Utility.h"
+#import "UIImagePickerController+Utility.h"
+
+#import "MFMailComposeViewController+Utility.h"
+
 #import <UIKit/UIKit.h>
 
 // returns a random CGFloat value between 0.0 and 1.0
 extern CGFloat randomf();
 extern u_int32_t randomi();
+
+extern CGSize CGSizeMinusCGSize(CGSize left, CGSize right);
+extern CGSize CGSizeMultiplied(CGSize size, CGFloat multiplier);
+
+extern CGPoint CGPointMakeScaled(CGFloat width, CGFloat height, CGFloat scale);
+
+extern NSString *GetAppDocumentPath();
+extern NSString *GetAppLibraryPath();

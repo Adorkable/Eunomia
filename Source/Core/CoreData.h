@@ -8,6 +8,6 @@
 
 #pragma once
 
-#import "Eunomia.h"
+// TODO: move to Eunomia CoreData
 
 #import "CoreDataStore.h"

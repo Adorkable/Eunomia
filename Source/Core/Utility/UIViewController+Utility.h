@@ -10,6 +10,14 @@
 
 @interface UIViewController (Eunomia_Utility)
 
+// returns NSNotFound when not found
+- (NSInteger)hasChildViewControllerAtDepth:(UIViewController *)viewController;
+
+- (void)enumerateSelfAndChildViewControllers:(void (^)(UIViewController *viewController) )block;
+- (void)enumerateChildViewControllers:(void (^)(UIViewController *viewController) )block;
+
+- (NSArray *)getAllChildViewControllersOfClass:(Class)ofClass;
+
 - (void)replaceWithViewController:(UIViewController *)viewController;
 - (void)replaceWithViewController:(UIViewController *)viewController
                       inSuperview:(BOOL)inSuperview

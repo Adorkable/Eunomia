@@ -10,8 +10,6 @@
 
 #import "NSNotification+Utility.h"
 
-#import "Eunomia.h"
-
 #import <objc/runtime.h>
 
 @implementation NSObject (Eunomia_Utility)
@@ -19,6 +17,23 @@
 - (NSString *)objectPerminentKey
 {
     return [NSString stringWithFormat:@"%@ %p", [self class], self];
+}
+
+#pragma mark Casting
+
++ (BOOL)isClass:(NSObject *)object
+{
+    return [object isKindOfClass:[self class] ];
+}
+
++ (instancetype)ofClass:(NSObject *)object
+{
+    id result = nil;
+    if ( [self isClass:object] )
+    {
+        result = object;
+    }
+    return result;
 }
 
 #pragma mark Runtime Properties
@@ -37,6 +52,25 @@
 {
     return objc_getAssociatedObject(self, key);
 }
+
+- (void)setProtocolRetainProperty:(const void *)key boolValue:(BOOL)boolValue
+{
+    [self setProtocolRetainProperty:key value:[NSNumber numberWithBool:boolValue] ];
+}
+
+- (BOOL)getProtocolPropertyBool:(const void *)key defaultValue:(BOOL)defaultValue
+{
+    BOOL result = defaultValue;
+    
+    id propertyValue = [self getProtocolProperty:key];
+    if ( [propertyValue isKindOfClass:[NSNumber class] ] )
+    {
+        NSNumber *numberValue = propertyValue;
+        result = [numberValue boolValue];
+    }
+    return result;
+}
+
 
 #pragma mark Keyboard Notifications
 
