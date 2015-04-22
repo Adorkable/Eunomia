@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Eunomia"
-  s.version      = "1.8.1"
+  s.version      = "1.8.2"
   s.summary      = "Our shared library of Utility and Constants (currently only in Objective-C)"
 
   s.homepage     = "https://bitbucket.org/yoiang/eunomia"
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author       = { "Ian G" => "yo.ian.g@gmail.com" }
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://bitbucket.org/yoiang/eunomia", :tag => "1.8.1" }
+  s.source       = { :git => "https://bitbucket.org/yoiang/eunomia", :tag => "1.8.2" }
 
   s.source_files = "Source/*.{h,m}", "Source/Core/**/*.{h,m}"
 
