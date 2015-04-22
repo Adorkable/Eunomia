@@ -8,7 +8,7 @@
 
 #import "LaunchView.h"
 
-#import "Config.pch"
+#import "Config.h"
 
 @implementation LaunchView
 

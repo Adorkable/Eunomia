@@ -10,7 +10,9 @@
 
 #import "Utility.h"
 
-#import "Config.pch"
+
+
+#import "Config.h"
 
 #import <objc/runtime.h>
 

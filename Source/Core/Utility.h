@@ -12,6 +12,7 @@
 
 #import "UIApplication+Utility.h"
 
+#import "UIDevice+Utility.h"
 #import "NSBundle+Utility.h"
 
 #import "JSContext+Utility.h"

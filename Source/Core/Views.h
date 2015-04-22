@@ -9,5 +9,4 @@
 #pragma once
 
 #import "LaunchView.h"
-#import "EunomiaViewController.h"
 #import "AutoloadWebView.h"

@@ -8,7 +8,7 @@
 
 #import "CoreDataStore.h"
 
-#import "Config.pch"
+#import "Config.h"
 
 // TODO: CoreDataStoreManager/RestKitCoreDataStoreManager components
 

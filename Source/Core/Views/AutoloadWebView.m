@@ -8,7 +8,7 @@
 
 #import "AutoloadWebView.h"
 
-#import "Config.pch"
+#import "Config.h"
 
 @implementation AutoloadWebView
 
