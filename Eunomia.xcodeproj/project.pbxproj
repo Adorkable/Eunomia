@@ -131,6 +131,8 @@
 		3CE162131AB496DF009E57C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162111AB496DF009E57C1 /* Main.storyboard */; };
 		3CE162151AB496DF009E57C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162141AB496DF009E57C1 /* Images.xcassets */; };
 		3CE162181AB496DF009E57C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162161AB496DF009E57C1 /* LaunchScreen.xib */; };
+		3CE50C701AE75B82000182BA /* EunomiaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE50C6E1AE75B82000182BA /* EunomiaViewController.h */; };
+		3CE50C711AE75B82000182BA /* EunomiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE50C6F1AE75B82000182BA /* EunomiaViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +184,27 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3CE161061AB41785009E57C1;
 			remoteInfo = SegueingInfoExampleFrameworkiOS;
+		};
+		3CE50C681AE75B6E000182BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C46DF431AE0C79400D3A789;
+			remoteInfo = SegueingInfoOSX;
+		};
+		3CE50C6A1AE75B6E000182BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C46DF611AE0C89100D3A789;
+			remoteInfo = SegueingInfoFrameworkOSX;
+		};
+		3CE50C6C1AE75B6E000182BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C46DF7E1AE0C8B400D3A789;
+			remoteInfo = SegueingInfoExampleFrameworkOSX;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -339,6 +362,8 @@
 		3CE46F5419ABBF7700053E62 /* LaunchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchView.h; sourceTree = "<group>"; };
 		3CE46F5519ABBF7700053E62 /* LaunchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchView.m; sourceTree = "<group>"; };
 		3CE46F5619ABBF7700053E62 /* Views.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Views.h; sourceTree = "<group>"; };
+		3CE50C6E1AE75B82000182BA /* EunomiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EunomiaViewController.h; sourceTree = "<group>"; };
+		3CE50C6F1AE75B82000182BA /* EunomiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EunomiaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,11 +464,14 @@
 		3C3DF6EC1AC2259800D8950D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C3DF6F41AC2259800D8950D /* libSegueingInfo.a */,
-				3C3DF6F61AC2259800D8950D /* SegueingInfoExample.app */,
+				3C3DF6F41AC2259800D8950D /* libSegueingInfoiOS.a */,
+				3C3DF6F61AC2259800D8950D /* SegueingInfoExampleiOS.app */,
+				3CE50C691AE75B6E000182BA /* libSegueingInfoOSX.a */,
 				3C3DF6F81AC2259800D8950D /* SegueingInfoExampleOSX.app */,
 				3C3DF6FA1AC2259800D8950D /* SegueingInfoiOS.framework */,
 				3C3DF6FC1AC2259800D8950D /* SegueingInfoExampleFrameworkiOS.app */,
+				3CE50C6B1AE75B6E000182BA /* SegueingInfoFrameworkOSX.framework */,
+				3CE50C6D1AE75B6E000182BA /* SegueingInfoExampleFrameworkOSX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -709,6 +737,8 @@
 				3CE46F5519ABBF7700053E62 /* LaunchView.m */,
 				3C38FC431A82DB1A00813A2B /* AutoloadWebView.h */,
 				3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */,
+				3CE50C6E1AE75B82000182BA /* EunomiaViewController.h */,
+				3CE50C6F1AE75B82000182BA /* EunomiaViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -756,6 +786,7 @@
 				3CE161C21AB49322009E57C1 /* ReplaceDownSegue.h in Headers */,
 				3CE161B21AB4931C009E57C1 /* UIMenuController+Utility.h in Headers */,
 				3CE161961AB492DD009E57C1 /* CoreData.h in Headers */,
+				3CE50C701AE75B82000182BA /* EunomiaViewController.h in Headers */,
 				3CE161B11AB4931C009E57C1 /* UILongPressGestureRecognizer+Utility.h in Headers */,
 				3CE161B61AB4931C009E57C1 /* UIStoryboardSegue+Utility.h in Headers */,
 				3CE161A11AB4930E009E57C1 /* UITextField+Templating.h in Headers */,
@@ -901,17 +932,17 @@
 			remoteRef = 3C3DF6E91AC2258200D8950D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3C3DF6F41AC2259800D8950D /* libSegueingInfo.a */ = {
+		3C3DF6F41AC2259800D8950D /* libSegueingInfoiOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libSegueingInfo.a;
+			path = libSegueingInfoiOS.a;
 			remoteRef = 3C3DF6F31AC2259800D8950D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3C3DF6F61AC2259800D8950D /* SegueingInfoExample.app */ = {
+		3C3DF6F61AC2259800D8950D /* SegueingInfoExampleiOS.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = SegueingInfoExample.app;
+			path = SegueingInfoExampleiOS.app;
 			remoteRef = 3C3DF6F51AC2259800D8950D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -934,6 +965,27 @@
 			fileType = wrapper.application;
 			path = SegueingInfoExampleFrameworkiOS.app;
 			remoteRef = 3C3DF6FB1AC2259800D8950D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3CE50C691AE75B6E000182BA /* libSegueingInfoOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSegueingInfoOSX.a;
+			remoteRef = 3CE50C681AE75B6E000182BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3CE50C6B1AE75B6E000182BA /* SegueingInfoFrameworkOSX.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SegueingInfoFrameworkOSX.framework;
+			remoteRef = 3CE50C6A1AE75B6E000182BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3CE50C6D1AE75B6E000182BA /* SegueingInfoExampleFrameworkOSX.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SegueingInfoExampleFrameworkOSX.app;
+			remoteRef = 3CE50C6C1AE75B6E000182BA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -990,6 +1042,7 @@
 				3C3CF7F81AB389E000EEE0D6 /* UIView+Utility.m in Sources */,
 				3C3CF8041AB389E900EEE0D6 /* UITextField+Templating.m in Sources */,
 				3C3CF7EE1AB389E000EEE0D6 /* UIColor+Utility.m in Sources */,
+				3CE50C711AE75B82000182BA /* EunomiaViewController.m in Sources */,
 				3C3CF7FC1AB389E000EEE0D6 /* NSCharacterSet+Utility.m in Sources */,
 				3C3CF7FB1AB389E000EEE0D6 /* UIApplication+Utility.m in Sources */,
 				3C3CF7EC1AB389E000EEE0D6 /* NSObject+Utility.m in Sources */,
