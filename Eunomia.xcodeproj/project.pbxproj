@@ -133,6 +133,8 @@
 		3CE162181AB496DF009E57C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162161AB496DF009E57C1 /* LaunchScreen.xib */; };
 		3CE50C701AE75B82000182BA /* EunomiaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE50C6E1AE75B82000182BA /* EunomiaViewController.h */; };
 		3CE50C711AE75B82000182BA /* EunomiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE50C6F1AE75B82000182BA /* EunomiaViewController.m */; };
+		3CE50CD41AE7661F000182BA /* EunomiaAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE50CD21AE7661F000182BA /* EunomiaAppDelegate.h */; };
+		3CE50CD51AE7661F000182BA /* EunomiaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE50CD31AE7661F000182BA /* EunomiaAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -364,6 +366,8 @@
 		3CE46F5619ABBF7700053E62 /* Views.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Views.h; sourceTree = "<group>"; };
 		3CE50C6E1AE75B82000182BA /* EunomiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EunomiaViewController.h; sourceTree = "<group>"; };
 		3CE50C6F1AE75B82000182BA /* EunomiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EunomiaViewController.m; sourceTree = "<group>"; };
+		3CE50CD21AE7661F000182BA /* EunomiaAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EunomiaAppDelegate.h; sourceTree = "<group>"; };
+		3CE50CD31AE7661F000182BA /* EunomiaAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EunomiaAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -587,6 +591,7 @@
 		3CE46EFD19ABBF7700053E62 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3CE50CC71AE765FA000182BA /* App */,
 				3CE46EFE19ABBF7700053E62 /* CoreData */,
 				3CE46F0119ABBF7700053E62 /* CoreData.h */,
 				3CE46F0219ABBF7700053E62 /* Exceptions */,
@@ -743,6 +748,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3CE50CC71AE765FA000182BA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3CE50CD21AE7661F000182BA /* EunomiaAppDelegate.h */,
+				3CE50CD31AE7661F000182BA /* EunomiaAppDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -783,6 +797,7 @@
 				3CE161C91AB4932C009E57C1 /* CoreDataStore.h in Headers */,
 				3CE161A71AB4931C009E57C1 /* NSManagedObject+Utility.h in Headers */,
 				3CE161C41AB49322009E57C1 /* ReplaceRightSegue.h in Headers */,
+				3CE50CD41AE7661F000182BA /* EunomiaAppDelegate.h in Headers */,
 				3CE161C21AB49322009E57C1 /* ReplaceDownSegue.h in Headers */,
 				3CE161B21AB4931C009E57C1 /* UIMenuController+Utility.h in Headers */,
 				3CE161961AB492DD009E57C1 /* CoreData.h in Headers */,
@@ -1063,6 +1078,7 @@
 				3C3CF7F61AB389E000EEE0D6 /* UITapGestureRecognizer+Utility.m in Sources */,
 				3C3CF7E41AB389E000EEE0D6 /* NSBundle+Utility.m in Sources */,
 				3C3CF7E51AB389E000EEE0D6 /* NSFetchedResultsController+Utility.m in Sources */,
+				3CE50CD51AE7661F000182BA /* EunomiaAppDelegate.m in Sources */,
 				3C3CF7F91AB389E000EEE0D6 /* UIViewController+Utility.m in Sources */,
 				3C3CF8051AB389E900EEE0D6 /* UITextView+Templating.m in Sources */,
 				3C3CF7E31AB389E000EEE0D6 /* JSContext+Utility.m in Sources */,
