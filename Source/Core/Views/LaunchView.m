@@ -78,7 +78,7 @@
     
     if (image == nil)
     {
-        [NSLogWrapper warn:@"Could not find expected Launch Image at %@", imagePath];
+        NSLogWarning(@"Could not find expected Launch Image at %@", imagePath);
     }
     
     [self setImage:image];

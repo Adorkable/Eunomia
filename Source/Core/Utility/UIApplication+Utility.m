@@ -14,12 +14,12 @@
 
 + (void)dumpApplicationInformation
 {
-    [NSLogWrapper info:@"Application Version: %@", [self applicationVersion] ];
-    [NSLogWrapper info:@"Build Version: %@", [self buildVersion] ];
+    NSLogInfo(@"Application Version: %@", [self applicationVersion] );
+    NSLogInfo(@"Build Version: %@", [self buildVersion] );
     
 #if TARGET_IPHONE_SIMULATOR
-    [NSLogWrapper info:@"Simulator build running from: %@", [ [NSBundle mainBundle] bundleURL] ];
-    [NSLogWrapper info:@"Document folder: %@", [ [NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] ];
+    NSLogInfo(@"Simulator build running from: %@", [ [NSBundle mainBundle] bundleURL] );
+    NSLogInfo(@"Document folder: %@", [ [NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] );
 #endif
 }
 

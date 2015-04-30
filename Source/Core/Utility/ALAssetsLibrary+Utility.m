@@ -43,7 +43,7 @@
          
          *stop = NO;
      } failureBlock:^(NSError *error) {
-         [NSLogWrapper error:@"When retrieving firstImage: %@", error];
+         NSLogWarning(@"When retrieving firstImage: %@", error);
      } ];
 }
 

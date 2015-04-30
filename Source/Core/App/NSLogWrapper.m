@@ -10,11 +10,61 @@
 
 @implementation NSLogWrapper
 
-+ (void)logWithPrefix:(NSString *)prefix format:(NSString *)format args:(va_list)args
++ (void)logWithPrefix:(NSString *)prefix
+         functionName:(const char*)functionName
+             fileName:(const char*)fileName
+               format:(NSString *)format args:(va_list)args
 {
-    NSString *formatWithPrefix = [NSString stringWithFormat:@"%@: %@", prefix, format];
+    NSMutableString *formatWithInfo = [NSMutableString string];
     
-    NSLogv(formatWithPrefix, args);
+    if (prefix.length > 0)
+    {
+        [formatWithInfo appendString:prefix];
+    }
+    
+    /*    if (logMessage->_threadName.length > 0)
+     {
+     [result appendFormat:@" | thrd:%@", logMessage->_threadName];
+     }
+     if (logMessage->_queueLabel.length > 0)
+     {
+     [result appendFormat:@" | gcd:%@", logMessage->_queueLabel];
+     }
+     */
+    
+    if (format.length > 0)
+    {
+        [formatWithInfo appendString:@" "];
+    }
+    [formatWithInfo appendString:@"|"];
+    
+    if (format.length > 0)
+    {
+        if (formatWithInfo.length > 0)
+        {
+            formatWithInfo = [NSMutableString stringWithFormat:@"%@ %@", formatWithInfo, format];
+        } else
+        {
+            [formatWithInfo appendString:format];
+        }
+    }
+    
+    if ( (fileName != NULL && strlen(fileName) > 0) || (functionName != NULL && strlen(functionName) > 0) )
+    {
+        NSString *fileNameString = [NSString stringWithUTF8String:fileName];
+        NSString *lastPathComponentString = [fileNameString lastPathComponent];
+        NSString *functionNameString = [NSString stringWithUTF8String:functionName];
+        
+        if (formatWithInfo.length > 0)
+        {
+            formatWithInfo = [NSMutableString stringWithFormat:@"%@ | {%@: %@}", formatWithInfo, lastPathComponentString, functionNameString];
+        } else
+        {
+            [formatWithInfo appendFormat:@"| {%@: %@}", lastPathComponentString, functionNameString];
+        }
+    }
+    
+    NSLogv(formatWithInfo, args);
 }
 
 #define NSLogWrapperStatement(name, prefix) \
@@ -24,23 +74,26 @@
         if (format != nil) \
         { \
             va_start(args, format); \
-            [self logWithPrefix:prefix format:format args:args]; \
+            [self logWithPrefix:prefix functionName:NULL fileName:NULL format:format args:args]; \
             va_end(args); \
         } \
-    }
+    } \
+    \
+    + (void)name##WithFunctionName:(const char*)functionName fileName:(const char*)fileName format:(NSString *)format, ... NS_FORMAT_FUNCTION(3,4) \
+    { \
+        va_list args; \
+        if (format != nil) \
+        { \
+            va_start(args, format); \
+            [self logWithPrefix:prefix functionName:functionName fileName:fileName format:format args:args]; \
+            va_end(args); \
+        } \
+    } \
 
-NSLogWrapperStatement(debug, @"Debug");
-NSLogWrapperStatement(verbose, @"Verbose");
-NSLogWrapperStatement(info, @"Info");
-NSLogWrapperStatement(warn, @"Warn");
-NSLogWrapperStatement(error, @"Error");
-
-//+ (void)debug:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2)
-//{
-//    va_list args;
-//    va_start(args, format);
-//    [self logWithPrefix:@"Debug: " format:format, args];
-//    va_end(args);
-//}
+NSLogWrapperStatement(verbose,  @"V");
+NSLogWrapperStatement(debug,    @"D");
+NSLogWrapperStatement(info,     @"I");
+NSLogWrapperStatement(warning,  @"W");
+NSLogWrapperStatement(error,    @"E");
 
 @end

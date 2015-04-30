@@ -82,7 +82,7 @@ NSString *const UIMenuControllerResponderKey = @"UIMenuControllerResponder";
         [self setMenuVisible:YES animated:animated];
     } else
     {
-        [NSLogWrapper warn:@"Skipping attempt to show menu with no items!"];
+        NSLogWarning(@"Skipping attempt to show menu with no items!");
     }
 }
 

@@ -20,7 +20,7 @@
         self.url = newURL;
     } else
     {
-        [NSLogWrapper error:@"Invalid url passed into setUrlString: %@", urlString];
+        NSLogError(@"Invalid url passed into setUrlString: %@", urlString);
     }
     
     if (self.superview != nil)
