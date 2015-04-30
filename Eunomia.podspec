@@ -16,4 +16,5 @@ Pod::Spec.new do |s|
   s.public_header_files = "Source/**/*.h"
   s.requires_arc = true
 
+  s.dependency 'CocoaLumberjack'
 end

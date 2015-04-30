@@ -10,27 +10,30 @@
 
 @interface NSLogWrapper : NSObject
 
++ (void)setupLogger;
+
 + (void)verbose:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-+ (void)verboseWithFunctionName:(const char*)functionName fileName:(const char*)fileName format:(NSString *)format, ... NS_FORMAT_FUNCTION(3,4);
++ (void)verboseWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
 + (void)debug:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-+ (void)debugWithFunctionName:(const char*)functionName fileName:(const char*)fileName format:(NSString *)format, ... NS_FORMAT_FUNCTION(3,4);
++ (void)debugWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
 + (void)info:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-+ (void)infoWithFunctionName:(const char*)functionName fileName:(const char*)fileName format:(NSString *)format, ... NS_FORMAT_FUNCTION(3,4);
++ (void)infoWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
 + (void)warning:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-+ (void)warningWithFunctionName:(const char*)functionName fileName:(const char*)fileName format:(NSString *)format, ... NS_FORMAT_FUNCTION(3,4);
++ (void)warningWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
 + (void)error:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-+ (void)errorWithFunctionName:(const char*)functionName fileName:(const char*)fileName format:(NSString *)format, ... NS_FORMAT_FUNCTION(3,4);
++ (void)errorWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
 @end
 
-#define NSLog(frmt, ...) [NSLogWrapper infoWithFunctionName:__PRETTY_FUNCTION__ fileName:__FILE__ format:frmt, ##__VA_ARGS__]
+#define NSLog(frmt, ...) \
+    [NSLogWrapper infoWithFunctionName:__PRETTY_FUNCTION__ fileName:__FILE__ format:frmt, ##__VA_ARGS__]
 
-#define NSLogVerbose(frmt, ...) [NSLogWrapper verboseWithFunctionName:__PRETTY_FUNCTION__ fileName:__FILE__ format:frmt, ##__VA_ARGS__]
-#define NSLogDebug(frmt, ...)   [NSLogWrapper debugWithFunctionName:__PRETTY_FUNCTION__ fileName:__FILE__ format:frmt, ##__VA_ARGS__]
-#define NSLogInfo(frmt, ...)    [NSLogWrapper infoWithFunctionName:__PRETTY_FUNCTION__ fileName:__FILE__ format:frmt, ##__VA_ARGS__]
-#define NSLogWarning(frmt, ...)    [NSLogWrapper warningWithFunctionName:__PRETTY_FUNCTION__ fileName:__FILE__ format:frmt, ##__VA_ARGS__]
-#define NSLogError(frmt, ...)   [NSLogWrapper errorWithFunctionName:__PRETTY_FUNCTION__ fileName:__FILE__ format:frmt, ##__VA_ARGS__]
+#define NSLogVerbose(frmt, ...) [NSLogWrapper verboseWithFileName:__FILE__ functionName:__PRETTY_FUNCTION__ line:__LINE__ format:frmt, ##__VA_ARGS__]
+#define NSLogDebug(frmt, ...)   [NSLogWrapper debugWithFileName:__FILE__ functionName:__PRETTY_FUNCTION__ line:__LINE__ format:frmt, ##__VA_ARGS__]
+#define NSLogInfo(frmt, ...)    [NSLogWrapper infoWithFileName:__FILE__ functionName:__PRETTY_FUNCTION__ line:__LINE__ format:frmt, ##__VA_ARGS__]
+#define NSLogWarning(frmt, ...) [NSLogWrapper warningWithFileName:__FILE__ functionName:__PRETTY_FUNCTION__ line:__LINE__ format:frmt, ##__VA_ARGS__]
+#define NSLogError(frmt, ...)   [NSLogWrapper errorWithFileName:__FILE__ functionName:__PRETTY_FUNCTION__ line:__LINE__ format:frmt, ##__VA_ARGS__]

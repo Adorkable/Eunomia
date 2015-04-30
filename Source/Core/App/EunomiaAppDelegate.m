@@ -10,6 +10,8 @@
 
 #import "Utility.h"
 
+#import "NSLogWrapper.h"
+
 @interface EunomiaAppDelegate ()
 
 @end
@@ -18,6 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [NSLogWrapper setupLogger];
+    
     [UIApplication dumpApplicationInformation];
     
     return YES;

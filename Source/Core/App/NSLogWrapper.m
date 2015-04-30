@@ -8,92 +8,140 @@
 
 #import "NSLogWrapper.h"
 
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+@interface EunomiaCocoaLumberjackFormatter : NSObject< DDLogFormatter >
+
+- (NSString *)formatLogMessage:(DDLogMessage *)logMessage;
+
+@end
+
 @implementation NSLogWrapper
 
-+ (void)logWithPrefix:(NSString *)prefix
-         functionName:(const char*)functionName
-             fileName:(const char*)fileName
-               format:(NSString *)format args:(va_list)args
++ (void)setupLogger;
 {
-    NSMutableString *formatWithInfo = [NSMutableString string];
+    EunomiaCocoaLumberjackFormatter *logFormatter = [ [EunomiaCocoaLumberjackFormatter alloc] init];
     
-    if (prefix.length > 0)
-    {
-        [formatWithInfo appendString:prefix];
-    }
+    [ [DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithRed:0.973f green:0.153f blue:0.218f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:DDLogFlagError];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithRed:0.870f green:0.825f blue:0.254f alpha:1.000] backgroundColor:[UIColor colorWithWhite:1.000 alpha:1.000] forFlag:DDLogFlagWarning];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithWhite:0.212f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:DDLogFlagInfo];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithRed:0.391f green:0.520f blue:0.417f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:DDLogFlagDebug];
+    [ [DDTTYLogger sharedInstance] setForegroundColor:[UIColor colorWithWhite:0.675f alpha:1.000] backgroundColor:[UIColor whiteColor] forFlag:DDLogFlagVerbose];
+    [ [DDTTYLogger sharedInstance] setLogFormatter:logFormatter];
     
-    /*    if (logMessage->_threadName.length > 0)
-     {
-     [result appendFormat:@" | thrd:%@", logMessage->_threadName];
-     }
-     if (logMessage->_queueLabel.length > 0)
-     {
-     [result appendFormat:@" | gcd:%@", logMessage->_queueLabel];
-     }
-     */
-    
-    if (format.length > 0)
-    {
-        [formatWithInfo appendString:@" "];
-    }
-    [formatWithInfo appendString:@"|"];
-    
-    if (format.length > 0)
-    {
-        if (formatWithInfo.length > 0)
-        {
-            formatWithInfo = [NSMutableString stringWithFormat:@"%@ %@", formatWithInfo, format];
-        } else
-        {
-            [formatWithInfo appendString:format];
-        }
-    }
-    
-    if ( (fileName != NULL && strlen(fileName) > 0) || (functionName != NULL && strlen(functionName) > 0) )
-    {
-        NSString *fileNameString = [NSString stringWithUTF8String:fileName];
-        NSString *lastPathComponentString = [fileNameString lastPathComponent];
-        NSString *functionNameString = [NSString stringWithUTF8String:functionName];
-        
-        if (formatWithInfo.length > 0)
-        {
-            formatWithInfo = [NSMutableString stringWithFormat:@"%@ | {%@: %@}", formatWithInfo, lastPathComponentString, functionNameString];
-        } else
-        {
-            [formatWithInfo appendFormat:@"| {%@: %@}", lastPathComponentString, functionNameString];
-        }
-    }
-    
-    NSLogv(formatWithInfo, args);
+    [DDLog addLogger:[DDTTYLogger sharedInstance] ];
 }
 
-#define NSLogWrapperStatement(name, prefix) \
-    + (void)name:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) \
+#define NSLogWrapperStatement(lowerName, UpperName) \
++ (void)lowerName:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2) \
+{ \
+    va_list args; \
+    if (format != nil) \
     { \
-        va_list args; \
-        if (format != nil) \
-        { \
-            va_start(args, format); \
-            [self logWithPrefix:prefix functionName:NULL fileName:NULL format:format args:args]; \
-            va_end(args); \
-        } \
+        va_start(args, format); \
+        \
+        [DDLog log:NO \
+             level:DDLogLevel##UpperName \
+              flag:DDLogFlag##UpperName \
+           context:0 \
+              file:NULL \
+          function:NULL \
+              line:0 \
+               tag:nil \
+            format:format \
+              args:args]; \
+        \
+        va_end(args); \
     } \
-    \
-    + (void)name##WithFunctionName:(const char*)functionName fileName:(const char*)fileName format:(NSString *)format, ... NS_FORMAT_FUNCTION(3,4) \
+} \
+\
++ (void)lowerName##WithFileName:(const char *)fileName functionName:(const char *)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4, 5) \
+{ \
+    va_list args; \
+    if (format != nil) \
     { \
-        va_list args; \
-        if (format != nil) \
-        { \
-            va_start(args, format); \
-            [self logWithPrefix:prefix functionName:functionName fileName:fileName format:format args:args]; \
-            va_end(args); \
-        } \
-    } \
+        va_start(args, format); \
+        \
+        [DDLog log:NO \
+             level:DDLogLevel##UpperName \
+              flag:DDLogFlag##UpperName \
+           context:0 \
+              file:fileName \
+          function:functionName \
+              line:0 \
+               tag:nil \
+            format:format \
+              args:args]; \
+        \
+        va_end(args); \
+    }\
+}
 
-NSLogWrapperStatement(verbose,  @"V");
-NSLogWrapperStatement(debug,    @"D");
-NSLogWrapperStatement(info,     @"I");
-NSLogWrapperStatement(warning,  @"W");
-NSLogWrapperStatement(error,    @"E");
+NSLogWrapperStatement(verbose, Verbose);
+NSLogWrapperStatement(debug, Debug);
+NSLogWrapperStatement(info, Info);
+NSLogWrapperStatement(warning, Warning);
+NSLogWrapperStatement(error,  Error);
+
+@end
+
+@implementation EunomiaCocoaLumberjackFormatter
+
+- (NSString *)cocoaLumberjackLogFlagAsString:(int)logFlag
+{
+    NSString *result;
+    switch (logFlag)
+    {
+        case DDLogFlagError :
+            result = @"E";
+            break;
+        case DDLogFlagWarning  :
+            result = @"W";
+            break;
+        case DDLogFlagInfo  :
+            result = @"I";
+            break;
+        case DDLogFlagDebug:
+            result = @"D";
+            break;
+        case DDLogFlagVerbose :
+            result = @"V";
+            break;
+    }
+    return result;
+}
+
+// TODO: support substring colors?
+- (NSString *)formatLogMessage:(DDLogMessage *)logMessage
+{
+    NSMutableString *result = [NSMutableString string];
+    
+    NSString *logLevel = [self cocoaLumberjackLogFlagAsString:logMessage->_flag];
+    if (logLevel.length > 0)
+    {
+        [result appendFormat:@"%@", logLevel];
+    }
+    
+    if (logMessage->_threadName.length > 0)
+    {
+        [result appendFormat:@" | thrd:%@", logMessage->_threadName];
+    }
+    if (logMessage->_queueLabel.length > 0)
+    {
+        [result appendFormat:@" | gcd:%@", logMessage->_queueLabel];
+    }
+    
+    [result appendFormat:@": %@", logMessage->_message];
+    
+    NSString *file;
+    if (logMessage->_file.length > 0)
+    {
+        file = [NSString stringWithFormat:@"%@:%lu:", [logMessage->_file lastPathComponent], (unsigned long)logMessage->_line];
+    }
+    [result appendFormat:@" | {%@%@}", file, logMessage->_function];
+    
+    return result;
+}
 
 @end
