@@ -10,7 +10,6 @@
 		3C0DC05F1AB4973700D32C10 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */; };
 		3C0DC0961AB49AD900D32C10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DC08F1AB49ACB00D32C10 /* AppDelegate.m */; };
 		3C0DC0971AB49AD900D32C10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DC0911AB49ACB00D32C10 /* ViewController.m */; };
-		3C3CF7DB1AB389D700EEE0D6 /* CoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F0019ABBF7700053E62 /* CoreDataStore.m */; };
 		3C3CF7DC1AB389D700EEE0D6 /* MissingSubclassOverrideException.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F0419ABBF7700053E62 /* MissingSubclassOverrideException.m */; };
 		3C3CF7DD1AB389DB00EEE0D6 /* ReplaceDownSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F0819ABBF7700053E62 /* ReplaceDownSegue.m */; };
 		3C3CF7DE1AB389DB00EEE0D6 /* ReplaceLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F0A19ABBF7700053E62 /* ReplaceLeftSegue.m */; };
@@ -57,9 +56,9 @@
 		3C3CF8071AB389EF00EEE0D6 /* LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F5519ABBF7700053E62 /* LaunchView.m */; };
 		3C3CF8091AB389EF00EEE0D6 /* AutoloadWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C38FC441A82DB1A00813A2B /* AutoloadWebView.m */; };
 		3C3CF8131AB38A5B00EEE0D6 /* Eunomia.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3CF8111AB38A5B00EEE0D6 /* Eunomia.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C3DF6FD1AC225C900D8950D /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3DF6E81AC2258200D8950D /* libCocoaLumberjack.a */; };
-		3C3DF6FE1AC2263600D8950D /* SegueingInfoiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3DF6FA1AC2259800D8950D /* SegueingInfoiOS.framework */; };
-		3CC9C6251AC227150075C406 /* SegueingInfoiOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C3DF6FA1AC2259800D8950D /* SegueingInfoiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C9672741AF2833C004BAF8E /* NSLogWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C9672721AF2833C004BAF8E /* NSLogWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C9672751AF2833C004BAF8E /* NSLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9672731AF2833C004BAF8E /* NSLogWrapper.m */; };
+		3C9672771AF28ABF004BAF8E /* App.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C9672761AF28ABF004BAF8E /* App.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CC9C6501AC229900075C406 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9C64D1AC229900075C406 /* AppDelegate.swift */; };
 		3CC9C6521AC229900075C406 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9C64F1AC229900075C406 /* ViewController.swift */; };
 		3CC9C6531AC229B20075C406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162111AB496DF009E57C1 /* Main.storyboard */; };
@@ -67,16 +66,8 @@
 		3CC9C6561AC229D10075C406 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */; };
 		3CC9C65C1AC22A340075C406 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9C6581AC22A340075C406 /* LaunchScreen.xib */; };
 		3CC9C65D1AC22A340075C406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9C65A1AC22A340075C406 /* Main.storyboard */; };
-		3CE1617C1AB48FF1009E57C1 /* NSLogWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161781AB48FF0009E57C1 /* NSLogWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE1617D1AB48FF1009E57C1 /* NSLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161791AB48FF1009E57C1 /* NSLogWrapper.m */; };
-		3CE1617E1AB48FF1009E57C1 /* VerboseDDLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE1617A1AB48FF1009E57C1 /* VerboseDDLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE1617F1AB48FF1009E57C1 /* VerboseDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1617B1AB48FF1009E57C1 /* VerboseDDLogFormatter.m */; };
-		3CE1618E1AB490D3009E57C1 /* ThirdPartyWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE1618C1AB490D3009E57C1 /* ThirdPartyWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE1618F1AB490D3009E57C1 /* ThirdPartyWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1618D1AB490D3009E57C1 /* ThirdPartyWrapper.m */; };
 		3CE161921AB49125009E57C1 /* UIDevice+Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE161901AB49125009E57C1 /* UIDevice+Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161931AB49125009E57C1 /* UIDevice+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE161911AB49125009E57C1 /* UIDevice+Utility.m */; };
-		3CE161951AB492C5009E57C1 /* Config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C65DDCE1965A9B8009C714B /* Config.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161961AB492DD009E57C1 /* CoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46F0119ABBF7700053E62 /* CoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161971AB492DD009E57C1 /* Exceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46F0519ABBF7700053E62 /* Exceptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161981AB492DD009E57C1 /* Segues.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46F1319ABBF7700053E62 /* Segues.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161991AB492DD009E57C1 /* Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46F4519ABBF7700053E62 /* Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -126,7 +117,6 @@
 		3CE161C61AB49322009E57C1 /* ZoomInFromRectSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46F0F19ABBF7700053E62 /* ZoomInFromRectSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161C71AB49322009E57C1 /* ZoomOutToRectSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46F1119ABBF7700053E62 /* ZoomOutToRectSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE161C81AB49327009E57C1 /* MissingSubclassOverrideException.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46F0319ABBF7700053E62 /* MissingSubclassOverrideException.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CE161C91AB4932C009E57C1 /* CoreDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE46EFF19ABBF7700053E62 /* CoreDataStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE1620A1AB496DF009E57C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE162091AB496DF009E57C1 /* main.m */; };
 		3CE162131AB496DF009E57C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162111AB496DF009E57C1 /* Main.storyboard */; };
 		3CE162151AB496DF009E57C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162141AB496DF009E57C1 /* Images.xcassets */; };
@@ -137,79 +127,6 @@
 		3CE50CD51AE7661F000182BA /* EunomiaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE50CD31AE7661F000182BA /* EunomiaAppDelegate.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3C3DF6E71AC2258200D8950D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2A37F97718E37270009FAAA7;
-			remoteInfo = CocoaLumberjack;
-		};
-		3C3DF6E91AC2258200D8950D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2A37F9DA18E37536009FAAA7;
-			remoteInfo = LibTest;
-		};
-		3C3DF6F31AC2259800D8950D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3C7A0BF619A14BE70001BE79;
-			remoteInfo = SegueingInfo;
-		};
-		3C3DF6F51AC2259800D8950D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3C7A0C1119A14CAF0001BE79;
-			remoteInfo = SegueingInfoExample;
-		};
-		3C3DF6F71AC2259800D8950D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3CC2AE391A853F1500D8FB27;
-			remoteInfo = SegueingInfoExampleOSX;
-		};
-		3C3DF6F91AC2259800D8950D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3C3CF81A1AB38E0D00EEE0D6;
-			remoteInfo = SegueingInfoFrameworkiOS;
-		};
-		3C3DF6FB1AC2259800D8950D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3CE161061AB41785009E57C1;
-			remoteInfo = SegueingInfoExampleFrameworkiOS;
-		};
-		3CE50C681AE75B6E000182BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3C46DF431AE0C79400D3A789;
-			remoteInfo = SegueingInfoOSX;
-		};
-		3CE50C6A1AE75B6E000182BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3C46DF611AE0C89100D3A789;
-			remoteInfo = SegueingInfoFrameworkOSX;
-		};
-		3CE50C6C1AE75B6E000182BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3C46DF7E1AE0C8B400D3A789;
-			remoteInfo = SegueingInfoExampleFrameworkOSX;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		3CC9C6231AC226FD0075C406 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -217,14 +134,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3CC9C6251AC227150075C406 /* SegueingInfoiOS.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3C071A551A7D4048006C5A6E /* Eunomia-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Eunomia-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C0AFFC01A97D60E0020B9CD /* UIImagePickerController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Utility.h"; sourceTree = "<group>"; };
 		3C0AFFC11A97D60E0020B9CD /* UIImagePickerController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Utility.m"; sourceTree = "<group>"; };
 		3C0AFFC31A97DB6D0020B9CD /* ALAssetsLibrary+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+Utility.h"; sourceTree = "<group>"; };
@@ -247,9 +162,9 @@
 		3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eunomia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3CF8111AB38A5B00EEE0D6 /* Eunomia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
 		3C3CF8121AB38A5B00EEE0D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = Library/CocoaLumberjack/Framework/Mobile/Lumberjack.xcodeproj; sourceTree = SOURCE_ROOT; };
-		3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SegueingInfo.xcodeproj; path = Library/SegueingInfo/SegueingInfo.xcodeproj; sourceTree = SOURCE_ROOT; };
-		3C65DDCE1965A9B8009C714B /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		3C9672721AF2833C004BAF8E /* NSLogWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogWrapper.h; sourceTree = "<group>"; };
+		3C9672731AF2833C004BAF8E /* NSLogWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLogWrapper.m; sourceTree = "<group>"; };
+		3C9672761AF28ABF004BAF8E /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		3CC9C62A1AC228FE0075C406 /* EunomiaExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EunomiaExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC9C64D1AC229900075C406 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CC9C64E1AC229900075C406 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -267,12 +182,6 @@
 		3CDA953319F58E100009A367 /* NSCharacterSet+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+Utility.m"; sourceTree = "<group>"; };
 		3CDA953519F58E920009A367 /* UIBarItem+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarItem+Utility.h"; sourceTree = "<group>"; };
 		3CDA953619F58E920009A367 /* UIBarItem+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarItem+Utility.m"; sourceTree = "<group>"; };
-		3CE161781AB48FF0009E57C1 /* NSLogWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogWrapper.h; sourceTree = "<group>"; };
-		3CE161791AB48FF1009E57C1 /* NSLogWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLogWrapper.m; sourceTree = "<group>"; };
-		3CE1617A1AB48FF1009E57C1 /* VerboseDDLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerboseDDLogFormatter.h; sourceTree = "<group>"; };
-		3CE1617B1AB48FF1009E57C1 /* VerboseDDLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerboseDDLogFormatter.m; sourceTree = "<group>"; };
-		3CE1618C1AB490D3009E57C1 /* ThirdPartyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyWrapper.h; sourceTree = "<group>"; };
-		3CE1618D1AB490D3009E57C1 /* ThirdPartyWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPartyWrapper.m; sourceTree = "<group>"; };
 		3CE161901AB49125009E57C1 /* UIDevice+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Utility.h"; sourceTree = "<group>"; };
 		3CE161911AB49125009E57C1 /* UIDevice+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Utility.m"; sourceTree = "<group>"; };
 		3CE162051AB496DF009E57C1 /* EunomiaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EunomiaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,9 +190,6 @@
 		3CE162121AB496DF009E57C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CE162141AB496DF009E57C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3CE162171AB496DF009E57C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3CE46EFF19ABBF7700053E62 /* CoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStore.h; sourceTree = "<group>"; };
-		3CE46F0019ABBF7700053E62 /* CoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStore.m; sourceTree = "<group>"; };
-		3CE46F0119ABBF7700053E62 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		3CE46F0319ABBF7700053E62 /* MissingSubclassOverrideException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingSubclassOverrideException.h; sourceTree = "<group>"; };
 		3CE46F0419ABBF7700053E62 /* MissingSubclassOverrideException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissingSubclassOverrideException.m; sourceTree = "<group>"; };
 		3CE46F0519ABBF7700053E62 /* Exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exceptions.h; sourceTree = "<group>"; };
@@ -375,8 +281,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C3DF6FD1AC225C900D8950D /* libCocoaLumberjack.a in Frameworks */,
-				3C3DF6FE1AC2263600D8950D /* SegueingInfoiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,30 +360,6 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
-		3C3DF6E31AC2258200D8950D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3C3DF6E81AC2258200D8950D /* libCocoaLumberjack.a */,
-				3C3DF6EA1AC2258200D8950D /* LibTest.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3C3DF6EC1AC2259800D8950D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3C3DF6F41AC2259800D8950D /* libSegueingInfoiOS.a */,
-				3C3DF6F61AC2259800D8950D /* SegueingInfoExampleiOS.app */,
-				3CE50C691AE75B6E000182BA /* libSegueingInfoOSX.a */,
-				3C3DF6F81AC2259800D8950D /* SegueingInfoExampleOSX.app */,
-				3C3DF6FA1AC2259800D8950D /* SegueingInfoiOS.framework */,
-				3C3DF6FC1AC2259800D8950D /* SegueingInfoExampleFrameworkiOS.app */,
-				3CE50C6B1AE75B6E000182BA /* SegueingInfoFrameworkOSX.framework */,
-				3CE50C6D1AE75B6E000182BA /* SegueingInfoExampleFrameworkOSX.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		3CC9C64C1AC229900075C406 /* CoreSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,34 +415,9 @@
 			isa = PBXGroup;
 			children = (
 				3C3CF8101AB38A5B00EEE0D6 /* Framework */,
-				3C071A551A7D4048006C5A6E /* Eunomia-Bridging-Header.h */,
-				3C65DDCE1965A9B8009C714B /* Config.h */,
 				3CE46EFD19ABBF7700053E62 /* Core */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		3CE161761AB48FF0009E57C1 /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-				3CE1618C1AB490D3009E57C1 /* ThirdPartyWrapper.h */,
-				3CE1618D1AB490D3009E57C1 /* ThirdPartyWrapper.m */,
-				3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */,
-				3CE161771AB48FF0009E57C1 /* CocoaLumberjack */,
-			);
-			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		3CE161771AB48FF0009E57C1 /* CocoaLumberjack */ = {
-			isa = PBXGroup;
-			children = (
-				3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */,
-				3CE161781AB48FF0009E57C1 /* NSLogWrapper.h */,
-				3CE161791AB48FF1009E57C1 /* NSLogWrapper.m */,
-				3CE1617A1AB48FF1009E57C1 /* VerboseDDLogFormatter.h */,
-				3CE1617B1AB48FF1009E57C1 /* VerboseDDLogFormatter.m */,
-			);
-			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
 		3CE162061AB496DF009E57C1 /* Example */ = {
@@ -592,8 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				3CE50CC71AE765FA000182BA /* App */,
-				3CE46EFE19ABBF7700053E62 /* CoreData */,
-				3CE46F0119ABBF7700053E62 /* CoreData.h */,
+				3C9672761AF28ABF004BAF8E /* App.h */,
 				3CE46F0219ABBF7700053E62 /* Exceptions */,
 				3CE46F0519ABBF7700053E62 /* Exceptions.h */,
 				3CE46F0619ABBF7700053E62 /* Segues */,
@@ -605,18 +459,8 @@
 				3CE46F5219ABBF7700053E62 /* View+Templating.h */,
 				3CE46F5319ABBF7700053E62 /* Views */,
 				3CE46F5619ABBF7700053E62 /* Views.h */,
-				3CE161761AB48FF0009E57C1 /* ThirdParty */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		3CE46EFE19ABBF7700053E62 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				3CE46EFF19ABBF7700053E62 /* CoreDataStore.h */,
-				3CE46F0019ABBF7700053E62 /* CoreDataStore.m */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		3CE46F0219ABBF7700053E62 /* Exceptions */ = {
@@ -753,6 +597,8 @@
 			children = (
 				3CE50CD21AE7661F000182BA /* EunomiaAppDelegate.h */,
 				3CE50CD31AE7661F000182BA /* EunomiaAppDelegate.m */,
+				3C9672721AF2833C004BAF8E /* NSLogWrapper.h */,
+				3C9672731AF2833C004BAF8E /* NSLogWrapper.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -764,6 +610,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9672771AF28ABF004BAF8E /* App.h in Headers */,
 				3CE161BA1AB4931C009E57C1 /* UIViewController+Utility.h in Headers */,
 				3CE161A81AB4931C009E57C1 /* NSManagedObjectContext+Utility.h in Headers */,
 				3CE161C11AB4931C009E57C1 /* ALAssetsLibrary+Utility.h in Headers */,
@@ -774,33 +621,29 @@
 				3CE161B41AB4931C009E57C1 /* UIPinchGestureRecognizer+Utility.h in Headers */,
 				3CE161C81AB49327009E57C1 /* MissingSubclassOverrideException.h in Headers */,
 				3CE161C71AB49322009E57C1 /* ZoomOutToRectSegue.h in Headers */,
-				3CE161951AB492C5009E57C1 /* Config.h in Headers */,
 				3CE161A21AB4930E009E57C1 /* UITextView+Templating.h in Headers */,
 				3CE161921AB49125009E57C1 /* UIDevice+Utility.h in Headers */,
 				3CE161BD1AB4931C009E57C1 /* NSCharacterSet+Utility.h in Headers */,
 				3CE161AC1AB4931C009E57C1 /* NSNotification+Utility.h in Headers */,
-				3CE1617C1AB48FF1009E57C1 /* NSLogWrapper.h in Headers */,
 				3CE161AA1AB4931C009E57C1 /* NSMutableDictionary+Utility.h in Headers */,
 				3CE161A91AB4931C009E57C1 /* NSMutableArray+Utility.h in Headers */,
+				3C9672741AF2833C004BAF8E /* NSLogWrapper.h in Headers */,
 				3CE1619B1AB492DD009E57C1 /* Views.h in Headers */,
 				3CE161B71AB4931C009E57C1 /* UITapGestureRecognizer+Utility.h in Headers */,
 				3CE161B01AB4931C009E57C1 /* UIImage+Utility.h in Headers */,
 				3CE161AE1AB4931C009E57C1 /* NSString+Utility.h in Headers */,
 				3CE161BC1AB4931C009E57C1 /* UIApplication+Utility.h in Headers */,
 				3CE161BF1AB4931C009E57C1 /* MFMailComposeViewController+Utility.h in Headers */,
-				3CE1618E1AB490D3009E57C1 /* ThirdPartyWrapper.h in Headers */,
 				3CE161C31AB49322009E57C1 /* ReplaceLeftSegue.h in Headers */,
 				3CE161B91AB4931C009E57C1 /* UIView+Utility.h in Headers */,
 				3CE161971AB492DD009E57C1 /* Exceptions.h in Headers */,
 				3C3CF8131AB38A5B00EEE0D6 /* Eunomia.h in Headers */,
 				3CE1619A1AB492DD009E57C1 /* View+Templating.h in Headers */,
-				3CE161C91AB4932C009E57C1 /* CoreDataStore.h in Headers */,
 				3CE161A71AB4931C009E57C1 /* NSManagedObject+Utility.h in Headers */,
 				3CE161C41AB49322009E57C1 /* ReplaceRightSegue.h in Headers */,
 				3CE50CD41AE7661F000182BA /* EunomiaAppDelegate.h in Headers */,
 				3CE161C21AB49322009E57C1 /* ReplaceDownSegue.h in Headers */,
 				3CE161B21AB4931C009E57C1 /* UIMenuController+Utility.h in Headers */,
-				3CE161961AB492DD009E57C1 /* CoreData.h in Headers */,
 				3CE50C701AE75B82000182BA /* EunomiaViewController.h in Headers */,
 				3CE161B11AB4931C009E57C1 /* UILongPressGestureRecognizer+Utility.h in Headers */,
 				3CE161B61AB4931C009E57C1 /* UIStoryboardSegue+Utility.h in Headers */,
@@ -812,7 +655,6 @@
 				3CE161991AB492DD009E57C1 /* Utility.h in Headers */,
 				3CE161A61AB4931C009E57C1 /* NSFetchedResultsController+Utility.h in Headers */,
 				3CE161B81AB4931C009E57C1 /* UITextField+Utility.h in Headers */,
-				3CE1617E1AB48FF1009E57C1 /* VerboseDDLogFormatter.h in Headers */,
 				3CE161AB1AB4931C009E57C1 /* NSMutableString+Utility.h in Headers */,
 				3CE161981AB492DD009E57C1 /* Segues.h in Headers */,
 				3CE1619C1AB492FF009E57C1 /* LaunchView.h in Headers */,
@@ -913,16 +755,6 @@
 			mainGroup = 3CD18CEF1964A60200DB8ED7;
 			productRefGroup = 3CD18CF91964A60200DB8ED7 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3C3DF6E31AC2258200D8950D /* Products */;
-					ProjectRef = 3C3DF6E21AC2258200D8950D /* Lumberjack.xcodeproj */;
-				},
-				{
-					ProductGroup = 3C3DF6EC1AC2259800D8950D /* Products */;
-					ProjectRef = 3C3DF6EB1AC2259800D8950D /* SegueingInfo.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				3C3CF7C11AB3897300EEE0D6 /* Eunomia */,
@@ -931,79 +763,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3C3DF6E81AC2258200D8950D /* libCocoaLumberjack.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libCocoaLumberjack.a;
-			remoteRef = 3C3DF6E71AC2258200D8950D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3C3DF6EA1AC2258200D8950D /* LibTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = LibTest.app;
-			remoteRef = 3C3DF6E91AC2258200D8950D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3C3DF6F41AC2259800D8950D /* libSegueingInfoiOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSegueingInfoiOS.a;
-			remoteRef = 3C3DF6F31AC2259800D8950D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3C3DF6F61AC2259800D8950D /* SegueingInfoExampleiOS.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SegueingInfoExampleiOS.app;
-			remoteRef = 3C3DF6F51AC2259800D8950D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3C3DF6F81AC2259800D8950D /* SegueingInfoExampleOSX.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SegueingInfoExampleOSX.app;
-			remoteRef = 3C3DF6F71AC2259800D8950D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3C3DF6FA1AC2259800D8950D /* SegueingInfoiOS.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SegueingInfoiOS.framework;
-			remoteRef = 3C3DF6F91AC2259800D8950D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3C3DF6FC1AC2259800D8950D /* SegueingInfoExampleFrameworkiOS.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SegueingInfoExampleFrameworkiOS.app;
-			remoteRef = 3C3DF6FB1AC2259800D8950D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3CE50C691AE75B6E000182BA /* libSegueingInfoOSX.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSegueingInfoOSX.a;
-			remoteRef = 3CE50C681AE75B6E000182BA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3CE50C6B1AE75B6E000182BA /* SegueingInfoFrameworkOSX.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SegueingInfoFrameworkOSX.framework;
-			remoteRef = 3CE50C6A1AE75B6E000182BA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3CE50C6D1AE75B6E000182BA /* SegueingInfoExampleFrameworkOSX.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SegueingInfoExampleFrameworkOSX.app;
-			remoteRef = 3CE50C6C1AE75B6E000182BA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3C3CF7C01AB3897300EEE0D6 /* Resources */ = {
@@ -1049,8 +808,6 @@
 				3C3CF7FA1AB389E000EEE0D6 /* UIWebView+Utility.m in Sources */,
 				3C3CF7FD1AB389E000EEE0D6 /* UIBarItem+Utility.m in Sources */,
 				3C3CF7FE1AB389E000EEE0D6 /* MFMailComposeViewController+Utility.m in Sources */,
-				3CE1618F1AB490D3009E57C1 /* ThirdPartyWrapper.m in Sources */,
-				3CE1617F1AB48FF1009E57C1 /* VerboseDDLogFormatter.m in Sources */,
 				3C3CF7E71AB389E000EEE0D6 /* NSManagedObjectContext+Utility.m in Sources */,
 				3C3CF7E11AB389DB00EEE0D6 /* ZoomInFromRectSegue.m in Sources */,
 				3C3CF7E01AB389DB00EEE0D6 /* ReplaceUpSegue.m in Sources */,
@@ -1082,16 +839,15 @@
 				3C3CF7F91AB389E000EEE0D6 /* UIViewController+Utility.m in Sources */,
 				3C3CF8051AB389E900EEE0D6 /* UITextView+Templating.m in Sources */,
 				3C3CF7E31AB389E000EEE0D6 /* JSContext+Utility.m in Sources */,
+				3C9672751AF2833C004BAF8E /* NSLogWrapper.m in Sources */,
 				3C3CF8021AB389E900EEE0D6 /* UIImageView+Templating.m in Sources */,
 				3C3CF7E91AB389E000EEE0D6 /* NSMutableDictionary+Utility.m in Sources */,
 				3C3CF7F01AB389E000EEE0D6 /* UILongPressGestureRecognizer+Utility.m in Sources */,
-				3CE1617D1AB48FF1009E57C1 /* NSLogWrapper.m in Sources */,
 				3C3CF7E61AB389E000EEE0D6 /* NSManagedObject+Utility.m in Sources */,
 				3C3CF7ED1AB389E000EEE0D6 /* NSString+Utility.m in Sources */,
 				3C3CF7F21AB389E000EEE0D6 /* UIPanGestureRecognizer+Utility.m in Sources */,
 				3C3CF7DC1AB389D700EEE0D6 /* MissingSubclassOverrideException.m in Sources */,
 				3C3CF7E21AB389DB00EEE0D6 /* ZoomOutToRectSegue.m in Sources */,
-				3C3CF7DB1AB389D700EEE0D6 /* CoreDataStore.m in Sources */,
 				3C3CF8031AB389E900EEE0D6 /* UILabel+Templating.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

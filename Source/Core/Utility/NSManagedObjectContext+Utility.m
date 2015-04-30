@@ -7,7 +7,7 @@
 
 #import "NSManagedObjectContext+Utility.h"
 
-#import "Config.h"
+#import "NSLogWrapper.h"
 
 @implementation NSManagedObjectContext (Eunomia_Utility)
 
@@ -17,7 +17,7 @@
     [self save:&error];
     if (error)
     {
-        NSLogError(@"%@: %@", usageContext, error);
+        [NSLogWrapper error:@"%@: %@", usageContext, error];
     }
     
     return error != nil;

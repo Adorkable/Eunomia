@@ -14,8 +14,7 @@ FOUNDATION_EXPORT double EunomiaVersionNumber;
 //! Project version string for Eunomia.
 FOUNDATION_EXPORT const unsigned char EunomiaVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like
-#import "CoreData.h"
+#import "App.h"
 
 #import "Exceptions.h"
 
@@ -26,8 +25,3 @@ FOUNDATION_EXPORT const unsigned char EunomiaVersionString[];
 #import "View+Templating.h"
 
 #import "Views.h"
-
-#import "ThirdPartyWrapper.h"
-
-#import "NSLogWrapper.h"
-#import "VerboseDDLogFormatter.h"

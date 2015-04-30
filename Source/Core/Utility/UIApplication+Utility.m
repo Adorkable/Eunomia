@@ -8,18 +8,18 @@
 
 #import "UIApplication+Utility.h"
 
-#import "Config.h"
+#import "NSLogWrapper.h"
 
 @implementation UIApplication (Eunomia_Utility)
 
 + (void)dumpApplicationInformation
 {
-    NSLogInfo(@"Application Version: %@", [self applicationVersion] );
-    NSLogInfo(@"Build Version: %@", [self buildVersion] );
+    [NSLogWrapper info:@"Application Version: %@", [self applicationVersion] ];
+    [NSLogWrapper info:@"Build Version: %@", [self buildVersion] ];
     
 #if TARGET_IPHONE_SIMULATOR
-    NSLogInfo(@"Simulator build running from: %@", [ [NSBundle mainBundle] bundleURL] );
-    NSLogInfo(@"Document folder: %@", [ [NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] );
+    [NSLogWrapper info:@"Simulator build running from: %@", [ [NSBundle mainBundle] bundleURL] ];
+    [NSLogWrapper info:@"Document folder: %@", [ [NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] ];
 #endif
 }
 

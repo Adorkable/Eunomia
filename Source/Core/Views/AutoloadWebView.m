@@ -8,7 +8,7 @@
 
 #import "AutoloadWebView.h"
 
-#import "Config.h"
+#import "NSLogWrapper.h"
 
 @implementation AutoloadWebView
 
@@ -20,7 +20,7 @@
         self.url = newURL;
     } else
     {
-        NSLogError(@"Invalid url passed into setUrlString: %@", urlString);
+        [NSLogWrapper error:@"Invalid url passed into setUrlString: %@", urlString];
     }
     
     if (self.superview != nil)

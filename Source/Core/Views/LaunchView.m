@@ -8,7 +8,7 @@
 
 #import "LaunchView.h"
 
-#import "Config.h"
+#import "NSLogWrapper.h"
 
 @implementation LaunchView
 
@@ -78,7 +78,7 @@
     
     if (image == nil)
     {
-        NSLogWarn(@"Could not find expected Launch Image at %@", imagePath);
+        [NSLogWrapper warn:@"Could not find expected Launch Image at %@", imagePath];
     }
     
     [self setImage:image];

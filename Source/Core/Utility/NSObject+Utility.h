@@ -35,3 +35,20 @@
 - (void)alignWithKeyboardBeginFrame:(CGRect)beginFrame endFrame:(CGRect)endFrame duration:(double)duration animationCurve:(UIViewAnimationCurve)animationCurve;
 
 @end
+
+#define DefineProtocolProperty(Type, Name) \
+    - (void)set##Name:(Type *)value \
+    { \
+        [self setProtocolRetainProperty:@selector(get##Name) value:value]; \
+    } \
+\
+    - (Type *)get##Name \
+    { \
+        Type *result; \
+        id object = [self getProtocolProperty:@selector(get##Name)]; \
+        if ( [object isKindOfClass:[Type class] ] ) \
+        { \
+            result = object; \
+        } \
+        return result; \
+    }

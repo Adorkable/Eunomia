@@ -10,9 +10,7 @@
 
 #import "Utility.h"
 
-
-
-#import "Config.h"
+#import "NSLogWrapper.h"
 
 #import <objc/runtime.h>
 
@@ -84,7 +82,7 @@ NSString *const UIMenuControllerResponderKey = @"UIMenuControllerResponder";
         [self setMenuVisible:YES animated:animated];
     } else
     {
-        NSLogWarn(@"Skipping attempthg to show menu with no items!");
+        [NSLogWrapper warn:@"Skipping attempt to show menu with no items!"];
     }
 }
 
