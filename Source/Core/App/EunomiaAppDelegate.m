@@ -8,13 +8,11 @@
 
 #import "EunomiaAppDelegate.h"
 
-#import "ThirdPartyWrapper.h"
-
 #import "Utility.h"
 
-@interface EunomiaAppDelegate ()
+#import "NSLogWrapper.h"
 
-@property (nonatomic, readwrite) ThirdPartyWrapper *thirdParty;
+@interface EunomiaAppDelegate ()
 
 @end
 
@@ -22,8 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.thirdParty = [ [ThirdPartyWrapper alloc] init];
-    [self.thirdParty initCocoaLumberjack];
+    [NSLogWrapper setupLogger];
     
     [UIApplication dumpApplicationInformation];
     
