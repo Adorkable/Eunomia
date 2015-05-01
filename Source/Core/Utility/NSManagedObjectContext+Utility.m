@@ -17,7 +17,7 @@
     [self save:&error];
     if (error)
     {
-        [NSLogWrapper error:@"%@: %@", usageContext, error];
+        NSLogError(@"%@: %@", usageContext, error);
     }
     
     return error != nil;

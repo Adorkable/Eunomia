@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E738C1BA343ACC2D89D8456 /* libPods-EunomiaCocoapodsExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B91909ABCFB178CE368D7234 /* libPods-EunomiaCocoapodsExample.a */; };
 		3C085F3A1AF2BE7D00E8C684 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE162091AB496DF009E57C1 /* main.m */; };
 		3C085F3B1AF2BE8400E8C684 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162161AB496DF009E57C1 /* LaunchScreen.xib */; };
 		3C085F3C1AF2BE8700E8C684 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162141AB496DF009E57C1 /* Images.xcassets */; };
@@ -136,6 +135,8 @@
 		3CE50C711AE75B82000182BA /* EunomiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE50C6F1AE75B82000182BA /* EunomiaViewController.m */; };
 		3CE50CD41AE7661F000182BA /* EunomiaAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE50CD21AE7661F000182BA /* EunomiaAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CE50CD51AE7661F000182BA /* EunomiaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE50CD31AE7661F000182BA /* EunomiaAppDelegate.m */; };
+		6690916B62BD8FDF7511DC10 /* Pods_EunomiaCocoapodsExampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F07EEC460CDB0ECEFB23C55 /* Pods_EunomiaCocoapodsExampleSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AB0AF5F5C5B6E93315F2A21B /* libPods-EunomiaCocoapodsExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D175349959E50E323C7F6E5E /* libPods-EunomiaCocoapodsExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -152,6 +153,7 @@
 
 /* Begin PBXFileReference section */
 		0544DE827A59EBC623DA501E /* Pods-EunomiaCocoapodsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaCocoapodsExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaCocoapodsExample/Pods-EunomiaCocoapodsExample.release.xcconfig"; sourceTree = "<group>"; };
+		1F07EEC460CDB0ECEFB23C55 /* Pods_EunomiaCocoapodsExampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EunomiaCocoapodsExampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C085F141AF2BE4000E8C684 /* EunomiaCocoapodsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EunomiaCocoapodsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C085F441AF2CB9D00E8C684 /* EunomiaCocoapodsExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EunomiaCocoapodsExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0AFFC01A97D60E0020B9CD /* UIImagePickerController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Utility.h"; sourceTree = "<group>"; };
@@ -284,8 +286,10 @@
 		3CE50C6F1AE75B82000182BA /* EunomiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EunomiaViewController.m; sourceTree = "<group>"; };
 		3CE50CD21AE7661F000182BA /* EunomiaAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EunomiaAppDelegate.h; sourceTree = "<group>"; };
 		3CE50CD31AE7661F000182BA /* EunomiaAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EunomiaAppDelegate.m; sourceTree = "<group>"; };
-		B91909ABCFB178CE368D7234 /* libPods-EunomiaCocoapodsExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EunomiaCocoapodsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FD9CBCE9854B782F3BEC642 /* Pods-EunomiaCocoapodsExampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaCocoapodsExampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaCocoapodsExampleSwift/Pods-EunomiaCocoapodsExampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		D175349959E50E323C7F6E5E /* libPods-EunomiaCocoapodsExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EunomiaCocoapodsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1BAA0AE5DE7E47FE58686E /* Pods-EunomiaCocoapodsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaCocoapodsExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaCocoapodsExample/Pods-EunomiaCocoapodsExample.debug.xcconfig"; sourceTree = "<group>"; };
+		EF4FD9E70945A5D820459C2C /* Pods-EunomiaCocoapodsExampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaCocoapodsExampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaCocoapodsExampleSwift/Pods-EunomiaCocoapodsExampleSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,7 +297,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E738C1BA343ACC2D89D8456 /* libPods-EunomiaCocoapodsExample.a in Frameworks */,
+				AB0AF5F5C5B6E93315F2A21B /* libPods-EunomiaCocoapodsExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6690916B62BD8FDF7511DC10 /* Pods_EunomiaCocoapodsExampleSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +431,8 @@
 			children = (
 				3CD18CFB1964A60200DB8ED7 /* Foundation.framework */,
 				3CD18D0C1964A60200DB8ED7 /* UIKit.framework */,
-				B91909ABCFB178CE368D7234 /* libPods-EunomiaCocoapodsExample.a */,
+				D175349959E50E323C7F6E5E /* libPods-EunomiaCocoapodsExample.a */,
+				1F07EEC460CDB0ECEFB23C55 /* Pods_EunomiaCocoapodsExampleSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -627,6 +633,8 @@
 			children = (
 				DB1BAA0AE5DE7E47FE58686E /* Pods-EunomiaCocoapodsExample.debug.xcconfig */,
 				0544DE827A59EBC623DA501E /* Pods-EunomiaCocoapodsExample.release.xcconfig */,
+				9FD9CBCE9854B782F3BEC642 /* Pods-EunomiaCocoapodsExampleSwift.debug.xcconfig */,
+				EF4FD9E70945A5D820459C2C /* Pods-EunomiaCocoapodsExampleSwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -722,9 +730,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C085F641AF2CB9D00E8C684 /* Build configuration list for PBXNativeTarget "EunomiaCocoapodsExampleSwift" */;
 			buildPhases = (
+				928AB8951F236A0AFCA540DB /* Check Pods Manifest.lock */,
 				3C085F401AF2CB9D00E8C684 /* Sources */,
 				3C085F411AF2CB9D00E8C684 /* Frameworks */,
 				3C085F421AF2CB9D00E8C684 /* Resources */,
+				49E2084F0218FA47DEE55249 /* Embed Pods Frameworks */,
+				E71E52D6E88321FFA8DFB322 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -902,6 +913,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EunomiaCocoapodsExample/Pods-EunomiaCocoapodsExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		49E2084F0218FA47DEE55249 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EunomiaCocoapodsExampleSwift/Pods-EunomiaCocoapodsExampleSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		928AB8951F236A0AFCA540DB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		9509B591C3FC0B852BF848B5 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -915,6 +956,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E71E52D6E88321FFA8DFB322 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EunomiaCocoapodsExampleSwift/Pods-EunomiaCocoapodsExampleSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1097,6 +1153,7 @@
 		};
 		3C085F601AF2CB9D00E8C684 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FD9CBCE9854B782F3BEC642 /* Pods-EunomiaCocoapodsExampleSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -1120,6 +1177,7 @@
 		};
 		3C085F611AF2CB9D00E8C684 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4FD9E70945A5D820459C2C /* Pods-EunomiaCocoapodsExampleSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -1359,6 +1417,7 @@
 				3C085F611AF2CB9D00E8C684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C3CF7D51AB3897300EEE0D6 /* Build configuration list for PBXNativeTarget "Eunomia" */ = {
 			isa = XCConfigurationList;

@@ -34,7 +34,20 @@
 }
 
 #define NSLogWrapperStatement(lowerName, UpperName) \
-+ (void)lowerName:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2) \
++ (void)lowerName:(NSString *)string \
+{ \
+    [DDLog log:NO \
+       message:string \
+         level:DDLogLevel##UpperName \
+          flag:DDLogFlag##UpperName \
+       context:0 \
+          file:NULL \
+      function:NULL \
+          line:0 \
+           tag:nil]; \
+} \
+\
++ (void)lowerName##WithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2) \
 { \
     va_list args; \
     if (format != nil) \

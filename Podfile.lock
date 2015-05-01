@@ -19,6 +19,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
-  Eunomia: cd09fc6d9e344a7f82ab70dc8f8b743c56a6d7b9
+  Eunomia: 222442dfbf3d3a03dce0211f250c1c57912b2ca9
 
 COCOAPODS: 0.36.4

@@ -5,3 +5,8 @@ target 'EunomiaCocoapodsExample' do
   pod 'Eunomia', :path => './'
 end
 
+target 'EunomiaCocoapodsExampleSwift' do
+    use_frameworks!
+    
+    pod 'Eunomia', :path => './'
+end

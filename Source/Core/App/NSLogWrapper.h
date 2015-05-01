@@ -12,19 +12,24 @@
 
 + (void)setupLogger;
 
-+ (void)verbose:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
++ (void)verbose:(NSString *)string;
++ (void)verboseWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 + (void)verboseWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
-+ (void)debug:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
++ (void)debug:(NSString *)string;
++ (void)debugWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 + (void)debugWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
-+ (void)info:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
++ (void)info:(NSString *)string;
++ (void)infoWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 + (void)infoWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
-+ (void)warning:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
++ (void)warning:(NSString *)string;
++ (void)warningWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 + (void)warningWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
-+ (void)error:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
++ (void)error:(NSString *)string;
++ (void)errorWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 + (void)errorWithFileName:(const char*)fileName functionName:(const char*)functionName line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(4,5);
 
 @end

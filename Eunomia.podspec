@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://bitbucket.org/yoiang/eunomia", :tag => "2.0.0" }
 
-  s.source_files = "Source/*.{h,m}", "Source/Core/**/*.{h,m}"
+  s.source_files = "Source/Core/**/*.{h,m}"
 
-  s.public_header_files = "Source/**/*.h"
+  s.public_header_files = "Source/Core/**/*.h"
   s.requires_arc = true
 
   s.dependency 'CocoaLumberjack'
