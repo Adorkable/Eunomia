@@ -1,6 +1,3 @@
 [submodule "Library/CocoaLumberjack"]
 	path = Library/CocoaLumberjack
-	url = https://github.com/CocoaLumberjack/CocoaLumberjack
-[submodule "Library/SegueingInfo"]
-	path = Library/SegueingInfo
-	url = https://github.com/Adorkable/SegueingInfo
+	url = https://github.com/CocoaLumberjack/CocoaLumberjack.git

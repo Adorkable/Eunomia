@@ -8,7 +8,7 @@
 
 #import "AutoloadWebView.h"
 
-#import "Config.h"
+#import "NSLogWrapper.h"
 
 @implementation AutoloadWebView
 

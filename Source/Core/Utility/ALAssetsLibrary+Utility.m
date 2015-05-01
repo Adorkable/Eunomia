@@ -8,7 +8,7 @@
 
 #import "ALAssetsLibrary+Utility.h"
 
-#import "Config.h"
+#import "NSLogWrapper.h"
 
 @implementation ALAssetsLibrary (Eunomia_Utility)
 
@@ -43,7 +43,7 @@
          
          *stop = NO;
      } failureBlock:^(NSError *error) {
-         NSLogError(@"When retrieving firstImage: %@", error);
+         NSLogWarning(@"When retrieving firstImage: %@", error);
      } ];
 }
 
