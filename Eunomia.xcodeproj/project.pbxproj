@@ -18,7 +18,10 @@
 		3C085F681AF2CBD200E8C684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9C64D1AC229900075C406 /* AppDelegate.swift */; };
 		3C085F691AF2CBD600E8C684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9C64F1AC229900075C406 /* ViewController.swift */; };
 		3C085F6B1AF2CBE200E8C684 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE162141AB496DF009E57C1 /* Images.xcassets */; };
-		3C0DC05F1AB4973700D32C10 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */; };
+		3C085F961AF32D5500E8C684 /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C085F891AF327FF00E8C684 /* libCocoaLumberjack.a */; };
+		3C085F971AF32F1D00E8C684 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */; };
+		3C085F9A1AF32FA800E8C684 /* Eunomia.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C085FA01AF3325E00E8C684 /* Eunomia.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C3CF7C21AB3897300EEE0D6 /* Eunomia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C0DC0961AB49AD900D32C10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DC08F1AB49ACB00D32C10 /* AppDelegate.m */; };
 		3C0DC0971AB49AD900D32C10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DC0911AB49ACB00D32C10 /* ViewController.m */; };
 		3C3CF7DC1AB389D700EEE0D6 /* MissingSubclassOverrideException.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE46F0419ABBF7700053E62 /* MissingSubclassOverrideException.m */; };
@@ -139,7 +142,58 @@
 		AB0AF5F5C5B6E93315F2A21B /* libPods-EunomiaCocoapodsExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D175349959E50E323C7F6E5E /* libPods-EunomiaCocoapodsExample.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3C085F881AF327FF00E8C684 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C085F831AF327FF00E8C684 /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2A37F97718E37270009FAAA7;
+			remoteInfo = CocoaLumberjack;
+		};
+		3C085F8A1AF327FF00E8C684 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C085F831AF327FF00E8C684 /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2A37F9DA18E37536009FAAA7;
+			remoteInfo = LibTest;
+		};
+		3C085F9B1AF3323700E8C684 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CD18CF01964A60200DB8ED7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C3CF7C11AB3897300EEE0D6;
+			remoteInfo = Eunomia;
+		};
+		3C085F9D1AF3324F00E8C684 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CD18CF01964A60200DB8ED7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C3CF7C11AB3897300EEE0D6;
+			remoteInfo = Eunomia;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		3C085F981AF32F5500E8C684 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C085F9A1AF32FA800E8C684 /* Eunomia.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C085F9F1AF3325500E8C684 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C085FA01AF3325E00E8C684 /* Eunomia.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CC9C6231AC226FD0075C406 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,6 +210,7 @@
 		1F07EEC460CDB0ECEFB23C55 /* Pods_EunomiaCocoapodsExampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EunomiaCocoapodsExampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C085F141AF2BE4000E8C684 /* EunomiaCocoapodsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EunomiaCocoapodsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C085F441AF2CB9D00E8C684 /* EunomiaCocoapodsExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EunomiaCocoapodsExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C085F831AF327FF00E8C684 /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = Framework/Mobile/Lumberjack.xcodeproj; sourceTree = "<group>"; };
 		3C0AFFC01A97D60E0020B9CD /* UIImagePickerController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Utility.h"; sourceTree = "<group>"; };
 		3C0AFFC11A97D60E0020B9CD /* UIImagePickerController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Utility.m"; sourceTree = "<group>"; };
 		3C0AFFC31A97DB6D0020B9CD /* ALAssetsLibrary+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+Utility.h"; sourceTree = "<group>"; };
@@ -313,6 +368,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C085F961AF32D5500E8C684 /* libCocoaLumberjack.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,13 +384,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0DC05F1AB4973700D32C10 /* Eunomia.framework in Frameworks */,
+				3C085F971AF32F1D00E8C684 /* Eunomia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C085F6D1AF3261400E8C684 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3C085F6E1AF3262800E8C684 /* CocoaLumberjack */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		3C085F6E1AF3262800E8C684 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				3C085F831AF327FF00E8C684 /* Lumberjack.xcodeproj */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		3C085F841AF327FF00E8C684 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C085F891AF327FF00E8C684 /* libCocoaLumberjack.a */,
+				3C085F8B1AF327FF00E8C684 /* LibTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3C0DC08D1AB49ACB00D32C10 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +489,7 @@
 				3CD18D211964A65F00DB8ED7 /* Source */,
 				3C371BD319853F20008503FE /* Tests */,
 				3CE162061AB496DF009E57C1 /* Example */,
+				3C085F6D1AF3261400E8C684 /* Library */,
 				3CD18CFA1964A60200DB8ED7 /* Frameworks */,
 				3CD18CF91964A60200DB8ED7 /* Products */,
 				F28919D26046D775109E17AC /* Pods */,
@@ -772,10 +854,12 @@
 				3CC9C6261AC228FE0075C406 /* Sources */,
 				3CC9C6271AC228FE0075C406 /* Frameworks */,
 				3CC9C6281AC228FE0075C406 /* Resources */,
+				3C085F9F1AF3325500E8C684 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3C085F9E1AF3324F00E8C684 /* PBXTargetDependency */,
 			);
 			name = EunomiaExampleSwift;
 			productName = EunomiaExampleSwift;
@@ -789,10 +873,12 @@
 				3CE162011AB496DF009E57C1 /* Sources */,
 				3CE162021AB496DF009E57C1 /* Frameworks */,
 				3CE162031AB496DF009E57C1 /* Resources */,
+				3C085F981AF32F5500E8C684 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3C085F9C1AF3323700E8C684 /* PBXTargetDependency */,
 			);
 			name = EunomiaExample;
 			productName = EunomiaExample;
@@ -836,6 +922,12 @@
 			mainGroup = 3CD18CEF1964A60200DB8ED7;
 			productRefGroup = 3CD18CF91964A60200DB8ED7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3C085F841AF327FF00E8C684 /* Products */;
+					ProjectRef = 3C085F831AF327FF00E8C684 /* Lumberjack.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3C3CF7C11AB3897300EEE0D6 /* Eunomia */,
@@ -846,6 +938,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3C085F891AF327FF00E8C684 /* libCocoaLumberjack.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCocoaLumberjack.a;
+			remoteRef = 3C085F881AF327FF00E8C684 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C085F8B1AF327FF00E8C684 /* LibTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LibTest.app;
+			remoteRef = 3C085F8A1AF327FF00E8C684 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3C085F121AF2BE4000E8C684 /* Resources */ = {
@@ -1071,6 +1180,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C085F9C1AF3323700E8C684 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C3CF7C11AB3897300EEE0D6 /* Eunomia */;
+			targetProxy = 3C085F9B1AF3323700E8C684 /* PBXContainerItemProxy */;
+		};
+		3C085F9E1AF3324F00E8C684 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C3CF7C11AB3897300EEE0D6 /* Eunomia */;
+			targetProxy = 3C085F9D1AF3324F00E8C684 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3CC9C6581AC22A340075C406 /* LaunchScreen.xib */ = {
