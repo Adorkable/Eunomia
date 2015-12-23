@@ -1,0 +1,27 @@
+PODS:
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - Eunomia (3.0.0):
+    - Eunomia/Core (= 3.0.0)
+  - Eunomia/Core (3.0.0):
+    - CocoaLumberjack
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - Eunomia (from `../`)
+
+EXTERNAL SOURCES:
+  Eunomia:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  Eunomia: ac7253dab8140c492a86c041f3541bddcb89dd91
+
+COCOAPODS: 0.39.0
