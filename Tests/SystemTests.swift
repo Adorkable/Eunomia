@@ -14,20 +14,20 @@ import Eunomia
 class SystemTests: XCTestCase {
     
     func testGetAppDocumentPaths() {
-        var paths = getAppDocumentPaths()
+        let paths = getAppDocumentPaths()
         
         XCTAssertNotNil(paths, "Result should not be nil")
         XCTAssertGreaterThan(paths!.count, 0, "Result should include at least one path")
     }
     
     func testGetAppDocumentPath() {
-        var path = getAppDocumentPath()
+        let path = getAppDocumentPath()
         
         XCTAssertNotNil(path, "Result should not be nil")
     }
     
     func testGetAppLibraryPaths() {
-        var paths = getAppLibraryPaths()
+        let paths = getAppLibraryPaths()
         
         XCTAssertNotNil(paths, "Result should not be nil")
         XCTAssertGreaterThan(paths!.count, 0, "Result should include at least one path")
@@ -35,7 +35,7 @@ class SystemTests: XCTestCase {
     }
     
     func testGetAppLibraryPath() {
-        var path = getAppLibraryPath()
+        let path = getAppLibraryPath()
         
         XCTAssertNotNil(path, "Result should not be nil")
     }
