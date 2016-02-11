@@ -6,7 +6,7 @@
 //  Copyright © 2015 Adorkable. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UITableViewCell {
     
