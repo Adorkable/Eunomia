@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Eunomia"
-  s.version      = "3.0.0"
+  s.version      = "3.0.1"
   s.summary      = "OSX and iOS common functionalities"
   s.license      = "MIT"
 
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author       = { "Ian G" => "yo.ian.g@gmail.com" }
   s.platform     = :ios, "9.0"
 
-  s.source       = { :git => "https://github.com/Adorkable/Eunomia.git", :tag => "3.0.0" }
+  s.source       = { :git => "https://github.com/Adorkable/Eunomia.git", :tag => s.version.to_s }
 
   s.requires_arc = true
 
