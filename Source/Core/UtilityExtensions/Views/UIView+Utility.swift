@@ -304,7 +304,7 @@ extension UIView {
         constraint.constant = self.heightThatFitsCurrentWidth
     }
 
-    public func snapshotView() -> UIImage?
+    public func eunomia_snapshotView() -> UIImage?
     {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0);
         
