@@ -14,6 +14,7 @@ public extension String
         return self.characters.count
     }
     
+    // TODO: deprecate in favor of joinWithSeparator
     public mutating func append(string : String, withJoin : String = "") {
         if string.length > 0
         {
@@ -36,7 +37,8 @@ public extension String
     }
     
     subscript (range : Range<Int>) -> String {
-        return substringWithRange(Range(start: startIndex.advancedBy(range.startIndex), end: startIndex.advancedBy(range.endIndex)))
+        let indexRange = self.startIndex.advancedBy(range.startIndex)..<startIndex.advancedBy(range.endIndex)
+        return substringWithRange(indexRange)
     }
 }
 

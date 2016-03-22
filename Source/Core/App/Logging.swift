@@ -48,23 +48,23 @@ extension DDLog {
         self.log(true, message: message, level: level, flag: flag, context: 0, file: (file as NSString).UTF8String, function: (function as NSString).UTF8String, line: UInt(line), tag: "")
     }
     
-    public class func error(message : String, fileName : String = __FILE__, functionName : String = __FUNCTION__, line : Int = __LINE__) {
+    public class func error(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
         self.log(message, level: DDLogLevel.Error, flag: DDLogFlag.Error, file: fileName, function: functionName, line: line)
     }
     
-    public class func warning(message : String, fileName : String = __FILE__, functionName : String = __FUNCTION__, line : Int = __LINE__) {
+    public class func warning(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
         self.log(message, level: DDLogLevel.Warning, flag: DDLogFlag.Warning, file: fileName, function: functionName, line: line)
     }
     
-    public class func info(message : String, fileName : String = __FILE__, functionName : String = __FUNCTION__, line : Int = __LINE__) {
+    public class func info(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
         self.log(message, level: DDLogLevel.Info, flag: DDLogFlag.Info, file: fileName, function: functionName, line: line)
     }
     
-    public class func debug(message : String, fileName : String = __FILE__, functionName : String = __FUNCTION__, line : Int = __LINE__) {
+    public class func debug(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
         self.log(message, level: DDLogLevel.Debug, flag: DDLogFlag.Debug, file: fileName, function: functionName, line: line)
     }
     
-    public class func verbose(message : String, fileName : String = __FILE__, functionName : String = __FUNCTION__, line : Int = __LINE__) {
+    public class func verbose(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
         self.log(message, level: DDLogLevel.Verbose, flag: DDLogFlag.Verbose, file: fileName, function: functionName, line: line)
     }
     
