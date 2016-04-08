@@ -76,6 +76,28 @@ extension UIView {
         }
     }
     
+    @IBInspectable public var shadowOffset : CGSize {
+        get {
+            return self.layer.shadowOffset
+        }
+        set {
+            self.layer.shadowOffset = newValue
+        }
+    }
+    
+    @IBInspectable public var shadowColor : UIColor? {
+        get {
+            guard let cgColor = self.layer.shadowColor else {
+                return nil
+            }
+            
+            return UIColor(CGColor: cgColor)
+        }
+        set {
+            self.layer.shadowColor = newValue?.CGColor
+        }
+    }
+    
     public class func view(nibName: String?, bundle: NSBundle?) -> UIView {
         let viewController = UIViewController(nibName: nibName, bundle: bundle)
         return viewController.view

@@ -37,8 +37,36 @@ class String_UtilityTests: XCTestCase {
         XCTAssertEqual(selfNotZero, notZero)
     }
     
-    // TODO: subscript -> Character
-    // TODO: subscript -> String
+    func testSubscriptCharacterResult() {
+        let test = [Character("A"),Character("S"),Character("L"),Character("K"),Character("D"),Character("F"),Character("J"),Character("L"),Character("A"),Character("K"),Character("S"),Character("J"),Character("D"),Character("F"),Character("a"),Character("s"),Character("d"),Character("l"),Character("f"),Character("k"),Character("j"),Character("a"),Character("l"),Character("s"),Character(";"),Character("d"),Character("k"),Character("f"),Character("j"),Character("o"),Character("a"),Character("i"),Character("j"),Character("e")]
+        
+        
+        let index = random() % test.count
+        let string = test.map({String($0)}).joinWithSeparator("")
+
+        XCTAssertEqual(test[index], string[index])
+    }
+    
+    func testSubscriptStringResult() {
+        let test = ["A", "S", "L", "K", "D", "F", "J", "L","A","K","S","J","D","F","a","s","d","l","f","k","j","a","l","s",";","d","k","f","j","o","a","i","j","e"]
+
+        
+        let index = random() % test.count
+        let string = test.joinWithSeparator("")
+
+        XCTAssertEqual(test[index], string[index])
+    }
+    
+    func testSubstringIntRangeIndex() {
+        let test = ["A", "S", "L", "K", "D", "F", "J", "L","A","K","S","J","D","F","a","s","d","l","f","k","j","a","l","s",";","d","k","f","j","o","a","i","j","e"]
+        
+        
+        let index = 3..<10
+        let string = test.joinWithSeparator("")
+        let testString = test[index].joinWithSeparator("")
+        
+        XCTAssertEqual(testString, string[index])
+    }
 
     // TODO: randomString()
     
