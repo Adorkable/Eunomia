@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'Core'
 
   s.subspec 'Core' do |core|
-    core.dependency 'CocoaLumberjack'
+    core.dependency 'CocoaLumberjack', '~> 2.2.0'
     core.source_files = "Source/Core/**/*.{h,m,swift}"
   end
 

@@ -3,5 +3,7 @@
 
 use_frameworks!
 
-pod 'CocoaLumberjack'
-pod 'Eunomia', :path => '../'
+target 'EunomiaCocoapodiOSTests' do
+	pod 'CocoaLumberjack', '~> 2.2.0'
+	pod 'Eunomia', :path => '../'
+end
