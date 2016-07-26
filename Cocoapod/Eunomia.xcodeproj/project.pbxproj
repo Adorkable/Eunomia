@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A7029FB8916BA178854C3A1 /* Pods_EunomiaCocoapodiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD83A43683222A1D5B0A9ACF /* Pods_EunomiaCocoapodiOSTests.framework */; };
 		3CB2C7851C2B1E3000BBC529 /* NSCharacterSet+UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7801C2B1E3000BBC529 /* NSCharacterSet+UtilityTests.swift */; };
 		3CB2C7861C2B1E3000BBC529 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7811C2B1E3000BBC529 /* RandomTests.swift */; };
 		3CB2C7871C2B1E3000BBC529 /* String+UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7821C2B1E3000BBC529 /* String+UtilityTests.swift */; };
 		3CB2C7881C2B1E3000BBC529 /* SystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7831C2B1E3000BBC529 /* SystemTests.swift */; };
-		E3FBCDE54937CF848D2FEBAD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66CB464A95203A6443B05BF /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +21,9 @@
 		3CB2C7811C2B1E3000BBC529 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
 		3CB2C7821C2B1E3000BBC529 /* String+UtilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UtilityTests.swift"; sourceTree = "<group>"; };
 		3CB2C7831C2B1E3000BBC529 /* SystemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemTests.swift; sourceTree = "<group>"; };
-		50F74D354281D6AD76B36A8E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		7DE4375EF19D809C00C92842 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F66CB464A95203A6443B05BF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E283395F15B41F177929A1D /* Pods-EunomiaCocoapodiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaCocoapodiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaCocoapodiOSTests/Pods-EunomiaCocoapodiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAA2F5EC6A99269C4310AF60 /* Pods-EunomiaCocoapodiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EunomiaCocoapodiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EunomiaCocoapodiOSTests/Pods-EunomiaCocoapodiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD83A43683222A1D5B0A9ACF /* Pods_EunomiaCocoapodiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EunomiaCocoapodiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3FBCDE54937CF848D2FEBAD /* Pods.framework in Frameworks */,
+				2A7029FB8916BA178854C3A1 /* Pods_EunomiaCocoapodiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,8 +72,8 @@
 		83E76D21F6B691155DCAA114 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				50F74D354281D6AD76B36A8E /* Pods.debug.xcconfig */,
-				7DE4375EF19D809C00C92842 /* Pods.release.xcconfig */,
+				8E283395F15B41F177929A1D /* Pods-EunomiaCocoapodiOSTests.debug.xcconfig */,
+				CAA2F5EC6A99269C4310AF60 /* Pods-EunomiaCocoapodiOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 		E97D945E4F2D844451B138ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F66CB464A95203A6443B05BF /* Pods.framework */,
+				CD83A43683222A1D5B0A9ACF /* Pods_EunomiaCocoapodiOSTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,12 +93,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CB2C77B1C2B1DDE00BBC529 /* Build configuration list for PBXNativeTarget "EunomiaCocoapodiOSTests" */;
 			buildPhases = (
-				4850748839E5757CB9DA9DD8 /* Check Pods Manifest.lock */,
+				4850748839E5757CB9DA9DD8 /* [CP] Check Pods Manifest.lock */,
 				3CB2C7721C2B1DDE00BBC529 /* Sources */,
 				3CB2C7731C2B1DDE00BBC529 /* Frameworks */,
 				3CB2C7741C2B1DDE00BBC529 /* Resources */,
-				8823B2174DF04EE6FD5A8B6D /* Embed Pods Frameworks */,
-				C74681A5AE00B93579858C7F /* Copy Pods Resources */,
+				8823B2174DF04EE6FD5A8B6D /* [CP] Embed Pods Frameworks */,
+				C74681A5AE00B93579858C7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,14 +152,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4850748839E5757CB9DA9DD8 /* Check Pods Manifest.lock */ = {
+		4850748839E5757CB9DA9DD8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,34 +167,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8823B2174DF04EE6FD5A8B6D /* Embed Pods Frameworks */ = {
+		8823B2174DF04EE6FD5A8B6D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EunomiaCocoapodiOSTests/Pods-EunomiaCocoapodiOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C74681A5AE00B93579858C7F /* Copy Pods Resources */ = {
+		C74681A5AE00B93579858C7F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EunomiaCocoapodiOSTests/Pods-EunomiaCocoapodiOSTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -305,7 +305,7 @@
 		};
 		3CB2C77C1C2B1DDE00BBC529 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50F74D354281D6AD76B36A8E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 8E283395F15B41F177929A1D /* Pods-EunomiaCocoapodiOSTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ../Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -316,7 +316,7 @@
 		};
 		3CB2C77D1C2B1DDE00BBC529 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DE4375EF19D809C00C92842 /* Pods.release.xcconfig */;
+			baseConfigurationReference = CAA2F5EC6A99269C4310AF60 /* Pods-EunomiaCocoapodiOSTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ../Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

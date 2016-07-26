@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Eunomia"
-  s.version      = "3.0.3"
+  s.version      = "3.0.4"
   s.summary      = "OSX and iOS common functionalities"
   s.license      = "MIT"
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'Core'
 
   s.subspec 'Core' do |core|
-    core.dependency 'CocoaLumberjack'
+    core.dependency 'CocoaLumberjack', '~> 2.2.0'
     core.source_files = "Source/Core/**/*.{h,m,swift}"
   end
 
