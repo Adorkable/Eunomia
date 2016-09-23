@@ -36,14 +36,14 @@ public class OrdinalNumberFormatter: NSNumberFormatter {
         return isSuccessful
     }
     
-    override public func stringForObjectValue(obj: AnyObject) -> String? {
-        if !obj.isKindOfClass(NSNumber.self)
+    override public func stringForObjectValue(obj: AnyObject?) -> String? {
+        if !obj!.isKindOfClass(NSNumber.self)
         {
             return nil
         }
         var result : String?
 
-        if let stringRepresentation = obj.stringValue
+        if let stringRepresentation = obj!.stringValue
         {
             if stringRepresentation.characters.count > 0
             {
