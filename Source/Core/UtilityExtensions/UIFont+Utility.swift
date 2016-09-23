@@ -33,7 +33,7 @@ extension UIFont {
     
     func fontWithTrait(trait : UIFontDescriptorSymbolicTraits) -> UIFont {
         let fontDescriptor = self.fontDescriptor().fontDescriptorWithSymbolicTraits(trait)
-        return UIFont(descriptor: fontDescriptor, size: self.pointSize)
+        return UIFont(descriptor: fontDescriptor!, size: self.pointSize)
     }
     
     func regularFont() -> UIFont? {
