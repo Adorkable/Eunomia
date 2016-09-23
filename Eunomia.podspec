@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Eunomia"
-  s.version      = "3.0.4"
+  s.version      = "3.0.5"
   s.summary      = "OSX and iOS common functionalities"
   s.license      = "MIT"
 
@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Adorkable/Eunomia.git", :tag => s.version.to_s }
 
   s.requires_arc = true
+
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '2.3' }
 
   s.default_subspecs = 'Core'
 
