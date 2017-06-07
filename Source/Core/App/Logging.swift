@@ -15,7 +15,7 @@ import CocoaLumberjack
 
 extension DDLog {
     
-    public class func setupLogger(consoleLogLevel : DDLogLevel = DDLogLevel.Info) {
+    public class func setupLogger(consoleLogLevel : DDLogLevel = DDLogLevel.info) throws {
 //        #if DEBUG
 //            // NSLogger connection
 //            DDLog.addLogger(DDNSLoggerLogger.sharedInstance())
@@ -23,19 +23,21 @@ extension DDLog {
 //        #endif
         
         // Xcode Console connection
-        let ddttyLogger = DDTTYLogger.sharedInstance()
+        guard let ddttyLogger = DDTTYLogger.sharedInstance else {
+            throw SharedInstanceIsNilError(ofType: DDTTYLogger.self)
+        }
         
         ddttyLogger.colorsEnabled = true
-        ddttyLogger.setForegroundColor(UIColor(red: 0.973, green: 0.153, blue: 0.218, alpha: 1.0), backgroundColor: UIColor.whiteColor(), forFlag: DDLogFlag.Error)
-        ddttyLogger.setForegroundColor(UIColor(red: 0.9337, green:0.6441, blue:0.254, alpha:1.0), backgroundColor: UIColor.whiteColor(), forFlag: DDLogFlag.Warning)
-        ddttyLogger.setForegroundColor(UIColor(white: 0.212, alpha: 1.0), backgroundColor: UIColor.whiteColor(), forFlag: DDLogFlag.Info)
-        ddttyLogger.setForegroundColor(UIColor(red:0.391, green:0.520, blue:0.417, alpha: 1.0), backgroundColor: UIColor.whiteColor(), forFlag: DDLogFlag.Debug)
-        ddttyLogger.setForegroundColor(UIColor(white: 0.675, alpha: 1.0), backgroundColor: UIColor.whiteColor(), forFlag: DDLogFlag.Verbose)
-        
+        ddttyLogger.setForegroundColor(UIColor(red: 0.973, green: 0.153, blue: 0.218, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.error)
+        ddttyLogger.setForegroundColor(UIColor(red: 0.9337, green:0.6441, blue:0.254, alpha:1.0), backgroundColor: UIColor.white, for: DDLogFlag.warning)
+        ddttyLogger.setForegroundColor(UIColor(white: 0.212, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.info)
+        ddttyLogger.setForegroundColor(UIColor(red:0.391, green:0.520, blue:0.417, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.debug)
+        ddttyLogger.setForegroundColor(UIColor(white: 0.675, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.verbose)
+
         ddttyLogger.logFormatter = EunomiaCocoaLumberjackFormatter()
         
         // addLogger is inclusive from specified level and up, ie saying withLevel: Info means Info, Warning, Error
-        DDLog.addLogger(ddttyLogger, withLevel: consoleLogLevel)
+        DDLog.add(ddttyLogger, with: consoleLogLevel)
         
         // Crashlytics connection
         // TODO: check if Crashlytics Cocoapods is ok to use again
@@ -45,27 +47,28 @@ extension DDLog {
     }
     
     public class func log(message: String, level: DDLogLevel, flag: DDLogFlag, file: String, function: String, line: Int) {
-        self.log(true, message: message, level: level, flag: flag, context: 0, file: (file as NSString).UTF8String, function: (function as NSString).UTF8String, line: UInt(line), tag: "")
+        let ddLogMessage = DDLogMessage(message: message, level: level, flag: flag, context: 0, file: file, function: function, line: UInt(line), tag: nil, options: DDLogMessageOptions.dontCopyMessage, timestamp: nil)
+        self.log(asynchronous: true, message: ddLogMessage)
     }
     
     public class func error(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message, level: DDLogLevel.Error, flag: DDLogFlag.Error, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: DDLogLevel.error, flag: DDLogFlag.error, file: fileName, function: functionName, line: line)
     }
     
     public class func warning(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message, level: DDLogLevel.Warning, flag: DDLogFlag.Warning, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: DDLogLevel.warning, flag: DDLogFlag.warning, file: fileName, function: functionName, line: line)
     }
     
     public class func info(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message, level: DDLogLevel.Info, flag: DDLogFlag.Info, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: DDLogLevel.info, flag: DDLogFlag.info, file: fileName, function: functionName, line: line)
     }
     
     public class func debug(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message, level: DDLogLevel.Debug, flag: DDLogFlag.Debug, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: DDLogLevel.debug, flag: DDLogFlag.debug, file: fileName, function: functionName, line: line)
     }
     
     public class func verbose(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message, level: DDLogLevel.Verbose, flag: DDLogFlag.Verbose, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: DDLogLevel.verbose, flag: DDLogFlag.verbose, file: fileName, function: functionName, line: line)
     }
     
     public class func logFlagAsString(logFlag : DDLogFlag) -> String {
@@ -73,19 +76,19 @@ extension DDLog {
         
         switch (logFlag)
         {
-        case DDLogFlag.Error:
+        case DDLogFlag.error:
             result = "E"
             break
-        case DDLogFlag.Warning:
+        case DDLogFlag.warning:
             result = "W"
             break
-        case DDLogFlag.Info:
+        case DDLogFlag.info:
             result = "I"
             break
-        case DDLogFlag.Debug:
+        case DDLogFlag.debug:
             result = "D"
             break
-        case DDLogFlag.Verbose:
+        case DDLogFlag.verbose:
             result = "V"
             break
         default:
@@ -96,11 +99,22 @@ extension DDLog {
     }
     
     public class EunomiaCocoaLumberjackFormatter : NSObject, DDLogFormatter {
-        public func formatLogMessage(logMessage: DDLogMessage!) -> String! {
-            
+        public /**
+         * Formatters may optionally be added to any logger.
+         * This allows for increased flexibility in the logging environment.
+         * For example, log messages for log files may be formatted differently than log messages for the console.
+         *
+         * For more information about formatters, see the "Custom Formatters" page:
+         * Documentation/CustomFormatters.md
+         *
+         * The formatter may also optionally filter the log message by returning nil,
+         * in which case the logger will not log the message.
+         **/
+        func format(message logMessage: DDLogMessage) -> String? {
+
             var result = String()
             
-            result += DDLog.logFlagAsString(logMessage.flag)
+            result += DDLog.logFlagAsString(logFlag: logMessage.flag)
             
             if logMessage.threadName.characters.count > 0
             {
@@ -118,9 +132,10 @@ extension DDLog {
             {
                 fileFunction += "\((logMessage.file as NSString).lastPathComponent):\(logMessage.line):"
             }
-            if logMessage.function.characters.count > 0
+            if let function = logMessage.function,
+                function.characters.count > 0
             {
-                fileFunction += "\(logMessage.function)"
+                fileFunction += "\(String(describing: function))"
             }
             if fileFunction.characters.count > 0
             {

@@ -11,25 +11,25 @@ import Photos
 extension PHPhotoLibrary {
     
     public enum RetrieveFirstImageResult {
-        case Success(UIImage)
-        case NoImages
-        case Denied(PHAuthorizationStatus)
-        case Error(NSError)
+        case success(UIImage)
+        case noImages
+        case denied(PHAuthorizationStatus)
+        case error(NSError)
     }
-    public func retrieveFirstImage(requestAuthorizationIfNeeded requestAuthorizationIfNeeded : Bool = true, completion completionHandler : (RetrieveFirstImageResult) -> Void) {
+    public func retrieveFirstImage(requestAuthorizationIfNeeded : Bool = true, completion completionHandler : @escaping (RetrieveFirstImageResult) -> Void) {
 
         let retrieve = { () -> Void in
-            let collections = PHAssetCollection.fetchAssetCollectionsWithType(.SmartAlbum, subtype: .SmartAlbumUserLibrary, options: nil)
+            let collections = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: nil)
             
             guard collections.count > 0 else {
-                completionHandler(.NoImages)
+                completionHandler(.noImages)
                 return
             }
             
-            guard let collection = collections.firstObject as? PHAssetCollection else {
+            guard let collection = collections.firstObject else {
                 
-                let error = NSError(description: "Expected to be given a \(PHAssetCollection.self), instead given a \(collections.firstObject?.dynamicType)")
-                completionHandler(.Error(error))
+                let error = NSError(description: "Expected to be given a \(PHAssetCollection.self), instead given a \(type(of: collections.firstObject))")
+                completionHandler(.error(error))
                 return
             }
             
@@ -37,68 +37,68 @@ extension PHPhotoLibrary {
             let cameraRoll = collection
 
             let options = PHFetchOptions()
-            options.predicate = NSPredicate(format: "mediaType == %d", PHAssetMediaType.Image.rawValue)
-            options.includeAssetSourceTypes = PHAssetSourceType.TypeUserLibrary
+            options.predicate = NSPredicate(format: "mediaType == %d", PHAssetMediaType.image.rawValue)
+            options.includeAssetSourceTypes = PHAssetSourceType.typeUserLibrary
             options.fetchLimit = 1
             options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
 
-            let assets = PHAsset.fetchAssetsInAssetCollection(cameraRoll, options: options)
+            let assets = PHAsset.fetchAssets(in: cameraRoll, options: options)
             guard assets.count > 0 else {
-                completionHandler(.NoImages)
+                completionHandler(.noImages)
                 return
             }
             
-            guard let asset = assets.firstObject as? PHAsset else {
+            guard let asset = assets.firstObject else {
                 
-                let error = NSError(description: "Expected to be given a \(PHAsset.self), instead given a \(assets.firstObject?.dynamicType)")
-                completionHandler(.Error(error))
+                let error = NSError(description: "Expected to be given a \(PHAsset.self), instead given a \(type(of: assets.firstObject))")
+                completionHandler(.error(error))
                 return
             }
             
             let imageManager : PHImageManager = PHImageManager()
-            imageManager.requestImageDataForAsset(asset, options: nil, resultHandler: { (data, dataUTI, orientation, info) -> Void in
+            imageManager.requestImageData(for: asset, options: nil, resultHandler: { (data, dataUTI, orientation, info) -> Void in
                 
                 guard let data = data else {
-                    completionHandler(.NoImages)
+                    completionHandler(.noImages)
                     return
                 }
                 
                 guard let photo = UIImage(data: data) else {
                     
                     let error = NSError(description: "Unable to create UIImage from data")
-                    completionHandler(.Error(error))
+                    completionHandler(.error(error))
                     return
                 }
 
-                completionHandler(.Success(photo))
+                completionHandler(.success(photo))
             })
         }
         
         switch PHPhotoLibrary.authorizationStatus() {
-        case .Authorized:
+        case .authorized:
             retrieve()
             break
             
-        case .NotDetermined:
+        case .notDetermined:
             if requestAuthorizationIfNeeded == true {
                 PHPhotoLibrary.requestAuthorization(self.requestAuthorizationToRetrieveFirstImageHandler(completion: completionHandler))
             } else {
-                completionHandler(.Denied(.NotDetermined))
+                completionHandler(.denied(.notDetermined))
             }
             break
 
-        case .Restricted:
-            completionHandler(.Denied(.Restricted))
+        case .restricted:
+            completionHandler(.denied(.restricted))
             break
             
-        case .Denied:
-            completionHandler(.Denied(.Denied))
+        case .denied:
+            completionHandler(.denied(.denied))
             break
         }
 
     }
     
-    private func requestAuthorizationToRetrieveFirstImageHandler(completion completionHandler : (RetrieveFirstImageResult) -> Void) -> ( (PHAuthorizationStatus) -> Void) {
+    fileprivate func requestAuthorizationToRetrieveFirstImageHandler(completion completionHandler : @escaping (RetrieveFirstImageResult) -> Void) -> ( (PHAuthorizationStatus) -> Void) {
         
         return { (result) -> Void in
             

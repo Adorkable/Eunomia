@@ -10,83 +10,87 @@ import UIKit
 
 import CocoaLumberjack
 
-public class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
-    public var window: UIWindow?
+open class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
+    open var window: UIWindow?
     
-    public func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-        
-        DDLog.setupLogger(DDLogLevel.Debug)
-        
+    open func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        do {
+            try DDLog.setupLogger(consoleLogLevel: DDLogLevel.debug)
+        } catch {
+            NSLog("Error: while settings up CocoaLumberjack: \(error)")
+        }
+
         UIApplication.dumpApplicationInformation()
         
         return true
     }
     
-    public func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+    open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return true
     }
     
-    public func applicationDidBecomeActive(application: UIApplication) {
+    open func applicationDidBecomeActive(_ application: UIApplication) {
         
     }
     
-    public func applicationWillResignActive(application: UIApplication) {
+    open func applicationWillResignActive(_ application: UIApplication) {
         
     }
 
-    public func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+    open func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
         return false
     }
     
-    public func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+    open func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return false
     }
     
-    public func applicationDidReceiveMemoryWarning(application: UIApplication) {
+    open func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
         
     }
     
-    public func applicationWillTerminate(application: UIApplication) {
+    open func applicationWillTerminate(_ application: UIApplication) {
         
     }
     
-    public func applicationSignificantTimeChange(application: UIApplication) {
+    open func applicationSignificantTimeChange(_ application: UIApplication) {
         
     }
     
-    public func application(application: UIApplication, willChangeStatusBarOrientation newStatusBarOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+    open func application(_ application: UIApplication, willChangeStatusBarOrientation newStatusBarOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         
     }
     
-    public func application(application: UIApplication, didChangeStatusBarOrientation oldStatusBarOrientation: UIInterfaceOrientation) {
+    open func application(_ application: UIApplication, didChangeStatusBarOrientation oldStatusBarOrientation: UIInterfaceOrientation) {
         
     }
     
-    public func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+    open func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
         
     }
     
-    public func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+    open func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
     }
     
-    public func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+    open func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         
     }
     
-    public func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+    open func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         
     }
     
-    public func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+    open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         
     }
     
-    public func applicationDidEnterBackground(application: UIApplication) {
+    open func applicationDidEnterBackground(_ application: UIApplication) {
         
     }
     
-    public func applicationWillEnterForeground(application: UIApplication) {
+    open func applicationWillEnterForeground(_ application: UIApplication) {
         
     }
 }

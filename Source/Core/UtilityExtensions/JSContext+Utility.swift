@@ -10,13 +10,13 @@ import JavaScriptCore
 
 extension JSContext {
 
-    public func setConsoleLogHandler(handler : @convention(block)(String) -> String) {
+    public func setConsoleLogHandler(_ handler : @convention(block)(String) -> String) {
         
-        self.setObject(unsafeBitCast(handler, AnyObject.self), forKeyedSubscript: "log")
+        self.setObject(unsafeBitCast(handler, to: AnyObject.self), forKeyedSubscript: "log" as NSCopying & NSObjectProtocol)
         
         // TODO: test if console already exists before creating each time
         self.evaluateScript("var console = new Object();")
         
-        self.objectForKeyedSubscript("console").setObject(unsafeBitCast(handler, AnyObject.self), forKeyedSubscript: "log")
+        self.objectForKeyedSubscript("console").setObject(unsafeBitCast(handler, to: AnyObject.self), forKeyedSubscript: "log" as NSCopying & NSObjectProtocol)
     }
 }

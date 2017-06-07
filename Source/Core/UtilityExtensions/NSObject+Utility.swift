@@ -31,7 +31,7 @@ private var AssociatedObjectsKey: UInt8 = 0
 
 extension NSObject {
     
-    private var associatedObjects: AssociatedPropertyObjects {
+    fileprivate var associatedObjects: AssociatedPropertyObjects {
         guard let associatedObjects = objc_getAssociatedObject(self, &AssociatedObjectsKey) as? AssociatedPropertyObjects else {
             let associatedObjects = AssociatedPropertyObjects()
             objc_setAssociatedObject(self, &AssociatedObjectsKey, associatedObjects, .OBJC_ASSOCIATION_RETAIN)
@@ -40,25 +40,25 @@ extension NSObject {
         return associatedObjects
     }
     
-    public func setAssociatedRetainProperty(key : String, value : AnyObject?) {
+    public func setAssociatedRetainProperty(_ key : String, value : AnyObject?) {
         self.associatedObjects[key] = value
     }
     
-    public func getAssociatedProperty<T>(key : String) -> T? {
+    public func getAssociatedProperty<T>(_ key : String) -> T? {
         guard let valueUncasted = self.associatedObjects[key] else {
             return nil
         }
         
         guard let valueCasted = valueUncasted as? T else {
             
-            DDLog.debug("In \(self) for Key \(key) found Value \(valueUncasted), that could not be casted to Type \(T.self)")
+            DDLog.debug(message: "In \(self) for Key \(key) found Value \(valueUncasted), that could not be casted to Type \(T.self)")
             return nil
         }
         
         return valueCasted
     }
     
-    public func getAssociatedProperty<T>(key : String, fallback : T) -> T {
+    public func getAssociatedProperty<T>(_ key : String, fallback : T) -> T {
         guard let value : T = self.getAssociatedProperty(key) else {
             return fallback
         }
@@ -71,34 +71,34 @@ extension NSObject {
     
     // TODO: because of how selectors are referenced in Swift and that we can't easily add a property to our NSObject extension in Swift is this safer to keep in Objective-C?
     public func registerForKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("keyboardDidShow:"), name: UIKeyboardDidShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("keyboardDidHide:"), name: UIKeyboardDidHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("keyboardWillShow:"), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("keyboardDidShow:"), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("keyboardWillHide:"), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("keyboardDidHide:"), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
     }
     
     public func unregisterForKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidHide, object: nil)
     }
     
-    internal class func getKeyboardChangeInfoValues(notification : NSNotification, inout beginFrame : CGRect?, inout endFrame : CGRect?, inout duration : NSTimeInterval?, inout animationCurve : UIViewAnimationCurve?) {
+    internal class func getKeyboardChangeInfoValues(_ notification : Notification, beginFrame : inout CGRect?, endFrame : inout CGRect?, duration : inout TimeInterval?, animationCurve : inout UIViewAnimationCurve?) {
         
-        beginFrame = notification.objectFromInfo(UIKeyboardFrameBeginUserInfoKey)?.CGRectValue
-        endFrame = notification.objectFromInfo(UIKeyboardFrameEndUserInfoKey)?.CGRectValue
+        beginFrame = notification.objectFromInfo(UIKeyboardFrameBeginUserInfoKey)?.cgRectValue
+        endFrame = notification.objectFromInfo(UIKeyboardFrameEndUserInfoKey)?.cgRectValue
         duration = notification.objectFromInfo(UIKeyboardAnimationDurationUserInfoKey)?.doubleValue
-        if let rawValue = notification.objectFromInfo(UIKeyboardAnimationCurveUserInfoKey)?.integerValue
+        if let curveValue = notification.objectFromInfo(UIKeyboardAnimationCurveUserInfoKey) as? NSNumber
         {
-            animationCurve = UIViewAnimationCurve(rawValue: rawValue)
+            animationCurve = UIViewAnimationCurve(rawValue: curveValue.intValue)
         }
     }
     
-    public func keyboardWillShow(notification : NSNotification) {
+    public func keyboardWillShow(_ notification : Notification) {
         var beginFrame : CGRect?
         var endFrame : CGRect?
-        var duration : NSTimeInterval?
+        var duration : TimeInterval?
         var animationCurve : UIViewAnimationCurve?
         NSObject.getKeyboardChangeInfoValues(notification, beginFrame: &beginFrame, endFrame: &endFrame, duration: &duration, animationCurve: &animationCurve)
         
@@ -110,18 +110,18 @@ extension NSObject {
             self.keyboardWillShow(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
         } else
         {
-            DDLog.error("Cannot call keyboardWillShow with info values, unable to retrieve expected info value")
+            DDLog.error(message: "Cannot call keyboardWillShow with info values, unable to retrieve expected info value")
         }
     }
     
-    public func keyboardWillShow(beginFrame : CGRect, endFrame : CGRect, duration : NSTimeInterval, animationCurve : UIViewAnimationCurve) {
+    public func keyboardWillShow(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIViewAnimationCurve) {
         self.alignWithKeyboard(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
     }
     
-    func keyboardDidShow(notification : NSNotification) {
+    func keyboardDidShow(_ notification : Notification) {
         var beginFrame : CGRect?
         var endFrame : CGRect?
-        var duration : NSTimeInterval?
+        var duration : TimeInterval?
         var animationCurve : UIViewAnimationCurve?
         NSObject.getKeyboardChangeInfoValues(notification, beginFrame: &beginFrame, endFrame: &endFrame, duration: &duration, animationCurve: &animationCurve)
         
@@ -133,18 +133,18 @@ extension NSObject {
             self.keyboardDidShow(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
         } else
         {
-            DDLog.error("Cannot call keyboardDidShow with info values, unable to retrieve expected info value")
+            DDLog.error(message: "Cannot call keyboardDidShow with info values, unable to retrieve expected info value")
         }
     }
     
-    public func keyboardDidShow(beginFrame : CGRect, endFrame : CGRect, duration : NSTimeInterval, animationCurve : UIViewAnimationCurve) {
+    public func keyboardDidShow(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIViewAnimationCurve) {
         self.alignWithKeyboard(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
     }
     
-    func keyboardWillHide(notification : NSNotification) {
+    func keyboardWillHide(_ notification : Notification) {
         var beginFrame : CGRect?
         var endFrame : CGRect?
-        var duration : NSTimeInterval?
+        var duration : TimeInterval?
         var animationCurve : UIViewAnimationCurve?
         NSObject.getKeyboardChangeInfoValues(notification, beginFrame: &beginFrame, endFrame: &endFrame, duration: &duration, animationCurve: &animationCurve)
         
@@ -156,18 +156,18 @@ extension NSObject {
             self.keyboardWillHide(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
         } else
         {
-            DDLog.error("Cannot call keyboardWillHide with info values, unable to retrieve expected info value")
+            DDLog.error(message: "Cannot call keyboardWillHide with info values, unable to retrieve expected info value")
         }
     }
     
-    public func keyboardWillHide(beginFrame : CGRect, endFrame : CGRect, duration : NSTimeInterval, animationCurve : UIViewAnimationCurve) {
+    public func keyboardWillHide(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIViewAnimationCurve) {
         self.alignWithKeyboard(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
     }
     
-    func keyboardDidHide(notification : NSNotification) {
+    func keyboardDidHide(_ notification : Notification) {
         var beginFrame : CGRect?
         var endFrame : CGRect?
-        var duration : NSTimeInterval?
+        var duration : TimeInterval?
         var animationCurve : UIViewAnimationCurve?
         NSObject.getKeyboardChangeInfoValues(notification, beginFrame: &beginFrame, endFrame: &endFrame, duration: &duration, animationCurve: &animationCurve)
         
@@ -179,15 +179,15 @@ extension NSObject {
             self.keyboardDidHide(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
         } else
         {
-            DDLog.error("Cannot call keyboardDidHide with info values, unable to retrieve expected info value")
+            DDLog.error(message: "Cannot call keyboardDidHide with info values, unable to retrieve expected info value")
         }
     }
     
-    public func keyboardDidHide(beginFrame : CGRect, endFrame : CGRect, duration : NSTimeInterval, animationCurve : UIViewAnimationCurve) {
+    public func keyboardDidHide(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIViewAnimationCurve) {
         self.alignWithKeyboard(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
     }
     
-    public func alignWithKeyboard(beginFrame : CGRect, endFrame : CGRect, duration : NSTimeInterval, animationCurve : UIViewAnimationCurve) {
+    public func alignWithKeyboard(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIViewAnimationCurve) {
         
     }
 }

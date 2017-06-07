@@ -8,17 +8,17 @@
 
 import Foundation
 
-extension NSCharacterSet {
+extension CharacterSet {
     
     // TODO: ascending and descending
     public var charactersInSetAscending : String {
         var result = String()
         
         for test in unichar.min...unichar.max - 1 {
-            if self.characterIsMember(test) {
+            if self.contains(UnicodeScalar(test)!) {
                 
                 var found = test
-                withUnsafePointer(&found, { (testPointer) -> Void in
+                withUnsafePointer(to: &found, { (testPointer) -> Void in
                     let append = NSString(characters: testPointer, length: 1)
                     result = result + (append as String)
                 })

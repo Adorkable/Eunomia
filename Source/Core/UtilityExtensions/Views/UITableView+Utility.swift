@@ -9,21 +9,21 @@
 import UIKit
 
 extension UITableView {
-    public func heightForCell(reusableIdentifier : String, configure : (cell : UITableViewCell) -> Void) throws -> CGFloat {
+    public func heightForCell(_ reusableIdentifier : String, configure : (_ cell : UITableViewCell) -> Void) throws -> CGFloat {
         
         var result : CGFloat = 0
         
-        if let cell = self.dequeueReusableCellWithIdentifier(reusableIdentifier)
+        if let cell = self.dequeueReusableCell(withIdentifier: reusableIdentifier)
         {
-            cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: self.frame.size.width, height: CGFloat.max)
+            cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: self.frame.size.width, height: CGFloat.greatestFiniteMagnitude)
             
-            configure(cell: cell)
+            configure(cell)
             
             cell.setNeedsLayout()
             cell.contentView.setNeedsLayout()
             cell.layoutIfNeeded()
             
-            cell.contentViewContraint(.Height).forEach({ (constraint) -> () in
+            cell.contentViewContraint(.height).forEach({ (constraint) -> () in
                 result = constraint.constant
             })
             
@@ -47,28 +47,28 @@ extension UITableView {
 // MARK: - Static Table
 extension UITableView {
     /// TODO: once linker bug is fixed switch these back to Structs
-    public class StaticSection
+    open class StaticSection
     {
-        public class StaticHeader
+        open class StaticHeader
         {
-            public var title : String?
+            open var title : String?
             public init(title : String?) {
                 self.title = title
             }
         }
         let header : StaticHeader?
         
-        public class StaticRow
+        open class StaticRow
         {
-            public let cellPrototypeIdentifier : String
+            open let cellPrototypeIdentifier : String
             
             public init(cellPrototypeIdentifier : String) {
                 self.cellPrototypeIdentifier = cellPrototypeIdentifier
             }
         }
-        public var rows = [StaticRow]()
+        open var rows = [StaticRow]()
         
-        public func row(rowIndex : Int) -> StaticRow? {
+        open func row(_ rowIndex : Int) -> StaticRow? {
             
             guard rowIndex < self.rows.count else {
                 return nil
@@ -82,7 +82,7 @@ extension UITableView {
         }
     }
     
-    public func staticSection(sections : [StaticSection], sectionIndex : Int) -> UITableView.StaticSection? {
+    public func staticSection(_ sections : [StaticSection], sectionIndex : Int) -> UITableView.StaticSection? {
         
         guard sectionIndex < sections.count else {
             return nil
@@ -91,7 +91,7 @@ extension UITableView {
         return sections[sectionIndex]
     }
     
-    public func staticNumberOfRowsInSection(sections : [StaticSection], sectionIndex : Int) -> Int {
+    public func staticNumberOfRowsInSection(_ sections : [StaticSection], sectionIndex : Int) -> Int {
         
         guard let section = self.staticSection(sections, sectionIndex: sectionIndex) else {
             return 0
@@ -100,7 +100,7 @@ extension UITableView {
         return section.rows.count
     }
     
-    public func staticTitleForHeaderInSection(sections : [StaticSection], sectionIndex : Int) -> String? {
+    public func staticTitleForHeaderInSection(_ sections : [StaticSection], sectionIndex : Int) -> String? {
         guard let section = self.staticSection(sections, sectionIndex: sectionIndex) else {
             return nil
         }
@@ -112,16 +112,16 @@ extension UITableView {
         return header.title
     }
     
-    public func staticCellForRowAtIndexPath(sections : [StaticSection], indexPath : NSIndexPath, fallbackIdentifier : String) -> UITableViewCell {
+    public func staticCellForRowAtIndexPath(_ sections : [StaticSection], indexPath : IndexPath, fallbackIdentifier : String) -> UITableViewCell {
         
         guard let section = self.staticSection(sections, sectionIndex: indexPath.section) else {
-            return self.dequeueReusableCellWithIdentifier(fallbackIdentifier, forIndexPath: indexPath)
+            return self.dequeueReusableCell(withIdentifier: fallbackIdentifier, for: indexPath)
         }
 
         guard let row = section.row(indexPath.row) else {
-            return self.dequeueReusableCellWithIdentifier(fallbackIdentifier, forIndexPath: indexPath)
+            return self.dequeueReusableCell(withIdentifier: fallbackIdentifier, for: indexPath)
         }
         
-        return self.dequeueReusableCellWithIdentifier(row.cellPrototypeIdentifier, forIndexPath: indexPath)
+        return self.dequeueReusableCell(withIdentifier: row.cellPrototypeIdentifier, for: indexPath)
     }
 }

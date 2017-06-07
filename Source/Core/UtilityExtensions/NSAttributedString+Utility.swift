@@ -14,14 +14,14 @@ extension NSAttributedString {
     convenience init(htmlString: String) throws {
 
         guard let data = htmlString.data() else {
-            throw NSError(description: "Failed to create \(self.dynamicType)", underlyingError: NSError(description: "Unable to translate htmlString into NSData"))
+            throw NSError(description: "Failed to create \(type(of: self))", underlyingError: NSError(description: "Unable to translate htmlString into NSData"))
         }
         
         let options : [String : AnyObject] = [
-            NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
-            NSCharacterEncodingDocumentAttribute : NSUTF8StringEncoding
+            NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType as AnyObject,
+            NSCharacterEncodingDocumentAttribute : String.Encoding.utf8 as AnyObject
         ]
         
-        try self.init(data: data, options: options, documentAttributes: nil)
+        try self.init(data: data as Data, options: options, documentAttributes: nil)
     }
 }

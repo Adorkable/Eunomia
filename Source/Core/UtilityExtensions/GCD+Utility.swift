@@ -8,6 +8,6 @@
 
 import Foundation
 
-func dispatchOnMain(block : dispatch_block_t) {
-    dispatch_async(dispatch_get_main_queue(), block)
+func dispatchOnMain(_ block : @escaping ()->()) {
+    DispatchQueue.main.async(execute: block)
 }

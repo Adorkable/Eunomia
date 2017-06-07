@@ -20,12 +20,12 @@ extension NSManagedObject {
         return classNameComponents.last!
     }
     
-    public class func entityDescription(inContext: NSManagedObjectContext) -> NSEntityDescription? {
-        return NSEntityDescription.entityForName(self.entityName, inManagedObjectContext: inContext)
+    public class func entityDescription(_ inContext: NSManagedObjectContext) -> NSEntityDescription? {
+        return NSEntityDescription.entity(forEntityName: self.entityName, in: inContext)
     }
     
-    public class func insertNewObjectInContext(context: NSManagedObjectContext) -> NSManagedObject {
-        return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext: context)
+    public class func insertNewObjectInContext(_ context: NSManagedObjectContext) -> NSManagedObject {
+        return NSEntityDescription.insertNewObject(forEntityName: self.entityName, into: context)
     }
 }
 
@@ -36,7 +36,7 @@ extension NSManagedObject {
         return [NSSortDescriptor]()
     }
     
-    public class func guaranteeSortDescriptors(potentialSortDescriptors : [NSSortDescriptor]?) -> [NSSortDescriptor] {
+    public class func guaranteeSortDescriptors(_ potentialSortDescriptors : [NSSortDescriptor]?) -> [NSSortDescriptor] {
         
         return guarantee(potentialSortDescriptors, fallback: self.defaultSortDescriptors())
     }
@@ -46,14 +46,14 @@ extension NSManagedObject {
 // MARK: - Fetch Request
 extension NSManagedObject {
     
-    public class func defaultFetchRequest(sortDescriptors : [NSSortDescriptor]? = nil) -> NSFetchRequest {
+    public class func defaultFetchRequest(_ sortDescriptors : [NSSortDescriptor]? = nil) -> NSFetchRequest<NSFetchRequestResult> {
         
-        let result = NSFetchRequest(entityName: self.entityName)
+        let result = NSFetchRequest<NSFetchRequestResult>(entityName: self.entityName)
         result.sortDescriptors = guarantee(sortDescriptors, fallback: self.defaultSortDescriptors())
         return result
     }
     
-    public class func guaranteeFetchRequest(potentialFetchRequest : NSFetchRequest?) -> NSFetchRequest {
+    public class func guaranteeFetchRequest(_ potentialFetchRequest : NSFetchRequest<NSFetchRequestResult>?) -> NSFetchRequest<NSFetchRequestResult> {
         return guarantee(potentialFetchRequest, fallback: self.defaultFetchRequest())
     }
     
@@ -62,7 +62,7 @@ extension NSManagedObject {
 // MARK: - Fetched Results Controller
 extension NSManagedObject {
     
-    public class func defaultFetchedResultsController(fetchRequest : NSFetchRequest? = nil, predicate : NSPredicate? = nil, sortDescriptors : [NSSortDescriptor]? = nil, inContext context: NSManagedObjectContext) -> NSFetchedResultsController {
+    public class func defaultFetchedResultsController(_ fetchRequest : NSFetchRequest<NSFetchRequestResult>? = nil, predicate : NSPredicate? = nil, sortDescriptors : [NSSortDescriptor]? = nil, inContext context: NSManagedObjectContext) -> NSFetchedResultsController<NSFetchRequestResult> {
         
         let useFetchRequest = guarantee(fetchRequest, fallback: self.defaultFetchRequest())
         
@@ -82,7 +82,7 @@ extension NSManagedObject {
 // MARK: - Save
 extension NSManagedObject {
     
-    public func saveOrLogError(logContext : String) -> Bool {
+    public func saveOrLogError(_ logContext : String) -> Bool {
         var result : Bool
         
         if let context = self.managedObjectContext
@@ -106,7 +106,7 @@ extension NSManagedObject {
         
         if let context = self.managedObjectContext
         {
-            context.deleteObject(self)
+            context.delete(self)
             result = true
         } else
         {
@@ -117,7 +117,7 @@ extension NSManagedObject {
         return result
     }
     
-    public func deleteAndSaveOrLogError(logContext : String) -> Bool {
+    public func deleteAndSaveOrLogError(_ logContext : String) -> Bool {
         var result : Bool
         
         if let context = self.managedObjectContext

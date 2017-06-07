@@ -14,7 +14,7 @@ import CocoaLumberjack
 
 extension NSManagedObjectContext
 {
-    public func saveOrLogError(logContext : String) -> Bool
+    public func saveOrLogError(_ logContext : String) -> Bool
     {
         let result : NSError?
         do {
@@ -23,7 +23,7 @@ extension NSManagedObjectContext
             result = nil
         } catch let error as NSError {
             
-            DDLog.error("\(logContext): \(error)")
+            DDLog.error(message: "\(logContext): \(error)")
             result = error
         }
         

@@ -10,7 +10,7 @@ import Foundation
 
 extension Array {
     
-    public mutating func append(newElement : Element?) {
+    public mutating func append(_ newElement : Element?) {
         
         if let newElement = newElement {
             self.append(newElement)

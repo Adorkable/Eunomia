@@ -11,7 +11,7 @@ import UIKit
 extension UICollectionViewFlowLayout {
     
     // return the number of items in width and height dimensions to fit the specified width
-    public func numberOfItemsToFit(width : CGFloat, itemCount : Int) -> CGSize {
+    public func numberOfItemsToFit(_ width : CGFloat, itemCount : Int) -> CGSize {
         var result = CGSize(width: 0, height: 0)
         
         var usedWidth = width
@@ -44,7 +44,7 @@ extension UICollectionViewFlowLayout {
         return result
     }
     
-    public func heightForItemsToFit(width : CGFloat, itemCount : Int) -> CGFloat {
+    public func heightForItemsToFit(_ width : CGFloat, itemCount : Int) -> CGFloat {
         
         var result : CGFloat
         

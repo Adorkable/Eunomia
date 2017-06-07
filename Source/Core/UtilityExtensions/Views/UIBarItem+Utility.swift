@@ -11,6 +11,6 @@ import UIKit
 extension UIBarItem {
     
     public var view : UIView? {
-        return self.valueForKey("view") as? UIView
+        return self.value(forKey: "view") as? UIView
     }
 }

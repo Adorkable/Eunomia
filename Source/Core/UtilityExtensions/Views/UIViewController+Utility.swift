@@ -14,10 +14,10 @@ extension UIViewController {
         let _ = self.view
     }
     
-    public func childViewControllers(ofClass : AnyClass) -> [UIViewController]? {
+    public func childViewControllers(_ ofClass : AnyClass) -> [UIViewController]? {
         var result : [UIViewController]?
         
-        let filteredChildren = self.childViewControllers.filter( { $0.isKindOfClass(ofClass) } )
+        let filteredChildren = self.childViewControllers.filter( { $0.isKind(of: ofClass) } )
         if filteredChildren.count > 0
         {
             result = filteredChildren
@@ -27,6 +27,6 @@ extension UIViewController {
     }
     
     @IBAction public func popViewController() {
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewController(animated: true)
     }
 }

@@ -12,8 +12,8 @@ extension UIFont {
     class func supportedFonts() -> [String : [String]]? {
         var result : [String : [String]]?
     
-        for familyName in UIFont.familyNames() {
-            let fonts = fontNamesForFamilyName(familyName)
+        for familyName in UIFont.familyNames {
+            let fonts = fontNames(forFamilyName: familyName)
             if fonts.count > 0 {
                 
                 if result == nil {
@@ -31,8 +31,8 @@ extension UIFont {
         return result
     }
     
-    func fontWithTrait(trait : UIFontDescriptorSymbolicTraits) -> UIFont {
-        let fontDescriptor = self.fontDescriptor().fontDescriptorWithSymbolicTraits(trait)
+    func fontWithTrait(_ trait : UIFontDescriptorSymbolicTraits) -> UIFont {
+        let fontDescriptor = self.fontDescriptor.withSymbolicTraits(trait)
         return UIFont(descriptor: fontDescriptor!, size: self.pointSize)
     }
     
@@ -41,38 +41,38 @@ extension UIFont {
     }
     
     func italicFont() -> UIFont {
-        return self.fontWithTrait(.TraitItalic)
+        return self.fontWithTrait(.traitItalic)
     }
     
     func boldFont() -> UIFont {
-        return self.fontWithTrait(.TraitBold)
+        return self.fontWithTrait(.traitBold)
     }
     
     func expandedFont() -> UIFont {
-        return self.fontWithTrait(.TraitExpanded)
+        return self.fontWithTrait(.traitExpanded)
     }
     
     func condensedFont() -> UIFont {
-        return self.fontWithTrait(.TraitCondensed)
+        return self.fontWithTrait(.traitCondensed)
     }
     
     func monospaceFont() -> UIFont {
-        return self.fontWithTrait(.TraitMonoSpace)
+        return self.fontWithTrait(.traitMonoSpace)
     }
     
     func verticalFont() -> UIFont {
-        return self.fontWithTrait(.TraitVertical)
+        return self.fontWithTrait(.traitVertical)
     }
     
     func uiOptimizedFont() -> UIFont {
-        return self.fontWithTrait(.TraitUIOptimized)
+        return self.fontWithTrait(.traitUIOptimized)
     }
     
     func tightLeadingFont() -> UIFont {
-        return self.fontWithTrait(.TraitTightLeading)
+        return self.fontWithTrait(.traitTightLeading)
     }
     
     func looseLeadingFont() -> UIFont {
-        return self.fontWithTrait(.TraitLooseLeading)
+        return self.fontWithTrait(.traitLooseLeading)
     }
 }

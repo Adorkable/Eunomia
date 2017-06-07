@@ -15,7 +15,7 @@ public extension String
     }
     
     // TODO: deprecate in favor of joinWithSeparator
-    public mutating func append(string : String, withJoin : String = "") {
+    public mutating func append(_ string : String, withJoin : String = "") {
         if string.length > 0
         {
             if self.length > 0
@@ -29,7 +29,7 @@ public extension String
     }
     
     subscript (index : Int) -> Character {
-        return self[ self.startIndex.advancedBy(index) ]
+        return self[ self.characters.index(self.startIndex, offsetBy: index) ]
     }
     
     subscript (index: Int) -> String {
@@ -37,8 +37,21 @@ public extension String
     }
     
     subscript (range : Range<Int>) -> String {
-        let indexRange = self.startIndex.advancedBy(range.startIndex)..<startIndex.advancedBy(range.endIndex)
-        return substringWithRange(indexRange)
+        let indexRange = self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<characters.index(startIndex, offsetBy: range.upperBound)
+        return substring(with: indexRange)
+    }
+
+    // From https://stackoverflow.com/a/39612638
+    subscript (range: CountableClosedRange<Int>) -> String {
+        let startIndex =  self.index(self.startIndex, offsetBy: range.lowerBound)
+        let endIndex = self.index(startIndex, offsetBy: range.upperBound - range.lowerBound)
+        return self[startIndex...endIndex]
+    }
+
+    subscript (range: CountableRange<Int>) -> String {
+        let startIndex =  self.index(self.startIndex, offsetBy: range.lowerBound)
+        let endIndex = self.index(startIndex, offsetBy: range.upperBound - range.lowerBound)
+        return self[startIndex...endIndex]
     }
 }
 
@@ -46,7 +59,7 @@ extension String {
 
     // TODO: random string without repeat
     // TODO: NSCharacterSet
-    public static func randomString(length : Int, allowedCharacters : String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890") -> String {
+    public static func randomString(_ length : Int, allowedCharacters : String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890") -> String {
         var result = String()
         
         for _ in 1...length
@@ -61,8 +74,8 @@ extension String {
 }
 
 extension String {
-    public func data() -> NSData? {
-        return self.dataUsingEncoding(NSUTF8StringEncoding)
+    public func data() -> Data? {
+        return self.data(using: String.Encoding.utf8)
     }
 }
 
@@ -74,7 +87,7 @@ extension String {
         
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
 
-        return emailTest.evaluateWithObject(self)
+        return emailTest.evaluate(with: self)
     }
 }
 
@@ -82,19 +95,19 @@ extension String {
     public var stringByRemovingZeroDecimalValues : String {
         var previousStep = self
         
-        var cleanZero = previousStep.stringByReplacingOccurrencesOfString(".0", withString: ".")
+        var cleanZero = previousStep.replacingOccurrences(of: ".0", with: ".")
         while cleanZero != previousStep {
             previousStep = cleanZero
             
-            cleanZero = previousStep.stringByReplacingOccurrencesOfString(".0", withString: ".")
+            cleanZero = previousStep.replacingOccurrences(of: ".0", with: ".")
         }
         
-        let decimalRange = (previousStep as NSString).rangeOfString(".")
+        let decimalRange = (previousStep as NSString).range(of: ".")
         if decimalRange.isValid() {
             
             if decimalRange.location == previousStep.characters.count - 1 {
                 
-                previousStep = previousStep.stringByReplacingOccurrencesOfString(".", withString: "")
+                previousStep = previousStep.replacingOccurrences(of: ".", with: "")
             } else {
                 if previousStep.characters.count - decimalRange.location < 2 {
                     previousStep = previousStep + "0"

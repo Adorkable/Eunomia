@@ -23,10 +23,10 @@ public func random_UInt32() -> UInt32
     return arc4random()
 }
 
-public func random_range_UInt32(low : UInt32, high : UInt32) -> UInt32 {
+public func random_range_UInt32(_ low : UInt32, high : UInt32) -> UInt32 {
     return UInt32( arc4random_uniform(UInt32(high - low + 1) ) ) + low
 }
 
-public func random_range(low : UInt, high : UInt) -> UInt {
+public func random_range(_ low : UInt, high : UInt) -> UInt {
     return UInt(arc4random_uniform(UInt32(high - low + 1) ) ) + low
 }

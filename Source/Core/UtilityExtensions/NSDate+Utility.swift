@@ -8,16 +8,16 @@
 
 import Foundation
 
-extension NSDate
+extension Date
 {
-    public func asFileName(fileExtension : String, includeMilliseconds : Bool) -> String
+    public func asFileName(_ fileExtension : String, includeMilliseconds : Bool) -> String
     {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd_hh-mm-ss"
         if includeMilliseconds == true
         {
             formatter.dateFormat = formatter.dateFormat + "-SSS"
         }
-        return formatter.stringFromDate(self) + ".\(fileExtension)"
+        return formatter.string(from: self) + ".\(fileExtension)"
     }    
 }

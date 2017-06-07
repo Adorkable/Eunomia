@@ -8,7 +8,7 @@
 
 import Foundation
 
-public func guarantee<T>(potential : T?, @autoclosure fallback : (() -> T) ) -> T {
+public func guarantee<T>(_ potential : T?, fallback : @autoclosure () -> T) -> T {
     
     let result : T
     if let actual = potential {

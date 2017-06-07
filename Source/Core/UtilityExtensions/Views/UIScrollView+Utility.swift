@@ -12,19 +12,19 @@ import CocoaLumberjack
 
 extension UIScrollView {
     
-    private var filteredScrollLastContentOffsetKey : String {
+    fileprivate var filteredScrollLastContentOffsetKey : String {
         return "Eunomia_UIScrollView_filteredScrollLastContentOffsetKey"
     }
-    private var filteredScrollLastContentOffset : CGFloat {
+    fileprivate var filteredScrollLastContentOffset : CGFloat {
         get {
             return self.getAssociatedProperty(self.filteredScrollLastContentOffsetKey, fallback: 0)
         }
         set {
-            self.setAssociatedRetainProperty(self.filteredScrollLastContentOffsetKey, value: newValue)
+            self.setAssociatedRetainProperty(self.filteredScrollLastContentOffsetKey, value: newValue as AnyObject)
         }
     }
     
-    public func applyFilteredScrollForScrollingBar(bar : UIView, barTopAlignment : NSLayoutConstraint, minimumDelta : CGFloat = 20) {
+    public func applyFilteredScrollForScrollingBar(_ bar : UIView, barTopAlignment : NSLayoutConstraint, minimumDelta : CGFloat = 20) {
         
         let scrollDistance : CGFloat = self.contentOffset.y - self.filteredScrollLastContentOffset
         

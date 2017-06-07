@@ -13,7 +13,7 @@ import JavaScriptCore
 extension UIWebView {
     
     public var jsContext : JSContext? {
-        return self.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as? JSContext
+        return self.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as? JSContext
     }
     
     public func loadFullCanvasHTML() {
