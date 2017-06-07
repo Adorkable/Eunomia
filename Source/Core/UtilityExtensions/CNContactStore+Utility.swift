@@ -14,14 +14,14 @@ import Contacts
 extension CNContactStore {
 
     // TODO: SuccessResult?
-    public class func requestAccessToContacts(completion: ((granted : Bool, error : NSError?) -> Void)?) {
+    public class func requestAccessToContacts(_ completion: ((_ granted : Bool, _ error : Error?) -> Void)?) {
         let contactStore = CNContactStore()
         
-        contactStore.requestAccessForEntityType(CNEntityType.Contacts) { (granted, error) -> Void in
+        contactStore.requestAccess(for: CNEntityType.contacts) { (granted, error) -> Void in
 
             if let completion = completion
             {
-                completion(granted: granted, error: error)
+                completion(granted, error)
             }
         }
     }

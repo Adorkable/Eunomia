@@ -11,39 +11,33 @@ import Foundation
 import CocoaLumberjack
 
 // translated from http://stackoverflow.com/a/3316016
-public class OrdinalNumberFormatter: NSNumberFormatter {
+open class OrdinalNumberFormatter: NumberFormatter {
 
-    override public func getObjectValue(obj: AutoreleasingUnsafeMutablePointer<AnyObject?>, forString string: String, errorDescription error: AutoreleasingUnsafeMutablePointer<NSString?>) -> Bool {
+    open override func getObjectValue(_ obj: AutoreleasingUnsafeMutablePointer<AnyObject?>?, for string: String, range rangep: UnsafeMutablePointer<NSRange>?) throws {
+
         var integerNumber : Int = 0
-        var isSuccessful = false
         
-        let scanner = NSScanner(string: string)
+        let scanner = Scanner(string: string)
         scanner.caseSensitive = false
-        scanner.charactersToBeSkipped = NSCharacterSet.letterCharacterSet()
+        scanner.charactersToBeSkipped = CharacterSet.letters
         
-        if scanner.scanInteger(&integerNumber) == true
+        if scanner.scanInt(&integerNumber) == true
         {
-            isSuccessful = true
-            obj.memory = NSNumber(integer: integerNumber)
+            obj?.pointee = NSNumber(value: integerNumber)
         } else
         {
-            if let error = error.memory
-            {
-                DDLog.error("Unable to create number from \(string): \(error)")
-            }
+            throw UnableToCreateNumberFromStringError(string: string)
         }
-        
-        return isSuccessful
     }
     
-    override public func stringForObjectValue(obj: AnyObject?) -> String? {
-        if !obj!.isKindOfClass(NSNumber.self)
+    override open func string(for obj: Any?) -> String? {
+        if !(obj! as AnyObject).isKind(of: NSNumber.self)
         {
             return nil
         }
         var result : String?
 
-        if let stringRepresentation = obj!.stringValue
+        if let stringRepresentation = (obj! as AnyObject).stringValue
         {
             if stringRepresentation.characters.count > 0
             {
@@ -67,7 +61,7 @@ public class OrdinalNumberFormatter: NSNumberFormatter {
         return result
     }
     
-    public class func ordinalSuffixForLastDigit(digit : Character) -> String? {
+    open class func ordinalSuffixForLastDigit(_ digit : Character) -> String? {
         var result : String?
         
         if digit == "1"

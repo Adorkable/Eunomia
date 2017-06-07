@@ -9,6 +9,6 @@
 import Foundation
 
 public enum SuccessResult<T> {
-    case Success(T)
-    case Failure(NSError)
+    case success(T)
+    case failure(NSError)
 }

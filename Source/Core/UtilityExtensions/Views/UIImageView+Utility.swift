@@ -22,18 +22,18 @@ public extension UIImageView {
             
             switch self.contentMode
             {
-            case UIViewContentMode.ScaleAspectFit:
+            case UIViewContentMode.scaleAspectFit:
                 s = CGFloat( fminf(sx, sy) )
                 result = CGSize(width: s, height: s)
                 break
                 
-            case UIViewContentMode.ScaleAspectFill:
+            case UIViewContentMode.scaleAspectFill:
                 s = CGFloat( fmaxf(sx, sy) )
                 result = CGSize(width: s, height: s)
                 break
                 
-            case UIViewContentMode.ScaleToFill:
-                result = CGSizeMake( CGFloat(sx), CGFloat(sy) )
+            case UIViewContentMode.scaleToFill:
+                result = CGSize( width: CGFloat(sx), height: CGFloat(sy) )
                 break
                 
             default:
@@ -41,7 +41,7 @@ public extension UIImageView {
             }
         } else
         {
-            result = CGSizeZero
+            result = CGSize.zero
         }
         
         return result
@@ -57,7 +57,7 @@ public extension UIImageView {
             result = CGSize(width: self.image!.size.width * imageScale.width, height: self.image!.size.height * imageScale.height)
         } else
         {
-            result = CGSizeZero
+            result = CGSize.zero
         }
         
         return result
@@ -70,74 +70,74 @@ public extension UIImageView {
         {
             switch self.contentMode
             {
-            case UIViewContentMode.ScaleAspectFit:
+            case UIViewContentMode.scaleAspectFit:
                 let displaySize = self.imageDisplaySize()
                 result = CGRect(x: (self.bounds.width - displaySize.width) / 2, y: (self.bounds.height - displaySize.height) / 2, width: displaySize.width, height: displaySize.height)
                 break
                 
-            case UIViewContentMode.ScaleAspectFill:
+            case UIViewContentMode.scaleAspectFill:
                 let displaySize = self.imageDisplaySize()
                 result = CGRect(x: (self.bounds.width - displaySize.width) / 2, y: (self.bounds.height - displaySize.height) / 2, width: displaySize.width, height: displaySize.height)
                 break
                 
-            case UIViewContentMode.ScaleToFill:
+            case UIViewContentMode.scaleToFill:
                 result = self.bounds
                 break
 
-            case UIViewContentMode.Top:
+            case UIViewContentMode.top:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
                 
-            case UIViewContentMode.TopLeft:
+            case UIViewContentMode.topLeft:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
                 
-            case UIViewContentMode.TopRight:
+            case UIViewContentMode.topRight:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
                 
-            case UIViewContentMode.Bottom:
+            case UIViewContentMode.bottom:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
                 
-            case UIViewContentMode.BottomLeft:
+            case UIViewContentMode.bottomLeft:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
                 
-            case UIViewContentMode.BottomRight:
+            case UIViewContentMode.bottomRight:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
                 
-            case UIViewContentMode.Center:
+            case UIViewContentMode.center:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
                 
-            case UIViewContentMode.Left:
+            case UIViewContentMode.left:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
                 
-            case UIViewContentMode.Right:
+            case UIViewContentMode.right:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
                 
-            case UIViewContentMode.Redraw:
+            case UIViewContentMode.redraw:
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
-                result = CGRectZero
+                result = CGRect.zero
                 break
             }
 
         } else
         {
-            result = CGRectZero
+            result = CGRect.zero
         }
         
         return result

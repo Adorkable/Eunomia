@@ -12,7 +12,7 @@ import CocoaLumberjack
 
 extension UITabBarController {
 
-    public func tabIndexOf(match : UIViewController) -> Int? {
+    public func tabIndexOf(_ match : UIViewController) -> Int? {
         var result : Int?
         
         if let viewControllers = self.viewControllers
@@ -25,7 +25,7 @@ extension UITabBarController {
                 {
                     result = index
                     break
-                } else if viewControllerAtIndex.isKindOfClass(UINavigationController)
+                } else if viewControllerAtIndex.isKind(of: UINavigationController.self)
                 {
                     let navigationController = viewControllerAtIndex as! UINavigationController
                     if navigationController.viewControllers.count > 0
@@ -43,28 +43,28 @@ extension UITabBarController {
         
         if result == nil
         {
-            DDLog.info("View controller \(match) was not found in any tab")
+            DDLog.info(message: "View controller \(match) was not found in any tab")
         }
         
         return result
     }
     
-    public func tabIndexForTabWithClass(matchClass : UIViewController.Type) -> Int? {
+    public func tabIndexForTabWithClass(_ matchClass : UIViewController.Type) -> Int? {
         var result : Int?
         
         if let viewControllers = self.viewControllers
         {
             for index in 0...viewControllers.count - 1
             {
-                if viewControllers[index].isKindOfClass(matchClass)
+                if viewControllers[index].isKind(of: matchClass)
                 {
                     result = index
                     break
-                } else if viewControllers[index].isKindOfClass(UINavigationController)
+                } else if viewControllers[index].isKind(of: UINavigationController.self)
                 {
                     let navigationController = viewControllers[index] as! UINavigationController
                     if navigationController.viewControllers.count > 0 &&
-                        navigationController.viewControllers[0].isKindOfClass(matchClass)
+                        navigationController.viewControllers[0].isKind(of: matchClass)
                     {
                         result = index
                         break
@@ -75,13 +75,13 @@ extension UITabBarController {
         
         if result == nil
         {
-            DDLog.info("No view controller class found of type \(matchClass)")
+            DDLog.info(message: "No view controller class found of type \(matchClass)")
         }
         
         return result
     }
 
-    public func selectTabWithClass(matchClass : UIViewController.Type) {
+    public func selectTabWithClass(_ matchClass : UIViewController.Type) {
         if let index = self.tabIndexForTabWithClass(matchClass)
         {
             self.selectedIndex = index
@@ -98,7 +98,7 @@ extension UITabBarController {
         }
     }
     
-    public func preloadTab(matchClass : UIViewController.Type) throws {
+    public func preloadTab(_ matchClass : UIViewController.Type) throws {
         guard let viewControllers = self.viewControllers else {
             return
         }
@@ -115,7 +115,7 @@ extension UITabBarController {
         let _ = viewControllers[index].view
     }
     
-    public func tabBarButtonWithClass(matchClass : UIViewController.Type) throws -> UIView? {
+    public func tabBarButtonWithClass(_ matchClass : UIViewController.Type) throws -> UIView? {
         guard let tabBarButtons = try self.tabBar.tabBarButtonViews() else {
             return nil
         }
@@ -132,7 +132,7 @@ extension UITabBarController {
         return tabBarButtons[index]
     }
     
-    public func rectForTabWithClass(matchClass : UIViewController.Type) throws -> CGRect? {
+    public func rectForTabWithClass(_ matchClass : UIViewController.Type) throws -> CGRect? {
         
         guard let tabBarButton = try self.tabBarButtonWithClass(matchClass) else {
             return nil

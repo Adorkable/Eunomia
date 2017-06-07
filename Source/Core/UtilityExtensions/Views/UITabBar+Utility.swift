@@ -21,7 +21,7 @@ extension UITabBar {
         
         for view in self.subviews {
             
-            if view.isKindOfClass(tabBarButtonClass) {
+            if view.isKind(of: tabBarButtonClass) {
                 
                 if result == nil {
                     result = [UIView]()
@@ -36,7 +36,7 @@ extension UITabBar {
         }
         
         if result != nil {
-            result?.sortInPlace { $0.0.frame.origin.x < $0.1.frame.origin.x }
+            result?.sort { $0.0.frame.origin.x < $0.1.frame.origin.x }
         }
         
         return result

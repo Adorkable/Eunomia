@@ -14,7 +14,7 @@ extension UIColor {
         return CGFloat(randomf())
     }
     
-    public class func randomColor(alpha alpha : CGFloat = 1.0) -> UIColor {
+    public class func randomColor(alpha : CGFloat = 1.0) -> UIColor {
         return UIColor(red: self.randomComponent(), green: self.randomComponent(), blue: self.randomComponent(), alpha: alpha)
     }
     
@@ -22,7 +22,7 @@ extension UIColor {
         return self.randomColor(alpha: self.randomComponent())
     }
     
-    private class func increase(inout components : [CGFloat], byAmount amount : CGFloat) {
+    fileprivate class func increase(_ components : inout [CGFloat], byAmount amount : CGFloat) {
         
         var increased = [CGFloat]()
         
@@ -35,7 +35,7 @@ extension UIColor {
         components = increased
     }
     
-    public class func randomColor(minimumIntensity minimumIntensity : CGFloat) -> UIColor {
+    public class func randomColor(minimumIntensity : CGFloat) -> UIColor {
         
         var components = [
             self.randomComponent(),
@@ -61,7 +61,7 @@ extension UIColor {
         return self.colorWithRGBComponents(components)
     }
     
-    private class func componentValueAtIndex(components : [CGFloat], index : Int) -> CGFloat? {
+    fileprivate class func componentValueAtIndex(_ components : [CGFloat], index : Int) -> CGFloat? {
         guard index < components.count else {
             return nil
         }
@@ -69,7 +69,7 @@ extension UIColor {
         return components[index]
     }
     
-    public class func colorWithRGBComponents(components : [CGFloat]) -> UIColor {
+    public class func colorWithRGBComponents(_ components : [CGFloat]) -> UIColor {
         let red = guarantee(self.componentValueAtIndex(components, index: 0), fallback: 0)
         let green = guarantee(self.componentValueAtIndex(components, index: 1), fallback: 0)
         let blue = guarantee(self.componentValueAtIndex(components, index: 2), fallback: 0)
@@ -78,7 +78,7 @@ extension UIColor {
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    public class func byteComponentToCGFloat(value : u_char) -> CGFloat {
+    public class func byteComponentToCGFloat(_ value : u_char) -> CGFloat {
         return CGFloat(value) / 255.0
     }
 }

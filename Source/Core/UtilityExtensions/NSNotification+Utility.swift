@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension NSNotification {
+extension Notification {
     
-    public func objectFromInfo(key : String) -> AnyObject? {
-        return self.userInfo?[key]
+    public func objectFromInfo(_ key : String) -> AnyObject? {
+        return self.userInfo?[key] as AnyObject
     }
 }

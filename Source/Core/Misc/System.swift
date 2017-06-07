@@ -11,7 +11,7 @@ import Foundation
 // TODO: vs NSFileManager.defaultManager().URLsForDirectory?
 // TODO: UIApplicationExtension?
 public func getAppDocumentPaths() -> [String]? {
-    return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+    return NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
 }
 
 public func getAppDocumentPath() -> String? {
@@ -19,7 +19,7 @@ public func getAppDocumentPath() -> String? {
 }
 
 public func getAppLibraryPaths() -> [String]? {
-    return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+    return NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.libraryDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
 }
 
 public func getAppLibraryPath() -> String? {

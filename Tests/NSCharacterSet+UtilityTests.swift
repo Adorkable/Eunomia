@@ -17,9 +17,9 @@ class NSCharacterSet_UtilityTests: XCTestCase {
         // "The longest words with no repeated letters are dermatoglyphics, misconjugatedly and uncopyrightables."
         
         let characters = "misconjugatedly"
-        let set = NSCharacterSet(charactersInString: characters)
+        let set = CharacterSet(charactersIn: characters)
         
-        let charactersSortedArray = characters.characters.sort()
+        let charactersSortedArray = characters.characters.sorted()
         let charactersSorted = String(charactersSortedArray)
         
         XCTAssertEqual(set.charactersInSetAscending, charactersSorted, "Returned characters in set \"\(set.charactersInSetAscending)\" are not equal to expected characters in set \"\(charactersSorted)\"")

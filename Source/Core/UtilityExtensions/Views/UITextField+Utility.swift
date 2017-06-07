@@ -10,7 +10,7 @@ import UIKit
 
 extension UITextField {
     
-    func setErrorMode(enabled : Bool, nonErrorColor : UIColor = UIColor.clearColor(), nonErrorCornerRadius : CGFloat = 0, errorColor : UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.09), errorCornerRadius : CGFloat = 2) {
+    func setErrorMode(_ enabled : Bool, nonErrorColor : UIColor = UIColor.clear, nonErrorCornerRadius : CGFloat = 0, errorColor : UIColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.09), errorCornerRadius : CGFloat = 2) {
 
         if enabled == true {
             

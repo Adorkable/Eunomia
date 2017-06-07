@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CB2C7851C2B1E3000BBC529 /* NSCharacterSet+UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7801C2B1E3000BBC529 /* NSCharacterSet+UtilityTests.swift */; };
+		3CB2C7861C2B1E3000BBC529 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7811C2B1E3000BBC529 /* RandomTests.swift */; };
+		3CB2C7871C2B1E3000BBC529 /* String+UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7821C2B1E3000BBC529 /* String+UtilityTests.swift */; };
+		3CB2C7881C2B1E3000BBC529 /* SystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7831C2B1E3000BBC529 /* SystemTests.swift */; };
+		3CC9640F1EE883170017C90D /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC9640E1EE883170017C90D /* Eunomia.framework */; };
+		3CC964111EE883230017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC964101EE883230017C90D /* CocoaLumberjackSwift.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3CB2C7761C2B1DDE00BBC529 /* EunomiaCarthageiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EunomiaCarthageiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB2C77F1C2B1E3000BBC529 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB2C7801C2B1E3000BBC529 /* NSCharacterSet+UtilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCharacterSet+UtilityTests.swift"; sourceTree = "<group>"; };
+		3CB2C7811C2B1E3000BBC529 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
+		3CB2C7821C2B1E3000BBC529 /* String+UtilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UtilityTests.swift"; sourceTree = "<group>"; };
+		3CB2C7831C2B1E3000BBC529 /* SystemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemTests.swift; sourceTree = "<group>"; };
+		3CC964051EE881620017C90D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		3CC9640C1EE882B60017C90D /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		3CC9640E1EE883170017C90D /* Eunomia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eunomia.framework; path = Carthage/Build/iOS/Eunomia.framework; sourceTree = "<group>"; };
+		3CC964101EE883230017C90D /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/iOS/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CB2C7731C2B1DDE00BBC529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC9640F1EE883170017C90D /* Eunomia.framework in Frameworks */,
+				3CC964111EE883230017C90D /* CocoaLumberjackSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CB2C75D1C2B1D3700BBC529 = {
+			isa = PBXGroup;
+			children = (
+				3CC964051EE881620017C90D /* Cartfile */,
+				3CB2C77E1C2B1E3000BBC529 /* Tests */,
+				3CB2C7681C2B1D3700BBC529 /* Products */,
+				3CC9640B1EE882B60017C90D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3CB2C7681C2B1D3700BBC529 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CB2C7761C2B1DDE00BBC529 /* EunomiaCarthageiOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CB2C77E1C2B1E3000BBC529 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3CB2C77F1C2B1E3000BBC529 /* Info.plist */,
+				3CB2C7801C2B1E3000BBC529 /* NSCharacterSet+UtilityTests.swift */,
+				3CB2C7811C2B1E3000BBC529 /* RandomTests.swift */,
+				3CB2C7821C2B1E3000BBC529 /* String+UtilityTests.swift */,
+				3CB2C7831C2B1E3000BBC529 /* SystemTests.swift */,
+			);
+			name = Tests;
+			path = ../Tests;
+			sourceTree = "<group>";
+		};
+		3CC9640B1EE882B60017C90D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CC964101EE883230017C90D /* CocoaLumberjackSwift.framework */,
+				3CC9640E1EE883170017C90D /* Eunomia.framework */,
+				3CC9640C1EE882B60017C90D /* CocoaLumberjack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		3CC964071EE881960017C90D /* carthage */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "bootstrap --configuration Debug --platform iOS --use-submodules --use-ssh --verbose --color auto ";
+			buildConfigurationList = 3CC964081EE881960017C90D /* Build configuration list for PBXLegacyTarget "carthage" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/carthage;
+			buildWorkingDirectory = $PROJECT_DIR;
+			dependencies = (
+			);
+			name = carthage;
+			passBuildSettingsInEnvironment = 1;
+			productName = carthage;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		3CB2C7751C2B1DDE00BBC529 /* EunomiaCarthageiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB2C77B1C2B1DDE00BBC529 /* Build configuration list for PBXNativeTarget "EunomiaCarthageiOSTests" */;
+			buildPhases = (
+				3CB2C7721C2B1DDE00BBC529 /* Sources */,
+				3CB2C7731C2B1DDE00BBC529 /* Frameworks */,
+				3CB2C7741C2B1DDE00BBC529 /* Resources */,
+				C74681A5AE00B93579858C7F /* Embed Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EunomiaCarthageiOSTests;
+			productName = EunomiaCocoapodsiOSTests;
+			productReference = 3CB2C7761C2B1DDE00BBC529 /* EunomiaCarthageiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CB2C75E1C2B1D3700BBC529 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Adorkable;
+				TargetAttributes = {
+					3CB2C7751C2B1DDE00BBC529 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3UDY2NT62F;
+						LastSwiftMigration = 0830;
+					};
+					3CC964071EE881960017C90D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3UDY2NT62F;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3CB2C7611C2B1D3700BBC529 /* Build configuration list for PBXProject "Eunomia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3CB2C75D1C2B1D3700BBC529;
+			productRefGroup = 3CB2C7681C2B1D3700BBC529 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CB2C7751C2B1DDE00BBC529 /* EunomiaCarthageiOSTests */,
+				3CC964071EE881960017C90D /* carthage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CB2C7741C2B1DDE00BBC529 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C74681A5AE00B93579858C7F /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Eunomia.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CB2C7721C2B1DDE00BBC529 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB2C7881C2B1E3000BBC529 /* SystemTests.swift in Sources */,
+				3CB2C7861C2B1E3000BBC529 /* RandomTests.swift in Sources */,
+				3CB2C7871C2B1E3000BBC529 /* String+UtilityTests.swift in Sources */,
+				3CB2C7851C2B1E3000BBC529 /* NSCharacterSet+UtilityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3CB2C76D1C2B1D3700BBC529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3CB2C76E1C2B1D3700BBC529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3CB2C77C1C2B1DDE00BBC529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3UDY2NT62F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ../Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adorkable.eunomia.EunomiaCocoapodsiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3CB2C77D1C2B1DDE00BBC529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3UDY2NT62F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = ../Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adorkable.eunomia.EunomiaCocoapodsiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3CC964091EE881960017C90D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3UDY2NT62F;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3CC9640A1EE881960017C90D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3UDY2NT62F;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CB2C7611C2B1D3700BBC529 /* Build configuration list for PBXProject "Eunomia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB2C76D1C2B1D3700BBC529 /* Debug */,
+				3CB2C76E1C2B1D3700BBC529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CB2C77B1C2B1DDE00BBC529 /* Build configuration list for PBXNativeTarget "EunomiaCarthageiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB2C77C1C2B1DDE00BBC529 /* Debug */,
+				3CB2C77D1C2B1DDE00BBC529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CC964081EE881960017C90D /* Build configuration list for PBXLegacyTarget "carthage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CC964091EE881960017C90D /* Debug */,
+				3CC9640A1EE881960017C90D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CB2C75E1C2B1D3700BBC529 /* Project object */;
+}

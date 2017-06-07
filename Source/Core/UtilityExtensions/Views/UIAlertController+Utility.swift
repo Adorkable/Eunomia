@@ -11,24 +11,24 @@ import UIKit
 extension UIAlertController
 {
     public class func showAlert(
-        title : String? = nil,
+        _ title : String? = nil,
         message : String? = nil,
         buttonText : String = "Ok",
         showOver : UIViewController,
         completion completionHandler : (() -> Void)? = nil
         ) {
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            alert.dismissViewControllerAnimated(true, completion: completionHandler)
+        alert.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.default, handler: { (action) -> Void in
+            alert.dismiss(animated: true, completion: completionHandler)
         }))
         
-        showOver.presentViewController(alert, animated: true, completion: nil)
+        showOver.present(alert, animated: true, completion: nil)
     }
     
     public class func showEmailReportAlert(
-        title : String? = nil,
+        _ title : String? = nil,
         message : String? = nil,
         defaultButtonText : String = "Ok",
         reportButtonText : String = "Report",
@@ -36,26 +36,26 @@ extension UIAlertController
         reportSubject : String,
         reportBody : String? = nil,
         showOver : UIViewController,
-        completion completionHandler : ( (error : NSError?) -> Void)? = nil
+        completion completionHandler : ( (_ error : NSError?) -> Void)? = nil
         ) {
             
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
             
-            alert.addAction(UIAlertAction(title: defaultButtonText, style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-                alert.dismissViewControllerAnimated(true, completion: { () -> Void in
+            alert.addAction(UIAlertAction(title: defaultButtonText, style: UIAlertActionStyle.default, handler: { (action) -> Void in
+                alert.dismiss(animated: true, completion: { () -> Void in
                     
                     if let completionHandler = completionHandler {
-                        completionHandler(error: nil)
+                        completionHandler(nil)
                     }
                 })
             }))
             
-            alert.addAction(UIAlertAction(title: reportButtonText, style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-                alert.dismissViewControllerAnimated(true, completion: { () -> Void in
+            alert.addAction(UIAlertAction(title: reportButtonText, style: UIAlertActionStyle.default, handler: { (action) -> Void in
+                alert.dismiss(animated: true, completion: { () -> Void in
                     
                     let error : NSError?
                     do {
-                        try UIApplication.sharedApplication().mailTo(reportEmailAddress, subject: reportSubject, body: reportBody)
+                        try UIApplication.shared.mailTo(reportEmailAddress, subject: reportSubject, body: reportBody)
                         
                         error = nil
                     } catch let mailToError as NSError {
@@ -64,39 +64,39 @@ extension UIAlertController
                     }
 
                     if let completionHandler = completionHandler {
-                        completionHandler(error: error)
+                        completionHandler(error)
                     }
                 })
             }))
             
-            showOver.presentViewController(alert, animated: true, completion: nil)
+            showOver.present(alert, animated: true, completion: nil)
     }
     
     public class func deleteActionSheet(
-        title : String,
+        _ title : String,
         deleteActionText : String = "Delete",
         cancelActionText : String = "Cancel",
         autoDismiss : Bool = true,
-        deleteActionHandler : ((UIAlertAction) -> Void),
+        deleteActionHandler : @escaping ((UIAlertAction) -> Void),
         cancelActionHandler : ((UIAlertAction) -> Void)?
         ) -> UIAlertController {
             
-        let result = UIAlertController(title: title, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let result = UIAlertController(title: title, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         
-        let deleteAction = UIAlertAction(title: deleteActionText, style: UIAlertActionStyle.Destructive, handler: { (action) -> Void in
+        let deleteAction = UIAlertAction(title: deleteActionText, style: UIAlertActionStyle.destructive, handler: { (action) -> Void in
             if autoDismiss
             {
-                result.dismissViewControllerAnimated(true, completion: nil)
+                result.dismiss(animated: true, completion: nil)
             }
             
             deleteActionHandler(action)
         })
         result.addAction(deleteAction)
     
-        let cancelAction = UIAlertAction(title: cancelActionText, style: UIAlertActionStyle.Cancel, handler: { (action) -> Void in
+        let cancelAction = UIAlertAction(title: cancelActionText, style: UIAlertActionStyle.cancel, handler: { (action) -> Void in
             if autoDismiss
             {
-                result.dismissViewControllerAnimated(true, completion: nil)
+                result.dismiss(animated: true, completion: nil)
             }
 
             if let cancelActionHandler = cancelActionHandler

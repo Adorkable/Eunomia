@@ -33,6 +33,10 @@
 		3CB2C75A1C2B144500BBC529 /* UIBarItem+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7571C2B144500BBC529 /* UIBarItem+Utility.swift */; };
 		3CB2C75B1C2B144500BBC529 /* UIScrollView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */; };
 		3CB2C75C1C2B144500BBC529 /* UITextView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */; };
+		3CC963FC1EE877350017C90D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC963FB1EE877350017C90D /* Errors.swift */; };
+		3CC964011EE87F4E0017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
+		3CC964161EE890040017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
+		3CC964191EE8906F0017C90D /* Eunomia.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C52C0D51B6203900014B938 /* Eunomia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3CF646281C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646251C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift */; };
 		3CF646291C0729E100BDDBC3 /* NSManagedObject+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646261C0729E100BDDBC3 /* NSManagedObject+Utility.swift */; };
 		3CF6462A1C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646271C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift */; };
@@ -69,11 +73,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3CC964181EE8905C0017C90D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3CC964191EE8906F0017C90D /* Eunomia.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		35C0350FF7E0ADD676F440F8 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Utility.swift"; sourceTree = "<group>"; };
-		3C4C32B61C0DEC5900FF039E /* PHPhotoLibrary_retrieveFirstImageTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHPhotoLibrary_retrieveFirstImageTest.swift; sourceTree = "<group>"; };
-		3C4C32B81C0DED8100FF039E /* UIViewController+TestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TestResult.swift"; sourceTree = "<group>"; };
 		3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
 		3C4EC6211B695AAD003CFD06 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		3C4EC6241B696E33003CFD06 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
@@ -92,12 +106,6 @@
 		3C52C0FA1B6204910014B938 /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
 		3C52C1001B6204910014B938 /* Eunomia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
 		3C52C1011B6204910014B938 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C52C1151B6204C20014B938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C52C1161B6204C20014B938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C52C11B1B6204C20014B938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3C52C11D1B6204C20014B938 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3C52C1201B6204C20014B938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3C52C1341B6204E70014B938 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3C52C1381B62068B0014B938 /* UIApplication+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utility.swift"; sourceTree = "<group>"; };
 		3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utility.swift"; sourceTree = "<group>"; };
 		3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CNContactStore+Utility.swift"; sourceTree = "<group>"; };
@@ -110,6 +118,11 @@
 		3CB2C7571C2B144500BBC529 /* UIBarItem+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarItem+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Utility.swift"; sourceTree = "<group>"; };
+		3CC963F61EE856F60017C90D /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/iOS/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
+		3CC963FB1EE877350017C90D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		3CC963FF1EE87EC70017C90D /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/Mac/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
+		3CC964021EE87F7A0017C90D /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/Mac/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		3CF646251C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+Utility.swift"; sourceTree = "<group>"; };
 		3CF646261C0729E100BDDBC3 /* NSManagedObject+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Utility.swift"; sourceTree = "<group>"; };
 		3CF646271C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Utility.swift"; sourceTree = "<group>"; };
@@ -134,8 +147,6 @@
 		3CF646541C07510A00BDDBC3 /* NSRange+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Utility.swift"; sourceTree = "<group>"; };
 		3CF646561C07529900BDDBC3 /* JSContext+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSContext+Utility.swift"; sourceTree = "<group>"; };
 		3CF646581C0755A000BDDBC3 /* UIWebView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Utility.swift"; sourceTree = "<group>"; };
-		9C247C8131E6DB4B56436063 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		F4BF8B51B0FA25C04FD73FD4 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC964161EE890040017C90D /* CocoaLumberjackSwift.framework in Frameworks */,
 				3C4EC6301B696F0E003CFD06 /* Eunomia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,21 +163,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC964011EE87F4E0017C90D /* CocoaLumberjackSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C4C32B51C0DEC5900FF039E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3C4C32B81C0DED8100FF039E /* UIViewController+TestResult.swift */,
-				3C4C32B61C0DEC5900FF039E /* PHPhotoLibrary_retrieveFirstImageTest.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		3C4EC6201B695A8D003CFD06 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +179,7 @@
 				3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */,
 				3CA1C8331BF59C70006ED56C /* Guarantee.swift */,
 				3CA1C8351BF59C94006ED56C /* SuccessResult.swift */,
+				3CC963FB1EE877350017C90D /* Errors.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -205,10 +210,8 @@
 				3C52C0F31B6204910014B938 /* Source */,
 				3C4EC62B1B696F0E003CFD06 /* Tests */,
 				3C52C1351B6205410014B938 /* Supporting Files */,
-				3C52C1131B6204C20014B938 /* Example */,
 				3C52C0D61B6203900014B938 /* Products */,
-				595A0158171337D152828E95 /* Pods */,
-				A132A30546B427ABD9D54A4D /* Frameworks */,
+				3CC963F51EE856F60017C90D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,35 +289,24 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
-		3C52C1131B6204C20014B938 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				3C52C1161B6204C20014B938 /* AppDelegate.swift */,
-				3C52C11A1B6204C20014B938 /* Main.storyboard */,
-				3C52C11D1B6204C20014B938 /* Images.xcassets */,
-				3C52C11F1B6204C20014B938 /* LaunchScreen.xib */,
-				3C4C32B51C0DEC5900FF039E /* Views */,
-				3C52C1141B6204C20014B938 /* Supporting Files */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		3C52C1141B6204C20014B938 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3C52C1151B6204C20014B938 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		3C52C1351B6205410014B938 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				3C52C0F11B6204910014B938 /* Eunomia.podspec */,
 				3C52C0F21B6204910014B938 /* Gemfile */,
-				3C52C1341B6204E70014B938 /* Podfile */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3CC963F51EE856F60017C90D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CC964021EE87F7A0017C90D /* CocoaLumberjack.framework */,
+				3CC963FF1EE87EC70017C90D /* CocoaLumberjackSwift.framework */,
+				3CC963F61EE856F60017C90D /* CocoaLumberjack.framework */,
+				3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3CF646241C0729E100BDDBC3 /* CoreData */ = {
@@ -348,23 +340,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		595A0158171337D152828E95 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				35C0350FF7E0ADD676F440F8 /* Pods-Example.debug.xcconfig */,
-				9C247C8131E6DB4B56436063 /* Pods-Example.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A132A30546B427ABD9D54A4D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F4BF8B51B0FA25C04FD73FD4 /* Pods_Example.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -386,6 +361,8 @@
 				3C4EC6261B696F0E003CFD06 /* Sources */,
 				3C4EC6271B696F0E003CFD06 /* Frameworks */,
 				3C4EC6281B696F0E003CFD06 /* Resources */,
+				3CC964181EE8905C0017C90D /* CopyFiles */,
+				3CC964171EE890250017C90D /* Embed Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -405,6 +382,7 @@
 				3C52C0D11B6203900014B938 /* Frameworks */,
 				3C52C0D21B6203900014B938 /* Headers */,
 				3C52C0D31B6203900014B938 /* Resources */,
+				3CC963FA1EE857020017C90D /* Embed Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -427,11 +405,12 @@
 				TargetAttributes = {
 					3C4EC6291B696F0E003CFD06 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0800;
+						DevelopmentTeam = 3UDY2NT62F;
+						LastSwiftMigration = 0830;
 					};
 					3C52C0D41B6203900014B938 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -471,6 +450,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CC963FA1EE857020017C90D /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		3CC964171EE890250017C90D /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C4EC6261B696F0E003CFD06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -503,6 +515,7 @@
 				3CF6464B1C07459700BDDBC3 /* UITabBar+Utility.swift in Sources */,
 				3CF646291C0729E100BDDBC3 /* NSManagedObject+Utility.swift in Sources */,
 				3C93C2451B620A68001C1114 /* UIDevice+Utility.swift in Sources */,
+				3CC963FC1EE877350017C90D /* Errors.swift in Sources */,
 				3C4EC6391B697237003CFD06 /* System.swift in Sources */,
 				3CF646471C0741EE00BDDBC3 /* Array+Utility.swift in Sources */,
 				3CB2C75B1C2B144500BBC529 /* UIScrollView+Utility.swift in Sources */,
@@ -544,57 +557,40 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		3C52C11A1B6204C20014B938 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C52C11B1B6204C20014B938 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3C52C11F1B6204C20014B938 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C52C1201B6204C20014B938 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		3C4EC6341B696F0E003CFD06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3UDY2NT62F;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3C4EC6351B696F0E003CFD06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3UDY2NT62F;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -696,36 +692,42 @@
 		3C52C0EC1B6203900014B938 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Framework/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eunomia;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3C52C0ED1B6203900014B938 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Framework/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eunomia;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

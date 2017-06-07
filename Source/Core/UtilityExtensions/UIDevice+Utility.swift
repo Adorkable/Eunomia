@@ -15,6 +15,6 @@ extension UIDevice
     }
     
     public var vendorUUIDString : String? {
-        return self.identifierForVendor?.UUIDString
+        return self.identifierForVendor?.uuidString
     }
 }

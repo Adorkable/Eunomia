@@ -2,6 +2,8 @@
 
 .ruby-version
 
+.gitmodules
+
 # Xcode
 #
 build/
@@ -24,8 +26,12 @@ DerivedData
 # Cocoapods
 #
 Pods/
+*/Pods/
 
 # Carthage
 #
 Carthage/Checkouts
 Carthage/Build
+*/Carthage/Checkouts
+*/Carthage/Build
+

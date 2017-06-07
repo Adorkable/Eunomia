@@ -18,7 +18,7 @@ extension UIView {
      
      - parameter replaceWith: view to replace ourself with
      */
-    public func replaceWithView(replaceWith : UIView)
+    public func replaceWithView(_ replaceWith : UIView)
     {
         // TODO: copy constraints
         replaceWith.frame = self.frame
@@ -48,13 +48,13 @@ extension UIView {
     @IBInspectable public var borderColor : UIColor? {
         get {
             if let cgColor = self.layer.borderColor {
-                return UIColor(CGColor: cgColor)
+                return UIColor(cgColor: cgColor)
             } else {
                 return nil
             }
         }
         set {
-            self.layer.borderColor = newValue?.CGColor
+            self.layer.borderColor = newValue?.cgColor
         }
     }
     
@@ -91,25 +91,25 @@ extension UIView {
                 return nil
             }
             
-            return UIColor(CGColor: cgColor)
+            return UIColor(cgColor: cgColor)
         }
         set {
-            self.layer.shadowColor = newValue?.CGColor
+            self.layer.shadowColor = newValue?.cgColor
         }
     }
     
-    public class func view(nibName: String?, bundle: NSBundle?) -> UIView {
+    public class func view(_ nibName: String?, bundle: Bundle?) -> UIView {
         let viewController = UIViewController(nibName: nibName, bundle: bundle)
         return viewController.view
     }
     
-    public class func view<T : UIView>(nibName nibName: String?, bundle: NSBundle?) -> T? {
+    public class func view<T : UIView>(nibName: String?, bundle: Bundle?) -> T? {
         let viewController = UIViewController(nibName: nibName, bundle: bundle)
         return viewController.view as? T
     }
     
-    public class func view(storyboard: UIStoryboard, identifier : String) -> UIView {
-        let viewController = storyboard.instantiateViewControllerWithIdentifier(identifier)
+    public class func view(_ storyboard: UIStoryboard, identifier : String) -> UIView {
+        let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
         return viewController.view
     }
     
@@ -129,7 +129,7 @@ extension UIView {
         return result
     }
 
-    public func hasSubviewAtDepth(view : UIView) -> Int?
+    public func hasSubviewAtDepth(_ view : UIView) -> Int?
     {
         var result : Int?
         
@@ -150,12 +150,12 @@ extension UIView {
         return result
     }
     
-    public typealias UIViewEnumerater = ((view : UIView, inout stop : Bool) -> Void)
+    public typealias UIViewEnumerater = ((_ view : UIView, _ stop : inout Bool) -> Void)
     
-    public func enumerateSelfAndSubviews(apply : UIViewEnumerater)
+    public func enumerateSelfAndSubviews(_ apply : UIViewEnumerater)
     {
         var stop : Bool = false
-        apply(view: self, stop: &stop)
+        apply(self, &stop)
         
         if stop == false
         {
@@ -163,18 +163,18 @@ extension UIView {
         }
     }
     
-    public func enumerateSubviews(apply : UIViewEnumerater)
+    public func enumerateSubviews(_ apply : UIViewEnumerater)
     {
         var stop : Bool = false
         self.enumerateSubviews(apply, stop: &stop)
     }
     
-    public func enumerateSubviews(apply : UIViewEnumerater, inout stop : Bool)
+    public func enumerateSubviews(_ apply : UIViewEnumerater, stop : inout Bool)
     {
         for subview in self.subviews
         {
             var stop : Bool = false
-            apply(view: subview, stop : &stop)
+            apply(subview, &stop)
             if stop == true
             {
                 break
@@ -187,12 +187,12 @@ extension UIView {
         }
     }
     
-    public func allSubviews<T : UIView>(ofClass : T.Type) -> [T]?
+    public func allSubviews<T : UIView>(_ ofClass : T.Type) -> [T]?
     {
         var result : [T]?
         
         self.enumerateSubviews { (view, stop) -> Void in
-            if view.isKindOfClass(ofClass)
+            if view.isKind(of: ofClass)
             {
                 if result == nil
                 {
@@ -205,13 +205,13 @@ extension UIView {
         return result
     }
 
-    public func enumerateSelfAndSuperviews(apply : UIViewEnumerater)
+    public func enumerateSelfAndSuperviews(_ apply : UIViewEnumerater)
     {
         var testView : UIView? = self
         while testView != nil
         {
             var stop : Bool = false
-            apply(view: testView!, stop: &stop)
+            apply(testView!, &stop)
             if stop == true
             {
                 break
@@ -220,17 +220,17 @@ extension UIView {
         }
     }
 
-    public func enumerateSuperviews(apply : UIViewEnumerater)
+    public func enumerateSuperviews(_ apply : UIViewEnumerater)
     {
         self.superview?.enumerateSelfAndSuperviews(apply)
     }
     
-    public func closestSuperview<T : UIView>(ofClass : T.Type) -> T?
+    public func closestSuperview<T : UIView>(_ ofClass : T.Type) -> T?
     {
         var result : T?
         
         self.enumerateSuperviews { (view, stop) -> Void in
-            if view.isKindOfClass(ofClass)
+            if view.isKind(of: ofClass)
             {
                 result = view as? T
                 stop = true
@@ -240,14 +240,14 @@ extension UIView {
         return result
     }
 
-    public func closestSelfOrSuperview<T : UIView>(ofClasses : [T.Type]) -> T?
+    public func closestSelfOrSuperview<T : UIView>(_ ofClasses : [T.Type]) -> T?
     {
         var result : T?
         
-        self.enumerateSelfAndSuperviews { (view, inout stop : Bool) -> Void in
+        self.enumerateSelfAndSuperviews { (view, stop : inout Bool) -> Void in
             for ofClass in ofClasses
             {
-                if view.isKindOfClass(ofClass)
+                if view.isKind(of: ofClass)
                 {
                     result = view as? T
                     stop = true
@@ -259,17 +259,17 @@ extension UIView {
         return result
     }
     
-    public func closestSuperview<T : UIView>(ofClasses : [T.Type]) -> T?
+    public func closestSuperview<T : UIView>(_ ofClasses : [T.Type]) -> T?
     {
         return self.superview?.closestSelfOrSuperview(ofClasses)
     }
     
-    public func closestSelfOrSuperview<T : Protocol>(ofProtocol : Protocol) -> T?
+    public func closestSelfOrSuperview<T : Protocol>(_ ofProtocol : Protocol) -> T?
     {
         var result : T?
         
-        self.enumerateSelfAndSuperviews { (view, inout stop : Bool) -> Void in
-            if view.conformsToProtocol(ofProtocol)
+        self.enumerateSelfAndSuperviews { (view, stop : inout Bool) -> Void in
+            if view.conforms(to: ofProtocol)
             {
                 result = view as? T
                 stop = true
@@ -279,17 +279,17 @@ extension UIView {
         return result
     }
 
-    public func closestSuperview<T : Protocol>(ofProtocol : Protocol) -> T?
+    public func closestSuperview<T : Protocol>(_ ofProtocol : Protocol) -> T?
     {
         return self.superview?.closestSelfOrSuperview(ofProtocol)
     }
     
-    public func closestSuperviewWhichRespondsTo(selector : Selector) -> UIView?
+    public func closestSuperviewWhichRespondsTo(_ selector : Selector) -> UIView?
     {
         var result : UIView?
         
         self.enumerateSuperviews { (view, stop) -> Void in
-            if view.respondsToSelector(selector)
+            if view.responds(to: selector)
             {
                 result = view
                 stop = true
@@ -310,7 +310,7 @@ extension UIView {
     }
     
     public var sizeThatFitsCurrentWidth : CGSize {
-        return self.sizeThatFits(CGSize(width: self.frame.width, height: CGFloat.max))
+        return self.sizeThatFits(CGSize(width: self.frame.width, height: CGFloat.greatestFiniteMagnitude))
     }
     
     public var heightThatFitsCurrentWidth : CGFloat {
@@ -321,7 +321,7 @@ extension UIView {
         self.frame.size = self.sizeThatFitsCurrentWidth
     }
     
-    public func sizeToFitCurrentWidthWithHeightConstraint(constraint : NSLayoutConstraint) {
+    public func sizeToFitCurrentWidthWithHeightConstraint(_ constraint : NSLayoutConstraint) {
         self.sizeToFitCurrentWidth()
         constraint.constant = self.heightThatFitsCurrentWidth
     }
@@ -334,7 +334,7 @@ extension UIView {
             return nil
         }
 
-        self.layer.renderInContext(context)
+        self.layer.render(in: context)
 
         let result = UIGraphicsGetImageFromCurrentImageContext()
             
@@ -362,22 +362,22 @@ extension UIView {
      - parameter distance: maximum distance to travel in either direction from the view's actual location
      */
     // TODO: custom number of cycles
-    public func errorVibrate(duration : NSTimeInterval, distance : CGFloat) {
+    public func errorVibrate(_ duration : TimeInterval, distance : CGFloat) {
         
         let keyframeDuration = duration / 4
         let originalFrame = self.frame
         
-        UIView.animateKeyframesWithDuration(duration, delay: 0, options: .CalculationModeLinear, animations: { () -> Void in
+        UIView.animateKeyframes(withDuration: duration, delay: 0, options: UIViewKeyframeAnimationOptions(), animations: { () -> Void in
             
-            UIView.addKeyframeWithRelativeStartTime(keyframeDuration * 0, relativeDuration: keyframeDuration, animations: { () -> Void in
-                self.transform = CGAffineTransformTranslate(self.transform, -distance, 0)
+            UIView.addKeyframe(withRelativeStartTime: keyframeDuration * 0, relativeDuration: keyframeDuration, animations: { () -> Void in
+                self.transform = self.transform.translatedBy(x: -distance, y: 0)
             })
             
-            UIView.addKeyframeWithRelativeStartTime(keyframeDuration * 1, relativeDuration: keyframeDuration * 2, animations: { () -> Void in
-                self.transform = CGAffineTransformTranslate(self.transform, distance * 2, 0)
+            UIView.addKeyframe(withRelativeStartTime: keyframeDuration * 1, relativeDuration: keyframeDuration * 2, animations: { () -> Void in
+                self.transform = self.transform.translatedBy(x: distance * 2, y: 0)
             })
             
-            UIView.addKeyframeWithRelativeStartTime(keyframeDuration * 3, relativeDuration: keyframeDuration, animations: { () -> Void in
+            UIView.addKeyframe(withRelativeStartTime: keyframeDuration * 3, relativeDuration: keyframeDuration, animations: { () -> Void in
                 self.frame = originalFrame
             })
         }, completion: nil)
@@ -393,19 +393,19 @@ extension UIView {
      - parameter options:       animation options
      - parameter completion:    completion handler
      */
-    public func fadeIn(useHidden : Bool = false, duration : NSTimeInterval = 0.25, force : Bool = false, startingAlpha : CGFloat = 0, options : UIViewAnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
+    public func fadeIn(_ useHidden : Bool = false, duration : TimeInterval = 0.25, force : Bool = false, startingAlpha : CGFloat = 0, options : UIViewAnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
 
         if force == true {
             if useHidden == true {
-                self.hidden = true
+                self.isHidden = true
             } else {
                 self.alpha = startingAlpha
             }
         }
         
-        UIView.animateWithDuration(duration, delay: 0, options: options, animations: { () -> Void in
+        UIView.animate(withDuration: duration, delay: 0, options: options, animations: { () -> Void in
             if useHidden == true {
-                self.hidden = false
+                self.isHidden = false
             } else {
                 self.alpha = 1
             }
@@ -422,19 +422,19 @@ extension UIView {
      - parameter options:       animation options
      - parameter completion:    completion handler
      */
-    public func fadeOut(useHidden : Bool = false, duration : NSTimeInterval = 0.25, force : Bool = false, startingAlpha : CGFloat = 1, options : UIViewAnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
+    public func fadeOut(_ useHidden : Bool = false, duration : TimeInterval = 0.25, force : Bool = false, startingAlpha : CGFloat = 1, options : UIViewAnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
         
         if force == true {
             if useHidden == true {
-                self.hidden = false
+                self.isHidden = false
             } else {
                 self.alpha = startingAlpha
             }
         }
         
-        UIView.animateWithDuration(duration, delay: 0, options: options, animations: { () -> Void in
+        UIView.animate(withDuration: duration, delay: 0, options: options, animations: { () -> Void in
             if useHidden == true {
-                self.hidden = true
+                self.isHidden = true
             } else {
                 self.alpha = 0
             }
@@ -450,7 +450,7 @@ extension UIView {
      - parameter options:    animation options
      - parameter completion: completion handler
      */
-    public func growDown(endSize : CGSize? = nil, duration : NSTimeInterval = 0.25, options : UIViewAnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
+    public func growDown(_ endSize : CGSize? = nil, duration : TimeInterval = 0.25, options : UIViewAnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
         
         let endFrame : CGRect
         
@@ -462,7 +462,7 @@ extension UIView {
         
         self.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: endFrame.width, height: 0)
         
-        UIView.animateWithDuration(duration, delay: 0, options: options, animations: { () -> Void in
+        UIView.animate(withDuration: duration, delay: 0, options: options, animations: { () -> Void in
 
             self.frame = endFrame
             }, completion: completion)
@@ -473,9 +473,9 @@ extension UIView {
 extension UIView {
     
     /// Activity Indicator Associated Property Key
-    private static var ActivityIndicatorKey : String { return "Eunomia_UIView_Extension_ActivityIndicator" }
+    fileprivate static var ActivityIndicatorKey : String { return "Eunomia_UIView_Extension_ActivityIndicator" }
     /// General Use Activity Indicator
-    private var activityIndicator : UIActivityIndicatorView? {
+    fileprivate var activityIndicator : UIActivityIndicatorView? {
         get {
             return self.getAssociatedProperty(UIView.ActivityIndicatorKey)
         }
@@ -491,24 +491,24 @@ extension UIView {
      - parameter centered:      whether to center the activity indicator automatically with Layout Contraints
      - parameter configureView: configure the view handler
      */
-    public func showActivityIndicator(visible : Bool, centered : Bool = true, configureView : ((activityIndicator : UIActivityIndicatorView, parentView : UIView) -> Void)? = nil) {
+    public func showActivityIndicator(_ visible : Bool, centered : Bool = true, configureView : ((_ activityIndicator : UIActivityIndicatorView, _ parentView : UIView) -> Void)? = nil) {
         
         if visible == true {
             
             if self.activityIndicator == nil {
-                let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+                let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
                 
                 self.addSubview(activityIndicator)
                 if centered == true {
-                    let horizontalCenter = NSLayoutConstraint(item: activityIndicator, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1.0, constant: 0)
-                    let verticalCenter = NSLayoutConstraint(item: activityIndicator, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1.0, constant: 0)
+                    let horizontalCenter = NSLayoutConstraint(item: activityIndicator, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0)
+                    let verticalCenter = NSLayoutConstraint(item: activityIndicator, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0)
                     activityIndicator.addConstraints([horizontalCenter, verticalCenter])
                 }
                 
                 activityIndicator.hidesWhenStopped = true
                 
                 if let configureView = configureView {
-                    configureView(activityIndicator: activityIndicator, parentView: self)
+                    configureView(activityIndicator, self)
                 }
                 
                 self.activityIndicator = activityIndicator
@@ -517,7 +517,7 @@ extension UIView {
             if let activityIndicator = self.activityIndicator {
                 activityIndicator.startAnimating()
             } else {
-                DDLog.error("Unable to create Activity Indicator for view \(self)")
+                DDLog.error(message: "Unable to create Activity Indicator for view \(self)")
             }
             
         } else {
