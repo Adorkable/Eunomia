@@ -51,7 +51,7 @@ public extension String
     subscript (range: CountableRange<Int>) -> String {
         let startIndex =  self.index(self.startIndex, offsetBy: range.lowerBound)
         let endIndex = self.index(startIndex, offsetBy: range.upperBound - range.lowerBound)
-        return self[startIndex...endIndex]
+        return self[startIndex..<endIndex]
     }
 }
 
