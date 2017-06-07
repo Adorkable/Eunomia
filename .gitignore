@@ -2,7 +2,7 @@
 
 .ruby-version
 
-/.gitmodules
+.gitmodules
 
 # Xcode
 #
@@ -29,5 +29,5 @@ Pods/
 
 # Carthage
 #
-/Carthage/Checkouts
-/Carthage/Build
+Carthage/Checkouts
+Carthage/Build
