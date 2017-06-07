@@ -35,7 +35,8 @@
 		3CB2C75C1C2B144500BBC529 /* UITextView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */; };
 		3CC963FC1EE877350017C90D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC963FB1EE877350017C90D /* Errors.swift */; };
 		3CC964011EE87F4E0017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
-		3CC964041EE87FB70017C90D /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F61EE856F60017C90D /* CocoaLumberjack.framework */; };
+		3CC964161EE890040017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
+		3CC964191EE8906F0017C90D /* Eunomia.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C52C0D51B6203900014B938 /* Eunomia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3CF646281C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646251C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift */; };
 		3CF646291C0729E100BDDBC3 /* NSManagedObject+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646261C0729E100BDDBC3 /* NSManagedObject+Utility.swift */; };
 		3CF6462A1C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646271C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift */; };
@@ -71,6 +72,19 @@
 			remoteInfo = Eunomia;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3CC964181EE8905C0017C90D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3CC964191EE8906F0017C90D /* Eunomia.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Utility.swift"; sourceTree = "<group>"; };
@@ -140,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC964041EE87FB70017C90D /* CocoaLumberjack.framework in Frameworks */,
+				3CC964161EE890040017C90D /* CocoaLumberjackSwift.framework in Frameworks */,
 				3C4EC6301B696F0E003CFD06 /* Eunomia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +361,8 @@
 				3C4EC6261B696F0E003CFD06 /* Sources */,
 				3C4EC6271B696F0E003CFD06 /* Frameworks */,
 				3C4EC6281B696F0E003CFD06 /* Resources */,
+				3CC964181EE8905C0017C90D /* CopyFiles */,
+				3CC964171EE890250017C90D /* Embed Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -450,6 +466,21 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		3CC964171EE890250017C90D /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -533,7 +564,6 @@
 				DEVELOPMENT_TEAM = 3UDY2NT62F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -541,7 +571,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -554,11 +584,10 @@
 				DEVELOPMENT_TEAM = 3UDY2NT62F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

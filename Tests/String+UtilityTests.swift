@@ -62,9 +62,9 @@ class String_UtilityTests: XCTestCase {
         
         
         let index = 3..<10
-        let string = test.joined(separator: "")
         let testString = test[index].joined(separator: "")
-        
+        let string = test.joined(separator: "")
+
         XCTAssertEqual(testString, string[index])
     }
 
