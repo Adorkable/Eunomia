@@ -362,7 +362,6 @@
 				3C4EC6271B696F0E003CFD06 /* Frameworks */,
 				3C4EC6281B696F0E003CFD06 /* Resources */,
 				3CC964181EE8905C0017C90D /* CopyFiles */,
-				3CC964171EE890250017C90D /* Embed Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -452,21 +451,6 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		3CC963FA1EE857020017C90D /* Embed Carthage Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
-			);
-			name = "Embed Carthage Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		3CC964171EE890250017C90D /* Embed Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
