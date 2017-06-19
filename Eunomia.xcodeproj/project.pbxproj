@@ -362,6 +362,7 @@
 				3C4EC6271B696F0E003CFD06 /* Frameworks */,
 				3C4EC6281B696F0E003CFD06 /* Resources */,
 				3CC964181EE8905C0017C90D /* CopyFiles */,
+				3CCD87BC1EF870CC00E39BBA /* Embed Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,7 +382,6 @@
 				3C52C0D11B6203900014B938 /* Frameworks */,
 				3C52C0D21B6203900014B938 /* Headers */,
 				3C52C0D31B6203900014B938 /* Resources */,
-				3CC963FA1EE857020017C90D /* Embed Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -450,7 +450,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3CC963FA1EE857020017C90D /* Embed Carthage Frameworks */ = {
+		3CCD87BC1EF870CC00E39BBA /* Embed Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
