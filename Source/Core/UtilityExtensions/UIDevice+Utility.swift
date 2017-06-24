@@ -11,7 +11,11 @@ import UIKit
 extension UIDevice
 {
     public var isSimulator : Bool {
-        return self.model == "iPhone Simulator" || self.name == "iPhone Simulator"
+        #if (arch(i386) || arch(x86_64)) && os(iOS)
+            return true
+        #else
+            return false
+        #endif
     }
     
     public var vendorUUIDString : String? {

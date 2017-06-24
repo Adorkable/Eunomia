@@ -1,9 +1,9 @@
 //
-//  NSDate+Utility.swift
+//  Date+Utility.swift
 //  Eunomia
 //
-//  Created by Ian Grossberg on 11/26/15.
-//  Copyright © 2015 Adorkable. All rights reserved.
+//  Created by Ian Grossberg on 6/23/17.
+//  Copyright © 2017 Adorkable. All rights reserved.
 //
 
 import Foundation
@@ -19,5 +19,9 @@ extension Date
             formatter.dateFormat = formatter.dateFormat + "-SSS"
         }
         return formatter.string(from: self) + ".\(fileExtension)"
-    }    
+    }
+}
+
+func - (left: Date, right: Date) -> TimeInterval {
+    return left.timeIntervalSince1970 - right.timeIntervalSince1970
 }

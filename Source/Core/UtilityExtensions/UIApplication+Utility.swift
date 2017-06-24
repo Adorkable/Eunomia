@@ -33,6 +33,8 @@ extension UIApplication
             {
                 DDLog.info(message: "Library folder: \(appLibraryPath)")
             }
+        } else {
+            DDLog.info(message: "Device build")
         }
     }
     
