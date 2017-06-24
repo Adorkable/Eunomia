@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 extension AVURLAsset {
-    func firstFrame() throws -> UIImage {
+    public func firstFrame() throws -> UIImage {
         let generate = AVAssetImageGenerator(asset: self)
         generate.appliesPreferredTrackTransform = true
         let time = CMTimeMake(1, 60)

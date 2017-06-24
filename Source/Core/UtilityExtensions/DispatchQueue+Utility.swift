@@ -41,3 +41,14 @@ public extension DispatchQueue {
         block()
     }
 }
+
+public func dispatch_async_main(_ closure : @escaping () -> Void) {
+    DispatchQueue.main.async(execute: closure)
+}
+
+public func dispatch_async_background(_ closure : @escaping () -> Void) {
+    DispatchQueue.global(qos: .background).async {
+        closure()
+    }
+}
+

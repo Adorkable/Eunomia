@@ -10,7 +10,7 @@ import UIKit
 
 extension UIProgressView {
     @available(iOS 10.0, *)
-    func scheduleUpdater(withTimeInterval timeInterval: TimeInterval, updater: @escaping (() -> Float), invalidatesWhen: @escaping ((_ progress: Float) -> Bool)) {
+    public func scheduleUpdater(withTimeInterval timeInterval: TimeInterval, updater: @escaping (() -> Float), invalidatesWhen: @escaping ((_ progress: Float) -> Bool)) {
 
         Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { (timer) in
 
@@ -23,7 +23,7 @@ extension UIProgressView {
     }
 
     @available(iOS 10.0, *)
-    func autoprogress(from: Date, to: Date, finishEarlyCondition finishEarly: @escaping (() -> Bool)) {
+    public func autoprogress(from: Date, to: Date, finishEarlyCondition finishEarly: @escaping (() -> Bool)) {
 
         // TODO: throw if from > to
         // TODO: ability to specify time interval

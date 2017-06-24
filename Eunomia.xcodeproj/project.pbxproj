@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3C4C32AE1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */; };
 		3C4C32BB1C0DF50100FF039E /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */; };
-		3C4EC6221B695AAD003CFD06 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6211B695AAD003CFD06 /* Dispatch.swift */; };
 		3C4EC6251B696E33003CFD06 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6241B696E33003CFD06 /* Random.swift */; };
 		3C4EC6301B696F0E003CFD06 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C52C0D51B6203900014B938 /* Eunomia.framework */; };
 		3C4EC6371B696F58003CFD06 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6361B696F58003CFD06 /* RandomTests.swift */; };
@@ -22,11 +21,11 @@
 		3C52C1071B6204910014B938 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52C0FA1B6204910014B938 /* String+Utility.swift */; };
 		3C52C10C1B6204910014B938 /* Eunomia.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C52C1001B6204910014B938 /* Eunomia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C52C1391B62068B0014B938 /* UIApplication+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52C1381B62068B0014B938 /* UIApplication+Utility.swift */; };
-		3C5FA6461EFDE48A00955DBC /* DispatchQueue+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6451EFDE48A00955DBC /* DispatchQueue+Utility.swift */; };
 		3C5FA64C1EFDE52900955DBC /* Date+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA64B1EFDE52900955DBC /* Date+Utility.swift */; };
 		3C5FA64E1EFDE57900955DBC /* UIProgressView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA64D1EFDE57900955DBC /* UIProgressView+Utility.swift */; };
 		3C5FA6521EFDE67100955DBC /* AVFoundation+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6501EFDE67100955DBC /* AVFoundation+Utility.swift */; };
 		3C5FA6531EFDE67100955DBC /* AVURLAsset+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6511EFDE67100955DBC /* AVURLAsset+Utility.swift */; };
+		3C5FA6551EFDEB7E00955DBC /* DispatchQueue+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6541EFDEB7E00955DBC /* DispatchQueue+Utility.swift */; };
 		3C93C2451B620A68001C1114 /* UIDevice+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */; };
 		3CA1C8261BF599FA006ED56C /* CNContactStore+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */; };
 		3CA1C8281BF59A10006ED56C /* GCD+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */; };
@@ -93,7 +92,6 @@
 /* Begin PBXFileReference section */
 		3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Utility.swift"; sourceTree = "<group>"; };
 		3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
-		3C4EC6211B695AAD003CFD06 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		3C4EC6241B696E33003CFD06 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		3C4EC62A1B696F0E003CFD06 /* Eunomia Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eunomia Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4EC62D1B696F0E003CFD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,11 +109,11 @@
 		3C52C1001B6204910014B938 /* Eunomia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
 		3C52C1011B6204910014B938 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C52C1381B62068B0014B938 /* UIApplication+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utility.swift"; sourceTree = "<group>"; };
-		3C5FA6451EFDE48A00955DBC /* DispatchQueue+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Utility.swift"; sourceTree = "<group>"; };
 		3C5FA64B1EFDE52900955DBC /* Date+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utility.swift"; sourceTree = "<group>"; };
 		3C5FA64D1EFDE57900955DBC /* UIProgressView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIProgressView+Utility.swift"; sourceTree = "<group>"; };
 		3C5FA6501EFDE67100955DBC /* AVFoundation+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVFoundation+Utility.swift"; sourceTree = "<group>"; };
 		3C5FA6511EFDE67100955DBC /* AVURLAsset+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVURLAsset+Utility.swift"; sourceTree = "<group>"; };
+		3C5FA6541EFDEB7E00955DBC /* DispatchQueue+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Utility.swift"; path = "Source/Core/UtilityExtensions/DispatchQueue+Utility.swift"; sourceTree = SOURCE_ROOT; };
 		3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utility.swift"; sourceTree = "<group>"; };
 		3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CNContactStore+Utility.swift"; sourceTree = "<group>"; };
 		3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCD+Utility.swift"; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 		3C4EC6201B695A8D003CFD06 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				3C4EC6211B695AAD003CFD06 /* Dispatch.swift */,
 				3C4EC6241B696E33003CFD06 /* Random.swift */,
 				3C4EC6381B697237003CFD06 /* System.swift */,
 				3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */,
@@ -282,7 +279,6 @@
 				3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */,
 				3CF646561C07529900BDDBC3 /* JSContext+Utility.swift */,
 				3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */,
-				3C5FA6451EFDE48A00955DBC /* DispatchQueue+Utility.swift */,
 				3C5FA64F1EFDE66400955DBC /* AV */,
 				3CF646241C0729E100BDDBC3 /* CoreData */,
 				3CF6462B1C072A5D00BDDBC3 /* Views */,
@@ -356,6 +352,7 @@
 				3CF646501C074C8B00BDDBC3 /* UITextField+Utility.swift */,
 				3CF646581C0755A000BDDBC3 /* UIWebView+Utility.swift */,
 				3C5FA64D1EFDE57900955DBC /* UIProgressView+Utility.swift */,
+				3C5FA6541EFDEB7E00955DBC /* DispatchQueue+Utility.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -505,7 +502,6 @@
 			files = (
 				3CA1C8261BF599FA006ED56C /* CNContactStore+Utility.swift in Sources */,
 				3C52C1071B6204910014B938 /* String+Utility.swift in Sources */,
-				3C5FA6461EFDE48A00955DBC /* DispatchQueue+Utility.swift in Sources */,
 				3C4EC6251B696E33003CFD06 /* Random.swift in Sources */,
 				3CF646571C07529900BDDBC3 /* JSContext+Utility.swift in Sources */,
 				3CF646361C072A5D00BDDBC3 /* UIImageView+Utility.swift in Sources */,
@@ -521,6 +517,7 @@
 				3CF6464B1C07459700BDDBC3 /* UITabBar+Utility.swift in Sources */,
 				3CF646291C0729E100BDDBC3 /* NSManagedObject+Utility.swift in Sources */,
 				3C93C2451B620A68001C1114 /* UIDevice+Utility.swift in Sources */,
+				3C5FA6551EFDEB7E00955DBC /* DispatchQueue+Utility.swift in Sources */,
 				3CC963FC1EE877350017C90D /* Errors.swift in Sources */,
 				3C4EC6391B697237003CFD06 /* System.swift in Sources */,
 				3CF646471C0741EE00BDDBC3 /* Array+Utility.swift in Sources */,
@@ -537,7 +534,6 @@
 				3C5FA6531EFDE67100955DBC /* AVURLAsset+Utility.swift in Sources */,
 				3CF646531C074EC700BDDBC3 /* RangeReplaceableCollectionType+Utility.swift in Sources */,
 				3CF646351C072A5D00BDDBC3 /* UICollectionViewFlowLayout+Utility.swift in Sources */,
-				3C4EC6221B695AAD003CFD06 /* Dispatch.swift in Sources */,
 				3C5FA6521EFDE67100955DBC /* AVFoundation+Utility.swift in Sources */,
 				3CF646281C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift in Sources */,
 				3C4EC6421B697AFC003CFD06 /* NSNotification+Utility.swift in Sources */,

@@ -22,6 +22,6 @@ extension Date
     }
 }
 
-func - (left: Date, right: Date) -> TimeInterval {
+public func - (left: Date, right: Date) -> TimeInterval {
     return left.timeIntervalSince1970 - right.timeIntervalSince1970
 }
