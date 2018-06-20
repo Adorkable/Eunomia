@@ -15,7 +15,7 @@ class String_UtilityTests: XCTestCase {
     func testLength() {
         let test = "ASLKDFJLAKSJDFasdlfkjals;dkfjoaije"
         
-        XCTAssertEqual(test.length, test.characters.count)
+        XCTAssertEqual(test.length, test.count)
     }
     
     func testAppend() {

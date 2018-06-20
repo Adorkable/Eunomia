@@ -19,7 +19,7 @@ class NSCharacterSet_UtilityTests: XCTestCase {
         let characters = "misconjugatedly"
         let set = CharacterSet(charactersIn: characters)
         
-        let charactersSortedArray = characters.characters.sorted()
+        let charactersSortedArray = characters.sorted()
         let charactersSorted = String(charactersSortedArray)
         
         XCTAssertEqual(set.charactersInSetAscending, charactersSorted, "Returned characters in set \"\(set.charactersInSetAscending)\" are not equal to expected characters in set \"\(charactersSorted)\"")

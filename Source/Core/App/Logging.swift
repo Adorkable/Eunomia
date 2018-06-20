@@ -116,11 +116,11 @@ extension DDLog {
             
             result += DDLog.logFlagAsString(logFlag: logMessage.flag)
             
-            if logMessage.threadName.characters.count > 0
+            if logMessage.threadName.count > 0
             {
                 result += " | thrd:\(logMessage.threadName)"
             }
-            if logMessage.queueLabel.characters.count > 0
+            if logMessage.queueLabel.count > 0
             {
                 result += " | gcd:\(logMessage.queueLabel)"
             }
@@ -128,16 +128,16 @@ extension DDLog {
             result += ": \(logMessage.message)"
             
             var fileFunction = String()
-            if logMessage.file.characters.count > 0
+            if logMessage.file.count > 0
             {
                 fileFunction += "\((logMessage.file as NSString).lastPathComponent):\(logMessage.line):"
             }
             if let function = logMessage.function,
-                function.characters.count > 0
+                function.count > 0
             {
                 fileFunction += "\(String(describing: function))"
             }
-            if fileFunction.characters.count > 0
+            if fileFunction.count > 0
             {
                 result += " | {\(fileFunction)}"
             }

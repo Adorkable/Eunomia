@@ -11,7 +11,7 @@ import Foundation
 public extension String
 {
     public var length : Int {
-        return self.characters.count
+        return self.count
     }
     
     // TODO: deprecate in favor of joinWithSeparator
@@ -29,7 +29,7 @@ public extension String
     }
     
     subscript (index : Int) -> Character {
-        return self[ self.characters.index(self.startIndex, offsetBy: index) ]
+        return self[ self.index(self.startIndex, offsetBy: index) ]
     }
     
     subscript (index: Int) -> String {
@@ -37,21 +37,21 @@ public extension String
     }
     
     subscript (range : Range<Int>) -> String {
-        let indexRange = self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<characters.index(startIndex, offsetBy: range.upperBound)
-        return substring(with: indexRange)
+        let indexRange = self.index(self.startIndex, offsetBy: range.lowerBound)..<self.index(startIndex, offsetBy: range.upperBound)
+        return self.substring(with: indexRange)
     }
 
     // From https://stackoverflow.com/a/39612638
     subscript (range: CountableClosedRange<Int>) -> String {
         let startIndex =  self.index(self.startIndex, offsetBy: range.lowerBound)
         let endIndex = self.index(startIndex, offsetBy: range.upperBound - range.lowerBound)
-        return self[startIndex...endIndex]
+        return String(self[startIndex...endIndex])
     }
 
     subscript (range: CountableRange<Int>) -> String {
         let startIndex =  self.index(self.startIndex, offsetBy: range.lowerBound)
         let endIndex = self.index(startIndex, offsetBy: range.upperBound - range.lowerBound)
-        return self[startIndex..<endIndex]
+        return String(self[startIndex..<endIndex])
     }
 }
 
@@ -105,11 +105,11 @@ extension String {
         let decimalRange = (previousStep as NSString).range(of: ".")
         if decimalRange.isValid() {
             
-            if decimalRange.location == previousStep.characters.count - 1 {
+            if decimalRange.location == previousStep.count - 1 {
                 
                 previousStep = previousStep.replacingOccurrences(of: ".", with: "")
             } else {
-                if previousStep.characters.count - decimalRange.location < 2 {
+                if previousStep.count - decimalRange.location < 2 {
                     previousStep = previousStep + "0"
                 }
             }

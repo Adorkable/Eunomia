@@ -17,11 +17,9 @@ extension NSAttributedString {
             throw NSError(description: "Failed to create \(type(of: self))", underlyingError: NSError(description: "Unable to translate htmlString into NSData"))
         }
         
-        let options : [String : AnyObject] = [
-            NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType as AnyObject,
-            NSCharacterEncodingDocumentAttribute : String.Encoding.utf8 as AnyObject
-        ]
-        
-        try self.init(data: data as Data, options: options, documentAttributes: nil)
+        try self.init(data: data as Data, options: [
+            .documentType : NSAttributedString.DocumentType.html as AnyObject,
+            .characterEncoding : String.Encoding.utf8 as AnyObject
+            ], documentAttributes: nil)
     }
 }

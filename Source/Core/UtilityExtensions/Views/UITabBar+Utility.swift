@@ -36,7 +36,7 @@ extension UITabBar {
         }
         
         if result != nil {
-            result?.sort { $0.0.frame.origin.x < $0.1.frame.origin.x }
+            result?.sort { $0.frame.origin.x < $1.frame.origin.x }
         }
         
         return result

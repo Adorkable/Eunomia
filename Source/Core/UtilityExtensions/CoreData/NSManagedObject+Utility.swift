@@ -15,8 +15,8 @@ extension NSManagedObject {
     
     public class var entityName : String { // Assumes we've named our CoreData object the same as the Class object
         
-        let fullClassName: String = NSStringFromClass(object_getClass(self))
-        let classNameComponents: [String] = fullClassName.characters.split { $0 == "." }.map { String($0) }
+        let fullClassName: String = NSStringFromClass(object_getClass(self)!)
+        let classNameComponents: [String] = fullClassName.split { $0 == "." }.map { String($0) }
         return classNameComponents.last!
     }
     

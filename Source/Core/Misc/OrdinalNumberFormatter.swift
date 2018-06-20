@@ -39,14 +39,14 @@ open class OrdinalNumberFormatter: NumberFormatter {
 
         if let stringRepresentation = (obj! as AnyObject).stringValue
         {
-            if stringRepresentation.characters.count > 0
+            if stringRepresentation.count > 0
             {
                 var ordinal : String?
                 
                 if stringRepresentation == "11" || stringRepresentation == "12" || stringRepresentation == "13"
                 {
                     ordinal = "th"
-                } else if let lastDigit = stringRepresentation.characters.last
+                } else if let lastDigit = stringRepresentation.last
                 {
                     ordinal = OrdinalNumberFormatter.ordinalSuffixForLastDigit(lastDigit)
                 }
