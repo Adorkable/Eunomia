@@ -9,7 +9,6 @@
 import Foundation
 
 extension NSAttributedString {
-    
     // http://stackoverflow.com/a/21901056/96153
     convenience init(htmlString: String) throws {
 
@@ -21,5 +20,22 @@ extension NSAttributedString {
             .documentType : NSAttributedString.DocumentType.html as AnyObject,
             .characterEncoding : String.Encoding.utf8 as AnyObject
             ], documentAttributes: nil)
+    }
+}
+
+extension NSAttributedString {
+    // https://stackoverflow.com/a/30450559
+    func height(withConstrainedWidth width: CGFloat) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, context: nil)
+        
+        return ceil(boundingBox.height)
+    }
+    
+    func width(withConstrainedHeight height: CGFloat) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, context: nil)
+        
+        return ceil(boundingBox.width)
     }
 }

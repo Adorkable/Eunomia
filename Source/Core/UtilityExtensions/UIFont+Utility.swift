@@ -76,3 +76,20 @@ extension UIFont {
         return self.fontWithTrait(.traitLooseLeading)
     }
 }
+
+extension UIFont {
+    // https://stackoverflow.com/a/30450559
+    func width(withConstrainedHeight height: CGFloat, string: String) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = string.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: self], context: nil)
+        
+        return ceil(boundingBox.width)
+    }
+    
+    func height(withConstrainedWidth width: CGFloat, string: String) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = string.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: self], context: nil)
+        
+        return ceil(boundingBox.height)
+    }
+}
