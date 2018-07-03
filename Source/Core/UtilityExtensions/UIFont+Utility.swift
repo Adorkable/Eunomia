@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIFont {
-    class func supportedFonts() -> [String : [String]]? {
+    public class func supportedFonts() -> [String : [String]]? {
         var result : [String : [String]]?
     
         for familyName in UIFont.familyNames {
@@ -31,62 +31,62 @@ extension UIFont {
         return result
     }
     
-    func fontWithTrait(_ trait : UIFontDescriptorSymbolicTraits) -> UIFont {
+    public func fontWithTrait(_ trait : UIFontDescriptorSymbolicTraits) -> UIFont {
         let fontDescriptor = self.fontDescriptor.withSymbolicTraits(trait)
         return UIFont(descriptor: fontDescriptor!, size: self.pointSize)
     }
     
-    func regularFont() -> UIFont? {
+    public func regularFont() -> UIFont? {
         return UIFont(name: self.fontName, size: self.pointSize)
     }
     
-    func italicFont() -> UIFont {
+    public func italicFont() -> UIFont {
         return self.fontWithTrait(.traitItalic)
     }
     
-    func boldFont() -> UIFont {
+    public func boldFont() -> UIFont {
         return self.fontWithTrait(.traitBold)
     }
     
-    func expandedFont() -> UIFont {
+    public func expandedFont() -> UIFont {
         return self.fontWithTrait(.traitExpanded)
     }
     
-    func condensedFont() -> UIFont {
+    public func condensedFont() -> UIFont {
         return self.fontWithTrait(.traitCondensed)
     }
     
-    func monospaceFont() -> UIFont {
+    public func monospaceFont() -> UIFont {
         return self.fontWithTrait(.traitMonoSpace)
     }
     
-    func verticalFont() -> UIFont {
+    public func verticalFont() -> UIFont {
         return self.fontWithTrait(.traitVertical)
     }
     
-    func uiOptimizedFont() -> UIFont {
+    public func uiOptimizedFont() -> UIFont {
         return self.fontWithTrait(.traitUIOptimized)
     }
     
-    func tightLeadingFont() -> UIFont {
+    public func tightLeadingFont() -> UIFont {
         return self.fontWithTrait(.traitTightLeading)
     }
     
-    func looseLeadingFont() -> UIFont {
+    public func looseLeadingFont() -> UIFont {
         return self.fontWithTrait(.traitLooseLeading)
     }
 }
 
 extension UIFont {
     // https://stackoverflow.com/a/30450559
-    func width(withConstrainedHeight height: CGFloat, string: String) -> CGFloat {
+    public func width(withConstrainedHeight height: CGFloat, string: String) -> CGFloat {
         let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
         let boundingBox = string.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: self], context: nil)
         
         return ceil(boundingBox.width)
     }
     
-    func height(withConstrainedWidth width: CGFloat, string: String) -> CGFloat {
+    public func height(withConstrainedWidth width: CGFloat, string: String) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = string.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: self], context: nil)
         
