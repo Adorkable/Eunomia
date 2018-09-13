@@ -84,7 +84,7 @@ extension UIColor {
 }
 
 extension UIColor {
-    static func createFrom(named: String, fallback: UIColor) -> UIColor {
+    public static func createFrom(named: String, fallback: UIColor) -> UIColor {
         guard #available(iOS 11.0, *) else {
             return fallback
         }
@@ -97,7 +97,7 @@ extension UIColor {
 
 // Based on: https://stackoverflow.com/questions/24263007/how-to-use-hex-colour-values
 extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
+    public convenience init(red: Int, green: Int, blue: Int) {
         self.init(
             red: red,
             green: green,
@@ -106,7 +106,7 @@ extension UIColor {
     }
     
     // Support alpha
-    convenience init(rgb: Int) {
+    public convenience init(rgb: Int) {
         self.init(
             red: (rgb >> 16) & 0xFF,
             green: (rgb >> 8) & 0xFF,
@@ -114,7 +114,7 @@ extension UIColor {
         )
     }
     
-    convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0) {
+    public convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0) {
         //        assert(red >= 0 && red <= 255, "Invalid red component")
         //        assert(green >= 0 && green <= 255, "Invalid green component")
         //        assert(blue >= 0 && blue <= 255, "Invalid blue component")
@@ -127,9 +127,9 @@ extension UIColor {
         )
     }
     
-    class InvalidFormatError: Error {
+    public class InvalidFormatError: Error {
     }
-    convenience init(hex: String) throws {
+    public convenience init(hex: String) throws {
         var string: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if string.hasPrefix("#") {

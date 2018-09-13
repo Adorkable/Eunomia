@@ -121,14 +121,14 @@ extension String {
 
 // Based on: https://useyourloaf.com/blog/swift-hashable/
 extension String {
-    var djb2hash: Int {
+    public var djb2hash: Int {
         let unicodeScalars = self.unicodeScalars.map { $0.value }
         return unicodeScalars.reduce(5381) {
             ($0 << 5) &+ $0 &+ Int($1)
         }
     }
     
-    var sdbmhash: Int {
+    public var sdbmhash: Int {
         let unicodeScalars = self.unicodeScalars.map { $0.value }
         return unicodeScalars.reduce(0) {
             Int($1) &+ ($0 << 6) &+ ($0 << 16) - $0

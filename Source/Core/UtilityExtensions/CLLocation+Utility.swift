@@ -14,7 +14,7 @@ extension CLLocation {
         self.init(latitude: CLLocationDegrees(from: latitude), longitude: CLLocationDegrees(from: longitude))
     }
     
-    func closest(from: [CLLocation]) -> CLLocation? {
+    public func closest(from: [CLLocation]) -> CLLocation? {
         var result: CLLocation? = nil
         var closestDistance: CLLocationDistance = CLLocationDistance.infinity
         

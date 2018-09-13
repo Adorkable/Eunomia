@@ -10,22 +10,22 @@ import Foundation
 import CoreLocation
 
 extension CLLocationCoordinate2D {
-    init(from: (Measurement<UnitAngle>, Measurement<UnitAngle>)) {
+    public init(from: (Measurement<UnitAngle>, Measurement<UnitAngle>)) {
         self.init(latitude: CLLocationDegrees(from: from.0), longitude: CLLocationDegrees(from: from.1))
     }
     
-    init(fromRadians from: (Double, Double)) {
+    public init(fromRadians from: (Double, Double)) {
         self.init(latitude: CLLocationDegrees(fromRadians: from.0), longitude: CLLocationDegrees(fromRadians: from.1))
     }
     
-    var asMeasurement: (Measurement<UnitAngle>, Measurement<UnitAngle>) {
+    public var asMeasurement: (Measurement<UnitAngle>, Measurement<UnitAngle>) {
         return (
             self.latitude.inRadians,
             self.longitude.inRadians
         )
     }
     
-    var inRadians: (Double, Double) {
+    public var inRadians: (Double, Double) {
         let asMeasurement = self.asMeasurement
         return (
              asMeasurement.0.value,
