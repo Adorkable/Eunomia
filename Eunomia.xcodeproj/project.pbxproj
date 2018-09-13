@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		3C4C32AE1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */; };
 		3C4C32BB1C0DF50100FF039E /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */; };
+		3C4DE61F214A147000985BBB /* Measurement+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE61E214A147000985BBB /* Measurement+Utility.swift */; };
+		3C4DE621214A160B00985BBB /* MeasurementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE620214A160B00985BBB /* MeasurementTest.swift */; };
+		3C4DE623214A167300985BBB /* CLLocationCoordinate2D+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE622214A167200985BBB /* CLLocationCoordinate2D+Utility.swift */; };
+		3C4DE627214A181E00985BBB /* CLLocationDegrees+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE626214A181E00985BBB /* CLLocationDegrees+Utility.swift */; };
+		3C4DE629214A18BF00985BBB /* CLLocation+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE628214A18BF00985BBB /* CLLocation+Utility.swift */; };
+		3C4DE62B214A191100985BBB /* ClosedRange+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE62A214A191100985BBB /* ClosedRange+Utility.swift */; };
 		3C4EC6251B696E33003CFD06 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6241B696E33003CFD06 /* Random.swift */; };
 		3C4EC6301B696F0E003CFD06 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C52C0D51B6203900014B938 /* Eunomia.framework */; };
 		3C4EC6371B696F58003CFD06 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6361B696F58003CFD06 /* RandomTests.swift */; };
@@ -33,6 +39,7 @@
 		3CA1C8361BF59C94006ED56C /* SuccessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8351BF59C94006ED56C /* SuccessResult.swift */; };
 		3CA1C8381BF59CD1006ED56C /* OrdinalNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */; };
 		3CA1C83A1BF5A19E006ED56C /* UIFont+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8391BF5A19E006ED56C /* UIFont+Utility.swift */; };
+		3CACA77F20DAF994005E0086 /* UIStackView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CACA77E20DAF994005E0086 /* UIStackView+Utility.swift */; };
 		3CB2C75A1C2B144500BBC529 /* UIBarItem+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7571C2B144500BBC529 /* UIBarItem+Utility.swift */; };
 		3CB2C75B1C2B144500BBC529 /* UIScrollView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */; };
 		3CB2C75C1C2B144500BBC529 /* UITextView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */; };
@@ -92,6 +99,12 @@
 /* Begin PBXFileReference section */
 		3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Utility.swift"; sourceTree = "<group>"; };
 		3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
+		3C4DE61E214A147000985BBB /* Measurement+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measurement+Utility.swift"; sourceTree = "<group>"; };
+		3C4DE620214A160B00985BBB /* MeasurementTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementTest.swift; sourceTree = "<group>"; };
+		3C4DE622214A167200985BBB /* CLLocationCoordinate2D+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Utility.swift"; sourceTree = "<group>"; };
+		3C4DE626214A181E00985BBB /* CLLocationDegrees+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationDegrees+Utility.swift"; sourceTree = "<group>"; };
+		3C4DE628214A18BF00985BBB /* CLLocation+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Utility.swift"; sourceTree = "<group>"; };
+		3C4DE62A214A191100985BBB /* ClosedRange+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Utility.swift"; sourceTree = "<group>"; };
 		3C4EC6241B696E33003CFD06 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		3C4EC62A1B696F0E003CFD06 /* Eunomia Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eunomia Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4EC62D1B696F0E003CFD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +134,7 @@
 		3CA1C8351BF59C94006ED56C /* SuccessResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessResult.swift; sourceTree = "<group>"; };
 		3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdinalNumberFormatter.swift; sourceTree = "<group>"; };
 		3CA1C8391BF5A19E006ED56C /* UIFont+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Utility.swift"; sourceTree = "<group>"; };
+		3CACA77E20DAF994005E0086 /* UIStackView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7571C2B144500BBC529 /* UIBarItem+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarItem+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Utility.swift"; sourceTree = "<group>"; };
@@ -193,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				3C4EC62C1B696F0E003CFD06 /* Supporting Files */,
+				3C4DE620214A160B00985BBB /* MeasurementTest.swift */,
 				3C4EC6361B696F58003CFD06 /* RandomTests.swift */,
 				3C4EC63A1B69735F003CFD06 /* SystemTests.swift */,
 				3CF646421C07393A00BDDBC3 /* NSCharacterSet+UtilityTests.swift */,
@@ -260,25 +275,30 @@
 		3C52C0F81B6204910014B938 /* UtilityExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				3C4EC63F1B69793A003CFD06 /* NSObject+Utility.swift */,
-				3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */,
-				3C52C1381B62068B0014B938 /* UIApplication+Utility.swift */,
+				3CF646461C0741EE00BDDBC3 /* Array+Utility.swift */,
+				3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */,
+				3C4DE628214A18BF00985BBB /* CLLocation+Utility.swift */,
+				3C4DE626214A181E00985BBB /* CLLocationDegrees+Utility.swift */,
+				3C4DE622214A167200985BBB /* CLLocationCoordinate2D+Utility.swift */,
+				3C4DE62A214A191100985BBB /* ClosedRange+Utility.swift */,
+				3C5FA64B1EFDE52900955DBC /* Date+Utility.swift */,
+				3CF646481C07425200BDDBC3 /* Dictionary+Utility.swift */,
 				3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */,
+				3CF646561C07529900BDDBC3 /* JSContext+Utility.swift */,
+				3C4DE61E214A147000985BBB /* Measurement+Utility.swift */,
 				3CF6463C1C072AD000BDDBC3 /* NSError+Utility.swift */,
-				3C52C0FA1B6204910014B938 /* String+Utility.swift */,
 				3CF6463E1C07327F00BDDBC3 /* NSAttributedString+Utility.swift */,
 				3CF646401C0734FA00BDDBC3 /* NSCharacterSet+Utility.swift */,
-				3CA1C8391BF5A19E006ED56C /* UIFont+Utility.swift */,
-				3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */,
-				3C5FA64B1EFDE52900955DBC /* Date+Utility.swift */,
+				3C4EC63F1B69793A003CFD06 /* NSObject+Utility.swift */,
 				3C4EC6411B697AFC003CFD06 /* NSNotification+Utility.swift */,
-				3CF646461C0741EE00BDDBC3 /* Array+Utility.swift */,
-				3CF646481C07425200BDDBC3 /* Dictionary+Utility.swift */,
 				3CF646541C07510A00BDDBC3 /* NSRange+Utility.swift */,
-				3CF646521C074EC700BDDBC3 /* RangeReplaceableCollectionType+Utility.swift */,
 				3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */,
-				3CF646561C07529900BDDBC3 /* JSContext+Utility.swift */,
+				3CF646521C074EC700BDDBC3 /* RangeReplaceableCollectionType+Utility.swift */,
+				3C52C0FA1B6204910014B938 /* String+Utility.swift */,
+				3C52C1381B62068B0014B938 /* UIApplication+Utility.swift */,
 				3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */,
+				3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */,
+				3CA1C8391BF5A19E006ED56C /* UIFont+Utility.swift */,
 				3C5FA64F1EFDE66400955DBC /* AV */,
 				3CF646241C0729E100BDDBC3 /* CoreData */,
 				3CF6462B1C072A5D00BDDBC3 /* Views */,
@@ -353,6 +373,7 @@
 				3CF646581C0755A000BDDBC3 /* UIWebView+Utility.swift */,
 				3C5FA64D1EFDE57900955DBC /* UIProgressView+Utility.swift */,
 				3C5FA6541EFDEB7E00955DBC /* DispatchQueue+Utility.swift */,
+				3CACA77E20DAF994005E0086 /* UIStackView+Utility.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -489,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4DE621214A160B00985BBB /* MeasurementTest.swift in Sources */,
 				3CF646451C073C6E00BDDBC3 /* String+UtilityTests.swift in Sources */,
 				3C4EC63C1B697381003CFD06 /* SystemTests.swift in Sources */,
 				3CF646431C07393A00BDDBC3 /* NSCharacterSet+UtilityTests.swift in Sources */,
@@ -509,6 +531,7 @@
 				3CF6462A1C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift in Sources */,
 				3C52C1391B62068B0014B938 /* UIApplication+Utility.swift in Sources */,
 				3CF646491C07425200BDDBC3 /* Dictionary+Utility.swift in Sources */,
+				3C4DE627214A181E00985BBB /* CLLocationDegrees+Utility.swift in Sources */,
 				3CF6463F1C07327F00BDDBC3 /* NSAttributedString+Utility.swift in Sources */,
 				3CF646551C07510A00BDDBC3 /* NSRange+Utility.swift in Sources */,
 				3C5FA64C1EFDE52900955DBC /* Date+Utility.swift in Sources */,
@@ -525,13 +548,18 @@
 				3C5FA64E1EFDE57900955DBC /* UIProgressView+Utility.swift in Sources */,
 				3C4C32BB1C0DF50100FF039E /* UIColor+Utility.swift in Sources */,
 				3CA1C8281BF59A10006ED56C /* GCD+Utility.swift in Sources */,
+				3C4DE62B214A191100985BBB /* ClosedRange+Utility.swift in Sources */,
 				3CF646591C0755A000BDDBC3 /* UIWebView+Utility.swift in Sources */,
 				3CF646381C072A5D00BDDBC3 /* UITableView+Utility.swift in Sources */,
+				3CACA77F20DAF994005E0086 /* UIStackView+Utility.swift in Sources */,
 				3CF6463B1C072A5D00BDDBC3 /* UIViewController+Utility.swift in Sources */,
+				3C4DE629214A18BF00985BBB /* CLLocation+Utility.swift in Sources */,
 				3CF646371C072A5D00BDDBC3 /* UITabBarController+Utility.swift in Sources */,
 				3CF646411C0734FA00BDDBC3 /* NSCharacterSet+Utility.swift in Sources */,
+				3C4DE623214A167300985BBB /* CLLocationCoordinate2D+Utility.swift in Sources */,
 				3CA1C83A1BF5A19E006ED56C /* UIFont+Utility.swift in Sources */,
 				3C5FA6531EFDE67100955DBC /* AVURLAsset+Utility.swift in Sources */,
+				3C4DE61F214A147000985BBB /* Measurement+Utility.swift in Sources */,
 				3CF646531C074EC700BDDBC3 /* RangeReplaceableCollectionType+Utility.swift in Sources */,
 				3CF646351C072A5D00BDDBC3 /* UICollectionViewFlowLayout+Utility.swift in Sources */,
 				3C5FA6521EFDE67100955DBC /* AVFoundation+Utility.swift in Sources */,
@@ -578,7 +606,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -595,7 +622,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -648,7 +674,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -700,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -729,7 +755,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Eunomia;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -752,7 +777,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Eunomia;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

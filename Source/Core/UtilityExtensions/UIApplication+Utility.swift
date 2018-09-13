@@ -68,25 +68,25 @@ extension UIApplication
 extension UIApplication {
     
     public func mailTo(_ emailAddress : String,
-        subject : String,
-        body : String? = nil) throws {
+                       subject : String,
+                       body : String? = nil) throws {
             
-            var parameters = [
-                "mailto:\(emailAddress)",
-                "subject=\(subject)"
-            ]
-            if let body = body {
-                parameters.append("body=\(body)")
-            }
-            
-            guard let path = (parameters as NSArray).componentsJoined(by: "&").addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
-                throw NSError(description: "Unable to create path String with parameters \(parameters)")
-            }
-            
-            guard let url = URL(string: path) else {
-                throw NSError(description: "Unable to create NSURL with path \(path)")
-            }
-            
-            self.openURL(url)
+        var parameters = [
+            "mailto:\(emailAddress)",
+            "subject=\(subject)"
+        ]
+        if let body = body {
+            parameters.append("body=\(body)")
+        }
+        
+        guard let path = (parameters as NSArray).componentsJoined(by: "&").addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
+            throw NSError(description: "Unable to create path String with parameters \(parameters)")
+        }
+        
+        guard let url = URL(string: path) else {
+            throw NSError(description: "Unable to create NSURL with path \(path)")
+        }
+        
+        self.open(url, options: [:], completionHandler: nil)
     }
 }
