@@ -47,6 +47,8 @@
 		3CC964011EE87F4E0017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
 		3CC964161EE890040017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
 		3CC964191EE8906F0017C90D /* Eunomia.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C52C0D51B6203900014B938 /* Eunomia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3CDB3BF82150B9B80073A0D5 /* KeyedEncodingContainer+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB3BF62150B9B80073A0D5 /* KeyedEncodingContainer+Utility.swift */; };
+		3CDB3BF92150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB3BF72150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift */; };
 		3CF646281C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646251C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift */; };
 		3CF646291C0729E100BDDBC3 /* NSManagedObject+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646261C0729E100BDDBC3 /* NSManagedObject+Utility.swift */; };
 		3CF6462A1C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646271C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift */; };
@@ -143,6 +145,8 @@
 		3CC963FB1EE877350017C90D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3CC963FF1EE87EC70017C90D /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/Mac/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
 		3CC964021EE87F7A0017C90D /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/Mac/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		3CDB3BF62150B9B80073A0D5 /* KeyedEncodingContainer+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyedEncodingContainer+Utility.swift"; sourceTree = "<group>"; };
+		3CDB3BF72150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Utility.swift"; sourceTree = "<group>"; };
 		3CF646251C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+Utility.swift"; sourceTree = "<group>"; };
 		3CF646261C0729E100BDDBC3 /* NSManagedObject+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Utility.swift"; sourceTree = "<group>"; };
 		3CF646271C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Utility.swift"; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 				3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */,
 				3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */,
 				3CA1C8391BF5A19E006ED56C /* UIFont+Utility.swift */,
+				3CDB3BF72150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift */,
+				3CDB3BF62150B9B80073A0D5 /* KeyedEncodingContainer+Utility.swift */,
 				3C5FA64F1EFDE66400955DBC /* AV */,
 				3CF646241C0729E100BDDBC3 /* CoreData */,
 				3CF6462B1C072A5D00BDDBC3 /* Views */,
@@ -522,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CDB3BF92150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift in Sources */,
 				3CA1C8261BF599FA006ED56C /* CNContactStore+Utility.swift in Sources */,
 				3C52C1071B6204910014B938 /* String+Utility.swift in Sources */,
 				3C4EC6251B696E33003CFD06 /* Random.swift in Sources */,
@@ -570,6 +577,7 @@
 				3CF6463D1C072AD000BDDBC3 /* NSError+Utility.swift in Sources */,
 				3CF646511C074C8B00BDDBC3 /* UITextField+Utility.swift in Sources */,
 				3CA1C8381BF59CD1006ED56C /* OrdinalNumberFormatter.swift in Sources */,
+				3CDB3BF82150B9B80073A0D5 /* KeyedEncodingContainer+Utility.swift in Sources */,
 				3CA1C8341BF59C70006ED56C /* Guarantee.swift in Sources */,
 				3CA1C8361BF59C94006ED56C /* SuccessResult.swift in Sources */,
 				3CB2C75C1C2B144500BBC529 /* UITextView+Utility.swift in Sources */,
@@ -675,6 +683,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -727,6 +736,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

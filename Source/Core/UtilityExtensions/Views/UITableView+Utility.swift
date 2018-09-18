@@ -60,7 +60,7 @@ extension UITableView {
         
         open class StaticRow
         {
-            open let cellPrototypeIdentifier : String
+            public let cellPrototypeIdentifier : String
             
             public init(cellPrototypeIdentifier : String) {
                 self.cellPrototypeIdentifier = cellPrototypeIdentifier

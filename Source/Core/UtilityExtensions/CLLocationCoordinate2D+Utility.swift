@@ -32,4 +32,9 @@ extension CLLocationCoordinate2D {
              asMeasurement.1.value
         )
     }
+    
+    public static func -(left: CLLocationCoordinate2D, right: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: left.latitude - right.latitude, longitude: left.longitude - right.longitude)
+    }
 }
+

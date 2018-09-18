@@ -66,19 +66,11 @@ open class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    open func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
-        
-    }
-    
     open func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
     }
     
     open func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        
-    }
-    
-    open func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         
     }
     

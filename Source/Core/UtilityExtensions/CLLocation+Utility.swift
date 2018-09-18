@@ -29,3 +29,4 @@ extension CLLocation {
         return result
     }
 }
+
