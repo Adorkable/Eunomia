@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4AD3D52156D4F70006A150 /* CLLocationDirection+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D42156D4F70006A150 /* CLLocationDirection+Utility.swift */; };
+		3C4AD3D72156D61F0006A150 /* Tangent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D62156D61F0006A150 /* Tangent.swift */; };
+		3C4AD3D92156D6400006A150 /* MPMediaItem+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D82156D6400006A150 /* MPMediaItem+Utility.swift */; };
+		3C4AD3DB2156D6650006A150 /* CLLocationSpeed+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3DA2156D6650006A150 /* CLLocationSpeed+Utility.swift */; };
 		3C4C32AE1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */; };
 		3C4C32BB1C0DF50100FF039E /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */; };
 		3C4DE61F214A147000985BBB /* Measurement+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE61E214A147000985BBB /* Measurement+Utility.swift */; };
@@ -99,6 +103,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C4AD3D42156D4F70006A150 /* CLLocationDirection+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationDirection+Utility.swift"; sourceTree = "<group>"; };
+		3C4AD3D62156D61F0006A150 /* Tangent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tangent.swift; sourceTree = "<group>"; };
+		3C4AD3D82156D6400006A150 /* MPMediaItem+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MPMediaItem+Utility.swift"; sourceTree = "<group>"; };
+		3C4AD3DA2156D6650006A150 /* CLLocationSpeed+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationSpeed+Utility.swift"; sourceTree = "<group>"; };
 		3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Utility.swift"; sourceTree = "<group>"; };
 		3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
 		3C4DE61E214A147000985BBB /* Measurement+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measurement+Utility.swift"; sourceTree = "<group>"; };
@@ -203,6 +211,7 @@
 				3CA1C8331BF59C70006ED56C /* Guarantee.swift */,
 				3CA1C8351BF59C94006ED56C /* SuccessResult.swift */,
 				3CC963FB1EE877350017C90D /* Errors.swift */,
+				3C4AD3D62156D61F0006A150 /* Tangent.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -283,13 +292,16 @@
 				3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */,
 				3C4DE628214A18BF00985BBB /* CLLocation+Utility.swift */,
 				3C4DE626214A181E00985BBB /* CLLocationDegrees+Utility.swift */,
+				3C4AD3D42156D4F70006A150 /* CLLocationDirection+Utility.swift */,
 				3C4DE622214A167200985BBB /* CLLocationCoordinate2D+Utility.swift */,
+				3C4AD3DA2156D6650006A150 /* CLLocationSpeed+Utility.swift */,
 				3C4DE62A214A191100985BBB /* ClosedRange+Utility.swift */,
 				3C5FA64B1EFDE52900955DBC /* Date+Utility.swift */,
 				3CF646481C07425200BDDBC3 /* Dictionary+Utility.swift */,
 				3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */,
 				3CF646561C07529900BDDBC3 /* JSContext+Utility.swift */,
 				3C4DE61E214A147000985BBB /* Measurement+Utility.swift */,
+				3C4AD3D82156D6400006A150 /* MPMediaItem+Utility.swift */,
 				3CF6463C1C072AD000BDDBC3 /* NSError+Utility.swift */,
 				3CF6463E1C07327F00BDDBC3 /* NSAttributedString+Utility.swift */,
 				3CF646401C0734FA00BDDBC3 /* NSCharacterSet+Utility.swift */,
@@ -528,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4AD3DB2156D6650006A150 /* CLLocationSpeed+Utility.swift in Sources */,
 				3CDB3BF92150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift in Sources */,
 				3CA1C8261BF599FA006ED56C /* CNContactStore+Utility.swift in Sources */,
 				3C52C1071B6204910014B938 /* String+Utility.swift in Sources */,
@@ -541,6 +554,7 @@
 				3C4DE627214A181E00985BBB /* CLLocationDegrees+Utility.swift in Sources */,
 				3CF6463F1C07327F00BDDBC3 /* NSAttributedString+Utility.swift in Sources */,
 				3CF646551C07510A00BDDBC3 /* NSRange+Utility.swift in Sources */,
+				3C4AD3D52156D4F70006A150 /* CLLocationDirection+Utility.swift in Sources */,
 				3C5FA64C1EFDE52900955DBC /* Date+Utility.swift in Sources */,
 				3C52C1041B6204910014B938 /* Logging.swift in Sources */,
 				3C4EC6401B69793A003CFD06 /* NSObject+Utility.swift in Sources */,
@@ -578,6 +592,8 @@
 				3CF646511C074C8B00BDDBC3 /* UITextField+Utility.swift in Sources */,
 				3CA1C8381BF59CD1006ED56C /* OrdinalNumberFormatter.swift in Sources */,
 				3CDB3BF82150B9B80073A0D5 /* KeyedEncodingContainer+Utility.swift in Sources */,
+				3C4AD3D92156D6400006A150 /* MPMediaItem+Utility.swift in Sources */,
+				3C4AD3D72156D61F0006A150 /* Tangent.swift in Sources */,
 				3CA1C8341BF59C70006ED56C /* Guarantee.swift in Sources */,
 				3CA1C8361BF59C94006ED56C /* SuccessResult.swift in Sources */,
 				3CB2C75C1C2B144500BBC529 /* UITextView+Utility.swift in Sources */,
