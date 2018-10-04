@@ -37,6 +37,7 @@ open class OrdinalNumberFormatter: NumberFormatter {
         }
         var result : String?
 
+        #if os(iOS)
         if let stringRepresentation = (obj! as AnyObject).stringValue
         {
             if stringRepresentation.count > 0
@@ -57,6 +58,26 @@ open class OrdinalNumberFormatter: NumberFormatter {
                 }
             }
         }
+        #elseif os(macOS)
+        let stringRepresentation = (obj! as! NSNumber).stringValue
+        if stringRepresentation.count > 0
+        {
+            var ordinal : String?
+            
+            if stringRepresentation == "11" || stringRepresentation == "12" || stringRepresentation == "13"
+            {
+                ordinal = "th"
+            } else if let lastDigit = stringRepresentation.last
+            {
+                ordinal = OrdinalNumberFormatter.ordinalSuffixForLastDigit(lastDigit)
+            }
+            
+            if let ordinal = ordinal
+            {
+                result = "\(stringRepresentation)\(ordinal)"
+            }
+        }
+        #endif
         
         return result
     }

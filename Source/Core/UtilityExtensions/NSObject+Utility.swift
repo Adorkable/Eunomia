@@ -67,6 +67,7 @@ extension NSObject {
     }
 }
 
+#if os(iOS)
 extension NSObject {
     
     // TODO: because of how selectors are referenced in Swift and that we can't easily add a property to our NSObject extension in Swift is this safer to keep in Objective-C?
@@ -191,3 +192,4 @@ extension NSObject {
         
     }
 }
+#endif

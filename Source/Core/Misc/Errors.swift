@@ -6,7 +6,7 @@
 //  Copyright © 2017 Adorkable. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class SharedInstanceIsNilError: Error {
     let ofType: AnyClass

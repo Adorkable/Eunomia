@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 Adorkable. All rights reserved.
 //
 
+#if os(iOS)
 #import <UIKit/UIKit.h>
+#elseif os(macOS)
+#import <Cocoa/Cocoa.h>
+#endif
 
 //! Project version number for Eunomia.
 FOUNDATION_EXPORT double EunomiaVersionNumber;

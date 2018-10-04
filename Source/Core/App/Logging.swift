@@ -27,13 +27,14 @@ extension DDLog {
             throw SharedInstanceIsNilError(ofType: DDTTYLogger.self)
         }
         
+        #if os(iOS)
         ddttyLogger.colorsEnabled = true
         ddttyLogger.setForegroundColor(UIColor(red: 0.973, green: 0.153, blue: 0.218, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.error)
         ddttyLogger.setForegroundColor(UIColor(red: 0.9337, green:0.6441, blue:0.254, alpha:1.0), backgroundColor: UIColor.white, for: DDLogFlag.warning)
         ddttyLogger.setForegroundColor(UIColor(white: 0.212, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.info)
         ddttyLogger.setForegroundColor(UIColor(red:0.391, green:0.520, blue:0.417, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.debug)
         ddttyLogger.setForegroundColor(UIColor(white: 0.675, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.verbose)
-
+        #endif
         ddttyLogger.logFormatter = EunomiaCocoaLumberjackFormatter()
         
         // addLogger is inclusive from specified level and up, ie saying withLevel: Info means Info, Warning, Error
