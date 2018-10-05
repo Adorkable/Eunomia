@@ -19,9 +19,7 @@
 		3C4DE627214A181E00985BBB /* CLLocationDegrees+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE626214A181E00985BBB /* CLLocationDegrees+Utility.swift */; };
 		3C4DE629214A18BF00985BBB /* CLLocation+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE628214A18BF00985BBB /* CLLocation+Utility.swift */; };
 		3C4DE62B214A191100985BBB /* ClosedRange+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE62A214A191100985BBB /* ClosedRange+Utility.swift */; };
-		3C4EC6251B696E33003CFD06 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6241B696E33003CFD06 /* Random.swift */; };
 		3C4EC6301B696F0E003CFD06 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C52C0D51B6203900014B938 /* Eunomia.framework */; };
-		3C4EC6371B696F58003CFD06 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6361B696F58003CFD06 /* RandomTests.swift */; };
 		3C4EC6391B697237003CFD06 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6381B697237003CFD06 /* System.swift */; };
 		3C4EC63C1B697381003CFD06 /* SystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC63A1B69735F003CFD06 /* SystemTests.swift */; };
 		3C4EC6401B69793A003CFD06 /* NSObject+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC63F1B69793A003CFD06 /* NSObject+Utility.swift */; };
@@ -59,7 +57,6 @@
 		3C5BD2ED21670FAE00AAC377 /* KeyedEncodingContainer+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB3BF62150B9B80073A0D5 /* KeyedEncodingContainer+Utility.swift */; };
 		3C5BD2EE21670FB300AAC377 /* AVFoundation+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6501EFDE67100955DBC /* AVFoundation+Utility.swift */; };
 		3C5BD2EF21670FB300AAC377 /* AVURLAsset+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6511EFDE67100955DBC /* AVURLAsset+Utility.swift */; };
-		3C5BD2F021670FBA00AAC377 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6241B696E33003CFD06 /* Random.swift */; };
 		3C5BD2F121670FBA00AAC377 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6381B697237003CFD06 /* System.swift */; };
 		3C5BD2F221670FBA00AAC377 /* OrdinalNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */; };
 		3C5BD2F321670FBA00AAC377 /* Guarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8331BF59C70006ED56C /* Guarantee.swift */; };
@@ -67,7 +64,6 @@
 		3C5BD2F521670FBA00AAC377 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC963FB1EE877350017C90D /* Errors.swift */; };
 		3C5BD2F621670FBA00AAC377 /* Tangent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D62156D61F0006A150 /* Tangent.swift */; };
 		3C5BD2F721670FC200AAC377 /* MeasurementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE620214A160B00985BBB /* MeasurementTest.swift */; };
-		3C5BD2F821670FC200AAC377 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6361B696F58003CFD06 /* RandomTests.swift */; };
 		3C5BD2F921670FC200AAC377 /* SystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC63A1B69735F003CFD06 /* SystemTests.swift */; };
 		3C5BD2FA21670FC200AAC377 /* NSCharacterSet+UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646421C07393A00BDDBC3 /* NSCharacterSet+UtilityTests.swift */; };
 		3C5BD2FB21670FC200AAC377 /* String+UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646441C073C6E00BDDBC3 /* String+UtilityTests.swift */; };
@@ -176,10 +172,8 @@
 		3C4DE626214A181E00985BBB /* CLLocationDegrees+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationDegrees+Utility.swift"; sourceTree = "<group>"; };
 		3C4DE628214A18BF00985BBB /* CLLocation+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Utility.swift"; sourceTree = "<group>"; };
 		3C4DE62A214A191100985BBB /* ClosedRange+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Utility.swift"; sourceTree = "<group>"; };
-		3C4EC6241B696E33003CFD06 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		3C4EC62A1B696F0E003CFD06 /* EunomiaTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EunomiaTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4EC62D1B696F0E003CFD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C4EC6361B696F58003CFD06 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
 		3C4EC6381B697237003CFD06 /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		3C4EC63A1B69735F003CFD06 /* SystemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemTests.swift; sourceTree = "<group>"; };
 		3C4EC63F1B69793A003CFD06 /* NSObject+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Utility.swift"; sourceTree = "<group>"; };
@@ -286,7 +280,6 @@
 		3C4EC6201B695A8D003CFD06 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				3C4EC6241B696E33003CFD06 /* Random.swift */,
 				3C4EC6381B697237003CFD06 /* System.swift */,
 				3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */,
 				3CA1C8331BF59C70006ED56C /* Guarantee.swift */,
@@ -302,7 +295,6 @@
 			children = (
 				3C4EC62C1B696F0E003CFD06 /* Supporting Files */,
 				3C4DE620214A160B00985BBB /* MeasurementTest.swift */,
-				3C4EC6361B696F58003CFD06 /* RandomTests.swift */,
 				3C4EC63A1B69735F003CFD06 /* SystemTests.swift */,
 				3CF646421C07393A00BDDBC3 /* NSCharacterSet+UtilityTests.swift */,
 				3CF646441C073C6E00BDDBC3 /* String+UtilityTests.swift */,
@@ -707,7 +699,6 @@
 				3CF646451C073C6E00BDDBC3 /* String+UtilityTests.swift in Sources */,
 				3C4EC63C1B697381003CFD06 /* SystemTests.swift in Sources */,
 				3CF646431C07393A00BDDBC3 /* NSCharacterSet+UtilityTests.swift in Sources */,
-				3C4EC6371B696F58003CFD06 /* RandomTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,7 +710,6 @@
 				3CDB3BF92150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift in Sources */,
 				3CA1C8261BF599FA006ED56C /* CNContactStore+Utility.swift in Sources */,
 				3C52C1071B6204910014B938 /* String+Utility.swift in Sources */,
-				3C4EC6251B696E33003CFD06 /* Random.swift in Sources */,
 				3CF646571C07529900BDDBC3 /* JSContext+Utility.swift in Sources */,
 				3CF646361C072A5D00BDDBC3 /* UIImageView+Utility.swift in Sources */,
 				3C4C32AE1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift in Sources */,
@@ -785,7 +775,6 @@
 				3C5BD2DA21670FAE00AAC377 /* CLLocationSpeed+Utility.swift in Sources */,
 				3C5BD2F621670FBA00AAC377 /* Tangent.swift in Sources */,
 				3C5BD2F421670FBA00AAC377 /* SuccessResult.swift in Sources */,
-				3C5BD2F021670FBA00AAC377 /* Random.swift in Sources */,
 				3C5BD2D921670FAE00AAC377 /* CLLocationCoordinate2D+Utility.swift in Sources */,
 				3C5BD2DC21670FAE00AAC377 /* Date+Utility.swift in Sources */,
 				3C5BD2F521670FBA00AAC377 /* Errors.swift in Sources */,
@@ -824,7 +813,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5BD2FA21670FC200AAC377 /* NSCharacterSet+UtilityTests.swift in Sources */,
-				3C5BD2F821670FC200AAC377 /* RandomTests.swift in Sources */,
 				3C5BD2F921670FC200AAC377 /* SystemTests.swift in Sources */,
 				3C5BD2FB21670FC200AAC377 /* String+UtilityTests.swift in Sources */,
 				3C5BD2F721670FC200AAC377 /* MeasurementTest.swift in Sources */,

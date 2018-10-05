@@ -21,7 +21,7 @@ extension Array {
         guard self.count > 0 else {
             return nil
         }
-        let index = random_range(0, high: UInt(self.count - 1))
+        let index = Int.random(in: 0...(self.count - 1))
         return self[index]
     }
 }
@@ -34,21 +34,20 @@ extension Array {
 }
 
 extension Array {
-    open class NoMatchesFoundError: Error {
-    }
-    
-    open class TooManyMatchesFoundError: Error {
+    public enum Errors: Error {
+        case noMatchesFoundError
+        case tooManyMatchesFoundError(matches: [Element])
     }
     
     public func filterOne(_ isIncluded: (Element) throws -> Bool) throws -> Element {
         let found = try self.filter(isIncluded)
         
         guard found.count < 2 else {
-            throw TooManyMatchesFoundError()
+            throw Errors.tooManyMatchesFoundError(matches: found)
         }
         
         guard let result = found.first else {
-            throw NoMatchesFoundError()
+            throw Errors.noMatchesFoundError
         }
         
         return result

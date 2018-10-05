@@ -58,8 +58,9 @@ extension String {
         
         for _ in 1...length
         {
-            let randomCharacterIndex = Int(random_UInt32()) % allowedCharacters.length
-            let randomCharacter : Character = allowedCharacters[randomCharacterIndex]
+            guard let randomCharacter : Character = allowedCharacters.randomElement() else {
+                break
+            }
             result.append(randomCharacter)
         }
         
