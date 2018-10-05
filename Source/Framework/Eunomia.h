@@ -6,9 +6,11 @@
 //  Copyright (c) 2015 Adorkable. All rights reserved.
 //
 
-#if os(iOS)
+#import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
-#elseif os(macOS)
+#elif TARGET_OS_MAC
 #import <Cocoa/Cocoa.h>
 #endif
 
