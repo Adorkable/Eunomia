@@ -90,6 +90,7 @@
 		3CBA36A5216711E7005F7C80 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963FF1EE87EC70017C90D /* CocoaLumberjackSwift.framework */; };
 		3CBA36A62167120D005F7C80 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963FF1EE87EC70017C90D /* CocoaLumberjackSwift.framework */; };
 		3CBA36A821671240005F7C80 /* Eunomia.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C5BD2BB21670D4400AAC377 /* Eunomia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3CBA36B821671B78005F7C80 /* NSColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA36B721671B78005F7C80 /* NSColor+Utility.swift */; };
 		3CC963FC1EE877350017C90D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC963FB1EE877350017C90D /* Errors.swift */; };
 		3CC964011EE87F4E0017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
 		3CC964161EE890040017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
@@ -210,6 +211,7 @@
 		3CB2C7571C2B144500BBC529 /* UIBarItem+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarItem+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Utility.swift"; sourceTree = "<group>"; };
+		3CBA36B721671B78005F7C80 /* NSColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Utility.swift"; sourceTree = "<group>"; };
 		3CC963F61EE856F60017C90D /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/iOS/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
 		3CC963FB1EE877350017C90D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				3CF6463C1C072AD000BDDBC3 /* NSError+Utility.swift */,
 				3CF6463E1C07327F00BDDBC3 /* NSAttributedString+Utility.swift */,
 				3CF646401C0734FA00BDDBC3 /* NSCharacterSet+Utility.swift */,
+				3CBA36B721671B78005F7C80 /* NSColor+Utility.swift */,
 				3C4EC63F1B69793A003CFD06 /* NSObject+Utility.swift */,
 				3C4EC6411B697AFC003CFD06 /* NSNotification+Utility.swift */,
 				3CF646541C07510A00BDDBC3 /* NSRange+Utility.swift */,
@@ -812,6 +815,7 @@
 				3C5BD2F221670FBA00AAC377 /* OrdinalNumberFormatter.swift in Sources */,
 				3C5BD2E421670FAE00AAC377 /* NSCharacterSet+Utility.swift in Sources */,
 				3C5BD2DB21670FAE00AAC377 /* ClosedRange+Utility.swift in Sources */,
+				3CBA36B821671B78005F7C80 /* NSColor+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
