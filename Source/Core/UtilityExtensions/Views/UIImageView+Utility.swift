@@ -22,17 +22,17 @@ public extension UIImageView {
             
             switch self.contentMode
             {
-            case UIViewContentMode.scaleAspectFit:
+            case UIView.ContentMode.scaleAspectFit:
                 s = CGFloat( fminf(sx, sy) )
                 result = CGSize(width: s, height: s)
                 break
                 
-            case UIViewContentMode.scaleAspectFill:
+            case UIView.ContentMode.scaleAspectFill:
                 s = CGFloat( fmaxf(sx, sy) )
                 result = CGSize(width: s, height: s)
                 break
                 
-            case UIViewContentMode.scaleToFill:
+            case UIView.ContentMode.scaleToFill:
                 result = CGSize( width: CGFloat(sx), height: CGFloat(sy) )
                 break
                 

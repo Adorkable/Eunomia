@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C4EC6291B696F0E003CFD06"
-               BuildableName = "Eunomia Tests.xctest"
-               BlueprintName = "Eunomia Tests"
+               BlueprintIdentifier = "3C52C0D41B6203900014B938"
+               BuildableName = "Eunomia.framework"
+               BlueprintName = "Eunomia-iOS"
                ReferencedContainer = "container:Eunomia.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -33,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3C4EC6291B696F0E003CFD06"
-               BuildableName = "Eunomia Tests.xctest"
-               BlueprintName = "Eunomia Tests"
+               BuildableName = "EunomiaTests-iOS.xctest"
+               BlueprintName = "EunomiaTests-iOS"
                ReferencedContainer = "container:Eunomia.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C4EC6291B696F0E003CFD06"
-            BuildableName = "Eunomia Tests.xctest"
-            BlueprintName = "Eunomia Tests"
+            BlueprintIdentifier = "3C52C0D41B6203900014B938"
+            BuildableName = "Eunomia.framework"
+            BlueprintName = "Eunomia-iOS"
             ReferencedContainer = "container:Eunomia.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C4EC6291B696F0E003CFD06"
-            BuildableName = "Eunomia Tests.xctest"
-            BlueprintName = "Eunomia Tests"
+            BlueprintIdentifier = "3C52C0D41B6203900014B938"
+            BuildableName = "Eunomia.framework"
+            BlueprintName = "Eunomia-iOS"
             ReferencedContainer = "container:Eunomia.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -79,6 +80,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3C52C0D41B6203900014B938"
+            BuildableName = "Eunomia.framework"
+            BlueprintName = "Eunomia-iOS"
+            ReferencedContainer = "container:Eunomia.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

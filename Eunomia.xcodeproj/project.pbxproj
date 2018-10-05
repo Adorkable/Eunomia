@@ -31,6 +31,46 @@
 		3C52C1071B6204910014B938 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52C0FA1B6204910014B938 /* String+Utility.swift */; };
 		3C52C10C1B6204910014B938 /* Eunomia.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C52C1001B6204910014B938 /* Eunomia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C52C1391B62068B0014B938 /* UIApplication+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52C1381B62068B0014B938 /* UIApplication+Utility.swift */; };
+		3C5BD2C421670D4400AAC377 /* Eunomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5BD2BB21670D4400AAC377 /* Eunomia.framework */; };
+		3C5BD2D221670F8B00AAC377 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52C0F61B6204910014B938 /* Logging.swift */; };
+		3C5BD2D321670F8F00AAC377 /* Eunomia.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C52C1001B6204910014B938 /* Eunomia.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C5BD2D421670FAE00AAC377 /* Array+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646461C0741EE00BDDBC3 /* Array+Utility.swift */; };
+		3C5BD2D521670FAE00AAC377 /* CNContactStore+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */; };
+		3C5BD2D621670FAE00AAC377 /* CLLocation+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE628214A18BF00985BBB /* CLLocation+Utility.swift */; };
+		3C5BD2D721670FAE00AAC377 /* CLLocationDegrees+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE626214A181E00985BBB /* CLLocationDegrees+Utility.swift */; };
+		3C5BD2D821670FAE00AAC377 /* CLLocationDirection+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D42156D4F70006A150 /* CLLocationDirection+Utility.swift */; };
+		3C5BD2D921670FAE00AAC377 /* CLLocationCoordinate2D+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE622214A167200985BBB /* CLLocationCoordinate2D+Utility.swift */; };
+		3C5BD2DA21670FAE00AAC377 /* CLLocationSpeed+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3DA2156D6650006A150 /* CLLocationSpeed+Utility.swift */; };
+		3C5BD2DB21670FAE00AAC377 /* ClosedRange+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE62A214A191100985BBB /* ClosedRange+Utility.swift */; };
+		3C5BD2DC21670FAE00AAC377 /* Date+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA64B1EFDE52900955DBC /* Date+Utility.swift */; };
+		3C5BD2DD21670FAE00AAC377 /* Dictionary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646481C07425200BDDBC3 /* Dictionary+Utility.swift */; };
+		3C5BD2DE21670FAE00AAC377 /* GCD+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */; };
+		3C5BD2DF21670FAE00AAC377 /* JSContext+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646561C07529900BDDBC3 /* JSContext+Utility.swift */; };
+		3C5BD2E021670FAE00AAC377 /* Measurement+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE61E214A147000985BBB /* Measurement+Utility.swift */; };
+		3C5BD2E221670FAE00AAC377 /* NSError+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6463C1C072AD000BDDBC3 /* NSError+Utility.swift */; };
+		3C5BD2E321670FAE00AAC377 /* NSAttributedString+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6463E1C07327F00BDDBC3 /* NSAttributedString+Utility.swift */; };
+		3C5BD2E421670FAE00AAC377 /* NSCharacterSet+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646401C0734FA00BDDBC3 /* NSCharacterSet+Utility.swift */; };
+		3C5BD2E521670FAE00AAC377 /* NSObject+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC63F1B69793A003CFD06 /* NSObject+Utility.swift */; };
+		3C5BD2E621670FAE00AAC377 /* NSNotification+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6411B697AFC003CFD06 /* NSNotification+Utility.swift */; };
+		3C5BD2E721670FAE00AAC377 /* NSRange+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646541C07510A00BDDBC3 /* NSRange+Utility.swift */; };
+		3C5BD2E921670FAE00AAC377 /* RangeReplaceableCollectionType+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646521C074EC700BDDBC3 /* RangeReplaceableCollectionType+Utility.swift */; };
+		3C5BD2EA21670FAE00AAC377 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52C0FA1B6204910014B938 /* String+Utility.swift */; };
+		3C5BD2EC21670FAE00AAC377 /* KeyedDecodingContainer+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB3BF72150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift */; };
+		3C5BD2ED21670FAE00AAC377 /* KeyedEncodingContainer+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB3BF62150B9B80073A0D5 /* KeyedEncodingContainer+Utility.swift */; };
+		3C5BD2EE21670FB300AAC377 /* AVFoundation+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6501EFDE67100955DBC /* AVFoundation+Utility.swift */; };
+		3C5BD2EF21670FB300AAC377 /* AVURLAsset+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6511EFDE67100955DBC /* AVURLAsset+Utility.swift */; };
+		3C5BD2F021670FBA00AAC377 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6241B696E33003CFD06 /* Random.swift */; };
+		3C5BD2F121670FBA00AAC377 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6381B697237003CFD06 /* System.swift */; };
+		3C5BD2F221670FBA00AAC377 /* OrdinalNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */; };
+		3C5BD2F321670FBA00AAC377 /* Guarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8331BF59C70006ED56C /* Guarantee.swift */; };
+		3C5BD2F421670FBA00AAC377 /* SuccessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8351BF59C94006ED56C /* SuccessResult.swift */; };
+		3C5BD2F521670FBA00AAC377 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC963FB1EE877350017C90D /* Errors.swift */; };
+		3C5BD2F621670FBA00AAC377 /* Tangent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D62156D61F0006A150 /* Tangent.swift */; };
+		3C5BD2F721670FC200AAC377 /* MeasurementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE620214A160B00985BBB /* MeasurementTest.swift */; };
+		3C5BD2F821670FC200AAC377 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC6361B696F58003CFD06 /* RandomTests.swift */; };
+		3C5BD2F921670FC200AAC377 /* SystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC63A1B69735F003CFD06 /* SystemTests.swift */; };
+		3C5BD2FA21670FC200AAC377 /* NSCharacterSet+UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646421C07393A00BDDBC3 /* NSCharacterSet+UtilityTests.swift */; };
+		3C5BD2FB21670FC200AAC377 /* String+UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646441C073C6E00BDDBC3 /* String+UtilityTests.swift */; };
 		3C5FA64C1EFDE52900955DBC /* Date+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA64B1EFDE52900955DBC /* Date+Utility.swift */; };
 		3C5FA64E1EFDE57900955DBC /* UIProgressView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA64D1EFDE57900955DBC /* UIProgressView+Utility.swift */; };
 		3C5FA6521EFDE67100955DBC /* AVFoundation+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6501EFDE67100955DBC /* AVFoundation+Utility.swift */; };
@@ -47,6 +87,9 @@
 		3CB2C75A1C2B144500BBC529 /* UIBarItem+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7571C2B144500BBC529 /* UIBarItem+Utility.swift */; };
 		3CB2C75B1C2B144500BBC529 /* UIScrollView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */; };
 		3CB2C75C1C2B144500BBC529 /* UITextView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */; };
+		3CBA36A5216711E7005F7C80 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963FF1EE87EC70017C90D /* CocoaLumberjackSwift.framework */; };
+		3CBA36A62167120D005F7C80 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963FF1EE87EC70017C90D /* CocoaLumberjackSwift.framework */; };
+		3CBA36A821671240005F7C80 /* Eunomia.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C5BD2BB21670D4400AAC377 /* Eunomia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3CC963FC1EE877350017C90D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC963FB1EE877350017C90D /* Errors.swift */; };
 		3CC964011EE87F4E0017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
 		3CC964161EE890040017C90D /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */; };
@@ -87,9 +130,26 @@
 			remoteGlobalIDString = 3C52C0D41B6203900014B938;
 			remoteInfo = Eunomia;
 		};
+		3C5BD2C521670D4400AAC377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C52C0CC1B6203900014B938 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C5BD2BA21670D4400AAC377;
+			remoteInfo = "Eunomia-macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3CBA36A721671232005F7C80 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3CBA36A821671240005F7C80 /* Eunomia.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CC964181EE8905C0017C90D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,7 +176,7 @@
 		3C4DE628214A18BF00985BBB /* CLLocation+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Utility.swift"; sourceTree = "<group>"; };
 		3C4DE62A214A191100985BBB /* ClosedRange+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Utility.swift"; sourceTree = "<group>"; };
 		3C4EC6241B696E33003CFD06 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
-		3C4EC62A1B696F0E003CFD06 /* Eunomia Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eunomia Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C4EC62A1B696F0E003CFD06 /* EunomiaTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EunomiaTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4EC62D1B696F0E003CFD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C4EC6361B696F58003CFD06 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
 		3C4EC6381B697237003CFD06 /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
@@ -132,6 +192,8 @@
 		3C52C1001B6204910014B938 /* Eunomia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eunomia.h; sourceTree = "<group>"; };
 		3C52C1011B6204910014B938 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C52C1381B62068B0014B938 /* UIApplication+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utility.swift"; sourceTree = "<group>"; };
+		3C5BD2BB21670D4400AAC377 /* Eunomia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eunomia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5BD2C321670D4400AAC377 /* EunomiaTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EunomiaTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5FA64B1EFDE52900955DBC /* Date+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utility.swift"; sourceTree = "<group>"; };
 		3C5FA64D1EFDE57900955DBC /* UIProgressView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIProgressView+Utility.swift"; sourceTree = "<group>"; };
 		3C5FA6501EFDE67100955DBC /* AVFoundation+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVFoundation+Utility.swift"; sourceTree = "<group>"; };
@@ -199,6 +261,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C5BD2B821670D4400AAC377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CBA36A5216711E7005F7C80 /* CocoaLumberjackSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5BD2C021670D4400AAC377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CBA36A62167120D005F7C80 /* CocoaLumberjackSwift.framework in Frameworks */,
+				3C5BD2C421670D4400AAC377 /* Eunomia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -252,7 +331,9 @@
 			isa = PBXGroup;
 			children = (
 				3C52C0D51B6203900014B938 /* Eunomia.framework */,
-				3C4EC62A1B696F0E003CFD06 /* Eunomia Tests.xctest */,
+				3C4EC62A1B696F0E003CFD06 /* EunomiaTests-iOS.xctest */,
+				3C5BD2BB21670D4400AAC377 /* Eunomia.framework */,
+				3C5BD2C321670D4400AAC377 /* EunomiaTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -407,12 +488,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C5BD2B621670D4400AAC377 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5BD2D321670F8F00AAC377 /* Eunomia.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3C4EC6291B696F0E003CFD06 /* Eunomia Tests */ = {
+		3C4EC6291B696F0E003CFD06 /* EunomiaTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C4EC6331B696F0E003CFD06 /* Build configuration list for PBXNativeTarget "Eunomia Tests" */;
+			buildConfigurationList = 3C4EC6331B696F0E003CFD06 /* Build configuration list for PBXNativeTarget "EunomiaTests-iOS" */;
 			buildPhases = (
 				3C4EC6261B696F0E003CFD06 /* Sources */,
 				3C4EC6271B696F0E003CFD06 /* Frameworks */,
@@ -425,14 +514,14 @@
 			dependencies = (
 				3C4EC6321B696F0E003CFD06 /* PBXTargetDependency */,
 			);
-			name = "Eunomia Tests";
+			name = "EunomiaTests-iOS";
 			productName = "Eunomia Tests";
-			productReference = 3C4EC62A1B696F0E003CFD06 /* Eunomia Tests.xctest */;
+			productReference = 3C4EC62A1B696F0E003CFD06 /* EunomiaTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3C52C0D41B6203900014B938 /* Eunomia */ = {
+		3C52C0D41B6203900014B938 /* Eunomia-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C52C0EB1B6203900014B938 /* Build configuration list for PBXNativeTarget "Eunomia" */;
+			buildConfigurationList = 3C52C0EB1B6203900014B938 /* Build configuration list for PBXNativeTarget "Eunomia-iOS" */;
 			buildPhases = (
 				3C52C0D01B6203900014B938 /* Sources */,
 				3C52C0D11B6203900014B938 /* Frameworks */,
@@ -443,10 +532,48 @@
 			);
 			dependencies = (
 			);
-			name = Eunomia;
+			name = "Eunomia-iOS";
 			productName = Eunomia;
 			productReference = 3C52C0D51B6203900014B938 /* Eunomia.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		3C5BD2BA21670D4400AAC377 /* Eunomia-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C5BD2D021670D4400AAC377 /* Build configuration list for PBXNativeTarget "Eunomia-macOS" */;
+			buildPhases = (
+				3C5BD2B621670D4400AAC377 /* Headers */,
+				3C5BD2B721670D4400AAC377 /* Sources */,
+				3C5BD2B821670D4400AAC377 /* Frameworks */,
+				3C5BD2B921670D4400AAC377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Eunomia-macOS";
+			productName = "Eunomia-macOS";
+			productReference = 3C5BD2BB21670D4400AAC377 /* Eunomia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3C5BD2C221670D4400AAC377 /* EunomiaTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C5BD2D121670D4400AAC377 /* Build configuration list for PBXNativeTarget "EunomiaTests-macOS" */;
+			buildPhases = (
+				3C5BD2BF21670D4400AAC377 /* Sources */,
+				3C5BD2C021670D4400AAC377 /* Frameworks */,
+				3C5BD2C121670D4400AAC377 /* Resources */,
+				3CBA36A721671232005F7C80 /* CopyFiles */,
+				3CBA36A9216713B1005F7C80 /* Embed Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C5BD2C621670D4400AAC377 /* PBXTargetDependency */,
+			);
+			name = "EunomiaTests-macOS";
+			productName = "Eunomia-macOSTests";
+			productReference = 3C5BD2C321670D4400AAC377 /* EunomiaTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -454,7 +581,7 @@
 		3C52C0CC1B6203900014B938 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Adorkable;
 				TargetAttributes = {
@@ -466,6 +593,14 @@
 					3C52C0D41B6203900014B938 = {
 						CreatedOnToolsVersion = 6.4;
 						LastSwiftMigration = 0940;
+					};
+					3C5BD2BA21670D4400AAC377 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+					};
+					3C5BD2C221670D4400AAC377 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -482,8 +617,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C52C0D41B6203900014B938 /* Eunomia */,
-				3C4EC6291B696F0E003CFD06 /* Eunomia Tests */,
+				3C52C0D41B6203900014B938 /* Eunomia-iOS */,
+				3C4EC6291B696F0E003CFD06 /* EunomiaTests-iOS */,
+				3C5BD2BA21670D4400AAC377 /* Eunomia-macOS */,
+				3C5BD2C221670D4400AAC377 /* EunomiaTests-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -503,9 +640,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C5BD2B921670D4400AAC377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5BD2C121670D4400AAC377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3CBA36A9216713B1005F7C80 /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/CocoaLumberjackSwift.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CocoaLumberjackSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		3CCD87BC1EF870CC00E39BBA /* Embed Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,10 +687,11 @@
 			);
 			name = "Embed Carthage Frameworks";
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CocoaLumberjackSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -603,13 +775,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C5BD2B721670D4400AAC377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5BD2DA21670FAE00AAC377 /* CLLocationSpeed+Utility.swift in Sources */,
+				3C5BD2F621670FBA00AAC377 /* Tangent.swift in Sources */,
+				3C5BD2F421670FBA00AAC377 /* SuccessResult.swift in Sources */,
+				3C5BD2F021670FBA00AAC377 /* Random.swift in Sources */,
+				3C5BD2D921670FAE00AAC377 /* CLLocationCoordinate2D+Utility.swift in Sources */,
+				3C5BD2DC21670FAE00AAC377 /* Date+Utility.swift in Sources */,
+				3C5BD2F521670FBA00AAC377 /* Errors.swift in Sources */,
+				3C5BD2E521670FAE00AAC377 /* NSObject+Utility.swift in Sources */,
+				3C5BD2E921670FAE00AAC377 /* RangeReplaceableCollectionType+Utility.swift in Sources */,
+				3C5BD2D721670FAE00AAC377 /* CLLocationDegrees+Utility.swift in Sources */,
+				3C5BD2D521670FAE00AAC377 /* CNContactStore+Utility.swift in Sources */,
+				3C5BD2EC21670FAE00AAC377 /* KeyedDecodingContainer+Utility.swift in Sources */,
+				3C5BD2E021670FAE00AAC377 /* Measurement+Utility.swift in Sources */,
+				3C5BD2D421670FAE00AAC377 /* Array+Utility.swift in Sources */,
+				3C5BD2E321670FAE00AAC377 /* NSAttributedString+Utility.swift in Sources */,
+				3C5BD2EF21670FB300AAC377 /* AVURLAsset+Utility.swift in Sources */,
+				3C5BD2F321670FBA00AAC377 /* Guarantee.swift in Sources */,
+				3C5BD2DD21670FAE00AAC377 /* Dictionary+Utility.swift in Sources */,
+				3C5BD2E721670FAE00AAC377 /* NSRange+Utility.swift in Sources */,
+				3C5BD2D621670FAE00AAC377 /* CLLocation+Utility.swift in Sources */,
+				3C5BD2D821670FAE00AAC377 /* CLLocationDirection+Utility.swift in Sources */,
+				3C5BD2E221670FAE00AAC377 /* NSError+Utility.swift in Sources */,
+				3C5BD2F121670FBA00AAC377 /* System.swift in Sources */,
+				3C5BD2EE21670FB300AAC377 /* AVFoundation+Utility.swift in Sources */,
+				3C5BD2E621670FAE00AAC377 /* NSNotification+Utility.swift in Sources */,
+				3C5BD2DE21670FAE00AAC377 /* GCD+Utility.swift in Sources */,
+				3C5BD2D221670F8B00AAC377 /* Logging.swift in Sources */,
+				3C5BD2DF21670FAE00AAC377 /* JSContext+Utility.swift in Sources */,
+				3C5BD2ED21670FAE00AAC377 /* KeyedEncodingContainer+Utility.swift in Sources */,
+				3C5BD2EA21670FAE00AAC377 /* String+Utility.swift in Sources */,
+				3C5BD2F221670FBA00AAC377 /* OrdinalNumberFormatter.swift in Sources */,
+				3C5BD2E421670FAE00AAC377 /* NSCharacterSet+Utility.swift in Sources */,
+				3C5BD2DB21670FAE00AAC377 /* ClosedRange+Utility.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5BD2BF21670D4400AAC377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5BD2FA21670FC200AAC377 /* NSCharacterSet+UtilityTests.swift in Sources */,
+				3C5BD2F821670FC200AAC377 /* RandomTests.swift in Sources */,
+				3C5BD2F921670FC200AAC377 /* SystemTests.swift in Sources */,
+				3C5BD2FB21670FC200AAC377 /* String+UtilityTests.swift in Sources */,
+				3C5BD2F721670FC200AAC377 /* MeasurementTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		3C4EC6321B696F0E003CFD06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3C52C0D41B6203900014B938 /* Eunomia */;
+			target = 3C52C0D41B6203900014B938 /* Eunomia-iOS */;
 			targetProxy = 3C4EC6311B696F0E003CFD06 /* PBXContainerItemProxy */;
+		};
+		3C5BD2C621670D4400AAC377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C5BD2BA21670D4400AAC377 /* Eunomia-macOS */;
+			targetProxy = 3C5BD2C521670D4400AAC377 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -630,7 +859,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -646,7 +874,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -704,6 +931,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -756,6 +984,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -774,15 +1003,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Source/Framework/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adorkable.Eunomia.iOS;
 				PRODUCT_NAME = Eunomia;
 				SKIP_INSTALL = YES;
 				SWIFT_ENABLE_BATCH_MODE = NO;
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -797,22 +1024,152 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Source/Framework/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adorkable.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adorkable.Eunomia.iOS;
 				PRODUCT_NAME = Eunomia;
 				SKIP_INSTALL = YES;
 				SWIFT_ENABLE_BATCH_MODE = NO;
-				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		3C5BD2CC21670D4400AAC377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Source/Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adorkable.Eunomia.macOS;
+				PRODUCT_NAME = Eunomia;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+			};
+			name = Debug;
+		};
+		3C5BD2CD21670D4400AAC377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Source/Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adorkable.Eunomia.macOS;
+				PRODUCT_NAME = Eunomia;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+			};
+			name = Release;
+		};
+		3C5BD2CE21670D4400AAC377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adorkable.Eunomia-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		3C5BD2CF21670D4400AAC377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adorkable.Eunomia-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C4EC6331B696F0E003CFD06 /* Build configuration list for PBXNativeTarget "Eunomia Tests" */ = {
+		3C4EC6331B696F0E003CFD06 /* Build configuration list for PBXNativeTarget "EunomiaTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C4EC6341B696F0E003CFD06 /* Debug */,
@@ -830,11 +1187,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C52C0EB1B6203900014B938 /* Build configuration list for PBXNativeTarget "Eunomia" */ = {
+		3C52C0EB1B6203900014B938 /* Build configuration list for PBXNativeTarget "Eunomia-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C52C0EC1B6203900014B938 /* Debug */,
 				3C52C0ED1B6203900014B938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C5BD2D021670D4400AAC377 /* Build configuration list for PBXNativeTarget "Eunomia-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C5BD2CC21670D4400AAC377 /* Debug */,
+				3C5BD2CD21670D4400AAC377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C5BD2D121670D4400AAC377 /* Build configuration list for PBXNativeTarget "EunomiaTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C5BD2CE21670D4400AAC377 /* Debug */,
+				3C5BD2CF21670D4400AAC377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
