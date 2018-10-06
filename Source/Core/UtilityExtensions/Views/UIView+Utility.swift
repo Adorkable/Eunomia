@@ -6,13 +6,23 @@
 //  Copyright © 2015 Adorkable. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
+#elseif os(macOS)
+import Cocoa
+#endif
 
 import CocoaLumberjack
 
+#if os(iOS)
+typealias ViewType = UIView
+#elseif os(macOS)
+typealias ViewType = NSView
+#endif
+
 // MARK: - Contained within
-extension UIView {
-    
+extension ViewType {
+    #if os(iOS)
     /**
      Replace our location in the superview with another view
      
@@ -30,6 +40,7 @@ extension UIView {
             self.removeFromSuperview()
         }
     }
+    #endif
     
     /**
      Remove all subviews
@@ -42,9 +53,9 @@ extension UIView {
     }
 }
 
+#if os(iOS)
 // MARK: - Border
 extension UIView {
-
     @IBInspectable public var borderColor : UIColor? {
         get {
             if let cgColor = self.layer.borderColor {
@@ -97,7 +108,10 @@ extension UIView {
             self.layer.shadowColor = newValue?.cgColor
         }
     }
-    
+}
+
+// MARK: nib and storyboard Instances
+extension UIView {
     public class func view(_ nibName: String?, bundle: Bundle?) -> UIView {
         let viewController = UIViewController(nibName: nibName, bundle: bundle)
         return viewController.view
@@ -128,7 +142,10 @@ extension UIView {
         }
         return result
     }
+}
 
+// MARK: Subviews
+extension UIView {
     public func hasSubviewAtDepth(_ view : UIView) -> Int?
     {
         var result : Int?
@@ -204,7 +221,10 @@ extension UIView {
         
         return result
     }
+}
 
+// MARK: Superviews
+extension UIView {
     public func enumerateSelfAndSuperviews(_ apply : UIViewEnumerater)
     {
         var testView : UIView? = self
@@ -308,7 +328,10 @@ extension UIView {
         
         return result
     }
-    
+}
+
+// MARK: Sizing
+extension UIView {
     public var sizeThatFitsCurrentWidth : CGSize {
         return self.sizeThatFits(CGSize(width: self.frame.width, height: CGFloat.greatestFiniteMagnitude))
     }
@@ -325,7 +348,10 @@ extension UIView {
         self.sizeToFitCurrentWidth()
         constraint.constant = self.heightThatFitsCurrentWidth
     }
+}
 
+// MARK: Snapshot
+extension UIView {
     public func eunomia_snapshotView() -> UIImage?
     {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0);
@@ -530,3 +556,4 @@ extension UIView {
         }
     }
 }
+#endif

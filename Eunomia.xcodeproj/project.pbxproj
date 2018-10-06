@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2D481F2169165F002D22C3 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646321C072A5D00BDDBC3 /* UIView+Utility.swift */; };
 		3C4AD3D52156D4F70006A150 /* CLLocationDirection+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D42156D4F70006A150 /* CLLocationDirection+Utility.swift */; };
 		3C4AD3D72156D61F0006A150 /* Tangent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D62156D61F0006A150 /* Tangent.swift */; };
 		3C4AD3D92156D6400006A150 /* MPMediaItem+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D82156D6400006A150 /* MPMediaItem+Utility.swift */; };
@@ -785,6 +786,7 @@
 				3C5BD2EC21670FAE00AAC377 /* KeyedDecodingContainer+Utility.swift in Sources */,
 				3C5BD2E021670FAE00AAC377 /* Measurement+Utility.swift in Sources */,
 				3C5BD2D421670FAE00AAC377 /* Array+Utility.swift in Sources */,
+				3C2D481F2169165F002D22C3 /* UIView+Utility.swift in Sources */,
 				3C5BD2E321670FAE00AAC377 /* NSAttributedString+Utility.swift in Sources */,
 				3C5BD2EF21670FB300AAC377 /* AVURLAsset+Utility.swift in Sources */,
 				3C5BD2F321670FBA00AAC377 /* Guarantee.swift in Sources */,

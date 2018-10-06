@@ -11,7 +11,7 @@ import UIKit
 extension UIColor {
     
     public class func randomComponent() -> CGFloat {
-        return CGFloat(randomf())
+        return CGFloat(CGFloat.random(in: 0.0...1.0))
     }
     
     public class func randomColor(alpha : CGFloat = 1.0) -> UIColor {
