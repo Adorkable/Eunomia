@@ -284,25 +284,25 @@ extension UIView {
         return self.superview?.closestSelfOrSuperview(ofClasses)
     }
     
-    public func closestSelfOrSuperview<T : Protocol>(_ ofProtocol : Protocol) -> T?
-    {
-        var result : T?
-        
-        self.enumerateSelfAndSuperviews { (view, stop : inout Bool) -> Void in
-            if view.conforms(to: ofProtocol)
-            {
-                result = view as? T
-                stop = true
-            }
-        }
-        
-        return result
-    }
+//    public func closestSelfOrSuperview<T : Protocol>(_ ofProtocol : Protocol) -> T?
+//    {
+//        var result : T?
+//
+//        self.enumerateSelfAndSuperviews { (view, stop : inout Bool) -> Void in
+//            if view.conforms(to: ofProtocol)
+//            {
+//                result = view as? T
+//                stop = true
+//            }
+//        }
+//
+//        return result
+//    }
 
-    public func closestSuperview<T : Protocol>(_ ofProtocol : Protocol) -> T?
-    {
-        return self.superview?.closestSelfOrSuperview(ofProtocol)
-    }
+//    public func closestSuperview<T : Protocol>(_ ofProtocol : Protocol) -> T?
+//    {
+//        return self.superview?.closestSelfOrSuperview(ofProtocol)
+//    }
     
     public func closestSuperviewWhichRespondsTo(_ selector : Selector) -> UIView?
     {

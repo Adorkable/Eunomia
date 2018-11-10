@@ -89,7 +89,7 @@ extension NSColor {
             return fallback
         }
 
-        guard let named = NSColor(named: NSColor.Name(named)) else {
+        guard let named = NSColor(named: named) else {
             return fallback
         }
         return named
