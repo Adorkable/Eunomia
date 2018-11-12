@@ -6,6 +6,7 @@
 //  Copyright © 2015 Adorkable. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 import JavaScriptCore
@@ -37,3 +38,4 @@ extension UIWebView {
         self.loadHTMLString(html, baseURL: nil)
     }
 }
+#endif

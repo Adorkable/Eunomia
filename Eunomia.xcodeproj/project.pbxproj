@@ -88,6 +88,33 @@
 		3CB3560A2199CC35000AB8E4 /* CocoaLumberjackDeprecation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB356082199CC35000AB8E4 /* CocoaLumberjackDeprecation.swift */; };
 		3CB3560C2199D697000AB8E4 /* ManagedObjectsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3560B2199D696000AB8E4 /* ManagedObjectsObserver.swift */; };
 		3CB3560D2199D697000AB8E4 /* ManagedObjectsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3560B2199D696000AB8E4 /* ManagedObjectsObserver.swift */; };
+		3CB3560E2199D809000AB8E4 /* MPMediaItem+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD3D82156D6400006A150 /* MPMediaItem+Utility.swift */; };
+		3CB3560F2199D809000AB8E4 /* PHPhotoLibrary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C32AD1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift */; };
+		3CB356102199D809000AB8E4 /* UIApplication+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52C1381B62068B0014B938 /* UIApplication+Utility.swift */; };
+		3CB356112199D809000AB8E4 /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C32BA1C0DF50100FF039E /* UIColor+Utility.swift */; };
+		3CB356122199D809000AB8E4 /* UIDevice+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */; };
+		3CB356132199D809000AB8E4 /* UIFont+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8391BF5A19E006ED56C /* UIFont+Utility.swift */; };
+		3CB356142199D80A000AB8E4 /* NSColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA36B721671B78005F7C80 /* NSColor+Utility.swift */; };
+		3CB356152199D86D000AB8E4 /* UIBarItem+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7571C2B144500BBC529 /* UIBarItem+Utility.swift */; };
+		3CB356162199D86D000AB8E4 /* UIScrollView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */; };
+		3CB356172199D86D000AB8E4 /* UITextView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */; };
+		3CB356182199D86D000AB8E4 /* UIAlertController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6462C1C072A5D00BDDBC3 /* UIAlertController+Utility.swift */; };
+		3CB356192199D86D000AB8E4 /* UICollectionViewFlowLayout+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6462D1C072A5D00BDDBC3 /* UICollectionViewFlowLayout+Utility.swift */; };
+		3CB3561A2199D86D000AB8E4 /* UIImageView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6462E1C072A5D00BDDBC3 /* UIImageView+Utility.swift */; };
+		3CB3561B2199D86D000AB8E4 /* UITabBar+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6464A1C07459700BDDBC3 /* UITabBar+Utility.swift */; };
+		3CB3561C2199D86D000AB8E4 /* UITabBarController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6462F1C072A5D00BDDBC3 /* UITabBarController+Utility.swift */; };
+		3CB3561D2199D86D000AB8E4 /* UITableView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646301C072A5D00BDDBC3 /* UITableView+Utility.swift */; };
+		3CB3561E2199D86D000AB8E4 /* UITableViewCell+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646311C072A5D00BDDBC3 /* UITableViewCell+Utility.swift */; };
+		3CB3561F2199D86D000AB8E4 /* UIViewController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646331C072A5D00BDDBC3 /* UIViewController+Utility.swift */; };
+		3CB356202199D86D000AB8E4 /* UITextField+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646501C074C8B00BDDBC3 /* UITextField+Utility.swift */; };
+		3CB356212199D86D000AB8E4 /* UIWebView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646581C0755A000BDDBC3 /* UIWebView+Utility.swift */; };
+		3CB356222199D86D000AB8E4 /* UIProgressView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA64D1EFDE57900955DBC /* UIProgressView+Utility.swift */; };
+		3CB356232199D86D000AB8E4 /* DispatchQueue+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6541EFDEB7E00955DBC /* DispatchQueue+Utility.swift */; };
+		3CB356242199D86D000AB8E4 /* UIStackView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CACA77E20DAF994005E0086 /* UIStackView+Utility.swift */; };
+		3CB356252199D874000AB8E4 /* NSManagedObjectContext+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646271C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift */; };
+		3CB356262199D877000AB8E4 /* NSManagedObject+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646261C0729E100BDDBC3 /* NSManagedObject+Utility.swift */; };
+		3CB356272199D879000AB8E4 /* NSFetchedResultsController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF646251C0729E100BDDBC3 /* NSFetchedResultsController+Utility.swift */; };
+		3CB356282199D881000AB8E4 /* EunomiaAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52C0F71B6204910014B938 /* EunomiaAppDelegate.swift */; };
 		3CBA36A821671240005F7C80 /* Eunomia.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C5BD2BB21670D4400AAC377 /* Eunomia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3CBA36B821671B78005F7C80 /* NSColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA36B721671B78005F7C80 /* NSColor+Utility.swift */; };
 		3CC963FC1EE877350017C90D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC963FB1EE877350017C90D /* Errors.swift */; };
@@ -677,6 +704,7 @@
 				3CF646361C072A5D00BDDBC3 /* UIImageView+Utility.swift in Sources */,
 				3C4C32AE1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift in Sources */,
 				3CF6462A1C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift in Sources */,
+				3CB356142199D80A000AB8E4 /* NSColor+Utility.swift in Sources */,
 				3C52C1391B62068B0014B938 /* UIApplication+Utility.swift in Sources */,
 				3CF646491C07425200BDDBC3 /* Dictionary+Utility.swift in Sources */,
 				3C4DE627214A181E00985BBB /* CLLocationDegrees+Utility.swift in Sources */,
@@ -736,26 +764,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB356162199D86D000AB8E4 /* UIScrollView+Utility.swift in Sources */,
+				3CB356182199D86D000AB8E4 /* UIAlertController+Utility.swift in Sources */,
+				3CB356242199D86D000AB8E4 /* UIStackView+Utility.swift in Sources */,
+				3CB356282199D881000AB8E4 /* EunomiaAppDelegate.swift in Sources */,
+				3CB3561C2199D86D000AB8E4 /* UITabBarController+Utility.swift in Sources */,
 				3C5BD2DA21670FAE00AAC377 /* CLLocationSpeed+Utility.swift in Sources */,
 				3C5BD2F621670FBA00AAC377 /* Tangent.swift in Sources */,
+				3CB356102199D809000AB8E4 /* UIApplication+Utility.swift in Sources */,
 				3C5BD2F421670FBA00AAC377 /* SuccessResult.swift in Sources */,
 				3C5BD2D921670FAE00AAC377 /* CLLocationCoordinate2D+Utility.swift in Sources */,
+				3CB356202199D86D000AB8E4 /* UITextField+Utility.swift in Sources */,
+				3CB356192199D86D000AB8E4 /* UICollectionViewFlowLayout+Utility.swift in Sources */,
 				3C5BD2DC21670FAE00AAC377 /* Date+Utility.swift in Sources */,
+				3CB356262199D877000AB8E4 /* NSManagedObject+Utility.swift in Sources */,
+				3CB356152199D86D000AB8E4 /* UIBarItem+Utility.swift in Sources */,
 				3C5BD2F521670FBA00AAC377 /* Errors.swift in Sources */,
+				3CB3561E2199D86D000AB8E4 /* UITableViewCell+Utility.swift in Sources */,
+				3CB356232199D86D000AB8E4 /* DispatchQueue+Utility.swift in Sources */,
+				3CB356122199D809000AB8E4 /* UIDevice+Utility.swift in Sources */,
 				3C5BD2E521670FAE00AAC377 /* NSObject+Utility.swift in Sources */,
 				3C5BD2E921670FAE00AAC377 /* RangeReplaceableCollectionType+Utility.swift in Sources */,
 				3C5BD2D721670FAE00AAC377 /* CLLocationDegrees+Utility.swift in Sources */,
+				3CB356212199D86D000AB8E4 /* UIWebView+Utility.swift in Sources */,
+				3CB3561D2199D86D000AB8E4 /* UITableView+Utility.swift in Sources */,
+				3CB3561A2199D86D000AB8E4 /* UIImageView+Utility.swift in Sources */,
+				3CB3561F2199D86D000AB8E4 /* UIViewController+Utility.swift in Sources */,
+				3CB356272199D879000AB8E4 /* NSFetchedResultsController+Utility.swift in Sources */,
 				3C5BD2D521670FAE00AAC377 /* CNContactStore+Utility.swift in Sources */,
 				3C5BD2EC21670FAE00AAC377 /* KeyedDecodingContainer+Utility.swift in Sources */,
+				3CB3560E2199D809000AB8E4 /* MPMediaItem+Utility.swift in Sources */,
 				3C5BD2E021670FAE00AAC377 /* Measurement+Utility.swift in Sources */,
+				3CB356132199D809000AB8E4 /* UIFont+Utility.swift in Sources */,
 				3C5BD2D421670FAE00AAC377 /* Array+Utility.swift in Sources */,
 				3C2D481F2169165F002D22C3 /* UIView+Utility.swift in Sources */,
 				3C5BD2E321670FAE00AAC377 /* NSAttributedString+Utility.swift in Sources */,
+				3CB3561B2199D86D000AB8E4 /* UITabBar+Utility.swift in Sources */,
 				3C5BD2EF21670FB300AAC377 /* AVURLAsset+Utility.swift in Sources */,
 				3C5BD2F321670FBA00AAC377 /* Guarantee.swift in Sources */,
 				3C5BD2DD21670FAE00AAC377 /* Dictionary+Utility.swift in Sources */,
 				3C5BD2E721670FAE00AAC377 /* NSRange+Utility.swift in Sources */,
 				3C5BD2D621670FAE00AAC377 /* CLLocation+Utility.swift in Sources */,
+				3CB356222199D86D000AB8E4 /* UIProgressView+Utility.swift in Sources */,
 				3C5BD2D821670FAE00AAC377 /* CLLocationDirection+Utility.swift in Sources */,
 				3C5BD2E221670FAE00AAC377 /* NSError+Utility.swift in Sources */,
 				3C5BD2F121670FBA00AAC377 /* System.swift in Sources */,
@@ -764,14 +814,18 @@
 				3C5BD2DE21670FAE00AAC377 /* GCD+Utility.swift in Sources */,
 				3C5BD2D221670F8B00AAC377 /* Logging.swift in Sources */,
 				3C5BD2DF21670FAE00AAC377 /* JSContext+Utility.swift in Sources */,
+				3CB3560F2199D809000AB8E4 /* PHPhotoLibrary+Utility.swift in Sources */,
 				3C5BD2ED21670FAE00AAC377 /* KeyedEncodingContainer+Utility.swift in Sources */,
 				3CB3560A2199CC35000AB8E4 /* CocoaLumberjackDeprecation.swift in Sources */,
 				3C5BD2EA21670FAE00AAC377 /* String+Utility.swift in Sources */,
 				3C5BD2F221670FBA00AAC377 /* OrdinalNumberFormatter.swift in Sources */,
 				3C5BD2E421670FAE00AAC377 /* NSCharacterSet+Utility.swift in Sources */,
+				3CB356112199D809000AB8E4 /* UIColor+Utility.swift in Sources */,
 				3C5BD2DB21670FAE00AAC377 /* ClosedRange+Utility.swift in Sources */,
 				3CB3560D2199D697000AB8E4 /* ManagedObjectsObserver.swift in Sources */,
 				3CBA36B821671B78005F7C80 /* NSColor+Utility.swift in Sources */,
+				3CB356252199D874000AB8E4 /* NSManagedObjectContext+Utility.swift in Sources */,
+				3CB356172199D86D000AB8E4 /* UITextView+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@
 //  Copyright © 2018 Adorkable. All rights reserved.
 //
 
+#if os(macOS)
 import Cocoa
 
 extension NSColor {
@@ -153,3 +154,4 @@ extension NSColor {
         )
     }
 }
+#endif

@@ -10,6 +10,7 @@ import Photos
 
 extension PHPhotoLibrary {
     
+    #if os(iOS)
     public enum RetrieveFirstImageResult {
         case success(UIImage)
         case noImages
@@ -97,7 +98,7 @@ extension PHPhotoLibrary {
         }
 
     }
-    
+
     fileprivate func requestAuthorizationToRetrieveFirstImageHandler(completion completionHandler : @escaping (RetrieveFirstImageResult) -> Void) -> ( (PHAuthorizationStatus) -> Void) {
         
         return { (result) -> Void in
@@ -106,4 +107,5 @@ extension PHPhotoLibrary {
             self.retrieveFirstImage(requestAuthorizationIfNeeded: false, completion: completionHandler)
         }
     }
+    #endif
 }

@@ -6,6 +6,7 @@
 //
 //
 
+#if os(iOS)
 import UIKit
 
 extension UIBarItem {
@@ -14,3 +15,4 @@ extension UIBarItem {
         return self.value(forKey: "view") as? UIView
     }
 }
+#endif

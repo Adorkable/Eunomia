@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Eunomia. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 open class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
@@ -84,3 +85,4 @@ open class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
         
     }
 }
+#endif

@@ -6,8 +6,10 @@
 //
 //
 
+#if os(iOS)
 import UIKit
 
 extension UITextView {
 
 }
+#endif

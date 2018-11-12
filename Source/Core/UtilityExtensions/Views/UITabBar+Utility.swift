@@ -6,6 +6,7 @@
 //  Copyright © 2015 Adorkable. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 extension UITabBar {
@@ -43,3 +44,4 @@ extension UITabBar {
     }
     
 }
+#endif

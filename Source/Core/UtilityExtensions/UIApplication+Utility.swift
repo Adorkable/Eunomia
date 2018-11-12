@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Adorkable. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 extension UIApplication
@@ -88,3 +89,4 @@ extension UIApplication {
         self.open(url, options: [:], completionHandler: nil)
     }
 }
+#endif

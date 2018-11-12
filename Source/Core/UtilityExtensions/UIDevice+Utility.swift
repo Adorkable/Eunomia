@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Adorkable. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 extension UIDevice
@@ -22,3 +23,4 @@ extension UIDevice
         return self.identifierForVendor?.uuidString
     }
 }
+#endif

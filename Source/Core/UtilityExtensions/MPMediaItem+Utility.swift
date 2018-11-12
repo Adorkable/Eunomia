@@ -8,6 +8,7 @@
 
 import MediaPlayer
 
+#if os(iOS)
 extension MPMediaItem {
     public static func sortByPlaybackDuration(left: MPMediaItem, right: MPMediaItem) -> Bool {
         let comparison: ComparisonResult = self.sortByPlaybackDuration(left: left, right: right)
@@ -30,3 +31,4 @@ extension Array where Element == MPMediaItem {
         return self.sorted(by: MPMediaItem.sortByPlaybackDuration)
     }
 }
+#endif

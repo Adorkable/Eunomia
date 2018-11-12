@@ -6,6 +6,7 @@
 //  Copyright © 2015 Adorkable. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 extension UIScrollView {
@@ -51,3 +52,4 @@ extension UIScrollView {
         bar.superview?.setNeedsLayout()
     }
 }
+#endif

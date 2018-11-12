@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Adorkable. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 public extension UIImageView {
@@ -143,3 +144,4 @@ public extension UIImageView {
         return result
     }
 }
+#endif

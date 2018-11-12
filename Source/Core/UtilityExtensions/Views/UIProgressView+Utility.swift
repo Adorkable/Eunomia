@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adorkable. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 extension UIProgressView {
@@ -49,3 +50,4 @@ extension UIProgressView {
         }
     }
 }
+#endif

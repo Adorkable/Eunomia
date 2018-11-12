@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Eunomia. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 extension UIFont {
@@ -93,3 +94,4 @@ extension UIFont {
         return ceil(boundingBox.height)
     }
 }
+#endif
