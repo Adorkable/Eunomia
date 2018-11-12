@@ -8,132 +8,104 @@
 
 import Foundation
 
-enum DDLogLevel {
-    case error
-    case warning
-    case debug
-    case info
-    case verbose
+class Log {
+    enum Level: CustomStringConvertible {
+        case error
+        case warning
+        case debug
+        case info
+        case verbose
 
-    case other(String)
-}
-typealias DDLogFlag = DDLogLevel
+        var description: String {
+            let result: String
+            switch self {
+            case .error:
+                result = "E"
 
-class DDLog {
-    struct DDLogMessage {
+            case .warning:
+                result = "W"
+
+            case .info:
+                result = "I"
+
+            case .debug:
+                result = "D"
+
+            case .verbose:
+                result = "V"
+            }
+            return result
+        }
+    }
+
+    struct Message {
         let message: String
-        let level: DDLogLevel
-        let flag: DDLogFlag
+        let level: Level
         let context: Int
         let file: String
-        let function: String?
+        let function: String
         let line: UInt
 
-        let threadName: String = Thread.current.name ?? ""
-        let queueLabel: String = ""
+        let threadName: String? = Thread.current.name
     }
 
-    static var consoleLogLevel: DDLogLevel = .info
-    static let formatter = EunomiaCocoaLumberjackFormatter()
+    static var consoleLevel: Level = .info
+    static let formatter = LogFormatter()
     
-    public class func setupLogger(consoleLogLevel : DDLogLevel = DDLogLevel.info) throws {
-        self.consoleLogLevel = consoleLogLevel
+    public class func setupLogger(consoleLogLevel: Level = .info) throws {
+        self.consoleLevel = consoleLogLevel
     }
     
-    public class func log(message: String, level: DDLogLevel, flag: DDLogFlag, file: String, function: String, line: Int) {
-        let ddLogMessage = DDLogMessage(message: message, level: level, flag: flag, context: 0, file: file, function: function, line: UInt(line))
-        guard let fullLog = self.formatter.format(message: ddLogMessage) else {
-            return
-        }
+    public class func log(message: String, level: Level, file: String, function: String, line: Int) {
+        let message = Message(message: message, level: level, context: 0, file: file, function: function, line: UInt(line))
 
-        NSLog(fullLog)
+        let stringMessage = self.formatter.format(message)
+        NSLog(stringMessage)
     }
     
     public class func error(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message: message, level: DDLogLevel.error, flag: DDLogFlag.error, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: Level.error, file: fileName, function: functionName, line: line)
     }
     
     public class func warning(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message: message, level: DDLogLevel.warning, flag: DDLogFlag.warning, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: Level.warning, file: fileName, function: functionName, line: line)
     }
     
     public class func info(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message: message, level: DDLogLevel.info, flag: DDLogFlag.info, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: Level.info, file: fileName, function: functionName, line: line)
     }
     
     public class func debug(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message: message, level: DDLogLevel.debug, flag: DDLogFlag.debug, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: Level.debug, file: fileName, function: functionName, line: line)
     }
     
     public class func verbose(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
-        self.log(message: message, level: DDLogLevel.verbose, flag: DDLogFlag.verbose, file: fileName, function: functionName, line: line)
+        self.log(message: message, level: Level.verbose, file: fileName, function: functionName, line: line)
     }
     
-    public class func logFlagAsString(logFlag : DDLogFlag) -> String {
-        var result : String
-        
-        switch (logFlag)
-        {
-        case DDLogFlag.error:
-            result = "E"
-            break
-        case DDLogFlag.warning:
-            result = "W"
-            break
-        case DDLogFlag.info:
-            result = "I"
-            break
-        case DDLogFlag.debug:
-            result = "D"
-            break
-        case DDLogFlag.verbose:
-            result = "V"
-            break
-        default:
-            result = "?"
-        }
-        
-        return result
-    }
-    
-    public class EunomiaCocoaLumberjackFormatter : NSObject {
-        public /**
-         * Formatters may optionally be added to any logger.
-         * This allows for increased flexibility in the logging environment.
-         * For example, log messages for log files may be formatted differently than log messages for the console.
-         *
-         * For more information about formatters, see the "Custom Formatters" page:
-         * Documentation/CustomFormatters.md
-         *
-         * The formatter may also optionally filter the log message by returning nil,
-         * in which case the logger will not log the message.
-         **/
-        func format(message logMessage: DDLogMessage) -> String? {
+    public class LogFormatter : NSObject {
+        func format(_ message: Message) -> String {
 
             var result = String()
             
-            result += DDLog.logFlagAsString(logFlag: logMessage.flag)
+            result += message.level.description
             
-            if logMessage.threadName.count > 0
+            if let threadName = message.threadName,
+                threadName.count > 0
             {
-                result += " | thrd:\(logMessage.threadName)"
-            }
-            if logMessage.queueLabel.count > 0
-            {
-                result += " | gcd:\(logMessage.queueLabel)"
+                result += " | thrd:\(threadName)"
             }
             
-            result += ": \(logMessage.message)"
+            result += ": \(message.message)"
             
             var fileFunction = String()
-            if logMessage.file.count > 0
+            if message.file.count > 0
             {
-                fileFunction += "\((logMessage.file as NSString).lastPathComponent):\(logMessage.line):"
+                fileFunction += "\((message.file as NSString).lastPathComponent):\(message.line):"
             }
-            if let function = logMessage.function,
-                function.count > 0
+            if message.function.count > 0
             {
-                fileFunction += "\(String(describing: logMessage.function))"
+                fileFunction += "\(String(describing: message.function))"
             }
             if fileFunction.count > 0
             {

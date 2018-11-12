@@ -541,7 +541,7 @@ extension UIView {
             if let activityIndicator = self.activityIndicator {
                 activityIndicator.startAnimating()
             } else {
-                DDLog.error(message: "Unable to create Activity Indicator for view \(self)")
+                Log.error(message: "Unable to create Activity Indicator for view \(self)")
             }
             
         } else {

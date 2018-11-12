@@ -41,7 +41,7 @@ extension UITabBarController {
         
         if result == nil
         {
-            DDLog.info(message: "View controller \(match) was not found in any tab")
+            Log.info(message: "View controller \(match) was not found in any tab")
         }
         
         return result
@@ -73,7 +73,7 @@ extension UITabBarController {
         
         if result == nil
         {
-            DDLog.info(message: "No view controller class found of type \(matchClass)")
+            Log.info(message: "No view controller class found of type \(matchClass)")
         }
         
         return result

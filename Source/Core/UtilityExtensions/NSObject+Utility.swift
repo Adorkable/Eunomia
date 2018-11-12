@@ -49,7 +49,7 @@ extension NSObject {
         
         guard let valueCasted = valueUncasted as? T else {
             
-            DDLog.debug(message: "In \(self) for Key \(key) found Value \(valueUncasted), that could not be casted to Type \(T.self)")
+            Log.debug(message: "In \(self) for Key \(key) found Value \(valueUncasted), that could not be casted to Type \(T.self)")
             return nil
         }
         
@@ -109,7 +109,7 @@ extension NSObject {
             self.keyboardWillShow(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
         } else
         {
-            DDLog.error(message: "Cannot call keyboardWillShow with info values, unable to retrieve expected info value")
+            Log.error(message: "Cannot call keyboardWillShow with info values, unable to retrieve expected info value")
         }
     }
     
@@ -132,7 +132,7 @@ extension NSObject {
             self.keyboardDidShow(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
         } else
         {
-            DDLog.error(message: "Cannot call keyboardDidShow with info values, unable to retrieve expected info value")
+            Log.error(message: "Cannot call keyboardDidShow with info values, unable to retrieve expected info value")
         }
     }
     
@@ -155,7 +155,7 @@ extension NSObject {
             self.keyboardWillHide(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
         } else
         {
-            DDLog.error(message: "Cannot call keyboardWillHide with info values, unable to retrieve expected info value")
+            Log.error(message: "Cannot call keyboardWillHide with info values, unable to retrieve expected info value")
         }
     }
     
@@ -178,7 +178,7 @@ extension NSObject {
             self.keyboardDidHide(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
         } else
         {
-            DDLog.error(message: "Cannot call keyboardDidHide with info values, unable to retrieve expected info value")
+            Log.error(message: "Cannot call keyboardDidHide with info values, unable to retrieve expected info value")
         }
     }
     

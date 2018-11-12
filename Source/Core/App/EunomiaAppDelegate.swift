@@ -14,7 +14,7 @@ open class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
     open func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         do {
-            try DDLog.setupLogger(consoleLogLevel: DDLogLevel.debug)
+            try Log.setupLogger(consoleLogLevel: .debug)
         } catch {
             NSLog("Error: while settings up logging: \(error)")
         }

@@ -21,7 +21,7 @@ extension NSManagedObjectContext
             result = nil
         } catch let error as NSError {
             
-            DDLog.error(message: "\(logContext): \(error)")
+            Log.error(message: "\(logContext): \(error)")
             result = error
         }
         

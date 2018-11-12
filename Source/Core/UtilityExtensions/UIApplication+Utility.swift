@@ -13,26 +13,26 @@ extension UIApplication
     public class func dumpApplicationInformation() {
         if let applicationVersion = self.applicationVersion
         {
-            DDLog.info(message: "Application Version: \(applicationVersion)")
+            Log.info(message: "Application Version: \(applicationVersion)")
         }
         if let buildVersion = self.buildVersion
         {
-            DDLog.info(message: "Build Version: \(buildVersion)")
+            Log.info(message: "Build Version: \(buildVersion)")
         }
         
         if UIDevice.current.isSimulator
         {
-            DDLog.info(message: "Simulator build running from bundle: \(Bundle.main.bundleURL)")
+            Log.info(message: "Simulator build running from bundle: \(Bundle.main.bundleURL)")
             if let documentPath = getAppDocumentPath()
             {
-                DDLog.info(message: "Document folder: \(documentPath)")
+                Log.info(message: "Document folder: \(documentPath)")
             }
             if let appLibraryPath = getAppLibraryPath()
             {
-                DDLog.info(message: "Library folder: \(appLibraryPath)")
+                Log.info(message: "Library folder: \(appLibraryPath)")
             }
         } else {
-            DDLog.info(message: "Device build")
+            Log.info(message: "Device build")
         }
     }
     
