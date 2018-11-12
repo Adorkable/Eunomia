@@ -19,13 +19,6 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'Core'
 
   s.subspec 'Core' do |core|
-    core.dependency 'CocoaLumberjack', '~> 2.2.0'
     core.source_files = "Source/Core/**/*.{h,m,swift}"
   end
-
-#  s.subspec 'Debug' do |debug|
-#    debug.prefix_header_contents = "#define DEBUG 1"
-##    debug.compiler_flags = '-Wno-incomplete-implementation -Wno-missing-prototypes'
-#    debug.dependency 'NSLogger-CocoaLumberjack-connector'
-#  end
 end

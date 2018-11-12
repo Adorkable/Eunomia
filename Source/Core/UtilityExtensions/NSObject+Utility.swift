@@ -8,8 +8,6 @@
 
 import Foundation
 
-import CocoaLumberjack
-
 import ObjectiveC
 
 // rewrite inspired by https://github.com/tokorom/HasAssociatedObjects

@@ -8,8 +8,6 @@
 
 import UIKit
 
-import CocoaLumberjack
-
 extension UIScrollView {
     
     fileprivate var filteredScrollLastContentOffsetKey : String {

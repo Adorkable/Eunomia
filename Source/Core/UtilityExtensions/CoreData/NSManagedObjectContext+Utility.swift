@@ -10,8 +10,6 @@ import Foundation
 
 import CoreData
 
-import CocoaLumberjack
-
 extension NSManagedObjectContext
 {
     public func saveOrLogError(_ logContext : String) -> Bool

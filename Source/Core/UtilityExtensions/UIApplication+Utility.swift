@@ -8,8 +8,6 @@
 
 import UIKit
 
-import CocoaLumberjack
-
 extension UIApplication
 {
     public class func dumpApplicationInformation() {

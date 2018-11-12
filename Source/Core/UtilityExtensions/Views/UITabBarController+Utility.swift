@@ -8,8 +8,6 @@
 
 import UIKit
 
-import CocoaLumberjack
-
 extension UITabBarController {
 
     public func tabIndexOf(_ match : UIViewController) -> Int? {

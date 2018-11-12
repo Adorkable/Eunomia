@@ -8,8 +8,6 @@
 
 import Foundation
 
-import CocoaLumberjack
-
 // translated from http://stackoverflow.com/a/3316016
 open class OrdinalNumberFormatter: NumberFormatter {
 

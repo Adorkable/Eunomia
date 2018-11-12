@@ -12,8 +12,6 @@ import UIKit
 import Cocoa
 #endif
 
-import CocoaLumberjack
-
 #if os(iOS)
 typealias ViewType = UIView
 #elseif os(macOS)

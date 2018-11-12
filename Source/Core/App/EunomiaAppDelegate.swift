@@ -8,8 +8,6 @@
 
 import UIKit
 
-import CocoaLumberjack
-
 open class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
     open var window: UIWindow?
     
@@ -18,7 +16,7 @@ open class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
         do {
             try DDLog.setupLogger(consoleLogLevel: DDLogLevel.debug)
         } catch {
-            NSLog("Error: while settings up CocoaLumberjack: \(error)")
+            NSLog("Error: while settings up logging: \(error)")
         }
 
         UIApplication.dumpApplicationInformation()

@@ -8,48 +8,45 @@
 
 import Foundation
 
-import CocoaLumberjack
-//    #if DEBUG
-//        import NSLogger_CocoaLumberjack_connector
-//    #endif
+enum DDLogLevel {
+    case error
+    case warning
+    case debug
+    case info
+    case verbose
 
-extension DDLog {
+    case other(String)
+}
+typealias DDLogFlag = DDLogLevel
+
+class DDLog {
+    struct DDLogMessage {
+        let message: String
+        let level: DDLogLevel
+        let flag: DDLogFlag
+        let context: Int
+        let file: String
+        let function: String?
+        let line: UInt
+
+        let threadName: String = Thread.current.name ?? ""
+        let queueLabel: String = ""
+    }
+
+    static var consoleLogLevel: DDLogLevel = .info
+    static let formatter = EunomiaCocoaLumberjackFormatter()
     
     public class func setupLogger(consoleLogLevel : DDLogLevel = DDLogLevel.info) throws {
-//        #if DEBUG
-//            // NSLogger connection
-//            DDLog.addLogger(DDNSLoggerLogger.sharedInstance())
-//        #else
-//        #endif
-        
-        // Xcode Console connection
-        guard let ddttyLogger = DDTTYLogger.sharedInstance else {
-            throw SharedInstanceIsNilError(ofType: DDTTYLogger.self)
-        }
-        
-        #if os(iOS)
-        ddttyLogger.colorsEnabled = true
-        ddttyLogger.setForegroundColor(UIColor(red: 0.973, green: 0.153, blue: 0.218, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.error)
-        ddttyLogger.setForegroundColor(UIColor(red: 0.9337, green:0.6441, blue:0.254, alpha:1.0), backgroundColor: UIColor.white, for: DDLogFlag.warning)
-        ddttyLogger.setForegroundColor(UIColor(white: 0.212, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.info)
-        ddttyLogger.setForegroundColor(UIColor(red:0.391, green:0.520, blue:0.417, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.debug)
-        ddttyLogger.setForegroundColor(UIColor(white: 0.675, alpha: 1.0), backgroundColor: UIColor.white, for: DDLogFlag.verbose)
-        #endif
-        ddttyLogger.logFormatter = EunomiaCocoaLumberjackFormatter()
-        
-        // addLogger is inclusive from specified level and up, ie saying withLevel: Info means Info, Warning, Error
-        DDLog.add(ddttyLogger, with: consoleLogLevel)
-        
-        // Crashlytics connection
-        // TODO: check if Crashlytics Cocoapods is ok to use again
-        //        var crashlyticsLogger = CrashlyticsLumberjack.sharedInstance()
-        //        crashlyticsLogger.logFormatter = EunomiaCocoaLumberjackFormatter()
-        //        DDLog.addLogger(crashlyticsLogger)
+        self.consoleLogLevel = consoleLogLevel
     }
     
     public class func log(message: String, level: DDLogLevel, flag: DDLogFlag, file: String, function: String, line: Int) {
-        let ddLogMessage = DDLogMessage(message: message, level: level, flag: flag, context: 0, file: file, function: function, line: UInt(line), tag: nil, options: DDLogMessageOptions.dontCopyMessage, timestamp: nil)
-        self.log(asynchronous: true, message: ddLogMessage)
+        let ddLogMessage = DDLogMessage(message: message, level: level, flag: flag, context: 0, file: file, function: function, line: UInt(line))
+        guard let fullLog = self.formatter.format(message: ddLogMessage) else {
+            return
+        }
+
+        NSLog(fullLog)
     }
     
     public class func error(message : String, fileName : String = #file, functionName : String = #function, line : Int = #line) {
@@ -99,7 +96,7 @@ extension DDLog {
         return result
     }
     
-    public class EunomiaCocoaLumberjackFormatter : NSObject, DDLogFormatter {
+    public class EunomiaCocoaLumberjackFormatter : NSObject {
         public /**
          * Formatters may optionally be added to any logger.
          * This allows for increased flexibility in the logging environment.
@@ -136,7 +133,7 @@ extension DDLog {
             if let function = logMessage.function,
                 function.count > 0
             {
-                fileFunction += "\(String(describing: function))"
+                fileFunction += "\(String(describing: logMessage.function))"
             }
             if fileFunction.count > 0
             {
