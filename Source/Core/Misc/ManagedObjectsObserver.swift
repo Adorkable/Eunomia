@@ -6,14 +6,12 @@
 //  Copyright © 2015 Adorkable. All rights reserved.
 //
 
+/*
 import Foundation
 
 import CoreData
 
-import CocoaLumberjack
-
 public class ManagedObjectsObserver : NSObject {
-    
     private let observer : NSFetchedResultsController
     public var fetchedObjects : [NSManagedObject]? {
         return self.observer.fetchedObjects as? [NSManagedObject]
@@ -121,3 +119,4 @@ extension ManagedObjectsObserver : NSFetchedResultsControllerDelegate {
         onObjectsDidChange(controller: controller, insertChanges: self.insertChanges, deleteChanges: self.deleteChanges)
     }
 }
+*/

@@ -86,6 +86,8 @@
 		3CB2C75C1C2B144500BBC529 /* UITextView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */; };
 		3CB356092199CC35000AB8E4 /* CocoaLumberjackDeprecation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB356082199CC35000AB8E4 /* CocoaLumberjackDeprecation.swift */; };
 		3CB3560A2199CC35000AB8E4 /* CocoaLumberjackDeprecation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB356082199CC35000AB8E4 /* CocoaLumberjackDeprecation.swift */; };
+		3CB3560C2199D697000AB8E4 /* ManagedObjectsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3560B2199D696000AB8E4 /* ManagedObjectsObserver.swift */; };
+		3CB3560D2199D697000AB8E4 /* ManagedObjectsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3560B2199D696000AB8E4 /* ManagedObjectsObserver.swift */; };
 		3CBA36A821671240005F7C80 /* Eunomia.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C5BD2BB21670D4400AAC377 /* Eunomia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3CBA36B821671B78005F7C80 /* NSColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA36B721671B78005F7C80 /* NSColor+Utility.swift */; };
 		3CC963FC1EE877350017C90D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC963FB1EE877350017C90D /* Errors.swift */; };
@@ -205,6 +207,7 @@
 		3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Utility.swift"; sourceTree = "<group>"; };
 		3CB356082199CC35000AB8E4 /* CocoaLumberjackDeprecation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaLumberjackDeprecation.swift; sourceTree = "<group>"; };
+		3CB3560B2199D696000AB8E4 /* ManagedObjectsObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectsObserver.swift; sourceTree = "<group>"; };
 		3CBA36B721671B78005F7C80 /* NSColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Utility.swift"; sourceTree = "<group>"; };
 		3CC963F61EE856F60017C90D /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		3CC963F71EE856F60017C90D /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/iOS/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
@@ -276,6 +279,7 @@
 		3C4EC6201B695A8D003CFD06 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				3CB3560B2199D696000AB8E4 /* ManagedObjectsObserver.swift */,
 				3C4EC6381B697237003CFD06 /* System.swift */,
 				3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */,
 				3CA1C8331BF59C70006ED56C /* Guarantee.swift */,
@@ -668,6 +672,7 @@
 				3CDB3BF92150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift in Sources */,
 				3CA1C8261BF599FA006ED56C /* CNContactStore+Utility.swift in Sources */,
 				3C52C1071B6204910014B938 /* String+Utility.swift in Sources */,
+				3CB3560C2199D697000AB8E4 /* ManagedObjectsObserver.swift in Sources */,
 				3CF646571C07529900BDDBC3 /* JSContext+Utility.swift in Sources */,
 				3CF646361C072A5D00BDDBC3 /* UIImageView+Utility.swift in Sources */,
 				3C4C32AE1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift in Sources */,
@@ -765,6 +770,7 @@
 				3C5BD2F221670FBA00AAC377 /* OrdinalNumberFormatter.swift in Sources */,
 				3C5BD2E421670FAE00AAC377 /* NSCharacterSet+Utility.swift in Sources */,
 				3C5BD2DB21670FAE00AAC377 /* ClosedRange+Utility.swift in Sources */,
+				3CB3560D2199D697000AB8E4 /* ManagedObjectsObserver.swift in Sources */,
 				3CBA36B821671B78005F7C80 /* NSColor+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
