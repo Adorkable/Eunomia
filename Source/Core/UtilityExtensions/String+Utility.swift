@@ -38,7 +38,7 @@ public extension String
     
     subscript (range : Range<Int>) -> String {
         let indexRange = self.index(self.startIndex, offsetBy: range.lowerBound)..<self.index(startIndex, offsetBy: range.upperBound)
-        return String(self[indexRange.lowerBound...indexRange.upperBound])
+        return String(self[indexRange.lowerBound..<indexRange.upperBound])
     }
 
     // From https://stackoverflow.com/a/39612638
