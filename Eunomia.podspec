@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/Adorkable/Eunomia"
 
   s.author       = { "Ian G" => "yo.ian.g@gmail.com" }
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "10.0"
 
   s.source       = { :git => "https://github.com/Adorkable/Eunomia.git", :tag => s.version.to_s }
 
