@@ -73,7 +73,7 @@ extension CLLocation: Encodable {
 }
 
 // Based on https://medium.com/@kf99916/codable-nsmanagedobject-and-cllocation-in-swift-4-b32f042cb7d3
-struct CodableLocation: Codable {
+public struct CodableLocation: Codable {
     let latitude: CLLocationDegrees
     let longitude: CLLocationDegrees
     let altitude: CLLocationDistance
@@ -105,13 +105,13 @@ struct CodableLocation: Codable {
         self.timestamp = timestamp
     }
 
-    init(from: CLLocation) {
+    public init(from: CLLocation) {
         self.init(latitude: from.coordinate.latitude, longitude: from.coordinate.longitude, altitude: from.altitude, horizontalAccuracy: from.horizontalAccuracy, verticalAccuracy: from.verticalAccuracy, speed: from.speed, course: from.course, timestamp: from.timestamp)
     }
 }
 
 extension CLLocation {
-    convenience init(model: CodableLocation) {
+    public convenience init(model: CodableLocation) {
         self.init(coordinate: model.coordinate, altitude: model.altitude, horizontalAccuracy: model.horizontalAccuracy, verticalAccuracy: model.verticalAccuracy, course: model.course, speed: model.speed, timestamp: model.timestamp)
     }
 }
