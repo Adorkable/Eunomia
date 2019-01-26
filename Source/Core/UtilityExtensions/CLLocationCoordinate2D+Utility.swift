@@ -60,3 +60,20 @@ extension CLLocationCoordinate2D {
         return measurement.converted(to: .degrees).value
     }
 }
+
+extension CLLocationCoordinate2D {
+    public func distance(from: CLLocationCoordinate2D) -> CLLocationDistance {
+        return self.distance(from: CLLocation(coordinate: from))
+    }
+
+    public func distance(from: CLLocation) -> CLLocationDistance {
+        return CLLocation(coordinate: self).distance(from: from)
+    }
+}
+
+extension CLLocationCoordinate2D: Equatable {
+    public static func == (left: CLLocationCoordinate2D, right: CLLocationCoordinate2D) -> Bool {
+        return left.latitude == right.latitude
+            && left.longitude == right.longitude
+    }
+}

@@ -24,4 +24,18 @@ extension UITextField {
         }
     }
 }
+
+extension UITextView {
+    public func verticallyCenterContents() {
+        let surroundingSpace = self.bounds.size.height - self.contentSize.height
+
+        let inset: CGFloat
+        if surroundingSpace > 0 {
+            inset = max(0, surroundingSpace / 2.0)
+        } else {
+            inset = 0
+        }
+        self.contentInset = UIEdgeInsets(top: inset, left: self.contentInset.left, bottom: inset, right: self.contentInset.right)
+    }
+}
 #endif

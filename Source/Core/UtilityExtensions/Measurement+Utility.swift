@@ -80,3 +80,15 @@ public func *(left: Measurement<UnitLength>, right: Measurement<UnitLength>) -> 
     let valueInMeters = left.converted(to: UnitLength.meters).value * right.converted(to: UnitLength.meters).value
     return Measurement(value: valueInMeters, unit: UnitLength.meters)
 }
+
+extension Measurement {
+    public static func `in`(degrees value: Double) -> Measurement<UnitAngle> {
+        return Measurement<UnitAngle>(value: value, unit: UnitAngle.degrees)
+    }
+}
+
+extension Measurement where UnitType == UnitAngle {
+    public var radians: Measurement<UnitAngle> {
+        return self.converted(to: UnitAngle.radians)
+    }
+}

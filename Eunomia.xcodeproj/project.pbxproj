@@ -81,6 +81,10 @@
 		3CA1C8381BF59CD1006ED56C /* OrdinalNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */; };
 		3CA1C83A1BF5A19E006ED56C /* UIFont+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8391BF5A19E006ED56C /* UIFont+Utility.swift */; };
 		3CACA77F20DAF994005E0086 /* UIStackView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CACA77E20DAF994005E0086 /* UIStackView+Utility.swift */; };
+		3CB26F4421FBF70300485B52 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB26F4321FBF70300485B52 /* CGRect.swift */; };
+		3CB26F4521FBF71B00485B52 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB26F4321FBF70300485B52 /* CGRect.swift */; };
+		3CB26F4921FBF8F900485B52 /* NSDataAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB26F4821FBF8F900485B52 /* NSDataAsset.swift */; };
+		3CB26F4A21FBF8F900485B52 /* NSDataAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB26F4821FBF8F900485B52 /* NSDataAsset.swift */; };
 		3CB2C75A1C2B144500BBC529 /* UIBarItem+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7571C2B144500BBC529 /* UIBarItem+Utility.swift */; };
 		3CB2C75B1C2B144500BBC529 /* UIScrollView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */; };
 		3CB2C75C1C2B144500BBC529 /* UITextView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */; };
@@ -230,6 +234,8 @@
 		3CA1C8371BF59CD1006ED56C /* OrdinalNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdinalNumberFormatter.swift; sourceTree = "<group>"; };
 		3CA1C8391BF5A19E006ED56C /* UIFont+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Utility.swift"; sourceTree = "<group>"; };
 		3CACA77E20DAF994005E0086 /* UIStackView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Utility.swift"; sourceTree = "<group>"; };
+		3CB26F4321FBF70300485B52 /* CGRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		3CB26F4821FBF8F900485B52 /* NSDataAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataAsset.swift; sourceTree = "<group>"; };
 		3CB2C7571C2B144500BBC529 /* UIBarItem+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarItem+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utility.swift"; sourceTree = "<group>"; };
 		3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Utility.swift"; sourceTree = "<group>"; };
@@ -392,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				3CF646461C0741EE00BDDBC3 /* Array+Utility.swift */,
+				3CB26F4321FBF70300485B52 /* CGRect.swift */,
 				3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */,
 				3C4DE628214A18BF00985BBB /* CLLocation+Utility.swift */,
 				3C4DE626214A181E00985BBB /* CLLocationDegrees+Utility.swift */,
@@ -401,6 +408,7 @@
 				3C4DE62A214A191100985BBB /* ClosedRange+Utility.swift */,
 				3C5FA64B1EFDE52900955DBC /* Date+Utility.swift */,
 				3CF646481C07425200BDDBC3 /* Dictionary+Utility.swift */,
+				3CB26F4821FBF8F900485B52 /* NSDataAsset.swift */,
 				3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */,
 				3CF646561C07529900BDDBC3 /* JSContext+Utility.swift */,
 				3C4DE61E214A147000985BBB /* Measurement+Utility.swift */,
@@ -563,9 +571,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C5BD2D021670D4400AAC377 /* Build configuration list for PBXNativeTarget "Eunomia-macOS" */;
 			buildPhases = (
-				3C5BD2B621670D4400AAC377 /* Headers */,
 				3C5BD2B721670D4400AAC377 /* Sources */,
 				3C5BD2B821670D4400AAC377 /* Frameworks */,
+				3C5BD2B621670D4400AAC377 /* Headers */,
 				3C5BD2B921670D4400AAC377 /* Resources */,
 			);
 			buildRules = (
@@ -702,6 +710,7 @@
 				3CB3560C2199D697000AB8E4 /* ManagedObjectsObserver.swift in Sources */,
 				3CF646571C07529900BDDBC3 /* JSContext+Utility.swift in Sources */,
 				3CF646361C072A5D00BDDBC3 /* UIImageView+Utility.swift in Sources */,
+				3CB26F4921FBF8F900485B52 /* NSDataAsset.swift in Sources */,
 				3C4C32AE1C0DE07600FF039E /* PHPhotoLibrary+Utility.swift in Sources */,
 				3CF6462A1C0729E100BDDBC3 /* NSManagedObjectContext+Utility.swift in Sources */,
 				3CB356142199D80A000AB8E4 /* NSColor+Utility.swift in Sources */,
@@ -729,6 +738,7 @@
 				3CF646591C0755A000BDDBC3 /* UIWebView+Utility.swift in Sources */,
 				3CF646381C072A5D00BDDBC3 /* UITableView+Utility.swift in Sources */,
 				3CACA77F20DAF994005E0086 /* UIStackView+Utility.swift in Sources */,
+				3CB26F4421FBF70300485B52 /* CGRect.swift in Sources */,
 				3CF6463B1C072A5D00BDDBC3 /* UIViewController+Utility.swift in Sources */,
 				3C4DE629214A18BF00985BBB /* CLLocation+Utility.swift in Sources */,
 				3CF646371C072A5D00BDDBC3 /* UITabBarController+Utility.swift in Sources */,
@@ -771,6 +781,7 @@
 				3CB3561C2199D86D000AB8E4 /* UITabBarController+Utility.swift in Sources */,
 				3C5BD2DA21670FAE00AAC377 /* CLLocationSpeed+Utility.swift in Sources */,
 				3C5BD2F621670FBA00AAC377 /* Tangent.swift in Sources */,
+				3CB26F4A21FBF8F900485B52 /* NSDataAsset.swift in Sources */,
 				3CB356102199D809000AB8E4 /* UIApplication+Utility.swift in Sources */,
 				3C5BD2F421670FBA00AAC377 /* SuccessResult.swift in Sources */,
 				3C5BD2D921670FAE00AAC377 /* CLLocationCoordinate2D+Utility.swift in Sources */,
@@ -798,6 +809,7 @@
 				3CB356132199D809000AB8E4 /* UIFont+Utility.swift in Sources */,
 				3C5BD2D421670FAE00AAC377 /* Array+Utility.swift in Sources */,
 				3C2D481F2169165F002D22C3 /* UIView+Utility.swift in Sources */,
+				3CB26F4521FBF71B00485B52 /* CGRect.swift in Sources */,
 				3C5BD2E321670FAE00AAC377 /* NSAttributedString+Utility.swift in Sources */,
 				3CB3561B2199D86D000AB8E4 /* UITabBar+Utility.swift in Sources */,
 				3C5BD2EF21670FB300AAC377 /* AVURLAsset+Utility.swift in Sources */,
@@ -998,6 +1010,7 @@
 		3C52C0EC1B6203900014B938 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1015,6 +1028,7 @@
 		3C52C0ED1B6203900014B938 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
