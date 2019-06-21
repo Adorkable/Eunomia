@@ -12,7 +12,7 @@ import UIKit
 open class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
     open var window: UIWindow?
     
-    open func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    open func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         do {
             try Log.setupLogger(consoleLogLevel: .debug)
@@ -25,7 +25,7 @@ open class EunomiaAppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
     }
     

@@ -391,7 +391,7 @@ extension UIView {
         let keyframeDuration = duration / 4
         let originalFrame = self.frame
         
-        UIView.animateKeyframes(withDuration: duration, delay: 0, options: UIViewKeyframeAnimationOptions(), animations: { () -> Void in
+        UIView.animateKeyframes(withDuration: duration, delay: 0, options: UIView.KeyframeAnimationOptions(), animations: { () -> Void in
             
             UIView.addKeyframe(withRelativeStartTime: keyframeDuration * 0, relativeDuration: keyframeDuration, animations: { () -> Void in
                 self.transform = self.transform.translatedBy(x: -distance, y: 0)
@@ -417,7 +417,7 @@ extension UIView {
      - parameter options:       animation options
      - parameter completion:    completion handler
      */
-    public func fadeIn(_ useHidden : Bool = false, duration : TimeInterval = 0.25, force : Bool = false, startingAlpha : CGFloat = 0, options : UIViewAnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
+    public func fadeIn(_ useHidden : Bool = false, duration : TimeInterval = 0.25, force : Bool = false, startingAlpha : CGFloat = 0, options : UIView.AnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
 
         if force == true {
             if useHidden == true {
@@ -446,7 +446,7 @@ extension UIView {
      - parameter options:       animation options
      - parameter completion:    completion handler
      */
-    public func fadeOut(_ useHidden : Bool = false, duration : TimeInterval = 0.25, force : Bool = false, startingAlpha : CGFloat = 1, options : UIViewAnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
+    public func fadeOut(_ useHidden : Bool = false, duration : TimeInterval = 0.25, force : Bool = false, startingAlpha : CGFloat = 1, options : UIView.AnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
         
         if force == true {
             if useHidden == true {
@@ -474,7 +474,7 @@ extension UIView {
      - parameter options:    animation options
      - parameter completion: completion handler
      */
-    public func growDown(_ endSize : CGSize? = nil, duration : TimeInterval = 0.25, options : UIViewAnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
+    public func growDown(_ endSize : CGSize? = nil, duration : TimeInterval = 0.25, options : UIView.AnimationOptions = [], completion : ( (Bool) -> Void)? = nil) {
         
         let endFrame : CGRect
         
@@ -520,7 +520,7 @@ extension UIView {
         if visible == true {
             
             if self.activityIndicator == nil {
-                let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+                let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
                 
                 self.addSubview(activityIndicator)
                 if centered == true {

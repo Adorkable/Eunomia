@@ -10,12 +10,12 @@ import Foundation
 
 public extension String
 {
-    public var length : Int {
+    var length : Int {
         return self.count
     }
     
     // TODO: deprecate in favor of joinWithSeparator
-    public mutating func append(_ string : String, withJoin : String = "") {
+    mutating func append(_ string : String, withJoin : String = "") {
         if string.length > 0
         {
             if self.length > 0

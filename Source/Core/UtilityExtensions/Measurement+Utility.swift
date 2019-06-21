@@ -9,7 +9,7 @@
 import Foundation
 
 public extension UnitLength {
-    public static var all: [UnitLength] {
+    static var all: [UnitLength] {
         return [
             .megameters,
             .kilometers,

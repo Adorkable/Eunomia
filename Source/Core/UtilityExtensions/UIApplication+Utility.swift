@@ -86,7 +86,7 @@ extension UIApplication {
             throw NSError(description: "Unable to create NSURL with path \(path)")
         }
         
-        self.open(url, options: [:], completionHandler: nil)
+        self.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
     }
 }
 #endif

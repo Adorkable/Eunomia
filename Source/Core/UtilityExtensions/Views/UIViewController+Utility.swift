@@ -18,7 +18,7 @@ extension UIViewController {
     public func childViewControllers(_ ofClass : AnyClass) -> [UIViewController]? {
         var result : [UIViewController]?
         
-        let filteredChildren = self.childViewControllers.filter( { $0.isKind(of: ofClass) } )
+        let filteredChildren = self.children.filter( { $0.isKind(of: ofClass) } )
         if filteredChildren.count > 0
         {
             result = filteredChildren

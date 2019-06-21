@@ -12,7 +12,7 @@ import UIKit
 public extension UIImageView {
     
     // http://stackoverflow.com/a/6857098
-    public func imageDisplayScale() -> CGSize {
+    func imageDisplayScale() -> CGSize {
         var result : CGSize
         
         if let image = self.image
@@ -48,7 +48,7 @@ public extension UIImageView {
         return result
     }
     
-    public func imageDisplaySize() -> CGSize {
+    func imageDisplaySize() -> CGSize {
         var result : CGSize
         
         if self.image != nil
@@ -64,7 +64,7 @@ public extension UIImageView {
         return result
     }
     
-    public func imageDisplayFrame() -> CGRect {
+    func imageDisplayFrame() -> CGRect {
         var result : CGRect
         
         if self.image != nil

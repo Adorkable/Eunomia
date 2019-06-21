@@ -19,9 +19,9 @@ extension UIAlertController
         completion completionHandler : (() -> Void)? = nil
         ) {
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.default, handler: { (action) -> Void in
+        alert.addAction(UIAlertAction(title: buttonText, style: UIAlertAction.Style.default, handler: { (action) -> Void in
             alert.dismiss(animated: true, completion: completionHandler)
         }))
         
@@ -40,9 +40,9 @@ extension UIAlertController
         completion completionHandler : ( (_ error : NSError?) -> Void)? = nil
         ) {
             
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
             
-            alert.addAction(UIAlertAction(title: defaultButtonText, style: UIAlertActionStyle.default, handler: { (action) -> Void in
+            alert.addAction(UIAlertAction(title: defaultButtonText, style: UIAlertAction.Style.default, handler: { (action) -> Void in
                 alert.dismiss(animated: true, completion: { () -> Void in
                     
                     if let completionHandler = completionHandler {
@@ -51,7 +51,7 @@ extension UIAlertController
                 })
             }))
             
-            alert.addAction(UIAlertAction(title: reportButtonText, style: UIAlertActionStyle.default, handler: { (action) -> Void in
+            alert.addAction(UIAlertAction(title: reportButtonText, style: UIAlertAction.Style.default, handler: { (action) -> Void in
                 alert.dismiss(animated: true, completion: { () -> Void in
                     
                     let error : NSError?
@@ -82,9 +82,9 @@ extension UIAlertController
         cancelActionHandler : ((UIAlertAction) -> Void)?
         ) -> UIAlertController {
             
-        let result = UIAlertController(title: title, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let result = UIAlertController(title: title, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         
-        let deleteAction = UIAlertAction(title: deleteActionText, style: UIAlertActionStyle.destructive, handler: { (action) -> Void in
+        let deleteAction = UIAlertAction(title: deleteActionText, style: UIAlertAction.Style.destructive, handler: { (action) -> Void in
             if autoDismiss
             {
                 result.dismiss(animated: true, completion: nil)
@@ -94,7 +94,7 @@ extension UIAlertController
         })
         result.addAction(deleteAction)
     
-        let cancelAction = UIAlertAction(title: cancelActionText, style: UIAlertActionStyle.cancel, handler: { (action) -> Void in
+        let cancelAction = UIAlertAction(title: cancelActionText, style: UIAlertAction.Style.cancel, handler: { (action) -> Void in
             if autoDismiss
             {
                 result.dismiss(animated: true, completion: nil)
