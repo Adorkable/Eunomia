@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.author       = { "Ian G" => "yo.ian.g@gmail.com" }
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '10.0'
   s.osx.deployment_target = '10.13'
 
   s.source       = { :git => "https://github.com/Adorkable/Eunomia.git", :tag => s.version.to_s }
