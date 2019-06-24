@@ -119,18 +119,18 @@ public class Location: NSObject {
 }
 
 #if os(iOS)
-extension Location {
+public extension Location {
     /// Add an authorization subscriber
     ///
     /// - Parameter subscriber: subscriber to add
-    public func add(subscriber: LocationAuthorizationStatusSubscriber) {
+    func add(subscriber: LocationAuthorizationStatusSubscriber) {
         self.authorizationStatusSubscribers.append(subscriber)
     }
     
     /// Remove an authorization subscriber
     ///
     /// - Parameter subscriber: subscriber to remove
-    public func remove(subscriber: LocationAuthorizationStatusSubscriber) {
+    func remove(subscriber: LocationAuthorizationStatusSubscriber) {
         guard let index = self.authorizationStatusSubscribers.firstIndex(where: { (compare) -> Bool in
             return compare === subscriber
         }) else {
@@ -142,7 +142,7 @@ extension Location {
     /// Force ask for "Always Authorizated" location access
     ///
     /// - Returns: `true` if authorization has been requested, `false` otherwise, usually if authorization has already been given or denied
-    public func askForAlwaysAuthorization() -> Bool {
+    func askForAlwaysAuthorization() -> Bool {
         switch self._status {
         case .notDetermined:
             self.locationManager.requestAlwaysAuthorization()
@@ -163,7 +163,7 @@ extension Location {
     /// Force ask for "When In Use Authorizated" location access
     ///
     /// - Returns: `true` if authorization has been requested, `false` otherwise, usually if authorization has already been given or denied
-    public func askForWhenInUseAuthorization() -> Bool {
+    func askForWhenInUseAuthorization() -> Bool {
         switch self._status {
         case .notDetermined:
             self.locationManager.requestWhenInUseAuthorization()
@@ -184,7 +184,7 @@ extension Location {
 #endif
 
 #if os(iOS)
-extension Location {
+public extension Location {
     /// Show location assistance explanation pop up
     /// Since iOS only allows us requesting authorization one time make sure we don't burn it without explaining the reason for requesting
     /// To localize message add values to keys:
@@ -196,7 +196,7 @@ extension Location {
     ///   - animated: Whether to animate the pop up
     ///   - onPresentFinished: Called when presenting the explination is complete
     ///   - onOk: Called when the user presses Ok
-    public static func showLocationAssistanceExplanationPopup(over: UIViewController, animated: Bool, onPresentFinished: (() -> Void)? = nil, onOk: (() -> Void)? = nil) {
+    static func showLocationAssistanceExplanationPopup(over: UIViewController, animated: Bool, onPresentFinished: (() -> Void)? = nil, onOk: (() -> Void)? = nil) {
         // TODO: allow for cancel? and/or support built in autodetecting already denied and prompt
         // TODO: direct customizing of title and message
         let alertController = UIAlertController(
@@ -258,18 +258,18 @@ extension Location {
     #endif
 }
 
-extension Location {
+public extension Location {
     /// Add a location and heading subscriber
     ///
     /// - Parameter subscriber: Subscriber to add
-    public func add(subscriber: LocationSubscriber) {
+    func add(subscriber: LocationSubscriber) {
         self.locationSubscribers.append(subscriber)
     }
     
     /// Remove a location and heading subscriber
     ///
     /// - Parameter subscriber: Subscriber to remove
-    public func remove(subscriber: LocationSubscriber) {
+    func remove(subscriber: LocationSubscriber) {
         guard let index = self.locationSubscribers.firstIndex(where: { (compare) -> Bool in
             return compare === subscriber
         }) else {
@@ -282,7 +282,7 @@ extension Location {
     ///
     /// - Parameter forEachDo: Closure to do for each subscriber
     /// - Throws: When a closure throws
-    public func forEach(_ forEachDo: (LocationSubscriber) throws -> Void) rethrows {
+    func forEach(_ forEachDo: (LocationSubscriber) throws -> Void) rethrows {
         try self.locationSubscribers.forEach(forEachDo)
     }
 }
@@ -338,7 +338,7 @@ extension Location {
     }
 }
 
-extension Location {
+public extension Location {
     static func placemark(from location: CLLocation, completionHandler: @escaping CLGeocodeCompletionHandler) {
         let geocoder = CLGeocoder()
 
