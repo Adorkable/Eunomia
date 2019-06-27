@@ -75,6 +75,8 @@
 		3C5FA6551EFDEB7E00955DBC /* DispatchQueue+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FA6541EFDEB7E00955DBC /* DispatchQueue+Utility.swift */; };
 		3C62746822C1624600B65C3C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62746722C1624600B65C3C /* Location.swift */; };
 		3C62746922C1624600B65C3C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62746722C1624600B65C3C /* Location.swift */; };
+		3C70540322C57EBF00685D6E /* AppExtensionSafeApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70540222C57EBF00685D6E /* AppExtensionSafeApplication.swift */; };
+		3C70540422C57EBF00685D6E /* AppExtensionSafeApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70540222C57EBF00685D6E /* AppExtensionSafeApplication.swift */; };
 		3C93C2451B620A68001C1114 /* UIDevice+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */; };
 		3CA1C8261BF599FA006ED56C /* CNContactStore+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */; };
 		3CA1C8281BF59A10006ED56C /* GCD+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */; };
@@ -229,6 +231,7 @@
 		3C5FA6511EFDE67100955DBC /* AVURLAsset+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVURLAsset+Utility.swift"; sourceTree = "<group>"; };
 		3C5FA6541EFDEB7E00955DBC /* DispatchQueue+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Utility.swift"; path = "Source/Core/UtilityExtensions/DispatchQueue+Utility.swift"; sourceTree = SOURCE_ROOT; };
 		3C62746722C1624600B65C3C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3C70540222C57EBF00685D6E /* AppExtensionSafeApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensionSafeApplication.swift; sourceTree = "<group>"; };
 		3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utility.swift"; sourceTree = "<group>"; };
 		3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CNContactStore+Utility.swift"; sourceTree = "<group>"; };
 		3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCD+Utility.swift"; sourceTree = "<group>"; };
@@ -394,6 +397,7 @@
 				3C52C0F71B6204910014B938 /* EunomiaAppDelegate.swift */,
 				3C62746722C1624600B65C3C /* Location.swift */,
 				3CB356082199CC35000AB8E4 /* CocoaLumberjackDeprecation.swift */,
+				3C70540222C57EBF00685D6E /* AppExtensionSafeApplication.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -644,6 +648,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 			);
 			mainGroup = 3C52C0CB1B6203900014B938;
@@ -709,6 +714,7 @@
 				3C4AD3DB2156D6650006A150 /* CLLocationSpeed+Utility.swift in Sources */,
 				3CDB3BF92150B9B80073A0D5 /* KeyedDecodingContainer+Utility.swift in Sources */,
 				3CA1C8261BF599FA006ED56C /* CNContactStore+Utility.swift in Sources */,
+				3C70540322C57EBF00685D6E /* AppExtensionSafeApplication.swift in Sources */,
 				3C52C1071B6204910014B938 /* String+Utility.swift in Sources */,
 				3CB3560C2199D697000AB8E4 /* ManagedObjectsObserver.swift in Sources */,
 				3CF646571C07529900BDDBC3 /* JSContext+Utility.swift in Sources */,
@@ -781,6 +787,7 @@
 				3CB356162199D86D000AB8E4 /* UIScrollView+Utility.swift in Sources */,
 				3CB356182199D86D000AB8E4 /* UIAlertController+Utility.swift in Sources */,
 				3CB356242199D86D000AB8E4 /* UIStackView+Utility.swift in Sources */,
+				3C70540422C57EBF00685D6E /* AppExtensionSafeApplication.swift in Sources */,
 				3CB356282199D881000AB8E4 /* EunomiaAppDelegate.swift in Sources */,
 				3CB3561C2199D86D000AB8E4 /* UITabBarController+Utility.swift in Sources */,
 				3C5BD2DA21670FAE00AAC377 /* CLLocationSpeed+Utility.swift in Sources */,

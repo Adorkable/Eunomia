@@ -56,7 +56,8 @@ extension UIAlertController
                     
                     let error : NSError?
                     do {
-                        try UIApplication.shared.mailTo(reportEmailAddress, subject: reportSubject, body: reportBody)
+                        let application = try AppExtensionSafeApplication.sharedThrowing()
+                        try application.mailTo(reportEmailAddress, subject: reportSubject, body: reportBody)
                         
                         error = nil
                     } catch let mailToError as NSError {
