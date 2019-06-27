@@ -9,13 +9,13 @@
 #if os(iOS)
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
-    public func forceLoadView() {
+    func forceLoadView() {
         let _ = self.view
     }
     
-    public func childViewControllers(_ ofClass : AnyClass) -> [UIViewController]? {
+    func childViewControllers(_ ofClass : AnyClass) -> [UIViewController]? {
         var result : [UIViewController]?
         
         let filteredChildren = self.children.filter( { $0.isKind(of: ofClass) } )
@@ -27,8 +27,19 @@ extension UIViewController {
         return result
     }
     
-    @IBAction public func popViewController() {
+    @IBAction func popViewController() {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
+public extension UIViewController {
+    @IBAction func dismissSelfAnimated() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func dismissSelf() {
+        self.dismiss(animated: false, completion: nil)
+    }
+}
+
 #endif

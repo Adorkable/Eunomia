@@ -51,6 +51,15 @@ extension ViewType {
     }
 }
 
+// MARK: Contraints
+public extension ViewType {
+    func removeAllConstraints() {
+        while self.constraints.count > 0 {
+            self.removeConstraints(self.constraints)
+        }
+    }
+}
+
 #if os(iOS)
 // MARK: - Border
 extension UIView {

@@ -53,3 +53,13 @@ extension Array {
         return result
     }
 }
+
+public extension Array where Element: NSAttributedString {
+    func toAttributedString() -> NSAttributedString {
+        return self.reduce(NSMutableAttributedString(string: "")) { (accumulated, next) -> NSMutableAttributedString in
+            accumulated.append(NSAttributedString(string: " "))
+            accumulated.append(next)
+            return accumulated
+        }
+    }
+}

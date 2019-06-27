@@ -77,6 +77,8 @@
 		3C62746922C1624600B65C3C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62746722C1624600B65C3C /* Location.swift */; };
 		3C70540322C57EBF00685D6E /* AppExtensionSafeApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70540222C57EBF00685D6E /* AppExtensionSafeApplication.swift */; };
 		3C70540422C57EBF00685D6E /* AppExtensionSafeApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70540222C57EBF00685D6E /* AppExtensionSafeApplication.swift */; };
+		3C70540622C5815900685D6E /* UICollectionView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70540522C5815900685D6E /* UICollectionView+Utility.swift */; };
+		3C70540722C5815900685D6E /* UICollectionView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70540522C5815900685D6E /* UICollectionView+Utility.swift */; };
 		3C93C2451B620A68001C1114 /* UIDevice+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */; };
 		3CA1C8261BF599FA006ED56C /* CNContactStore+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */; };
 		3CA1C8281BF59A10006ED56C /* GCD+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */; };
@@ -232,6 +234,7 @@
 		3C5FA6541EFDEB7E00955DBC /* DispatchQueue+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Utility.swift"; path = "Source/Core/UtilityExtensions/DispatchQueue+Utility.swift"; sourceTree = SOURCE_ROOT; };
 		3C62746722C1624600B65C3C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3C70540222C57EBF00685D6E /* AppExtensionSafeApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensionSafeApplication.swift; sourceTree = "<group>"; };
+		3C70540522C5815900685D6E /* UICollectionView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utility.swift"; sourceTree = "<group>"; };
 		3C93C2441B620A68001C1114 /* UIDevice+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utility.swift"; sourceTree = "<group>"; };
 		3CA1C8251BF599FA006ED56C /* CNContactStore+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CNContactStore+Utility.swift"; sourceTree = "<group>"; };
 		3CA1C8271BF59A10006ED56C /* GCD+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCD+Utility.swift"; sourceTree = "<group>"; };
@@ -499,6 +502,7 @@
 				3CB2C7581C2B144500BBC529 /* UIScrollView+Utility.swift */,
 				3CB2C7591C2B144500BBC529 /* UITextView+Utility.swift */,
 				3CF6462C1C072A5D00BDDBC3 /* UIAlertController+Utility.swift */,
+				3C70540522C5815900685D6E /* UICollectionView+Utility.swift */,
 				3CF6462D1C072A5D00BDDBC3 /* UICollectionViewFlowLayout+Utility.swift */,
 				3CF6462E1C072A5D00BDDBC3 /* UIImageView+Utility.swift */,
 				3CF6464A1C07459700BDDBC3 /* UITabBar+Utility.swift */,
@@ -757,6 +761,7 @@
 				3CA1C83A1BF5A19E006ED56C /* UIFont+Utility.swift in Sources */,
 				3C5FA6531EFDE67100955DBC /* AVURLAsset+Utility.swift in Sources */,
 				3C4DE61F214A147000985BBB /* Measurement+Utility.swift in Sources */,
+				3C70540622C5815900685D6E /* UICollectionView+Utility.swift in Sources */,
 				3CF646531C074EC700BDDBC3 /* RangeReplaceableCollectionType+Utility.swift in Sources */,
 				3CF646351C072A5D00BDDBC3 /* UICollectionViewFlowLayout+Utility.swift in Sources */,
 				3C5FA6521EFDE67100955DBC /* AVFoundation+Utility.swift in Sources */,
@@ -830,6 +835,7 @@
 				3C5BD2E721670FAE00AAC377 /* NSRange+Utility.swift in Sources */,
 				3C5BD2D621670FAE00AAC377 /* CLLocation+Utility.swift in Sources */,
 				3CB356222199D86D000AB8E4 /* UIProgressView+Utility.swift in Sources */,
+				3C70540722C5815900685D6E /* UICollectionView+Utility.swift in Sources */,
 				3C5BD2D821670FAE00AAC377 /* CLLocationDirection+Utility.swift in Sources */,
 				3C5BD2E221670FAE00AAC377 /* NSError+Utility.swift in Sources */,
 				3C5BD2F121670FBA00AAC377 /* System.swift in Sources */,
