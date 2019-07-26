@@ -7,7 +7,9 @@
 //
 
 import Photos
+import UIKit
 
+@available(OSX 10.13, iOS 10.3, *)
 extension PHPhotoLibrary {
     
     #if os(iOS)
@@ -95,6 +97,8 @@ extension PHPhotoLibrary {
         case .denied:
             completionHandler(.denied(.denied))
             break
+        @unknown default:
+            fatalError("Unexpected PHAuthorizationStatus")
         }
 
     }
