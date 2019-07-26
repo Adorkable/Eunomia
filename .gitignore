@@ -35,3 +35,8 @@ Carthage/Build
 */Carthage/Checkouts
 */Carthage/Build
 
+
+
+# Accio dependency management
+Dependencies/
+.accio/

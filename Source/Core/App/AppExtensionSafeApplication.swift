@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // Based on https://github.com/heilerich/Gestalt/commit/259c4f2e3e0878e97ee2b98cad2610990a3e2f14
 #if os(iOS)

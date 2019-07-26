@@ -134,6 +134,10 @@ public extension UIImageView {
                 NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
                 result = CGRect.zero
                 break
+            @unknown default:
+                NSLog("TODO: Eunomia UIImageView+Utility, imageDisplayFrame(): implement handling ContentMode")
+                result = CGRect.zero
+                break
             }
 
         } else

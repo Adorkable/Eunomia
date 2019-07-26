@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public func tangent(from fromCenter: CGPoint, withRadius fromRadius: CGFloat, to toCenter: CGPoint, withRadius toRadius: CGFloat) -> CGPoint {
     // Based on http://www.ambrsoft.com/TrigoCalc/Circles2/Circles2Tangent_.htm

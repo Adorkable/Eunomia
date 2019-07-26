@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension NSAttributedString {
     // http://stackoverflow.com/a/21901056/96153

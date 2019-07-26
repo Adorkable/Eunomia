@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 import ObjectiveC
 
@@ -66,6 +67,11 @@ extension NSObject {
 }
 
 #if os(iOS)
+@objc
+protocol KeyboardNotificationsSubscriber {
+    @objc optional func alignWithKeyboard(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve)
+}
+
 extension NSObject {
     
     // TODO: because of how selectors are referenced in Swift and that we can't easily add a property to our NSObject extension in Swift is this safer to keep in Objective-C?
@@ -94,7 +100,7 @@ extension NSObject {
         }
     }
     
-    public func keyboardWillShow(_ notification : Notification) {
+    @objc open func keyboardWillShow(_ notification : Notification) {
         var beginFrame : CGRect?
         var endFrame : CGRect?
         var duration : TimeInterval?
@@ -113,11 +119,11 @@ extension NSObject {
         }
     }
     
-    public func keyboardWillShow(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
+    @objc open func keyboardWillShow(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
         self.alignWithKeyboard(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
     }
     
-    func keyboardDidShow(_ notification : Notification) {
+    @objc open func keyboardDidShow(_ notification : Notification) {
         var beginFrame : CGRect?
         var endFrame : CGRect?
         var duration : TimeInterval?
@@ -136,11 +142,11 @@ extension NSObject {
         }
     }
     
-    public func keyboardDidShow(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
+    @objc open func keyboardDidShow(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
         self.alignWithKeyboard(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
     }
     
-    func keyboardWillHide(_ notification : Notification) {
+    @objc open func keyboardWillHide(_ notification : Notification) {
         var beginFrame : CGRect?
         var endFrame : CGRect?
         var duration : TimeInterval?
@@ -159,11 +165,11 @@ extension NSObject {
         }
     }
     
-    public func keyboardWillHide(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
+    @objc open func keyboardWillHide(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
         self.alignWithKeyboard(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
     }
     
-    func keyboardDidHide(_ notification : Notification) {
+    @objc open func keyboardDidHide(_ notification : Notification) {
         var beginFrame : CGRect?
         var endFrame : CGRect?
         var duration : TimeInterval?
@@ -182,12 +188,11 @@ extension NSObject {
         }
     }
     
-    public func keyboardDidHide(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
+    @objc open func keyboardDidHide(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
         self.alignWithKeyboard(beginFrame, endFrame: endFrame, duration: duration, animationCurve: animationCurve)
     }
     
-    public func alignWithKeyboard(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
-        
+    @objc open func alignWithKeyboard(_ beginFrame : CGRect, endFrame : CGRect, duration : TimeInterval, animationCurve : UIView.AnimationCurve) {
     }
 }
 #endif

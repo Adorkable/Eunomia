@@ -85,11 +85,8 @@ extension NSColor {
 }
 
 extension NSColor {
+    @available(OSX 10.13, *)
     public static func createFrom(named: String, fallback: NSColor) -> NSColor {
-        guard #available(iOS 11.0, *) else {
-            return fallback
-        }
-
         guard let named = NSColor(named: named) else {
             return fallback
         }
